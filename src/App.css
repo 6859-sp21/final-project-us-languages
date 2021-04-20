@@ -36,3 +36,116 @@
     transform: rotate(360deg);
   }
 }
+
+#globe {
+  /* margin: 20px auto;
+  margin-top: 50px; */
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  /* position: fixed; */
+}
+/* #globe path {
+
+} */
+#globe svg {
+  cursor: pointer;
+}
+svg {
+  display: block;
+  /* width: 100% */
+}
+svg .country {
+  fill: #aaa;
+  stroke: #ddd;
+  stroke-width: 0.5px;
+}
+svg .country:hover {
+  /* stroke: rgb(223, 179, 179);
+  stroke-width: 5px; */
+  fill: #D67474;
+  cursor: pointer;
+}
+svg .country { 
+  transition: fill .4s ease; 
+}
+.tooltip {
+  background: #f1f0f1;                                         
+  box-shadow: 0 0 5px #999999;                              
+  color: #333;                                           
+  display: none;                                                
+  font-size: 14px; 
+  font-family: Helvetica;		
+  left: 300px;                                                   
+  padding: 10px;                                                 
+  position: absolute;                                            
+  text-align: center;                                       
+  top: 220px;                                                     
+  width: 80px;                                                  
+  z-index: 10;      
+}
+.d3-tip {
+  line-height: 1;
+  padding: 12px;
+  background: rgba(43,43,43, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+body {
+  text-align: center;
+  margin: auto;
+  font-family: 'Roboto';
+}
+.overlay {
+  /* position: absolute; */
+  /* background-color : #526355; */
+  background: linear-gradient(125deg,#FFE8D6, #D67474);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.8;
+  color : white;
+  height: 100%;
+  width: 100%;
+  
+  /* display: flex;
+  justify-content: center;
+  align-content: center; */
+  flex-flow: wrap;
+}
+.container {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  flex-flow: wrap;
+  padding-top: 200px;
+}
+.heading, .subheading, .body-container {
+  width: 100%;
+  justify-content: center;
+  color: white;
+
+}
+.heading {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 30px;
+}
+.subheading {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 90px;
+  margin-bottom: 40px;
+}
+.body-container {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 16px;
+  display: flex;
+  /* max-width: 600px; */
+}
+.body-text {
+  max-width: 600px;
+}
