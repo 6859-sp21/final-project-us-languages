@@ -1,0 +1,101 @@
+Table	Location	Latitude	Longitude
+1	"Akron, OH"	41.081444	-81.519005
+2	"Albany-Schenectady-Troy, NY"	42.745522	-73.816521
+3	"Albuquerque, NM"	35.084385	-106.650421
+4	"Allentown-Bethlehem-Easton, PA-NJ"	40.65015	-75.338242
+5	"Anchorage, AK"	61.218056	-149.900284
+6	"Ann Arbor, MI"	42.2681569	-83.7312291
+7	"Atlanta-Sandy Springs-Roswell, GA"	34.002468	-84.180717
+8	"Atlantic City-Hammonton, NJ"	39.61015	-74.82284
+9	"Austin-Round Rock, TX"	30.46031	-97.65799
+10	"Bakersfield, CA"	35.373291	-119.018715
+11	"Baltimore-Columbia-Towson, MD"	39.401859	-76.605049
+12	"Baton Rouge, LA"	30.451468	-91.187149
+13	"Boston-Cambridge-Newton, MA-NH"	42.356709	-71.158096
+14	"Bridgeport-Stamford-Norwalk, CT"	41.04858	-73.453423
+15	"Buffalo-Cheektowaga-Niagara Falls, NY"	42.95808	-78.82383
+16	"Cape Coral-Fort Myers, FL"	26.79986	-81.829689
+17	"Charlotte-Concord-Gastonia, NC-SC"	35.403839	-80.86142
+18	"Chicago-Naperville-Elgin, IL-IN-WI"	42.24124385	-87.85252261
+19	"Cincinnati, OH-KY-IN"	39.08136685	-84.44479858
+20	"Cleveland-Elyria, OH"	41.36827157	-82.10717888
+21	"Colorado Springs, CO"	38.8320219	-104.8179547
+22	"Columbus, OH"	39.96168594	-83.00330923
+23	"Dallas-Fort Worth-Arlington, TX"	32.74875523	-96.89508364
+24	"Dayton, OH"	39.75960644	-84.19082827
+25	"Deltona-Daytona Beach-Ormond Beach, FL"	29.06655829	-81.26428124
+26	"Denver-Aurora-Lakewood, CO"	39.56027314	-104.8372224
+27	"Des Moines-West Des Moines, IA"	41.56410183	-93.76247011
+28	"Detroit-Warren-Dearborn, MI"	42.33144623	-83.06151977
+29	"Durham-Chapel Hill, NC"	35.91913109	-79.04342909
+30	"Farmington, NM"	36.74285223	-108.1899186
+31	"Fresno, CA"	36.73869361	-119.7870174
+32	"Grand Rapids-Wyoming, MI"	42.91334237	-85.70315035
+33	"Greensboro-High Point, NC"	35.9550176	-80.00083742
+34	"Harrisburg-Carlisle, PA"	40.33841295	-77.1022484
+35	"Hartford-West Hartford-East Hartford, CT"	41.76073129	-72.6809816
+36	"Hilo, HI"	19.72437505	-155.0874474
+37	"Houston-The Woodlands-Sugar Land, TX"	29.76096705	-95.39401418
+38	"Indianapolis-Carmel-Anderson, IN"	39.76179858	-86.12589716
+39	"Jacksonville, FL"	30.33075667	-81.66778601
+40	"Kahului-Wailuku-Lahaina, HI"	20.88884298	-156.4654442
+41	"Kansas City, MO-KS"	39.1054386	-94.5716345
+42	"Lafayette, LA"	30.24565355	-92.00987983
+43	"Lancaster, PA"	40.03681236	-76.30345798
+44	"Lansing-East Lansing, MI"	42.73253509	-84.48580461
+45	"Las Vegas-Henderson-Paradise, NV"	36.10420783	-115.0712529
+46	"Los Angeles-Long Beach-Anaheim, CA"	34.15966067	-118.2323993
+47	"Louisville/Jefferson County, KY-IN"	38.25260749	-85.73380731
+48	"Madison, WI"	43.09451625	-89.41049166
+49	"Manchester-Nashua, NH"	42.79586561	-71.42909728
+50	"Memphis, TN-MS-AR"	35.0817922	-89.84518952
+51	"Miami-Fort Lauderdale-West Palm Beach, FL"	26.39255968	-80.63102078
+52	"Milwaukee-Waukesha-West Allis, WI"	43.0162795	-88.3893594
+53	"Minneapolis-St. Paul-Bloomington, MN-WI"	45.3311469	-93.44605584
+54	"Modesto, CA"	37.75201781	-120.9932572
+55	"Naples-Immokalee-Marco Island, FL"	26.14219107	-81.787382
+56	"Nashville-Davidson--Murfreesboro--Franklin, TN"	36.21659477	-86.5803366
+57	"New Haven-Milford, CT"	41.23134563	-73.06447638
+58	"New Orleans-Metairie, LA"	29.98388352	-90.15335643
+59	"New York-Newark-Jersey City, NY-NJ-PA"	40.71277586	-74.00595541
+60	"North Port-Sarasota-Bradenton, FL"	27.39586174	-82.51869266
+61	"Oklahoma City, OK"	35.46753413	-97.51642708
+62	"Omaha-Council Bluffs, NE-IA"	41.29039161	-95.89874307
+63	"Orlando-Kissimmee-Sanford, FL"	28.58277125	-81.34036491
+64	"Oxnard-Thousand Oaks-Ventura, CA"	34.17128549	-118.8377403
+65	"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD"	39.95285345	-75.16558511
+66	"Phoenix-Mesa-Scottsdale, AZ"	33.49821905	-112.2384017
+67	"Pittsburgh, PA"	40.44032123	-79.9958868
+68	"Portland-South Portland, ME"	43.64118059	-70.24122486
+69	"Portland-Vancouver-Hillsboro, OR-WA"	45.65363321	-122.5466307
+70	"Providence-Warwick, RI-MA"	41.76560908	-71.6675127
+71	"Raleigh, NC"	35.77963217	-78.63815879
+72	"Reno, NV"	39.52949169	-119.8138274
+73	"Richmond, VA"	37.54071426	-77.43604813
+74	"Riverside-San Bernardino-Ontario, CA"	34.06347658	-117.6508876
+75	"Rochester, NY"	43.1565592	-77.60884771
+76	"Sacramento--Roseville--Arden-Arcade, CA"	38.58127653	-121.494077
+77	"St. Louis, MO-IL"	38.62552308	-90.20026234
+78	"Salinas, CA"	36.67773235	-121.6555229
+79	"Salt Lake City, UT"	40.76086561	-111.8909525
+80	"San Antonio-New Braunfels, TX"	29.42520577	-98.49160603
+81	"San Diego-Carlsbad, CA"	33.15801752	-117.3509729
+82	"San Francisco-Oakland-Hayward, CA"	37.7753241	-122.4194252
+83	"San Jose-Sunnyvale-Santa Clara, CA"	37.36868314	-122.0360064
+84	"Santa Maria-Santa Barbara, CA"	34.9534457	-120.4355473
+85	"Santa Rosa, CA"	38.44014951	-122.71354
+86	"Seattle-Tacoma-Bellevue, WA"	47.60609127	-122.3323609
+87	"Show Low, AZ"	34.25434033	-110.0298327
+88	"Spokane-Spokane Valley, WA"	47.67324962	-117.2403591
+89	"Springfield, MA"	42.10186458	-72.58995004
+90	"Stockton-Lodi, CA"	37.95781782	-121.2902201
+91	"Syracuse, NY"	43.04833008	-76.14708088
+92	"Tampa-St. Petersburg-Clearwater, FL"	28.27433803	-82.38840667
+93	"Trenton, NJ"	40.22027823	-74.76006075
+94	"Tucson, AZ"	32.22267713	-110.9757888
+95	"Tulsa, OK"	36.15424862	-95.99277491
+96	"Urban Honolulu, HI"	21.30677715	-157.85799
+97	"Vallejo-Fairfield, CA"	38.10380584	-122.2566369
+98	"Virginia Beach-Norfolk-Newport News, VA-NC"	36.85056157	-76.28651407
+99	"Washington-Arlington-Alexandria, DC-VA-MD-WV"	39.13199904	-77.38837991
+100	"Worcester, MA-CT"	42.26180945	-71.80226042

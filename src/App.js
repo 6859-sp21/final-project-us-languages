@@ -21,7 +21,7 @@ function App() {
   const [mapData, setMapData] = useState({})
 
   useEffect(() => {
-    axios.get('/api/countries').then(res => {
+    axios.get('/api/datasets/countries').then(res => {
       setMapData(res.data.mapData);
       setIsLoaded(true);
     }) 
