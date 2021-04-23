@@ -4,6 +4,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import axios from 'axios';
 
 import Map from './Map.js';
+import Navbar from './components/Navbar';
 
 const theme = createMuiTheme({
   palette: {
@@ -31,6 +32,7 @@ function App() {
     <div className="App">
       <MuiThemeProvider theme={theme} >
           <div className="background">
+            <Navbar />
             { isLoaded ? 
                 <Map size={800} data={mapData}/>
                 : null
