@@ -2,6 +2,7 @@
 const express = require('express')
 
 const datasets = require('./datasets.js')
+const audioclips = require('./audioclips.js')
 
 // Import middleware
 const cookieParser = require('cookie-parser')
@@ -9,7 +10,9 @@ const compression = require('compression')
 const helmet = require('helmet')
 // const cors = require('cors')
 
+// Enable reading of environment variables
 require('dotenv').config();
+
 const PORT = process.env.PORT || 8080
 const app = express(); 
 
@@ -29,5 +32,6 @@ app.use((err, req, res, next) => {
  })
 
 app.use('/api/datasets', datasets);
+app.use('/api/audioclips', audioclips);
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`));
