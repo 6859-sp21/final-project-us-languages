@@ -5,10 +5,12 @@ const express = require('express')
 const router = express.Router();
 
 const locationsFile = path.resolve(__dirname, '../datasets/location_coordinates.csv');
+const statesFile = path.resolve(__dirname, '../datasets/us.json');
 const languagesFile = path.resolve(__dirname, '../datasets/languages_total.csv')
 const countriesFiles = path.resolve(__dirname, '../datasets/ne_110m_admin_0_countries.geo.json');
 
 const countriesData = fs.readFileSync(countriesFiles);
+const statesData = fs.readFileSync(statesFile);
 const locationsData = [];
 const languagesData = [];
 
@@ -35,8 +37,13 @@ router.get('/countries', async(req, res) => {
    res.send({mapData: countries});
 })
 
+router.get('/states', async(req, res) => { 
+   const states = JSON.parse(statesData);
+   res.send({statesData: states});
+})
+
 router.get('/locations', async(req, res) => { 
-    res.send({locData: locationsData});
+    res.send({locationsData: locationsData});
  })
 
  router.get('/languages', async(req, res) => { 

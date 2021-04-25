@@ -3,7 +3,7 @@ import './App.css';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import axios from 'axios';
 
-import Map from './Map.js';
+import Map from './components/Map.js';
 import Navbar from './components/Navbar';
 
 const theme = createMuiTheme({
@@ -19,13 +19,20 @@ const theme = createMuiTheme({
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false)
-  const [mapData, setMapData] = useState({})
+  const [statesData, setStatesData] = useState({})
+  const [locationsData, setLocationsData] = useState({})
 
   useEffect(() => {
-    axios.get('/api/datasets/countries').then(res => {
-      setMapData(res.data.mapData);
-      setIsLoaded(true);
-    }) 
+    axios
+      .all([
+        axios.get('/api/datasets/states'),
+        axios.get('/api/datasets/locations')
+      ])
+      .then(res => {
+        setStatesData(res[0].data.statesData);
+        setLocationsData(res[1].data.locationsData);
+        setIsLoaded(true);
+      });
   }, [])
 
   return (
@@ -34,7 +41,7 @@ function App() {
           <div className="background">
             <Navbar />
             { isLoaded ? 
-                <Map size={800} data={mapData}/>
+                <Map size={1200} statesData={statesData} locationsData={locationsData}/>
                 : null
             }
           </div>
