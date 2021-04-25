@@ -30,15 +30,30 @@ fs.createReadStream(languagesFile)
     console.log('Languages CSV file successfully processed');
 });
 
+/**
+ * GET /api/datasets/countries
+ * 
+ * Sends parsed topojson data of countries
+ */ 
 router.get('/countries', async(req, res) => { 
    const countries = JSON.parse(countriesData);
    res.send({mapData: countries});
 })
 
+/**
+ * GET /api/datasets/locations
+ * 
+ * Sends parsed csv objects of US locations and their coordinates
+ */ 
 router.get('/locations', async(req, res) => { 
     res.send({locData: locationsData});
  })
 
+ /**
+ * GET /api/datasets/languages
+ * 
+ * Sends parsed csv data of languages spoken in the US
+ */ 
  router.get('/languages', async(req, res) => { 
     res.send({langData: languagesData});
  })
