@@ -12,10 +12,14 @@ import tip from "d3-tip";
  * @param {Integer} size parameter used for width and height
  * @returns 
  */
-export default function Map({statesData, locationsData, languagesData, size, selectedLanguage}) {
+export default function Map({statesData, locationsData, languagesData, size, selectedLanguage, handleLocationClick}) {
     const width = size, height = size/2;
     const svgRef = useRef();
     const wrapperRef = useRef();
+
+    const handleClickLocation = (data) => {
+        handleLocationClick(data);
+    }
 
     useEffect( () => {
         const svg = d3.select(svgRef.current);
@@ -64,7 +68,6 @@ export default function Map({statesData, locationsData, languagesData, size, sel
         }).sort((a,b) => {
             return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
         });
-        console.log('filtered locations', filteredLocations);
 
         svg.call(tooltip);
             
@@ -79,7 +82,7 @@ export default function Map({statesData, locationsData, languagesData, size, sel
                     d["containerFeature"] = containerFeature;
                     return d;
                 })
-                .on("click", (event,d) => zoomClick(event, d["containerFeature"])) 
+                .on("click", (event,d) => zoomClick(event, d)) 
                 .on("mouseover", tooltip.show)
                 .on("mouseout", tooltip.hide)
                 .attr("transform", function(d) {
@@ -92,7 +95,8 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             // active.classed("active", false);
             // active = d3.select(this).classed("active", true);
             // console.log(this);
-            let bounds = path.bounds(d);
+            const containerFeature = d['containerFeature']
+            let bounds = path.bounds(containerFeature);
             if (JSON.stringify(zoomedBounds) === JSON.stringify(bounds)) return reset();
             zoomedBounds = bounds;
             let dx = bounds[1][0] - bounds[0][0],
@@ -107,6 +111,8 @@ export default function Map({statesData, locationsData, languagesData, size, sel
                 .duration(750)
                 .style("stroke-width", 1.5 / scale + "px")
                 .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
+            tooltip.hide()
+            handleClickLocation(d); 
         }
             
         // Adapted from https://bl.ocks.org/mbostock/4699541

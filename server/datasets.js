@@ -46,7 +46,7 @@ fs.createReadStream(languagesFile)
   })
   .on('end', () => {
     allLanguagesData = Array.from(new Set(languagesData.map(entry => entry.Language)));
-    console.log('Languages CSV file successfully processed', languagesData);
+    console.log('Languages CSV file successfully processed');
 });
 
 /**

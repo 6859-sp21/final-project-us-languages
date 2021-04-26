@@ -6,6 +6,7 @@ import axios from 'axios';
 import Map from './components/Map.js';
 import Navbar from './components/Navbar';
 import LanguageSelect from './components/LanguageSelect';
+import LeftDrawer from './components/LeftDrawer';
 
 const theme = createMuiTheme({
   palette: {
@@ -25,6 +26,22 @@ function App() {
   const [languagesData, setLanguagesData] = useState({})
   const [allLanguages, setAllLanguages] = useState([])
   const [selectedLanguage, setSelectedLanguage] = useState("")
+  const [selectedLocation, setSelectedLocation] = useState("")
+
+  const [open, setOpen] = useState(false);
+
+  const handleLocationClick = (data) => {
+    setSelectedLocation(data.Location);
+    handleDrawerOpen()
+  }
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     axios
@@ -52,9 +69,16 @@ function App() {
       <MuiThemeProvider theme={theme} >
           <div className="background">
             <Navbar />
+            <LeftDrawer open={open} selectedLocation={selectedLocation} handleDrawerClose={handleDrawerClose}></LeftDrawer>
             <LanguageSelect allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
             { isLoaded ? 
-                <Map size={1200} statesData={statesData} locationsData={locationsData} languagesData={languagesData} selectedLanguage={selectedLanguage}/>
+                <Map 
+                  size={1200} 
+                  handleLocationClick={handleLocationClick}
+                  statesData={statesData} 
+                  locationsData={locationsData} 
+                  languagesData={languagesData} 
+                  selectedLanguage={selectedLanguage}/>
                 : null
             }
           </div>
