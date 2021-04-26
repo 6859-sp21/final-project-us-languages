@@ -4,9 +4,12 @@ const csv = require('csv-parser');
 const express = require('express')
 const router = express.Router();
 
-const locationsFile = path.resolve(__dirname, '../datasets/location_coordinates.csv');
+// Some CSV files may be generated with, or contain a leading Byte Order Mark. This may cause issues parsing headers and/or data from your file.
+const stripBom = require('strip-bom-stream');
+
+const locationsFile = path.resolve(__dirname, '../datasets/location_coordinates.txt');
 const statesFile = path.resolve(__dirname, '../datasets/us.json');
-const languagesFile = path.resolve(__dirname, '../datasets/languages_total.csv')
+const languagesFile = path.resolve(__dirname, '../datasets/languages_total.txt')
 const countriesFiles = path.resolve(__dirname, '../datasets/ne_110m_admin_0_countries.geo.json');
 
 const countriesData = fs.readFileSync(countriesFiles);
@@ -17,13 +20,14 @@ let allLanguagesData = [];
 const formattedLocationsData = {};
 
 fs.createReadStream(locationsFile)
+  .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
   .pipe(csv({separator: '\t'}))
   .on('data', (row) => {
     locationsData.push(row)
   })
   .on('end', () => {
     locationsData
-      .forEach(entry => {
+      .forEach(entry => { 
         formattedLocationsData[entry.Location] = {
           "coordinates": {
             "latitude": entry.Latitude,
@@ -35,13 +39,14 @@ fs.createReadStream(locationsFile)
 });
 
 fs.createReadStream(languagesFile)
+  .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
   .pipe(csv({separator: '\t'}))
   .on('data', (row) => {
     languagesData.push(row)
   })
   .on('end', () => {
     allLanguagesData = Array.from(new Set(languagesData.map(entry => entry.Language)));
-    console.log('Languages CSV file successfully processed');
+    console.log('Languages CSV file successfully processed', languagesData);
 });
 
 /**

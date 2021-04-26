@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import * as d3 from "d3";
-import * as topojson from "topojson";
+import * as topojson from "topojson-client";
 import '../App.css';
 import tip from "d3-tip";
 
@@ -53,7 +53,7 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             .attr('class', 'd3-tip')
             .offset([-5, 0])
             .html(function(event, d) {
-                return d.Location + "</br>" + d["Number of speakers"];
+                return d.Location + "</br>" + d["NumberOfSpeakers"];
             })
         
         const filteredLocations = languagesData.filter(entry => {
@@ -62,8 +62,9 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             // }
             return entry.Language === selectedLanguage && locationsData[entry.Location];
         }).sort((a,b) => {
-            return b["Number of speakers"] - a["Number of speakers"];
+            return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
         });
+        console.log('filtered locations', filteredLocations);
 
         svg.call(tooltip);
             
@@ -72,13 +73,13 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             .data(filteredLocations)
             .enter()
                 .append("circle")
-                .attr("r", d => parseInt(d["Number of speakers"])/1000)
+                .attr("r", d => parseInt(d["NumberOfSpeakers"])/1000)
                 .attr("d", d => {
                     let containerFeature = statesGeoJSON.features.filter(feature => d3.geoContains(feature, [locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]))[0];
                     d["containerFeature"] = containerFeature;
                     return d;
                 })
-                .on("click", (event,d) => zoomClick(event, d["containerFeature"]))
+                .on("click", (event,d) => zoomClick(event, d["containerFeature"])) 
                 .on("mouseover", tooltip.show)
                 .on("mouseout", tooltip.hide)
                 .attr("transform", function(d) {
