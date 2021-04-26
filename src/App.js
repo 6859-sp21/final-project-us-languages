@@ -5,10 +5,7 @@ import axios from 'axios';
 
 import Map from './components/Map.js';
 import Navbar from './components/Navbar';
-
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import { makeStyles } from '@material-ui/core/styles';
+import LanguageSelect from './components/LanguageSelect';
 
 const theme = createMuiTheme({
   palette: {
@@ -21,16 +18,6 @@ const theme = createMuiTheme({
   }
 });
 
-const useStyles = makeStyles({
-  option: {
-    fontSize: 15,
-    '& > span': {
-      marginRight: 10,
-      fontSize: 18,
-    },
-  },
-});
-
 function App() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [statesData, setStatesData] = useState({})
@@ -38,8 +25,6 @@ function App() {
   const [languagesData, setLanguagesData] = useState({})
   const [allLanguages, setAllLanguages] = useState([])
   const [selectedLanguage, setSelectedLanguage] = useState("")
-
-  const classes = useStyles();
 
   useEffect(() => {
     axios
@@ -58,8 +43,7 @@ function App() {
       });
   }, [])
 
-  function handleChange(event) {
-    console.log(event.target.innerText);
+  function handleLanguageChange(event) {
     setSelectedLanguage(event.target.innerText);
   };
 
@@ -68,33 +52,7 @@ function App() {
       <MuiThemeProvider theme={theme} >
           <div className="background">
             <Navbar />
-            <div style={{ display: "flex", justifyContent: "center"}}>
-              <Autocomplete
-                id="language-select"
-                style={{ width: 300, marginTop: 10}}
-                options={allLanguages}
-                classes={{option: classes.option}}
-                autoHighlight
-                getOptionLabel={(option) => option}
-                onChange={handleChange}
-                renderOption={(option) => (
-                  <React.Fragment>
-                    {option}
-                  </React.Fragment>
-                )}
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    label="Choose a Language"
-                    variant="outlined"
-                    inputProps={{
-                      ...params.inputProps,
-                      autoComplete: 'new-password', // disable autocomplete and autofill
-                    }}
-                  />
-                )}
-              />
-            </div>
+            <LanguageSelect allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
             { isLoaded ? 
                 <Map size={1200} statesData={statesData} locationsData={locationsData} languagesData={languagesData} selectedLanguage={selectedLanguage}/>
                 : null
