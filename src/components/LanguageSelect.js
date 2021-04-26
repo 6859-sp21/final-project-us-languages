@@ -24,9 +24,9 @@ export default function LanguageSelect({allLanguages, handleLanguageChange}) {
         style={{ width: 300, marginTop: 10}}
         options={allLanguages}
         classes={{option: classes.option}}
-        
+        blurOnSelect
         getOptionLabel={(option) => option}
-        onChange={handleLanguageChange}
+        onChange={(event, d) => handleLanguageChange(d)}
         renderOption={(option) => (
           <React.Fragment>
             {option}

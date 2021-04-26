@@ -43,8 +43,8 @@ function App() {
       });
   }, [])
 
-  function handleLanguageChange(event) {
-    setSelectedLanguage(event.target.innerText);
+  function handleLanguageChange(newLanguage) {
+    setSelectedLanguage(newLanguage);
   };
 
   return (
