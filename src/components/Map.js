@@ -12,37 +12,16 @@ import tip from "d3-tip";
  * @param {Integer} size parameter used for width and height
  * @returns 
  */
-export default function Map({statesData, locationsData, languagesData, size}) {
-    const selectedLanguage = "German";
+export default function Map({statesData, locationsData, languagesData, size, selectedLanguage}) {
     const width = size, height = size/2;
     const svgRef = useRef();
     const wrapperRef = useRef();
-    const [selectedLocation, setSelectedLocation] = useState(null)
-    // const [isRotating, setIsRotating] = useState(true)
-    const [open, setOpen] = useState(false);
 
-    // const sensitivity = 75;
-    // function stopRotate() {
-    //     setIsRotating(false)
-    //     // isRotating.stop();
-    // }
-    // function resumeRotate() {
-    //     setIsRotating(true)
-    //     // isRotating.restart();
-    // }
-    const openModal = (e, d) => {
-        setOpen(true);
-        setSelectedLocation(d.Location);
-        // const selectedISO = d.properties.ISO_A3;
-        // const selectedSubmission = submissions[selectedISO] || [];
-        // setSubmissionData(selectedSubmission);
-    }
-    const closeModal = () => {
-        setOpen(false);
-    }
-
-    useEffect(() => {
+    useEffect( () => {
         const svg = d3.select(svgRef.current);
+        svg.selectAll("g").remove();
+        svg.selectAll("rect").remove();
+
         let active = d3.select(null);
 
         const statesGeoJSON = topojson.feature(statesData, statesData.objects.states);
@@ -68,28 +47,25 @@ export default function Map({statesData, locationsData, languagesData, size}) {
             .attr("d", path)
             .attr("class", "feature")
             .on("click", zoomClick);
-
-        // g.append("path")
-        //     .datum(topojson.mesh(statesData, statesData.objects.states, function(a, b) { return a !== b; }))
-        //     .attr("class", "mesh")
-        //     .attr("d", path);
-
-        const filteredLocations = languagesData.filter(entry => {
-            // if (entry.Language === selectedLanguage && locationsData[entry.Location] === undefined) {
-            //     console.log("Improper location in languages dataset: " + entry.Location);
-            // }
-            return entry.Language === selectedLanguage && locationsData[entry.Location];
-        });
-
+        
         const tooltip = tip()
             .attr('class', 'd3-tip')
             .offset([-5, 0])
             .html(function(event, d) {
                 return d.Location + "</br>" + d["Number of speakers"];
-        })
+            })
+        
+        const filteredLocations = languagesData.filter(entry => {
+            // if (entry.Language === selectedLanguage && locationsData[entry.Location] === undefined) {
+            //     console.log("Improper location in languages dataset: " + entry.Location);
+            // }
+            return entry.Language === selectedLanguage && locationsData[entry.Location];
+        }).sort((a,b) => {
+            return b["Number of speakers"] - a["Number of speakers"];
+        });
 
         svg.call(tooltip);
-        
+            
         g.append("g")
             .selectAll("g")
             .data(filteredLocations)
@@ -99,11 +75,10 @@ export default function Map({statesData, locationsData, languagesData, size}) {
                 .attr("d", d => d)
                 .on("mouseover", tooltip.show)
                 .on("mouseout", tooltip.hide)
-                .on("click", openModal)
                 .attr("transform", function(d) {
                     return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
                 });
-        
+
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function zoomClick(event, d) {
             if (active.node() === this) return reset();
@@ -119,12 +94,12 @@ export default function Map({statesData, locationsData, languagesData, size}) {
                 translate = [width / 2 - scale * x, height / 2 - scale * y];
             
             g.transition()
+                .ease(d3.easePoly)
                 .duration(750)
                 .style("stroke-width", 1.5 / scale + "px")
                 .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
-
-            }
-        
+        }
+            
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function reset() {
             active.classed("active", false);
@@ -135,7 +110,6 @@ export default function Map({statesData, locationsData, languagesData, size}) {
                 .style("stroke-width", "1.5px")
                 .attr("transform", "");
         }
-
 
         // // Add tooltip for name of each country
         // const tooltip = tip()
@@ -222,16 +196,13 @@ export default function Map({statesData, locationsData, languagesData, size}) {
         // // const rotateTimer = d3.timer(rotateFunction,200)
     });
 
-
     return (
         <div id="globe" ref={wrapperRef} >
             <svg
-                // onMouseEnter={stopRotate} 
-                // onMouseLeave={resumeRotate} 
                 width={width} 
                 height={height} 
                 ref={svgRef}>
-                </svg>
+            </svg>
         </div>
     )
 }

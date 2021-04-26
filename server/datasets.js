@@ -13,6 +13,7 @@ const countriesData = fs.readFileSync(countriesFiles);
 const statesData = fs.readFileSync(statesFile);
 const locationsData = [];
 const languagesData = [];
+let allLanguagesData = [];
 const formattedLocationsData = {};
 
 fs.createReadStream(locationsFile)
@@ -39,6 +40,7 @@ fs.createReadStream(languagesFile)
     languagesData.push(row)
   })
   .on('end', () => {
+    allLanguagesData = Array.from(new Set(languagesData.map(entry => entry.Language)));
     console.log('Languages CSV file successfully processed');
 });
 
@@ -78,6 +80,15 @@ router.get('/locations', async(req, res) => {
  */ 
  router.get('/languages', async(req, res) => { 
     res.send({langData: languagesData});
+ })
+
+  /**
+ * GET /api/datasets/allLanguages
+ * 
+ * Sends parsed csv data of all languages in the US
+ */ 
+   router.get('/allLanguages', async(req, res) => { 
+    res.send({allLanguagesData: allLanguagesData});
  })
 
  module.exports = router;
