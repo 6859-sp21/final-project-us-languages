@@ -21,16 +21,19 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [statesData, setStatesData] = useState({})
   const [locationsData, setLocationsData] = useState({})
+  const [languagesData, setLanguagesData] = useState({})
 
   useEffect(() => {
     axios
       .all([
         axios.get('/api/datasets/states'),
-        axios.get('/api/datasets/locations')
+        axios.get('/api/datasets/locations'),
+        axios.get('/api/datasets/languages'),
       ])
       .then(res => {
         setStatesData(res[0].data.statesData);
         setLocationsData(res[1].data.locationsData);
+        setLanguagesData(res[2].data.langData);
         setIsLoaded(true);
       });
   }, [])
@@ -41,7 +44,7 @@ function App() {
           <div className="background">
             <Navbar />
             { isLoaded ? 
-                <Map size={1200} statesData={statesData} locationsData={locationsData}/>
+                <Map size={1200} statesData={statesData} locationsData={locationsData} languagesData={languagesData}/>
                 : null
             }
           </div>

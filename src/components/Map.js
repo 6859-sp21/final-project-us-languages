@@ -12,7 +12,8 @@ import tip from "d3-tip";
  * @param {Integer} size parameter used for width and height
  * @returns 
  */
-export default function Map({statesData, locationsData, size}) {
+export default function Map({statesData, locationsData, languagesData, size}) {
+    const selectedLanguage = "German";
     const width = size, height = size/2;
     const svgRef = useRef();
     const wrapperRef = useRef();
@@ -42,6 +43,7 @@ export default function Map({statesData, locationsData, size}) {
 
     useEffect(() => {
         const svg = d3.select(svgRef.current);
+        let active = d3.select(null);
 
         const statesGeoJSON = topojson.feature(statesData, statesData.objects.states);
 
@@ -55,6 +57,7 @@ export default function Map({statesData, locationsData, size}) {
             .attr("class", "background")
             .attr("width", size)
             .attr("height", size)
+            .on("click", reset);
 
         const g = svg.append("g")
             .style("stroke-width", "1.5px");
@@ -63,35 +66,75 @@ export default function Map({statesData, locationsData, size}) {
             .data(statesGeoJSON.features)
             .enter().append("path")
             .attr("d", path)
-            .attr("class", "feature");
+            .attr("class", "feature")
+            .on("click", zoomClick);
 
-        g.append("path")
-            .datum(topojson.mesh(statesData, statesData.objects.states, function(a, b) { return a !== b; }))
-            .attr("class", "mesh")
-            .attr("d", path);
+        // g.append("path")
+        //     .datum(topojson.mesh(statesData, statesData.objects.states, function(a, b) { return a !== b; }))
+        //     .attr("class", "mesh")
+        //     .attr("d", path);
+
+        const filteredLocations = languagesData.filter(entry => {
+            // if (entry.Language === selectedLanguage && locationsData[entry.Location] === undefined) {
+            //     console.log("Improper location in languages dataset: " + entry.Location);
+            // }
+            return entry.Language === selectedLanguage && locationsData[entry.Location];
+        });
 
         const tooltip = tip()
             .attr('class', 'd3-tip')
             .offset([-5, 0])
             .html(function(event, d) {
-                return d.Location;
+                return d.Location + "</br>" + d["Number of speakers"];
         })
 
         svg.call(tooltip);
         
-        svg.append("g")
+        g.append("g")
             .selectAll("g")
-            .data(locationsData)
+            .data(filteredLocations)
             .enter()
                 .append("circle")
-                .attr("r", 20)
+                .attr("r", d => parseInt(d["Number of speakers"])/1000)
                 .attr("d", d => d)
                 .on("mouseover", tooltip.show)
                 .on("mouseout", tooltip.hide)
                 .on("click", openModal)
                 .attr("transform", function(d) {
-                    return "translate(" + projection([d.Longitude, d.Latitude]) + ")"; 
+                    return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
                 });
+        
+        // Adapted from https://bl.ocks.org/mbostock/4699541
+        function zoomClick(event, d) {
+            if (active.node() === this) return reset();
+            active.classed("active", false);
+            active = d3.select(this).classed("active", true);
+            
+            var bounds = path.bounds(d),
+                dx = bounds[1][0] - bounds[0][0],
+                dy = bounds[1][1] - bounds[0][1],
+                x = (bounds[0][0] + bounds[1][0]) / 2,
+                y = (bounds[0][1] + bounds[1][1]) / 2,
+                scale = .9 / Math.max(dx / width, dy / height),
+                translate = [width / 2 - scale * x, height / 2 - scale * y];
+            
+            g.transition()
+                .duration(750)
+                .style("stroke-width", 1.5 / scale + "px")
+                .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
+
+            }
+        
+        // Adapted from https://bl.ocks.org/mbostock/4699541
+        function reset() {
+            active.classed("active", false);
+            active = d3.select(null);
+            
+            g.transition()
+                .duration(750)
+                .style("stroke-width", "1.5px")
+                .attr("transform", "");
+        }
 
 
         // // Add tooltip for name of each country

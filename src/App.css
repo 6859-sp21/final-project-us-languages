@@ -159,20 +159,24 @@ body {
 .feature {
   fill: #ccc;
   cursor: pointer;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .feature.active {
   fill: orange;
 }
 
-.mesh {
-  fill: none;
+/* .mesh {
+  fill: transparent;
   stroke: #fff;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
+} */
 
 circle {
   fill: steelblue;
   stroke: #fff;
+  opacity: .75;
 }

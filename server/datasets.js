@@ -13,6 +13,7 @@ const countriesData = fs.readFileSync(countriesFiles);
 const statesData = fs.readFileSync(statesFile);
 const locationsData = [];
 const languagesData = [];
+const formattedLocationsData = {};
 
 fs.createReadStream(locationsFile)
   .pipe(csv({separator: '\t'}))
@@ -20,6 +21,15 @@ fs.createReadStream(locationsFile)
     locationsData.push(row)
   })
   .on('end', () => {
+    locationsData
+      .forEach(entry => {
+        formattedLocationsData[entry.Location] = {
+          "coordinates": {
+            "latitude": entry.Latitude,
+            "longitude": entry.Longitude,
+          }
+        };
+      });
     console.log('Locations CSV file successfully processed');
 });
 
@@ -42,6 +52,11 @@ router.get('/countries', async(req, res) => {
    res.send({mapData: countries});
 })
 
+/**
+ * GET /api/datasets/states
+ * 
+ * Sends parsed topojson data of states
+ */ 
 router.get('/states', async(req, res) => { 
    const states = JSON.parse(statesData);
    res.send({statesData: states});
@@ -53,7 +68,7 @@ router.get('/states', async(req, res) => {
  * Sends parsed csv objects of US locations and their coordinates
  */ 
 router.get('/locations', async(req, res) => { 
-    res.send({locationsData: locationsData});
+    res.send({locationsData: formattedLocationsData});
  })
 
  /**
