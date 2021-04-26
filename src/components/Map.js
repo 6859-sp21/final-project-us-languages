@@ -23,8 +23,8 @@ export default function Map({statesData, locationsData, languagesData, size, sel
 
     useEffect( () => {
         const svg = d3.select(svgRef.current);
-        svg.selectAll("g").remove();
-        svg.selectAll("rect").remove();
+        // svg.selectAll("g").remove();
+        // svg.selectAll("rect").remove();
 
         // let active = d3.select(null);
         let zoomedBounds = [];
@@ -37,21 +37,28 @@ export default function Map({statesData, locationsData, languagesData, size, sel
         const path = d3.geoPath()
             .projection(projection);
 
-        svg.append("rect")
-            .attr("class", "background")
-            .attr("width", size)
-            .attr("height", size)
-            .on("click", reset);
+        if (svg.selectAll("rect").size() === 0) {
+            svg.append("rect")
+                .attr("class", "background")
+                .attr("width", size)
+                .attr("height", size)
+                .on("click", reset);
+        }
+        
+        let g = d3.select(null);
+        if (svg.selectAll("g").size() === 0) {
+            g = svg.append("g")
+                .style("stroke-width", "1.5px");
 
-        const g = svg.append("g")
-            .style("stroke-width", "1.5px");
-
-        g.selectAll("path")
-            .data(statesGeoJSON.features)
-            .enter().append("path")
-            .attr("d", path)
-            .attr("class", "feature")
-            .on("click", zoomClick);
+            g.selectAll("path")
+                .data(statesGeoJSON.features)
+                .enter().append("path")
+                .attr("d", path)
+                .attr("class", "feature")
+                .on("click", zoomClick);
+        } else {
+            g = svg.select("g");
+        }
         
         const tooltip = tip()
             .attr('class', 'd3-tip')
@@ -61,33 +68,39 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             })
         
         const filteredLocations = languagesData.filter(entry => {
-            // if (entry.Language === selectedLanguage && locationsData[entry.Location] === undefined) {
-            //     console.log("Improper location in languages dataset: " + entry.Location);
-            // }
             return entry.Language === selectedLanguage && locationsData[entry.Location];
         }).sort((a,b) => {
             return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
         });
 
-        svg.call(tooltip);
-            
-        g.append("g")
-            .selectAll("g")
-            .data(filteredLocations)
-            .enter()
-                .append("circle")
-                .attr("r", d => parseInt(d["NumberOfSpeakers"])/1000)
-                .attr("d", d => {
-                    let containerFeature = statesGeoJSON.features.filter(feature => d3.geoContains(feature, [locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]))[0];
-                    d["containerFeature"] = containerFeature;
-                    return d;
-                })
-                .on("click", (event,d) => zoomClick(event, d)) 
-                .on("mouseover", tooltip.show)
-                .on("mouseout", tooltip.hide)
-                .attr("transform", function(d) {
-                    return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
-                });
+        let prevCircles = g.selectAll("circle");
+
+        prevCircles.transition().duration(400).attr("r", 0).style("stroke-width", 0).remove().end().then( () => addNewCircles());
+        
+        function addNewCircles() {
+            svg.call(tooltip);
+
+            let circles = g
+                .selectAll("circle")
+                .data(filteredLocations)
+                .enter()
+                    .append("circle")
+                    .attr("r", 0)
+                    .style("stroke-width", 0)
+                    .attr("d", d => {
+                        let containerFeature = statesGeoJSON.features.filter(feature => d3.geoContains(feature, [locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]))[0];
+                        d["containerFeature"] = containerFeature;
+                        return d;
+                    })
+                    .on("click", (event,d) => zoomClick(event, d["containerFeature"]))
+                    .on("mouseover", tooltip.show)
+                    .on("mouseout", tooltip.hide)
+                    .attr("transform", function(d) {
+                        return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
+                    });
+                    
+            circles.transition().duration(400).attr("r", d => parseInt(d["NumberOfSpeakers"])/1000).style("stroke-width", 1.5);
+        }
 
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function zoomClick(event, d) {
@@ -125,38 +138,6 @@ export default function Map({statesData, locationsData, languagesData, size, sel
                 .style("stroke-width", "1.5px")
                 .attr("transform", "");
         }
-
-        // // Add tooltip for name of each country
-        // const tooltip = tip()
-        //     .attr('class', 'd3-tip')
-        //     .offset([-5, 0])
-        //     .html(function(event, d) {
-        //         return d.properties.NAME || d.properties.FORMAL_EN
-        // })
-
-        // svg.call(tooltip);
-        // svg
-        //     .selectAll('circle')
-        //     .data(locationsData)
-        //     .join("path")
-        //     .attr("class", "country")
-        //     .attr("d", feature => path(feature))
-        //     .on("mouseover", tooltip.show)
-        //     .on("mouseout", tooltip.hide)
-        //     .on("click", openModal)
-            
-        
-        // // const circles = svg
-        // //     .selectAll("locations")
-        // //     .data([{long: -75, lat: 43},{long: -78, lat: 41},{long: -70, lat: 53}])
-        // //     .join("path") // has to be a path because circles don't have edge clipping
-        // //     .attr("class", "locations")
-        // //     .attr("trans", geo => path([geo.long, geo.lat]))
-        // //     .attr("fill", "pink")
-        // //     .attr("point-events", "none")
-        // //     .attr("r", 40)
-
-        // // repeat();
 
         // //blinking circles from https://bl.ocks.org/Tak113/4a8caf75e1d3aa13132c8ad9a662a49b
         // // function repeat() {
