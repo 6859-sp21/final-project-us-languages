@@ -41,8 +41,8 @@ function App() {
         setAllLanguages(res[3].data.allLanguagesData);
         setIsLoaded(true);
       });
-  }, [])
-
+    }, [])
+    
   function handleLanguageChange(newLanguage) {
     setSelectedLanguage(newLanguage);
   };

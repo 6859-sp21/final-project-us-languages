@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import * as d3 from "d3";
-import * as topojson from "topojson";
+import * as topojson from "topojson-client";
 import '../App.css';
 import tip from "d3-tip";
 
@@ -60,16 +60,13 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             .attr('class', 'd3-tip')
             .offset([-5, 0])
             .html(function(event, d) {
-                return d.Location + "</br>" + d["Number of speakers"];
+                return d.Location + "</br>" + d["NumberOfSpeakers"];
             })
         
         const filteredLocations = languagesData.filter(entry => {
-            // if (entry.Language === selectedLanguage && locationsData[entry.Location] === undefined) {
-            //     console.log("Improper location in languages dataset: " + entry.Location);
-            // }
             return entry.Language === selectedLanguage && locationsData[entry.Location];
         }).sort((a,b) => {
-            return b["Number of speakers"] - a["Number of speakers"];
+            return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
         });
 
         let prevCircles = g.selectAll("circle");
@@ -98,7 +95,7 @@ export default function Map({statesData, locationsData, languagesData, size, sel
                         return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
                     });
                     
-            circles.transition().duration(400).attr("r", d => parseInt(d["Number of speakers"])/1000).style("stroke-width", 1.5);
+            circles.transition().duration(400).attr("r", d => parseInt(d["NumberOfSpeakers"])/1000).style("stroke-width", 1.5);
         }
 
         // Adapted from https://bl.ocks.org/mbostock/4699541
