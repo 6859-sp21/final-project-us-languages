@@ -164,7 +164,7 @@ body {
   stroke-linejoin: round;
 }
 
-.feature.active {
+.feature:hover {
   fill: orange;
 }
 

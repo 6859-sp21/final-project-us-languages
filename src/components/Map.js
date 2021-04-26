@@ -22,7 +22,8 @@ export default function Map({statesData, locationsData, languagesData, size, sel
         svg.selectAll("g").remove();
         svg.selectAll("rect").remove();
 
-        let active = d3.select(null);
+        // let active = d3.select(null);
+        let zoomedBounds = [];
 
         const statesGeoJSON = topojson.feature(statesData, statesData.objects.states);
 
@@ -72,7 +73,12 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             .enter()
                 .append("circle")
                 .attr("r", d => parseInt(d["Number of speakers"])/1000)
-                .attr("d", d => d)
+                .attr("d", d => {
+                    let containerFeature = statesGeoJSON.features.filter(feature => d3.geoContains(feature, [locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]))[0];
+                    d["containerFeature"] = containerFeature;
+                    return d;
+                })
+                .on("click", (event,d) => zoomClick(event, d["containerFeature"]))
                 .on("mouseover", tooltip.show)
                 .on("mouseout", tooltip.hide)
                 .attr("transform", function(d) {
@@ -81,18 +87,20 @@ export default function Map({statesData, locationsData, languagesData, size, sel
 
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function zoomClick(event, d) {
-            if (active.node() === this) return reset();
-            active.classed("active", false);
-            active = d3.select(this).classed("active", true);
-            
-            var bounds = path.bounds(d),
-                dx = bounds[1][0] - bounds[0][0],
+            // if (active.node() === this) return reset();
+            // active.classed("active", false);
+            // active = d3.select(this).classed("active", true);
+            // console.log(this);
+            let bounds = path.bounds(d);
+            if (JSON.stringify(zoomedBounds) === JSON.stringify(bounds)) return reset();
+            zoomedBounds = bounds;
+            let dx = bounds[1][0] - bounds[0][0],
                 dy = bounds[1][1] - bounds[0][1],
                 x = (bounds[0][0] + bounds[1][0]) / 2,
                 y = (bounds[0][1] + bounds[1][1]) / 2,
                 scale = .9 / Math.max(dx / width, dy / height),
                 translate = [width / 2 - scale * x, height / 2 - scale * y];
-            
+
             g.transition()
                 .ease(d3.easePoly)
                 .duration(750)
@@ -102,9 +110,9 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function reset() {
-            active.classed("active", false);
-            active = d3.select(null);
-            
+            // active.classed("active", false);
+            // active = d3.select(null);
+            zoomedBounds = [];
             g.transition()
                 .duration(750)
                 .style("stroke-width", "1.5px")
