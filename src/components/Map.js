@@ -17,9 +17,7 @@ export default function Map({statesData, locationsData, languagesData, size, sel
     const svgRef = useRef();
     const wrapperRef = useRef();
 
-    const handleClickLocation = (data) => {
-        handleLocationClick(data);
-    }
+
 
     useEffect( () => {
         const svg = d3.select(svgRef.current);
@@ -92,7 +90,7 @@ export default function Map({statesData, locationsData, languagesData, size, sel
                         d["containerFeature"] = containerFeature;
                         return d;
                     })
-                    .on("click", (event,d) => zoomClick(event, d["containerFeature"]))
+                    .on("click", (event,d) => handleClickLocation(event, d))
                     .on("mouseover", tooltip.show)
                     .on("mouseout", tooltip.hide)
                     .attr("transform", function(d) {
@@ -102,14 +100,19 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             circles.transition().duration(400).attr("r", d => parseInt(d["NumberOfSpeakers"])/1000).style("stroke-width", 1.5);
         }
 
+        const handleClickLocation = (event, data) => {
+            handleLocationClick(data);
+            zoomClick(event, data['containerFeature'])
+        }
+
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function zoomClick(event, d) {
             // if (active.node() === this) return reset();
             // active.classed("active", false);
             // active = d3.select(this).classed("active", true);
             // console.log(this);
-            const containerFeature = d['containerFeature']
-            let bounds = path.bounds(containerFeature);
+            // const containerFeature = d['containerFeature']
+            let bounds = path.bounds(d);
             if (JSON.stringify(zoomedBounds) === JSON.stringify(bounds)) return reset();
             zoomedBounds = bounds;
             let dx = bounds[1][0] - bounds[0][0],
@@ -124,8 +127,8 @@ export default function Map({statesData, locationsData, languagesData, size, sel
                 .duration(750)
                 .style("stroke-width", 1.5 / scale + "px")
                 .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
-            tooltip.hide()
-            handleClickLocation(d); 
+            // tooltip.hide()
+            
         }
             
         // Adapted from https://bl.ocks.org/mbostock/4699541
