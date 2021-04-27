@@ -75,6 +75,7 @@ function App() {
                 <Map 
                   size={1200} 
                   handleLocationClick={handleLocationClick}
+                  allLanguages={allLanguages}
                   statesData={statesData} 
                   locationsData={locationsData} 
                   languagesData={languagesData} 

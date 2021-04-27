@@ -1,41 +1,94 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import '../App.css';
-import tip from "d3-tip";
 
-/**
- * Source inspiration from https://dev.to/muratkemaldar/interactive-world-map-with-d3-geo-498
+/** 
+ * Map of the US that displays the communities where a specified language is present.
  * 
  * @param {Object} statesData TopoJSON object of state borders
  * @param {Array} locationsData array of objects with location and coordinate info
- * @param {Integer} size parameter used for width and height
+ * @param {Array} allLanguages array of all languages in the dataset
+ * @param {Integer} size parameter used for width=size and height=size/2
+ * @param {String} selectedLanguage the language for which to display data on the map
+ * @param {Function} handleLocationClick callback to pass the clicked location to parent
  * @returns 
  */
-export default function Map({statesData, locationsData, languagesData, size, selectedLanguage, handleLocationClick}) {
+export default function Map({statesData, locationsData, allLanguages, languagesData, size, selectedLanguage, handleLocationClick}) {
     const width = size, height = size/2;
     const svgRef = useRef();
     const wrapperRef = useRef();
 
+    function showHistogram(event, d) {
+        d3.select("#bar-tooltip").selectAll("svg").remove();
 
+        const height = 200, width = 300;
+        const margin = ({top: 10, right: 10, bottom: 20, left: 20});
+
+        const selectedLocLangData = languagesData.filter(entry => entry.Location === d['Location'] && !isNaN(parseInt(entry['NumberOfSpeakers'])));
+        const topTenLangData = selectedLocLangData
+            .sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']))
+            .slice(0, 10);
+
+        if (!topTenLangData.map(entry => entry['Language']).includes(d['Language'])) {
+            topTenLangData[9] = d;
+        }
+        
+        const tenLanguages = topTenLangData.map(entry => entry['Language']);
+        const colorScale = d3.scaleOrdinal(d3.schemeTableau10).domain(allLanguages);
+
+        const xScale = d3.scaleLinear()
+            .domain([0, parseInt(topTenLangData[0]["NumberOfSpeakers"])])
+            .range([0, width]);
+        const xMargin = xScale.copy().range([margin.left, width - margin.right]);
+
+        const yScale = d3.scaleBand()
+            .domain(tenLanguages)
+            .range([height, 0]);
+        const yMargin = yScale.copy().range([height - margin.bottom, margin.top]);
+
+        const svg = d3.create('svg')
+            .attr('width', width)
+            .attr('height', height);
+
+        svg.selectAll('rect')
+            .data(topTenLangData)
+            .join('rect')
+                .attr('x', 0)
+                .attr('y', 0)
+                .attr('d', d => d)
+                .attr('width', 0)
+                .attr('height', yMargin.bandwidth())
+                .style('fill', (d,i) => colorScale(d["Language"]))
+                .style('stroke', 'white')
+                .attr('transform', (d,i) => `translate(${margin.left}, ${yMargin(d["Language"])})`);
+
+        svg.selectAll('rect')
+            .transition()
+            .duration(500)
+            .attr('width', (d) => xMargin(parseInt(d["NumberOfSpeakers"])) - xMargin(0))
+
+        d3.select("#bar-tooltip")
+            .style("left", (event.pageX) + "px")
+            .style("top", (event.pageY - 28) + "px")
+            .style("opacity", 1);
+
+        document.getElementById("bar-tooltip").appendChild(svg.node());
+    }
+
+    function hideHistogram(event, d) {
+        d3.select("#bar-tooltip").style("opacity", 0);
+    }
 
     useEffect( () => {
         const svg = d3.select(svgRef.current);
-        // svg.selectAll("g").remove();
-        // svg.selectAll("rect").remove();
+        const statesGeoJSON = topojson.feature(statesData, statesData.objects.states);
+        const projection = d3.geoAlbersUsa().fitSize([width, height], statesGeoJSON);
+        const path = d3.geoPath().projection(projection);
 
-        // let active = d3.select(null);
         let zoomedBounds = [];
 
-        const statesGeoJSON = topojson.feature(statesData, statesData.objects.states);
-
-        const projection = d3.geoAlbersUsa()
-            .fitSize([width, height], statesGeoJSON);
-
-        const path = d3.geoPath()
-            .projection(projection);
-
-        if (svg.selectAll("rect").size() === 0) {
+        if (svg.selectAll("rect").size() === 0) { // Check if the background is already drawn
             svg.append("rect")
                 .attr("class", "background")
                 .attr("width", size)
@@ -44,7 +97,7 @@ export default function Map({statesData, locationsData, languagesData, size, sel
         }
         
         let g = d3.select(null);
-        if (svg.selectAll("g").size() === 0) {
+        if (svg.selectAll("g").size() === 0) { // Check if the states are already drawn
             g = svg.append("g")
                 .style("stroke-width", "1.5px");
 
@@ -58,27 +111,31 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             g = svg.select("g");
         }
         
-        const tooltip = tip()
-            .attr('class', 'd3-tip')
-            .offset([-5, 0])
-            .html(function(event, d) {
-                return d.Location + "</br>" + d["NumberOfSpeakers"];
-            })
-        
         const filteredLocations = languagesData.filter(entry => {
             return entry.Language === selectedLanguage && locationsData[entry.Location];
         }).sort((a,b) => {
             return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
         });
 
+        // Shrink & remove any previous circles, then add the new circles
         let prevCircles = g.selectAll("circle");
-
-        prevCircles.transition().duration(400).attr("r", 0).style("stroke-width", 0).remove().end().then( () => addNewCircles());
+        prevCircles.transition()
+            .duration(400)
+            .attr("r", 0)
+            .style("stroke-width", 0)
+            .remove().end()
+            .then(() => addNewCircles());
         
-        function addNewCircles() {
-            svg.call(tooltip);
+        // Remove any previous tooltip and add a new one
+        d3.selectAll("#bar-tooltip").remove();
+        d3.select(wrapperRef.current)
+            .append("div")
+            .attr("id", "bar-tooltip")
+            .attr("class", "bar-tooltip")
+            .style("opacity", 1);
 
-            let circles = g
+        function addNewCircles() {
+            const circles = g
                 .selectAll("circle")
                 .data(filteredLocations)
                 .enter()
@@ -91,13 +148,16 @@ export default function Map({statesData, locationsData, languagesData, size, sel
                         return d;
                     })
                     .on("click", (event,d) => handleClickLocation(event, d))
-                    .on("mouseover", tooltip.show)
-                    .on("mouseout", tooltip.hide)
+                    .on("mouseover", (event,d) => showHistogram(event, d))
+                    .on("mouseout", (event, d) => hideHistogram(event, d))
                     .attr("transform", function(d) {
                         return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
                     });
                     
-            circles.transition().duration(400).attr("r", d => parseInt(d["NumberOfSpeakers"])/1000).style("stroke-width", 1.5);
+            circles.transition()
+                .duration(400)
+                .attr("r", d => parseInt(d["NumberOfSpeakers"])/1000)
+                .style("stroke-width", 1.5);
         }
 
         const handleClickLocation = (event, data) => {
@@ -112,8 +172,6 @@ export default function Map({statesData, locationsData, languagesData, size, sel
             // if (active.node() === this) return reset();
             // active.classed("active", false);
             // active = d3.select(this).classed("active", true);
-            // console.log(this);
-            // const containerFeature = d['containerFeature']
             let bounds = path.bounds(d);
             if (JSON.stringify(zoomedBounds) === JSON.stringify(bounds)) return reset();
             zoomedBounds = bounds;
@@ -143,59 +201,7 @@ export default function Map({statesData, locationsData, languagesData, size, sel
                 .style("stroke-width", "1.5px")
                 .attr("transform", "");
         }
-
-        // //blinking circles from https://bl.ocks.org/Tak113/4a8caf75e1d3aa13132c8ad9a662a49b
-        // // function repeat() {
-        // //     circles
-        // //         .attr('stroke-width',1)
-        // //         .attr('stroke', 'pink')
-        // //         .attr('opacity', 1)
-        // //         .transition()
-        // //         .duration(2000)
-        // //         .attr('stroke-width', 25)
-        // //         .attr('opacity', 0)
-        // //         .on('end',repeat);
-        // // };
-
-        // // svg.call(d3.drag().on('drag', (event) => {
-        // //     const rotate = projection.rotate()
-        // //     const k = sensitivity / projection.scale()
-        // //     projection.rotate([
-        // //         rotate[0] + event.dx * k,
-        // //     ])
-        // //     path = d3.geoPath().projection(projection)
-        // //     svg.selectAll("path").attr("d", feature => path(feature))
-        // //     rotateTimer.stop()
-        // //     }))
-        //     // .call(d3.zoom().on('zoom', () => {
-        //     // if(d3.event.transform.k > 0.3) {
-        //     //     projection.scale(initialScale * d3.event.transform.k)
-        //     //     path = d3.geoPath().projection(projection)
-        //     //     svg.selectAll("path").attr("d", path)
-        //     //     globe.attr("r", projection.scale())
-        //     // }
-        //     // else {
-        //     //     d3.event.transform.k = 0.3
-        //     // }
-        //     // }))
-
-        //     // Define the div for the tooltip
-        //     // const tooltip = globe
-        //     //     .selectAll(".country").append("div")	
-        //     //     .attr("class", "tooltip")				
-        //     //     .style("opacity", 0);
-
-        // // function rotateFunction() {
-        // //     const rotate = projection.rotate()
-        // //     const k = sensitivity / projection.scale()
-        // //     projection.rotate([
-        // //         rotate[0] + 1 * k/2,
-        // //     ])
-        // //     path = d3.geoPath().projection(projection)
-        // //     svg.selectAll("path").attr("d", feature => path(feature))
-        // //     }
-        // // const rotateTimer = d3.timer(rotateFunction,200)
-    });
+    }, [statesData, locationsData, allLanguages, languagesData, size, selectedLanguage]);
 
     return (
         <div id="globe" ref={wrapperRef} >
