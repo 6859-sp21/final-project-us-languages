@@ -102,7 +102,9 @@ export default function Map({statesData, locationsData, languagesData, size, sel
 
         const handleClickLocation = (event, data) => {
             handleLocationClick(data);
-            zoomClick(event, data['containerFeature'])
+            if (data['containerFeature'] !== undefined) {
+                zoomClick(event, data['containerFeature'])
+            }
         }
 
         // Adapted from https://bl.ocks.org/mbostock/4699541
