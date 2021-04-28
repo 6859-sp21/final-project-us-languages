@@ -1,7 +1,9 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import '../App.css';
+
+import HistogramTooltip from './HistogramTooltip';
 
 /** 
  * Map of the US that displays the communities where a specified language is present.
@@ -22,6 +24,10 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
     const histogramTransitionSpeed = 500;
     const zoomTransitionSpeed = 750;
     const allLanguagesSet = new Set(allLanguages);
+
+    // const [tooltipD, setTooltipD] = useState(undefined);
+    // const [tooltipEvent, setTooltipEvent] = useState(undefined);
+
 
     //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
     function numberWithCommas(x) {
@@ -124,6 +130,35 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         d3.select("#bar-tooltip").style("opacity", 0);
     }
 
+    // function showHistogram2(event, d) {
+    //     setTooltipD(d);
+    //     setTooltipEvent(d);
+    // }
+    
+    // function hideHistogram2(event, d) {
+    //     setTooltipD(undefined);
+    //     setTooltipEvent(undefined);
+    // }
+
+    function genRadius(val) {
+        val = parseInt(val);
+        if (isNaN(val)) {return 0};
+
+        if (val < 100) {
+            return 2;
+        } else if (val < 1000) {
+            return 4;
+        } else if (val < 10000) {
+            return 8;
+        } else if (val < 100000) {
+            return 16;
+        } else if (val < 1000000) {
+            return 32;
+        } else {
+            return 64;
+        }
+    }
+
     useEffect( () => {
         const svg = d3.select(svgRef.current);
         const statesGeoJSON = topojson.feature(statesData, statesData.objects.states);
@@ -175,8 +210,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         d3.select(wrapperRef.current)
             .append("div")
             .attr("id", "bar-tooltip")
-            .attr("class", "bar-tooltip")
-            .style("opacity", 1);
+            .style("opacity", 0);
 
         function addNewCircles() {
             const circles = g
@@ -200,7 +234,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
                     
             circles.transition()
                 .duration(circleTransitionSpeed)
-                .attr("r", d => parseInt(d["NumberOfSpeakers"])/1000)
+                .attr("r", d => genRadius(d["NumberOfSpeakers"]))
                 .style("stroke-width", 1.5);
         }
 
@@ -251,6 +285,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
                 height={height} 
                 ref={svgRef}>
             </svg>
+            {/* <HistogramTooltip allLanguages={allLanguages} languagesData={languagesData} event={tooltipEvent} d={tooltipD} /> */}
         </div>
     )
 }
