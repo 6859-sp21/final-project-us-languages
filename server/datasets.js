@@ -9,13 +9,15 @@ const stripBom = require('strip-bom-stream');
 
 const locationsFile = path.resolve(__dirname, '../datasets/location_coordinates.txt');
 const statesFile = path.resolve(__dirname, '../datasets/us.json');
-const languagesFile = path.resolve(__dirname, '../datasets/languages_total.txt')
+const languagesWithLocFile = path.resolve(__dirname, '../datasets/languages_total.txt')
+const languagesOnlyFile = path.resolve(__dirname, '../datasets/languages_only.txt')
 const countriesFiles = path.resolve(__dirname, '../datasets/ne_110m_admin_0_countries.geo.json');
 
 const countriesData = fs.readFileSync(countriesFiles);
 const statesData = fs.readFileSync(statesFile);
 const locationsData = [];
-const languagesData = [];
+const languagesWithLocData = [];
+const languagesOnlyData = [];
 let allLanguagesData = [];
 const formattedLocationsData = {};
 
@@ -38,14 +40,25 @@ fs.createReadStream(locationsFile)
     console.log('Locations CSV file successfully processed');
 });
 
-fs.createReadStream(languagesFile)
+fs.createReadStream(languagesWithLocFile)
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
   .pipe(csv({separator: '\t'}))
   .on('data', (row) => {
-    languagesData.push(row)
+    languagesWithLocData.push(row)
   })
   .on('end', () => {
-    allLanguagesData = Array.from(new Set(languagesData.map(entry => entry.Language)));
+    allLanguagesData = Array.from(new Set(languagesWithLocData.map(entry => entry.Language)));
+    console.log('Languages CSV file successfully processed');
+});
+
+fs.createReadStream(languagesOnlyFile)
+  .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
+  .pipe(csv({separator: '\t'}))
+  .on('data', (row) => {
+    languagesOnlyData.push(row)
+  })
+  .on('end', () => {
+    allLanguagesData = Array.from(new Set(languagesOnlyData.map(entry => entry.Language)));
     console.log('Languages CSV file successfully processed');
 });
 
@@ -84,7 +97,7 @@ router.get('/locations', async(req, res) => {
  * Sends parsed csv data of languages spoken in the US
  */ 
  router.get('/languages', async(req, res) => { 
-    res.send({langData: languagesData});
+    res.send({langData: languagesWithLocData});
  })
 
   /**
