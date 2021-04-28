@@ -1,15 +1,10 @@
 import React from 'react';
-import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
@@ -23,20 +18,6 @@ const drawerWidth = 350;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-  },
-  appBar: {
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -83,42 +64,48 @@ const useStyles = makeStyles((theme) => ({
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
+    textAlign: 'left',
   }, 
   titleContainer: {
     overflow: 'hidden',
+    width: 280,
+  },
+  container: {
+    margin: '0 20px',
+    fontSize: '1rem',
+    textAlign: 'left', 
+    // padding: '0 10px',
   }
 }));
 
-export default function LeftDrawer({open, selectedLocation, languagesData, handleDrawerClose}) {
+/**
+ * Left drawer that appears when a user clicks on a circle location on the Map
+ * 
+ * @param {Boolean} open whether the drawer should be open or closed
+ * @param {String} selectedLocation metro area circle clicked by the user
+ * @param {Object} sortedLocLanguages contains the list of languages that a metro area has and the index that corresponds to the language selected by user
+ * @param {Function} handleDrawerClose closes the drawer 
+ * @returns 
+ */
+export default function LeftDrawer({open, selectedLocation, sortedLocLanguages, handleDrawerClose}) {
   const classes = useStyles();
   const theme = useTheme();
+  const {sortedLocLangData, selectedLangIndex} = sortedLocLanguages;
+  const metroArea = selectedLocation.split(',')[0];
+  const abbrev = ['st', 'nd', 'rd', 'th']
 
-  console.log('locations dat: ', languagesData);
+  function stringifyNumber(index) {
+    const n = index + 1
+    if (n <= 3) return `${n}${abbrev[index]}`
+    else return `${n}${abbrev[3]}`
+  }
 
+  //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+  function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
   return (
     <div className={classes.root}>
-      <CssBaseline />
-      {/* <AppBar
-        position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
-        })}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap>
-            US Languages
-          </Typography>
-        </Toolbar>
-      </AppBar> */}
       <Drawer
         className={classes.drawer}
         variant="persistent"
@@ -130,21 +117,22 @@ export default function LeftDrawer({open, selectedLocation, languagesData, handl
       >
         <div className={classes.drawerHeader}>
           <div className={classes.titleContainer}>
-            <Typography className={classes.title}>{selectedLocation}</Typography>
+            <Typography className={classes.title}>{selectedLocation.split(',')[0]}</Typography>
           </div>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </div>
         <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        <div className={classes.container}>
+            {sortedLocLangData.length !== 0 ?
+            (<p>
+              <b>{sortedLocLangData[selectedLangIndex].Language}</b> is the <b>{stringifyNumber(selectedLangIndex)}</b> most spoken language in {metroArea} (excluding English). There 
+              are {numberWithCommas(sortedLocLangData[selectedLangIndex].NumberOfSpeakers)} speakers in the area.            
+            </p>)
+            : null
+            }
+        </div>
         <Divider />
         <List>
           {['All mail', 'Trash', 'Spam'].map((text, index) => (

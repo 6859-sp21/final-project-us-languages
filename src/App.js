@@ -27,6 +27,7 @@ function App() {
   const [allLanguages, setAllLanguages] = useState([])
   const [selectedLanguage, setSelectedLanguage] = useState("")
   const [selectedLocation, setSelectedLocation] = useState("")
+  const [sortedLocLanguages, setSortedLocLanguages] = useState({sortedLocLangData: [], selectedLangIndex: 0})
 
   const [open, setOpen] = useState(false);
 
@@ -69,7 +70,13 @@ function App() {
       <MuiThemeProvider theme={theme} >
           <div className="background">
             <Navbar />
-            <LeftDrawer open={open} selectedLocation={selectedLocation} languagesData={languagesData} handleDrawerClose={handleDrawerClose}></LeftDrawer>
+            <LeftDrawer 
+              open={open} 
+              selectedLocation={selectedLocation} 
+              languagesData={languagesData} 
+              handleDrawerClose={handleDrawerClose}
+              sortedLocLanguages={sortedLocLanguages}
+              />
             <LanguageSelect allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
             { isLoaded ? 
                 <Map 
@@ -79,6 +86,7 @@ function App() {
                   statesData={statesData} 
                   locationsData={locationsData} 
                   languagesData={languagesData} 
+                  setSortedLocLanguages={setSortedLocLanguages}
                   selectedLanguage={selectedLanguage}/>
                 : null
             }

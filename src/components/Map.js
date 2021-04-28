@@ -14,7 +14,7 @@ import '../App.css';
  * @param {Function} handleLocationClick callback to pass the clicked location to parent
  * @returns 
  */
-export default function Map({statesData, locationsData, allLanguages, languagesData, size, selectedLanguage, handleLocationClick}) {
+export default function Map({statesData, locationsData, allLanguages, languagesData, size, selectedLanguage, setSortedLocLanguages, handleLocationClick}) {
     const width = size, height = size/2;
     const svgRef = useRef();
     const wrapperRef = useRef();
@@ -22,6 +22,9 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
     const histogramTransitionSpeed = 500;
     const zoomTransitionSpeed = 750;
     const allLanguagesSet = new Set(allLanguages);
+    let sortedLocLangData = [];
+    let selectedLangIndex = 0;
+
 
     //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
     function numberWithCommas(x) {
@@ -35,8 +38,8 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         const margin = ({top: 30, right: 70, bottom: 20, left: 80});
 
         const selectedLocLangData = languagesData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allLanguagesSet.has(entry.Language));
-        const sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
-        const selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
+        sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
+        selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
         const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
         
         const graphedLanguages = dataToGraph.map(entry => entry.Language);
@@ -160,7 +163,6 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         }).sort((a,b) => {
             return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
         });
-        console.log('filtered locs: ', filteredLocations);
 
         // Shrink & remove any previous circles, then add the new circles
         let prevCircles = g.selectAll("circle");
@@ -206,6 +208,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         }
 
         const handleClickLocation = (event, data) => {
+            setSortedLocLanguages({selectedLangIndex, sortedLocLangData});
             handleLocationClick(data);
             if (data['containerFeature'] !== undefined) {
                 zoomClick(event, data['containerFeature'])
