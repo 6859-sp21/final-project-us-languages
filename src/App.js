@@ -69,7 +69,7 @@ function App() {
       <MuiThemeProvider theme={theme} >
           <div className="background">
             <Navbar />
-            <LeftDrawer open={open} selectedLocation={selectedLocation} handleDrawerClose={handleDrawerClose}></LeftDrawer>
+            <LeftDrawer open={open} selectedLocation={selectedLocation} languagesData={languagesData} handleDrawerClose={handleDrawerClose}></LeftDrawer>
             <LanguageSelect allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
             { isLoaded ? 
                 <Map 

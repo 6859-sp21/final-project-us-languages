@@ -116,6 +116,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         }).sort((a,b) => {
             return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
         });
+        console.log('filtered locs: ', filteredLocations);
 
         // Shrink & remove any previous circles, then add the new circles
         let prevCircles = g.selectAll("circle");

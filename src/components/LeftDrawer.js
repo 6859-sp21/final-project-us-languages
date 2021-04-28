@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
   },
   content: {
     flexGrow: 1,
@@ -76,12 +76,24 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  title: {
+    fontWeight: 400,
+    marginLeft: 10,
+    fontSize: 19,
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  }, 
+  titleContainer: {
+    overflow: 'hidden',
+  }
 }));
 
-export default function LeftDrawer({open, selectedLocation, handleDrawerClose}) {
+export default function LeftDrawer({open, selectedLocation, languagesData, handleDrawerClose}) {
   const classes = useStyles();
   const theme = useTheme();
 
+  console.log('locations dat: ', languagesData);
 
   return (
     <div className={classes.root}>
@@ -117,7 +129,9 @@ export default function LeftDrawer({open, selectedLocation, handleDrawerClose}) 
         }}
       >
         <div className={classes.drawerHeader}>
-          <Typography>{selectedLocation}</Typography>
+          <div className={classes.titleContainer}>
+            <Typography className={classes.title}>{selectedLocation}</Typography>
+          </div>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
