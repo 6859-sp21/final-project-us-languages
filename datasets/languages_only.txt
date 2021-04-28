@@ -1,5 +1,4 @@
 Language	NumberOfSpeakers	SpeakEnglishLessThanVeryWell
-Speak only English at home	231122908	(X)
 Spanish	37458470	16344440
 Ladino	130	25
 Pachuco	(D)	(D)

@@ -18,59 +18,103 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
     const width = size, height = size/2;
     const svgRef = useRef();
     const wrapperRef = useRef();
+    const circleTransitionSpeed = 400;
+    const histogramTransitionSpeed = 500;
+    const zoomTransitionSpeed = 750;
+    const allLanguagesSet = new Set(allLanguages);
+
+    //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
     function showHistogram(event, d) {
         d3.select("#bar-tooltip").selectAll("svg").remove();
 
-        const height = 200, width = 300;
-        const margin = ({top: 10, right: 10, bottom: 20, left: 20});
+        const height = 200, width = 400;
+        const margin = ({top: 30, right: 70, bottom: 20, left: 80});
 
-        const selectedLocLangData = languagesData.filter(entry => entry.Location === d['Location'] && !isNaN(parseInt(entry['NumberOfSpeakers'])));
-        const topTenLangData = selectedLocLangData
-            .sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']))
-            .slice(0, 10);
-
-        if (!topTenLangData.map(entry => entry['Language']).includes(d['Language'])) {
-            topTenLangData[9] = d;
-        }
+        const selectedLocLangData = languagesData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allLanguagesSet.has(entry.Language));
+        const sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
+        const selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
+        const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
         
-        const tenLanguages = topTenLangData.map(entry => entry['Language']);
-        const colorScale = d3.scaleOrdinal(d3.schemeTableau10).domain(allLanguages);
+        const graphedLanguages = dataToGraph.map(entry => entry.Language);
+        // const colorScale = d3.scaleOrdinal(d3.schemeTableau10).domain(allLanguages);
+        const colorScale = language => language === d.Language ? "darkred" : "#ccc";
 
         const xScale = d3.scaleLinear()
-            .domain([0, parseInt(topTenLangData[0]["NumberOfSpeakers"])])
+            .domain([0, parseInt(dataToGraph[0].NumberOfSpeakers)])
             .range([0, width]);
         const xMargin = xScale.copy().range([margin.left, width - margin.right]);
 
         const yScale = d3.scaleBand()
-            .domain(tenLanguages)
-            .range([height, 0]);
+            .domain(graphedLanguages)
+            .range([height, 0])
+            .paddingInner(0.25);
         const yMargin = yScale.copy().range([height - margin.bottom, margin.top]);
 
         const svg = d3.create('svg')
             .attr('width', width)
             .attr('height', height);
+        
+        const g = svg.selectAll('g')
+            .data(dataToGraph)
+            .enter() 
+            .append('g')
+                .attr('transform', d => `translate(${margin.left}, ${yMargin(d.Language)})`);
+        
+        g.append('rect')
+            .attr('width', 0)
+            .attr('height', yMargin.bandwidth())
+            .style('fill', d => colorScale(d.Language))
+            .style('padding-bottom', 5)
+            .style('stroke', '#fff');
+        
+        g.append('text')
+            .attr('x', 0)
+            .attr('dx', 4)
+            .attr('dy', '1.25em')
+            .attr('fill', 'white')
+            .style('font-size', 'small')
+            .text(d => numberWithCommas(d.NumberOfSpeakers))
 
-        svg.selectAll('rect')
-            .data(topTenLangData)
-            .join('rect')
-                .attr('x', 0)
-                .attr('y', 0)
-                .attr('d', d => d)
-                .attr('width', 0)
-                .attr('height', yMargin.bandwidth())
-                .style('fill', (d,i) => colorScale(d["Language"]))
-                .style('stroke', 'white')
-                .attr('transform', (d,i) => `translate(${margin.left}, ${yMargin(d["Language"])})`);
+        svg.append('text')
+            .attr('text-anchor', 'middle')
+            .attr('fill', '#fff')
+            .style('font-size', 'medium')
+            .attr('x', width/2)
+            .attr('y', margin.top)
+            .attr('dy', '-0.5em')
+            .text(d.Location);
+        
+        // svg.append('g')
+        //     .attr('transform', `translate(0, ${height - margin.bottom})`)
+        //     .call(d3.axisBottom(xMargin));
+        
+        const axis = svg.append('g')
+            .style('color', "white")
+            .attr('transform', `translate(${margin.left}, 0)`)
+            .call(d3.axisLeft(yMargin).tickSize(0));
 
-        svg.selectAll('rect')
+        axis.select(".domain").remove();
+        axis.selectAll('text')
+            .attr('dx', -2)
+            .style("font-size", 'small');
+
+        g.selectAll('rect')
             .transition()
-            .duration(500)
-            .attr('width', (d) => xMargin(parseInt(d["NumberOfSpeakers"])) - xMargin(0))
+            .duration(histogramTransitionSpeed)
+            .attr('width', (d) => xMargin(parseInt(d.NumberOfSpeakers)) - xMargin(0))
+
+        g.selectAll('text')
+            .transition()
+            .duration(histogramTransitionSpeed)
+            .attr('x', (d) => xMargin(parseInt(d.NumberOfSpeakers)) - xMargin(0))
 
         d3.select("#bar-tooltip")
-            .style("left", (event.pageX) + "px")
-            .style("top", (event.pageY - 28) + "px")
+            .style("left", (event.pageX + 15) + "px")
+            .style("top", (event.pageY - 15) + "px")
             .style("opacity", 1);
 
         document.getElementById("bar-tooltip").appendChild(svg.node());
@@ -121,7 +165,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         // Shrink & remove any previous circles, then add the new circles
         let prevCircles = g.selectAll("circle");
         prevCircles.transition()
-            .duration(400)
+            .duration(circleTransitionSpeed)
             .attr("r", 0)
             .style("stroke-width", 0)
             .remove().end()
@@ -156,7 +200,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
                     });
                     
             circles.transition()
-                .duration(400)
+                .duration(circleTransitionSpeed)
                 .attr("r", d => parseInt(d["NumberOfSpeakers"])/1000)
                 .style("stroke-width", 1.5);
         }
@@ -184,12 +228,9 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
                 translate = [width / 2 - scale * x, height / 2 - scale * y];
 
             g.transition()
-                .ease(d3.easePoly)
-                .duration(750)
+                .duration(zoomTransitionSpeed)
                 .style("stroke-width", 1.5 / scale + "px")
-                .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
-            // tooltip.hide()
-            
+                .attr("transform", "translate(" + translate + ")scale(" + scale + ")");            
         }
             
         // Adapted from https://bl.ocks.org/mbostock/4699541
@@ -198,7 +239,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
             // active = d3.select(null);
             zoomedBounds = [];
             g.transition()
-                .duration(750)
+                .duration(zoomTransitionSpeed)
                 .style("stroke-width", "1.5px")
                 .attr("transform", "");
         }

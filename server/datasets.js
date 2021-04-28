@@ -47,7 +47,6 @@ fs.createReadStream(languagesWithLocFile)
     languagesWithLocData.push(row)
   })
   .on('end', () => {
-    allLanguagesData = Array.from(new Set(languagesWithLocData.map(entry => entry.Language)));
     console.log('Languages CSV file successfully processed');
 });
 
@@ -55,11 +54,11 @@ fs.createReadStream(languagesOnlyFile)
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
   .pipe(csv({separator: '\t'}))
   .on('data', (row) => {
-    languagesOnlyData.push(row)
+    languagesOnlyData.push(row.Language)
   })
   .on('end', () => {
-    allLanguagesData = Array.from(new Set(languagesOnlyData.map(entry => entry.Language)));
-    console.log('Languages CSV file successfully processed');
+    allLanguagesData = languagesOnlyData;
+    console.log('Languages Only CSV file successfully processed');
 });
 
 /**
