@@ -21,6 +21,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
     const circleTransitionSpeed = 400;
     const histogramTransitionSpeed = 500;
     const zoomTransitionSpeed = 750;
+    const allLanguagesSet = new Set(allLanguages);
 
     //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
     function numberWithCommas(x) {
@@ -30,17 +31,17 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
     function showHistogram(event, d) {
         d3.select("#bar-tooltip").selectAll("svg").remove();
 
-        const height = 150, width = 400;
-        const margin = ({top: 20, right: 70, bottom: 20, left: 70});
+        const height = 200, width = 400;
+        const margin = ({top: 30, right: 70, bottom: 20, left: 80});
 
-        const selectedLocLangData = languagesData.filter(entry => entry.Location === d['Location'] && !isNaN(parseInt(entry['NumberOfSpeakers'])));
+        const selectedLocLangData = languagesData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allLanguagesSet.has(entry.Language));
         const sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
         const selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
-        const dataToGraph = sortedLocLangData.slice(selectedLangIndex-2, selectedLangIndex+3);
+        const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
         
         const graphedLanguages = dataToGraph.map(entry => entry.Language);
         // const colorScale = d3.scaleOrdinal(d3.schemeTableau10).domain(allLanguages);
-        const colorScale = language => language === d.Language ? "darkred" : "gray";
+        const colorScale = language => language === d.Language ? "darkred" : "#ccc";
 
         const xScale = d3.scaleLinear()
             .domain([0, parseInt(dataToGraph[0].NumberOfSpeakers)])
@@ -49,8 +50,8 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
 
         const yScale = d3.scaleBand()
             .domain(graphedLanguages)
-            .range([height, 0]);
-            // .paddingInner(0.25);
+            .range([height, 0])
+            .paddingInner(0.25);
         const yMargin = yScale.copy().range([height - margin.bottom, margin.top]);
 
         const svg = d3.create('svg')
@@ -68,24 +69,38 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
             .attr('height', yMargin.bandwidth())
             .style('fill', d => colorScale(d.Language))
             .style('padding-bottom', 5)
-            .style('stroke', 'white');
+            .style('stroke', '#fff');
         
         g.append('text')
             .attr('x', 0)
-            .attr('dx', 2)
+            .attr('dx', 4)
             .attr('dy', '1.25em')
             .attr('fill', 'white')
             .style('font-size', 'small')
             .text(d => numberWithCommas(d.NumberOfSpeakers))
+
+        svg.append('text')
+            .attr('text-anchor', 'middle')
+            .attr('fill', '#fff')
+            .style('font-size', 'medium')
+            .attr('x', width/2)
+            .attr('y', margin.top)
+            .attr('dy', '-0.5em')
+            .text(d.Location);
         
         // svg.append('g')
         //     .attr('transform', `translate(0, ${height - margin.bottom})`)
         //     .call(d3.axisBottom(xMargin));
         
-        svg.append('g')
+        const axis = svg.append('g')
             .style('color', "white")
             .attr('transform', `translate(${margin.left}, 0)`)
-            .call(d3.axisLeft(yMargin).tickSize(0))
+            .call(d3.axisLeft(yMargin).tickSize(0));
+
+        axis.select(".domain").remove();
+        axis.selectAll('text')
+            .attr('dx', -2)
+            .style("font-size", 'small');
 
         g.selectAll('rect')
             .transition()
