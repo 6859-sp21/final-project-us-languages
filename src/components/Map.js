@@ -3,8 +3,6 @@ import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import '../App.css';
 
-import HistogramTooltip from './HistogramTooltip';
-
 /** 
  * Map of the US that displays the communities where a specified language is present.
  * 
@@ -23,14 +21,11 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
     const circleTransitionSpeed = 400;
     const histogramTransitionSpeed = 500;
     const zoomTransitionSpeed = 750;
+    const defaultCircleColor = "steelblue";
+    const highlightedCircleColor = "red";
     const allLanguagesSet = new Set(allLanguages);
     let sortedLocLangData = [];
     let selectedLangIndex = 0;
-
-
-    // const [tooltipD, setTooltipD] = useState(undefined);
-    // const [tooltipEvent, setTooltipEvent] = useState(undefined);
-
 
     //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
     function numberWithCommas(x) {
@@ -133,16 +128,6 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         d3.select("#bar-tooltip").style("opacity", 0);
     }
 
-    // function showHistogram2(event, d) {
-    //     setTooltipD(d);
-    //     setTooltipEvent(d);
-    // }
-    
-    // function hideHistogram2(event, d) {
-    //     setTooltipD(undefined);
-    //     setTooltipEvent(undefined);
-    // }
-
     function genRadius(val) {
         val = parseInt(val);
         if (isNaN(val)) {return 0};
@@ -162,13 +147,19 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         }
     }
 
+    function unhighlightCircles() {
+        d3.selectAll('circle').style("fill", defaultCircleColor);
+    }
+
+    function highlightClickedCircle(event) {
+        d3.select(event.target).style("fill", highlightedCircleColor);
+    }
+
     useEffect( () => {
-        const svg = d3.select(svgRef.current);
+        const svg = d3.select(svgRef.current).attr('zoomedBounds', "");
         const statesGeoJSON = topojson.feature(statesData, statesData.objects.states);
         const projection = d3.geoAlbersUsa().fitSize([width, height], statesGeoJSON);
         const path = d3.geoPath().projection(projection);
-
-        let zoomedBounds = [];
 
         if (svg.selectAll("rect").size() === 0) { // Check if the background is already drawn
             svg.append("rect")
@@ -223,6 +214,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
                     .append("circle")
                     .attr("r", 0)
                     .style("stroke-width", 0)
+                    .style("fill", defaultCircleColor)
                     .attr("d", d => {
                         let containerFeature = statesGeoJSON.features.filter(feature => d3.geoContains(feature, [locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]))[0];
                         d["containerFeature"] = containerFeature;
@@ -244,6 +236,8 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         const handleClickLocation = (event, data) => {
             setSortedLocLanguages({selectedLangIndex, sortedLocLangData});
             handleLocationClick(data);
+            unhighlightCircles();
+            highlightClickedCircle(event);
             if (data['containerFeature'] !== undefined) {
                 zoomClick(event, data['containerFeature'])
             }
@@ -251,12 +245,11 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
 
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function zoomClick(event, d) {
-            // if (active.node() === this) return reset();
-            // active.classed("active", false);
-            // active = d3.select(this).classed("active", true);
             let bounds = path.bounds(d);
-            if (JSON.stringify(zoomedBounds) === JSON.stringify(bounds)) return reset();
-            zoomedBounds = bounds;
+            // const boundingClientRect = event.target.getBoundingClientRect();
+            // const customBounds = [[boundingClientRect.left, boundingClientRect.top],[boundingClientRect.right, boundingClientRect.bottom]];
+            if (svg.attr('zoomedBounds') === JSON.stringify(bounds) && this !== undefined) return reset();
+            svg.attr('zoomedBounds', JSON.stringify(bounds));
             let dx = bounds[1][0] - bounds[0][0],
                 dy = bounds[1][1] - bounds[0][1],
                 x = (bounds[0][0] + bounds[1][0]) / 2,
@@ -272,9 +265,8 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
             
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function reset() {
-            // active.classed("active", false);
-            // active = d3.select(null);
-            zoomedBounds = [];
+            unhighlightCircles();
+            svg.attr('zoomedBounds', "");
             g.transition()
                 .duration(zoomTransitionSpeed)
                 .style("stroke-width", "1.5px")
@@ -289,7 +281,6 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
                 height={height} 
                 ref={svgRef}>
             </svg>
-            {/* <HistogramTooltip allLanguages={allLanguages} languagesData={languagesData} event={tooltipEvent} d={tooltipD} /> */}
         </div>
     )
 }

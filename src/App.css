@@ -169,7 +169,6 @@ body {
 }
 
 circle {
-  fill: steelblue;
   stroke: #fff;
   opacity: .75;
 }

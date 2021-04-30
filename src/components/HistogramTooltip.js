@@ -1,32 +1,35 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef} from 'react'
 import * as d3 from "d3";
 import '../App.css';
-import { svg } from 'd3';
 
 /** 
  * 
  * @param {Array} allLanguages array of all languages in the dataset
  * @param {String} selectedLanguage the language for which to display data on the map
+ * @param {Object} event object with 'event' and 'd' properties
  * @returns 
  */
-export default function HistogramTooltip({allLanguages, languagesData, event, d}) {
+export default function HistogramTooltip({allLanguages, languagesData, eventD}) {
   //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  console.log("tooltip rendered", d);
+  const event = eventD.event;
+  const d = eventD.d;
 
-  const svgRef = useRef();
   const wrapperRef = useRef();
   const histogramTransitionSpeed = 500;
   const height = 200, width = 400;
   const margin = ({top: 30, right: 70, bottom: 20, left: 80});
-  
-  const svg = d3.select(svgRef.current);
 
+  d3.select(wrapperRef.current).selectAll('svg').remove();
 
   if (d !== undefined && event !== undefined) {
+    const svg = d3.select(wrapperRef.current)
+      .append('svg')
+        .attr('width', width)
+        .attr('height', height);
     const allLanguagesSet = new Set(allLanguages);
 
     const selectedLocLangData = languagesData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allLanguagesSet.has(entry.Language));
@@ -100,20 +103,8 @@ export default function HistogramTooltip({allLanguages, languagesData, event, d}
 
     d3.select(wrapperRef.current)
       .style("left", (event.pageX + 15) + "px")
-      .style("top", (event.pageY - 15) + "px")
-      .style("opacity", 1);
-  } else {
-    d3.select(wrapperRef.current)
-      .style("opacity", 0);
+      .style("top", (event.pageY - 15) + "px");
   }
 
-  return (
-    <div id="bar-tooltip" ref={wrapperRef} >
-      <svg
-        width={width} 
-        height={height} 
-        ref={svgRef}>
-      </svg>
-    </div>
-  )
+  return <div id="bar-tooltip" ref={wrapperRef} />
 }
