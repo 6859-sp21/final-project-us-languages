@@ -1,17 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import useSound from 'use-sound';
+import axios from 'axios';
+import AudioPlayer from './AudioPlayer';
+import ReactPlayer from 'react-player';
 
 const drawerWidth = 350;
 
@@ -19,43 +17,22 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  hide: {
-    display: 'none',
-  },
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
   },
   drawerPaper: {
     width: drawerWidth,
-    top: 64,
+    // top: 64,
   },
   drawerHeader: {
     display: 'flex',
     alignItems: 'center',
     padding: theme.spacing(0, 1),
+    marginTop: 40,
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: 'flex-start',
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: -drawerWidth,
-  },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    marginLeft: 0,
   },
   title: {
     fontWeight: 400,
@@ -88,18 +65,35 @@ const useStyles = makeStyles((theme) => ({
  * @returns 
  */
 export default function LeftDrawer({open, selectedLocation, sortedLocLanguages, handleDrawerClose}) {
+  const [audioClipUrl, setAudioClipUrl] = useState('')
+  const myRef = useRef(null)
   const classes = useStyles();
   const theme = useTheme();
   const {sortedLocLangData, selectedLangIndex} = sortedLocLanguages;
   const metroArea = selectedLocation.split(',')[0];
   const abbrev = ['st', 'nd', 'rd', 'th']
 
+
   function stringifyNumber(index) {
     const n = index + 1
     if (n <= 3) return `${n}${abbrev[index]}`
     else return `${n}${abbrev[3]}`
   }
-
+  const playAudio = () => {
+    myRef.current.src = window.URL.createObjectURL(audioClipUrl)
+    myRef.current.play()
+  }
+  useEffect(() => {
+    axios.get('/api/audioclips/metadata')
+      .then(res => {
+        // const mp3 = new Blob([res.data], { type: 'audio/mp3' });
+        // myRef.current.src = window.URL.createObjectURL(mp3);
+        console.log('mp3: ', res.data);
+        const id = res.data.metadata[0].DriveID;
+        const url = `https://docs.google.com/uc?export=download&id=${id}`
+        setAudioClipUrl(url);
+      });
+    }, [])
   //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
   function numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -133,23 +127,13 @@ export default function LeftDrawer({open, selectedLocation, sortedLocLanguages, 
             : null
             }
         </div>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        <div className={classes.container}>
+          {/* <AudioPlayer url={audioClip}></AudioPlayer> */}
+          {/* <ReactPlayer url={audioClip} file={{forceAudio: true}}></ReactPlayer> */}
+          <audio src={audioClipUrl} type="audio/mp3" controls="controls"></audio>
+        </div>
+        
       </Drawer>
-      {/* <main
-        className={clsx(classes.content, {
-          [classes.contentShift]: open,
-        })}
-      >
-        <div className={classes.drawerHeader} />
-      </main> */}
     </div>
   );
 }

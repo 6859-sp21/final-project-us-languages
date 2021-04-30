@@ -47,28 +47,28 @@ async function main() {
 main()
 
 // Source snippet from https://stackoverflow.com/questions/62476413/google-drive-api-downloading-file-nodejs
-async function downloadAudio(auth, fileId, res) {
-  // const dest = fs.createWriteStream(tempAudioFile + '/temp.mp3');
-  console.log('params: ', fileId);
-  const drive = google.drive({version: 'v3', auth});
-  drive.files.get({
-    fileId: fileId,
-    alt: 'media'
-  }, {responseType: 'stream'}, (err, {data}) => {
-    if (err) console.log(err);
-    // console.log('data', data);
-    data
-      .on("end", () => {console.log("Done."); res.end();})
-      .on("error", (err) => {
-        console.log(err);
-        res.sendStatus(404);
-        return process.exit();
-      })
-      .on("data", (data) => {
-        res.write(data);
-      })
-  })
-}
+// async function downloadAudio(auth, fileId, res) {
+//   // const dest = fs.createWriteStream(tempAudioFile + '/temp.mp3');
+//   console.log('params: ', fileId);
+//   const drive = google.drive({version: 'v3', auth});
+//   drive.files.get({
+//     fileId: fileId,
+//     alt: 'media'
+//   }, {responseType: 'stream'}, (err, {data}) => {
+//     if (err) console.log(err);
+//     // console.log('data', data);
+//     data
+//       .on("data", (data) => {
+//         res.write(data);
+//       })
+//       .on("end", () => res.end())
+//       .on("error", (err) => {
+//         console.log(err);
+//         res.sendStatus(404);
+//         return process.exit();
+//       })
+//   })
+// }
 
 // Source snippet from https://hackernoon.com/how-to-use-google-sheets-api-with-nodejs-cz3v316f
 // and https://developers.google.com/drive/api/v3/quickstart/nodejs
@@ -127,14 +127,22 @@ async function getSoundClips(auth) {
  * 
  * Sends audio stream clip of selected language
  */ 
-router.get('/:language', async(req, res) => { 
-  console.log('hit route');
-  res.set('content-type', 'audio/mp3');
-  res.set('accept-ranges', 'bytes');
-  const language = req.params.language;
-  const auth = await getAuthToken();
-  const fileId = audiomapData[language].DriveID;
-  await downloadAudio(auth, fileId, res);
+// router.get('/:language', async(req, res) => { 
+//   res.set('content-type', 'audio/mp3');
+//   res.set('accept-ranges', 'bytes');
+//   const language = req.params.language;
+//   const auth = await getAuthToken();
+//   const fileId = audiomapData[language].DriveID;
+//   await downloadAudio(auth, fileId, res);
+// })
+
+/**
+ * GET /api/audioclips/metadata
+ * 
+ * Sends metadata of audio clip mappings
+ */ 
+ router.get('/metadata', async(req, res) => { 
+  res.send({metadata: Object.values(audiomapData)});
 })
 
 module.exports = router;

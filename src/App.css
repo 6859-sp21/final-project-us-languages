@@ -48,9 +48,6 @@
 
   /* position: fixed; */
 }
-/* #globe path {
-
-} */
 #globe svg {
   cursor: pointer;
 }
@@ -179,4 +176,26 @@ circle {
   pointer-events: none;
   background: rgba(43,43,43, 0.8);
   border-radius: 10px;
+}
+
+.block {
+  /* margin: 10px 50px; */
+  display: flex; /* required */
+  flex-flow: row nowrap; /* required */
+  overflow: hidden;
+}
+.block .background-overlay,
+.block .foreground-overlay {
+  box-sizing: border-box; /* required */
+  width: 100%; /* required */
+  height: 100vh;
+  min-height: 100vh;
+  flex: none; /* required */
+
+}
+.block .foreground-zIndex {
+  z-index: 10;
+}
+.block .background-overlay {
+  margin-left: -100%; /* required */
 }

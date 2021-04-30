@@ -7,14 +7,15 @@ import Map from './components/Map.js';
 import Navbar from './components/Navbar';
 import LanguageSelect from './components/LanguageSelect';
 import LeftDrawer from './components/LeftDrawer';
+import LandingOverlay from './components/LandingOverlay';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#D67474'
+      main: '#2b5876'
     },
     secondary: {
-      main: '#FFE8D6'
+      main: '#4e4376'
     }
   }
 });
@@ -28,6 +29,7 @@ function App() {
   const [selectedLanguage, setSelectedLanguage] = useState("")
   const [selectedLocation, setSelectedLocation] = useState("")
   const [sortedLocLanguages, setSortedLocLanguages] = useState({sortedLocLangData: [], selectedLangIndex: 0})
+  const [hidden, setHidden] = useState(false);
 
   const [open, setOpen] = useState(false);
 
@@ -68,28 +70,37 @@ function App() {
   return (
     <div className="App">
       <MuiThemeProvider theme={theme} >
-          <div className="background">
-            <Navbar />
-            <LeftDrawer 
-              open={open} 
-              selectedLocation={selectedLocation} 
-              languagesData={languagesData} 
-              handleDrawerClose={handleDrawerClose}
-              sortedLocLanguages={sortedLocLanguages}
-              />
-            <LanguageSelect allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
-            { isLoaded ? 
-                <Map 
-                  size={1200} 
-                  handleLocationClick={handleLocationClick}
-                  allLanguages={allLanguages}
-                  statesData={statesData} 
-                  locationsData={locationsData} 
-                  languagesData={languagesData} 
-                  setSortedLocLanguages={setSortedLocLanguages}
-                  selectedLanguage={selectedLanguage}/>
-                : null
-            }
+          <div className="block">
+            <div className={hidden ? 'foreground-overlay' : 'foreground-overlay foreground-zIndex'}>
+              <LandingOverlay hidden={hidden} setHidden={setHidden}></LandingOverlay>
+            </div>
+            <div className="background-overlay">
+              {/* <Navbar /> */}
+              <LeftDrawer 
+                open={open} 
+                selectedLocation={selectedLocation} 
+                languagesData={languagesData} 
+                handleDrawerClose={handleDrawerClose}
+                sortedLocLanguages={sortedLocLanguages}
+                />
+              { isLoaded ? 
+                (
+                  <div>
+                    <LanguageSelect allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
+                    <Map 
+                      size={1200} 
+                      handleLocationClick={handleLocationClick}
+                      allLanguages={allLanguages}
+                      statesData={statesData} 
+                      locationsData={locationsData} 
+                      languagesData={languagesData} 
+                      setSortedLocLanguages={setSortedLocLanguages}
+                      selectedLanguage={selectedLanguage}/>
+                  </div>
+                )
+                  : null
+              }
+            </div>
           </div>
       </MuiThemeProvider>
     </div>
