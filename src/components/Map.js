@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect } from 'react'
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import '../App.css';
@@ -26,6 +26,79 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
     const allLanguagesSet = new Set(allLanguages);
     let sortedLocLangData = [];
     let selectedLangIndex = 0;
+
+    function genRadius(val) {
+        val = parseInt(val);
+        if (isNaN(val)) {return 0};
+
+        if (val <= 100) {
+            return 2;
+        } else if (val <= 1000) {
+            return 4;
+        } else if (val <= 10000) {
+            return 8;
+        } else if (val <= 100000) {
+            return 16;
+        } else if (val <= 1000000) {
+            return 32;
+        } else {
+            return 64;
+        }
+    }
+
+    function createLegend() {
+        // Add legend
+        const legendSvg = d3.create('svg')
+            .attr('width', 300)
+            .attr('height', height);
+
+        const legendLabels = ["<= 100", "<= 1,000", "<= 10,000", "<= 100,000", "<= 1,000,000", "> 1,000,000"];
+        const legendValues = [100, 1000, 10000, 100000, 1000000, 10000001];
+        legendValues.reverse();
+        legendLabels.reverse();
+        const xCircle = 66;
+        const yCircle = 130;
+        const xLabel = 150;
+
+        legendSvg
+            .selectAll("legend")
+            .data(legendValues)
+            .enter()
+            .append("circle")
+                .attr("cx", 66)
+                .attr("cy", function(d, i){ return 4*genRadius(d)} )
+                .attr("r", function(d){ return genRadius(d) })
+                .style("fill", defaultCircleColor)
+                .style("stroke-width", 1.5)
+
+        // Add legend: segments
+        legendSvg
+            .selectAll("legend")
+            .data(legendValues)
+            .enter()
+            .append("line")
+                .attr('x1', function(d){ return xCircle + genRadius(d) } )
+                .attr('x2', xLabel)
+                .attr('y1', function(d){ return 4*genRadius(d)} )
+                .attr('y2', function(d){ return 4*genRadius(d) } )
+                .attr('stroke', 'black')
+                .style('stroke-dasharray', ('2,2'))
+
+        // Add legend: labels
+        legendSvg
+            .selectAll("legend")
+            .data(legendValues)
+            .enter()
+            .append("text")
+                .attr('x', xLabel)
+                .attr('y', function(d){ return 4*genRadius(d) } )
+                .text( function(d, i){ return legendLabels[i] } )
+                .style("font-size", 10)
+                .style("fill", "black")
+                .attr('alignment-baseline', 'middle')
+        
+        document.getElementById("globe").appendChild(legendSvg.node());
+    }
 
     //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
     function numberWithCommas(x) {
@@ -128,25 +201,6 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         d3.select("#bar-tooltip").style("opacity", 0);
     }
 
-    function genRadius(val) {
-        val = parseInt(val);
-        if (isNaN(val)) {return 0};
-
-        if (val < 100) {
-            return 2;
-        } else if (val < 1000) {
-            return 4;
-        } else if (val < 10000) {
-            return 8;
-        } else if (val < 100000) {
-            return 16;
-        } else if (val < 1000000) {
-            return 32;
-        } else {
-            return 64;
-        }
-    }
-
     function unhighlightCircles() {
         d3.selectAll('circle').style("fill", defaultCircleColor);
     }
@@ -164,9 +218,10 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         if (svg.selectAll("rect").size() === 0) { // Check if the background is already drawn
             svg.append("rect")
                 .attr("class", "background")
-                .attr("width", size)
-                .attr("height", size)
+                .attr("width", width)
+                .attr("height", height)
                 .on("click", reset);
+            createLegend();
         }
         
         let g = d3.select(null);
