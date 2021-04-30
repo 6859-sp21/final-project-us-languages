@@ -166,12 +166,11 @@ body {
 }
 
 circle {
-  fill: steelblue;
   stroke: #fff;
   opacity: .75;
 }
 
-.bar-tooltip {
+#bar-tooltip {
   position: absolute;
   pointer-events: none;
   background: rgba(43,43,43, 0.8);
