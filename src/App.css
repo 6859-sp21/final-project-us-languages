@@ -36,11 +36,20 @@
     transform: rotate(360deg);
   }
 }
-
+.main-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+.content-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
 #globe {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  right: 125px;
+  right: 125px; */
 }
 #map {
   /* margin: 20px auto;
@@ -50,16 +59,16 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-right: 100px;
+  padding-left: 100px;
   /* position: fixed; */
 }
 #map, #globe svg {
   cursor: pointer;
 }
 .legend {
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
-  right: 100px;
+  right: 100px; */
 }
 svg {
   display: block;

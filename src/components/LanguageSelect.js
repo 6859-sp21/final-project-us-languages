@@ -18,7 +18,7 @@ export default function LanguageSelect({allLanguages, handleLanguageChange}) {
   const classes = useStyles();
 
   return (
-    <div style={{ display: "flex", justifyContent: "center"}}>
+    <div style={{ display: "flex", justifyContent: "center", width: '100%'}}>
       <Autocomplete
         id="language-select"
         style={{ width: 300, marginTop: 10}}

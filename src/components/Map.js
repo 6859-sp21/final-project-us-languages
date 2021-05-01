@@ -14,8 +14,8 @@ import '../App.css';
  * @param {Function} handleLocationClick callback to pass the clicked location to parent
  * @returns 
  */
-export default function Map({statesData, locationsData, allLanguages, languagesData, size, selectedLanguage, setSortedLocLanguages, handleLocationClick}) {
-    const width = size, height = size/2;
+export default function Map({statesData, locationsData, allLanguages, languagesData, sizeVw, sizeVh, selectedLanguage, setSortedLocLanguages, handleLocationClick}) {
+    const width = sizeVw, height = sizeVh;
     const svgRef = useRef();
     const wrapperRef = useRef();
     const circleTransitionSpeed = 400;
@@ -222,7 +222,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
                 .attr("width", width)
                 .attr("height", height)
                 .on("click", reset);
-            createLegend();
+            // createLegend();
         }
         
         let g = d3.select(null);
@@ -248,12 +248,16 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
 
         // Shrink & remove any previous circles, then add the new circles
         let prevCircles = g.selectAll("circle");
-        prevCircles.transition()
-            .duration(circleTransitionSpeed)
-            .attr("r", 0)
-            .style("stroke-width", 0)
-            .remove().end()
-            .then(() => addNewCircles());
+        if (prevCircles.size() === 0) {
+            addNewCircles();
+        } else {
+            prevCircles.transition()
+                .duration(circleTransitionSpeed)
+                .attr("r", 0)
+                .style("stroke-width", 0)
+                .remove().end()
+                .then(() => addNewCircles());
+        }
         
         // Remove any previous tooltip and add a new one
         d3.selectAll("#bar-tooltip").remove();
@@ -328,10 +332,10 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
                 .style("stroke-width", "1.5px")
                 .attr("transform", "");
         }
-    }, [statesData, locationsData, allLanguages, languagesData, size, selectedLanguage]);
+    }, [statesData, locationsData, allLanguages, languagesData, sizeVw, sizeVh, selectedLanguage]);
 
     return (
-        <div id="map" ref={wrapperRef} >
+        <div id="map" ref={wrapperRef} style={{width: sizeVw}} >
             <svg
                 width={width} 
                 height={height} 

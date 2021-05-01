@@ -71,6 +71,10 @@ function App() {
     setSelectedLanguage(newLanguage);
   };
 
+  // set the size of the map based on the size of the user's window
+  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) / 2;
+  const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) - 150;
+
   return (
     <div className="App">
       <MuiThemeProvider theme={theme} >
@@ -89,21 +93,24 @@ function App() {
                 />
               { isLoaded ? 
                 (
-                  <div>
+                  <div className="main-container">
                     <LanguageSelect allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
-                    <Map 
-                      size={1200} 
-                      handleLocationClick={handleLocationClick}
-                      allLanguages={allLanguages}
-                      statesData={statesData} 
-                      locationsData={locationsData} 
-                      languagesData={languagesData} 
-                      setSortedLocLanguages={setSortedLocLanguages}
-                      selectedLanguage={selectedLanguage}/>
-                    <Globe 
-                      sizeVw={250}
-                      sizeVh={250}
-                      data={countriesData}/>
+                    <div className="content-container">
+                      <Map 
+                        sizeVw={vw}
+                        sizeVh={vh}
+                        handleLocationClick={handleLocationClick}
+                        allLanguages={allLanguages}
+                        statesData={statesData} 
+                        locationsData={locationsData} 
+                        languagesData={languagesData} 
+                        setSortedLocLanguages={setSortedLocLanguages}
+                        selectedLanguage={selectedLanguage}/>
+                      <Globe 
+                        sizeVw={250}
+                        sizeVh={250}
+                        data={countriesData}/>
+                    </div>
                   </div>
                 )
                   : null
