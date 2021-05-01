@@ -25,6 +25,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
+// Deployment: serve build of React files
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
+
 // Implement route for errors
 app.use((err, req, res, next) => {
     console.error(err.stack) 

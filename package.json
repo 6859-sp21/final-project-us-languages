@@ -14,7 +14,6 @@
     "compression": "^1.7.4",
     "concurrently": "^6.0.2",
     "cookie-parser": "^1.4.5",
-    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "csv-parser": "^3.0.0",
     "csv-stringify": "^5.6.2",
