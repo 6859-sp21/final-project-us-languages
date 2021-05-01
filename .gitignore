@@ -20,7 +20,7 @@
 .env.production.local
 
 # auth
-google_credentials.json
+google-credentials.json
 
 npm-debug.log*
 yarn-debug.log*
