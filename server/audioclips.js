@@ -48,7 +48,6 @@ main()
 // Source snippet from https://stackoverflow.com/questions/62476413/google-drive-api-downloading-file-nodejs
 // async function downloadAudio(auth, fileId, res) {
 //   // const dest = fs.createWriteStream(tempAudioFile + '/temp.mp3');
-//   console.log('params: ', fileId);
 //   const drive = google.drive({version: 'v3', auth});
 //   drive.files.get({
 //     fileId: fileId,
