@@ -73,7 +73,7 @@ function App() {
 
   // set the size of the map based on the size of the user's window
   const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) / 2;
-  const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) - 150;
+  const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) /1.5;
 
   return (
     <div className="App">
@@ -107,8 +107,8 @@ function App() {
                         setSortedLocLanguages={setSortedLocLanguages}
                         selectedLanguage={selectedLanguage}/>
                       <Globe 
-                        sizeVw={250}
-                        sizeVh={250}
+                        sizeVw={vw/4}
+                        sizeVh={vw/4}
                         data={countriesData}/>
                     </div>
                   </div>

@@ -24,6 +24,10 @@ app.use(compression())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
+app.use(function(req, res, next) {
+    res.setHeader("Content-Security-Policy", "default-src 'self'", "style-src 'self' fonts.googleapis.com", "font-src fonts.gstatic.com", "workers-src 'none'", "block-all-mixed-content", "media-src 'self' https://docs.google.com", "scripts-src 'self' https://docs.google.com");
+    return next();
+});
 
 // Deployment: serve build of React files
 const buildPath = path.join(__dirname, '..', 'build');
