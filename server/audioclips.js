@@ -39,7 +39,6 @@ async function main() {
       if (refreshDriveFiles) {
         await getSoundClips(auth)
       }
-      console.log('audiomapdata', audiomapData);
       // downloadAudio(auth, audiomapData['spanish'].DriveID)
     });
 }
