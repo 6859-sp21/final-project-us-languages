@@ -68,7 +68,7 @@ fs.createReadStream(languagesOnlyFile)
  */ 
 router.get('/countries', async(req, res) => { 
    const countries = JSON.parse(countriesData);
-   res.send({mapData: countries});
+   res.send({countriesData: countries});
 })
 
 /**

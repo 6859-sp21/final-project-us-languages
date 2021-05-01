@@ -38,6 +38,11 @@
 }
 
 #globe {
+  position: absolute;
+  top: 0;
+  right: 125px;
+}
+#map {
   /* margin: 20px auto;
   margin-top: 50px; */
   padding-top: 10px;
@@ -45,11 +50,16 @@
   display: flex;
   justify-content: center;
   align-content: center;
-
+  padding-right: 100px;
   /* position: fixed; */
 }
-#globe svg {
+#map, #globe svg {
   cursor: pointer;
+}
+.legend {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
 }
 svg {
   display: block;
@@ -63,7 +73,7 @@ svg .country {
 svg .country:hover {
   /* stroke: rgb(223, 179, 179);
   stroke-width: 5px; */
-  fill: #D67474;
+  fill: #4e4376;
   cursor: pointer;
 }
 svg .country { 
@@ -162,11 +172,12 @@ body {
 }
 
 .feature:hover {
-  fill: orange;
+  fill: #4e4376;
 }
 
 circle {
   stroke: #fff;
+  stroke-opacity: .5;
   opacity: .75;
 }
 

@@ -8,7 +8,6 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import useSound from 'use-sound';
 import axios from 'axios';
-import AudioPlayer from './AudioPlayer';
 import ReactPlayer from 'react-player';
 
 const drawerWidth = 350;

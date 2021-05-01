@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import LanguageSelect from './components/LanguageSelect';
 import LeftDrawer from './components/LeftDrawer';
 import LandingOverlay from './components/LandingOverlay';
+import Globe from './components/Globe';
 
 const theme = createMuiTheme({
   palette: {
@@ -26,6 +27,7 @@ function App() {
   const [locationsData, setLocationsData] = useState({})
   const [languagesData, setLanguagesData] = useState({})
   const [allLanguages, setAllLanguages] = useState([])
+  const [countriesData, setCountriesData] = useState({})
   const [selectedLanguage, setSelectedLanguage] = useState("")
   const [selectedLocation, setSelectedLocation] = useState("")
   const [sortedLocLanguages, setSortedLocLanguages] = useState({sortedLocLangData: [], selectedLangIndex: 0})
@@ -53,13 +55,16 @@ function App() {
         axios.get('/api/datasets/locations'),
         axios.get('/api/datasets/languages'),
         axios.get('/api/datasets/allLanguages'),
+        axios.get('/api/datasets/countries'),
       ])
       .then(res => {
         setStatesData(res[0].data.statesData);
         setLocationsData(res[1].data.locationsData);
         setLanguagesData(res[2].data.langData);
         setAllLanguages(res[3].data.allLanguagesData);
+        setCountriesData(res[4].data.countriesData);
         setIsLoaded(true);
+        console.log('countries', countriesData);
       });
     }, [])
     
@@ -96,6 +101,10 @@ function App() {
                       languagesData={languagesData} 
                       setSortedLocLanguages={setSortedLocLanguages}
                       selectedLanguage={selectedLanguage}/>
+                    <Globe 
+                      sizeVw={250}
+                      sizeVh={250}
+                      data={countriesData}/>
                   </div>
                 )
                   : null

@@ -21,8 +21,8 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
     const circleTransitionSpeed = 400;
     const histogramTransitionSpeed = 500;
     const zoomTransitionSpeed = 750;
-    const defaultCircleColor = "steelblue";
-    const highlightedCircleColor = "red";
+    const defaultCircleColor = "#2b5876";
+    const highlightedCircleColor = "#4e4376";
     const allLanguagesSet = new Set(allLanguages);
     let sortedLocLangData = [];
     let selectedLangIndex = 0;
@@ -50,7 +50,8 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         // Add legend
         const legendSvg = d3.create('svg')
             .attr('width', 300)
-            .attr('height', height);
+            .attr('height', height)
+            .attr('class', 'legend');
 
         const legendLabels = ["<= 100", "<= 1,000", "<= 10,000", "<= 100,000", "<= 1,000,000", "> 1,000,000"];
         const legendValues = [100, 1000, 10000, 100000, 1000000, 10000001];
@@ -97,7 +98,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
                 .style("fill", "black")
                 .attr('alignment-baseline', 'middle')
         
-        document.getElementById("globe").appendChild(legendSvg.node());
+        document.getElementById("map").appendChild(legendSvg.node());
     }
 
     //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
@@ -118,7 +119,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         
         const graphedLanguages = dataToGraph.map(entry => entry.Language);
         // const colorScale = d3.scaleOrdinal(d3.schemeTableau10).domain(allLanguages);
-        const colorScale = language => language === d.Language ? "darkred" : "#ccc";
+        const colorScale = language => language === d.Language ? "#2b5876" : "#ccc";
 
         const xScale = d3.scaleLinear()
             .domain([0, parseInt(dataToGraph[0].NumberOfSpeakers)])
@@ -330,7 +331,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
     }, [statesData, locationsData, allLanguages, languagesData, size, selectedLanguage]);
 
     return (
-        <div id="globe" ref={wrapperRef} >
+        <div id="map" ref={wrapperRef} >
             <svg
                 width={width} 
                 height={height} 
