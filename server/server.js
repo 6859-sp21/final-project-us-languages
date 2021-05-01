@@ -26,15 +26,14 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 // Deployment: serve build of React files
-if(process.env.NODE_ENV === 'production') {
-    const buildPath = path.join(__dirname, '..', 'build');
+const buildPath = path.join(__dirname, '..', 'build');
 
-    // set static folder
-    app.use(express.static(buildPath));
-    app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
-    });
-  }
+// set static folder
+app.use(express.static(buildPath));
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+});
+  
 
 // Implement route for errors
 app.use((err, req, res, next) => {
