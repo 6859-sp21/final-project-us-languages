@@ -64,7 +64,6 @@ function App() {
         setAllLanguages(res[3].data.allLanguagesData);
         setCountriesData(res[4].data.countriesData);
         setIsLoaded(true);
-        console.log('countries', countriesData);
       });
     }, [])
     
