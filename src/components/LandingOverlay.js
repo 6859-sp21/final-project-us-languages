@@ -91,11 +91,9 @@ export default function LandingOverlay({hidden, setHidden}) {
                 </div>
                 <div className={classes.bodyContainer}>
                     <div className={classes.bodyText}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In aliquet praesent leo ipsum, imperdiet tempor, quam. 
-                        Curabitur nisl facilisis libero sed habitant interdum. 
-                        Etiam non amet, quis eu ut rutrum aenean. 
-                        Nunc cras accumsan pellentesque lacus sed sed facilisis blandit urna.
+                    This project is a visualization of the many languages spoken in the United States, drawn from the 2009-2013 American Community Survey 
+                    which was a 5-year estimate of US census data. 
+                    Select a language to see how many speakers of that language there are and where they are located.
                     </div>
                 </div>
                 <Button onClick={handleClick} variant="outlined" size="large" className={classes.button}>

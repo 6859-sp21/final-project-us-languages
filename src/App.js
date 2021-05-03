@@ -97,8 +97,8 @@ function App() {
                     <LanguageSelect allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
                     <div className="content-container">
                       <Map 
-                        sizeVw={vw}
-                        sizeVh={vh}
+                        sizeVw={vw*1.35}
+                        sizeVh={vh*1.35}
                         handleLocationClick={handleLocationClick}
                         allLanguages={allLanguages}
                         statesData={statesData} 
