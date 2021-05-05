@@ -7,12 +7,16 @@ const router = express.Router();
 // Some CSV files may be generated with, or contain a leading Byte Order Mark. This may cause issues parsing headers and/or data from your file.
 const stripBom = require('strip-bom-stream');
 
+const countyLanguagesFile = path.resolve(__dirname, '../datasets/2019_state_languages_breakdown.csv');
+const stateLanguagesFile = path.resolve(__dirname, '../datasets/2019_county_languages_breakdown_5year_est.txt');
 const locationsFile = path.resolve(__dirname, '../datasets/location_coordinates.txt');
 const statesFile = path.resolve(__dirname, '../datasets/us.json');
 const languagesWithLocFile = path.resolve(__dirname, '../datasets/languages_total.txt')
 const languagesOnlyFile = path.resolve(__dirname, '../datasets/languages_only.txt')
 const countriesFiles = path.resolve(__dirname, '../datasets/ne_110m_admin_0_countries.geo.json');
 
+const countyLanguagesData = [];
+const stateLanguagesData = [];
 const countriesData = fs.readFileSync(countriesFiles);
 const statesData = fs.readFileSync(statesFile);
 const locationsData = [];
@@ -20,6 +24,26 @@ const languagesWithLocData = [];
 const languagesOnlyData = [];
 let allLanguagesData = [];
 const formattedLocationsData = {};
+
+fs.createReadStream(countyLanguagesFile)  
+  .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
+  .pipe(csv({separator: '\t'}))
+  .on('data', (row) => {
+    countyLanguagesData.push(row)
+  })
+  .on('end', () => {
+    console.log('Counties CSV file successfully processed', countyLanguagesData);
+});
+
+fs.createReadStream(stateLanguagesFile)
+  .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
+  .pipe(csv({separator: '\t'}))
+  .on('data', (row) => {
+    stateLanguagesData.push(row)
+  })
+  .on('end', () => {
+    console.log('State languages CSV file successfully processed');
+});
 
 fs.createReadStream(locationsFile)
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
@@ -89,6 +113,27 @@ router.get('/states', async(req, res) => {
 router.get('/locations', async(req, res) => { 
     res.send({locationsData: formattedLocationsData});
  })
+
+/**
+ * GET /api/datasets/counties
+ * 
+ * Sends parsed csv data of languages spoken in the US by county
+ */ 
+  router.get('/counties', async(req, res) => { 
+    res.send({countyData: countyLanguagesData});
+ })
+
+
+/**
+ * GET /api/datasets/state-languages
+ * 
+ * Sends parsed csv data of languages spoken in the US
+ */ 
+  router.get('/state-languages', async(req, res) => { 
+    res.send({stateLanguagesData: stateLanguagesData});
+ })
+
+
 
  /**
  * GET /api/datasets/languages

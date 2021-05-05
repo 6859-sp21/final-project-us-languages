@@ -1,0 +1,3221 @@
+GEOID,County,Population5YearsAndOver,SpeakALanguageOtherThanEnglish,Spanish,IndoEuropean,AsianPacificIsland,Other
+US01001,"Autauga County, Alabama",52163,2256,1356,110,649,141
+US01003,"Baldwin County, Alabama",201141,10871,7362,2589,848,72
+US01005,"Barbour County, Alabama",24012,1715,1384,162,126,43
+US01007,"Bibb County, Alabama",21178,487,432,55,0,0
+US01009,"Blount County, Alabama",54249,4435,4112,228,48,47
+US01011,"Bullock County, Alabama",9706,330,256,58,9,7
+US01013,"Butler County, Alabama",18679,243,127,87,29,0
+US01015,"Calhoun County, Alabama",108010,4697,3565,440,600,92
+US01017,"Chambers County, Alabama",31617,769,386,117,266,0
+US01019,"Cherokee County, Alabama",24716,380,294,16,53,17
+US01021,"Chilton County, Alabama",41296,3108,2782,154,172,0
+US01023,"Choctaw County, Alabama",12246,196,126,70,0,0
+US01025,"Clarke County, Alabama",22751,196,149,13,34,0
+US01027,"Clay County, Alabama",12657,400,374,26,0,0
+US01029,"Cleburne County, Alabama",14067,405,356,43,0,6
+US01031,"Coffee County, Alabama",48455,3122,2091,405,582,44
+US01033,"Colbert County, Alabama",51632,1395,898,300,168,29
+US01035,"Conecuh County, Alabama",11694,52,9,8,35,0
+US01037,"Coosa County, Alabama",10393,71,70,1,0,0
+US01039,"Covington County, Alabama",35035,580,350,52,158,20
+US01041,"Crenshaw County, Alabama",13056,256,68,42,146,0
+US01043,"Cullman County, Alabama",77738,3120,2648,246,185,41
+US01045,"Dale County, Alabama",46046,2867,2046,405,394,22
+US01047,"Dallas County, Alabama",36756,532,256,111,111,54
+US01049,"DeKalb County, Alabama",67050,8659,8478,66,112,3
+US01051,"Elmore County, Alabama",76407,2637,1553,513,468,103
+US01053,"Escambia County, Alabama",34954,500,351,23,94,32
+US01055,"Etowah County, Alabama",96832,3989,2631,631,404,323
+US01057,"Fayette County, Alabama",15618,207,106,55,46,0
+US01059,"Franklin County, Alabama",29247,4722,4368,26,95,233
+US01061,"Geneva County, Alabama",24977,917,743,27,120,27
+US01063,"Greene County, Alabama",7746,24,16,0,0,8
+US01065,"Hale County, Alabama",13825,154,89,47,9,9
+US01067,"Henry County, Alabama",16244,344,252,66,15,11
+US01069,"Houston County, Alabama",98301,3699,2117,818,631,133
+US01071,"Jackson County, Alabama",49096,715,529,41,130,15
+US01073,"Jefferson County, Alabama",617160,35696,21184,6293,5684,2535
+US01075,"Lamar County, Alabama",13163,136,122,10,4,0
+US01077,"Lauderdale County, Alabama",87771,3038,1843,618,422,155
+US01079,"Lawrence County, Alabama",31279,577,450,18,72,37
+US01081,"Lee County, Alabama",151625,11104,3973,2057,4548,526
+US01083,"Limestone County, Alabama",89510,5980,4447,827,506,200
+US01085,"Lowndes County, Alabama",9466,40,40,0,0,0
+US01087,"Macon County, Alabama",17874,440,312,89,20,19
+US01089,"Madison County, Alabama",341026,23686,11521,5809,4929,1427
+US01091,"Marengo County, Alabama",18352,102,38,39,22,3
+US01093,"Marion County, Alabama",28314,886,652,85,93,56
+US01095,"Marshall County, Alabama",89028,11014,9449,1241,223,101
+US01097,"Mobile County, Alabama",386912,17818,7576,2982,5375,1885
+US01099,"Monroe County, Alabama",20135,89,38,38,13,0
+US01101,"Montgomery County, Alabama",211595,13110,5754,1784,4455,1117
+US01103,"Morgan County, Alabama",112032,9076,7585,910,244,337
+US01105,"Perry County, Alabama",8809,112,90,22,0,0
+US01107,"Pickens County, Alabama",19186,962,896,50,8,8
+US01109,"Pike County, Alabama",31507,1831,467,389,964,11
+US01111,"Randolph County, Alabama",21330,446,268,178,0,0
+US01113,"Russell County, Alabama",53794,3533,2315,594,503,121
+US01115,"St. Clair County, Alabama",82818,2162,1402,258,391,111
+US01117,"Shelby County, Alabama",200991,16536,10433,2785,2541,777
+US01119,"Sumter County, Alabama",12082,407,97,25,200,85
+US01121,"Talladega County, Alabama",76121,2501,1498,583,208,212
+US01123,"Tallapoosa County, Alabama",38284,1000,862,81,46,11
+US01125,"Tuscaloosa County, Alabama",194903,10776,5953,2171,2207,445
+US01127,"Walker County, Alabama",60187,1405,1026,62,306,11
+US01129,"Washington County, Alabama",15740,201,139,42,20,0
+US01131,"Wilcox County, Alabama",10010,275,59,16,0,200
+US01133,"Winston County, Alabama",22469,572,496,42,11,23
+US02013,"Aleutians East Borough, Alaska",3276,1107,256,52,645,154
+US02016,"Aleutians West Census Area, Alaska",5509,3204,615,127,2234,228
+US02020,"Anchorage Municipality, Alaska",272334,48600,13458,6128,23472,5542
+US02050,"Bethel Census Area, Alaska",16299,10223,193,149,270,9611
+US02060,"Bristol Bay Borough, Alaska",827,57,24,2,8,23
+US02068,"Denali Borough, Alaska",2182,260,33,91,116,20
+US02070,"Dillingham Census Area, Alaska",4492,1708,76,39,44,1549
+US02090,"Fairbanks North Star Borough, Alaska",91264,9154,2871,1821,2663,1799
+US02100,"Haines Borough, Alaska",2333,195,79,55,18,43
+US02105,"Hoonah-Angoon Census Area, Alaska",2049,246,46,49,34,117
+US02110,"Juneau City and Borough, Alaska",30352,3897,1206,444,1726,521
+US02122,"Kenai Peninsula Borough, Alaska",54872,4430,1751,1272,694,713
+US02130,"Ketchikan Gateway Borough, Alaska",13003,1427,221,138,865,203
+US02150,"Kodiak Island Borough, Alaska",12460,3359,726,113,2379,141
+US02158,"Kusilvak Census Area, Alaska",7174,2689,82,3,17,2587
+US02164,"Lake and Peninsula Borough, Alaska",1306,148,3,12,22,111
+US02170,"Matanuska-Susitna Borough, Alaska",97852,6095,1622,2467,1330,676
+US02180,"Nome Census Area, Alaska",9001,2794,123,117,162,2392
+US02185,"North Slope Borough, Alaska",8999,2957,211,177,543,2026
+US02188,"Northwest Arctic Borough, Alaska",6897,2457,86,90,87,2194
+US02195,"Petersburg Borough, Alaska",3048,512,320,30,138,24
+US02198,"Prince of Wales-Hyder Census Area, Alaska",6027,341,89,18,73,161
+US02220,"Sitka City and Borough, Alaska",8257,1025,330,129,438,128
+US02230,"Skagway Municipality, Alaska",1046,115,46,24,5,40
+US02240,"Southeast Fairbanks Census Area, Alaska",6361,1215,209,781,70,155
+US02261,"Valdez-Cordova Census Area, Alaska",8659,887,311,85,378,113
+US02275,"Wrangell City and Borough, Alaska",2382,92,63,4,15,10
+US02282,"Yakutat City and Borough, Alaska",593,74,14,0,31,29
+US02290,"Yukon-Koyukuk Census Area, Alaska",4977,666,35,36,50,545
+US04001,"Apache County, Arizona",66698,35882,2190,148,267,33277
+US04003,"Cochise County, Arizona",118453,33551,29454,1571,1895,631
+US04005,"Coconino County, Arizona",133512,31986,8587,1981,1883,19535
+US04007,"Gila County, Arizona",50611,8645,4391,643,331,3280
+US04009,"Graham County, Arizona",35231,7105,5206,205,126,1568
+US04011,"Greenlee County, Arizona",8773,1878,1618,0,71,189
+US04012,"La Paz County, Arizona",19831,3579,3224,87,80,188
+US04013,"Maricopa County, Arizona",4050301,1093087,826178,99371,106537,61001
+US04015,"Mohave County, Arizona",198586,20814,16772,1513,1333,1196
+US04017,"Navajo County, Arizona",101540,38116,6119,780,711,30506
+US04019,"Pima County, Arizona",968882,273063,224767,16818,18221,13257
+US04021,"Pinal County, Arizona",407869,86550,71131,4803,5350,5266
+US04023,"Santa Cruz County, Arizona",43169,34392,34057,211,124,0
+US04025,"Yavapai County, Arizona",218478,23948,18222,3299,1537,890
+US04027,"Yuma County, Arizona",194397,103390,100188,1266,1244,692
+US05001,"Arkansas County, Arkansas",16772,331,275,31,8,17
+US05003,"Ashley County, Arkansas",19036,992,954,25,13,0
+US05005,"Baxter County, Arkansas",39691,710,357,213,137,3
+US05007,"Benton County, Arkansas",247049,33529,25063,1818,6208,440
+US05009,"Boone County, Arkansas",34996,541,192,251,51,47
+US05011,"Bradley County, Arkansas",10211,1714,1498,216,0,0
+US05013,"Calhoun County, Arkansas",4935,162,129,25,8,0
+US05015,"Carroll County, Arkansas",26384,3459,2911,141,407,0
+US05017,"Chicot County, Arkansas",10009,674,581,34,51,8
+US05019,"Clark County, Arkansas",21185,1048,860,94,86,8
+US05021,"Clay County, Arkansas",14068,192,170,22,0,0
+US05023,"Cleburne County, Arkansas",23921,577,316,101,145,15
+US05025,"Cleveland County, Arkansas",7706,76,68,8,0,0
+US05027,"Columbia County, Arkansas",22331,712,473,82,135,22
+US05029,"Conway County, Arkansas",19604,626,497,59,70,0
+US05031,"Craighead County, Arkansas",99879,5726,3514,1304,659,249
+US05033,"Crawford County, Arkansas",58791,4218,3030,352,836,0
+US05035,"Crittenden County, Arkansas",44906,1287,789,252,225,21
+US05037,"Cross County, Arkansas",15758,61,42,12,7,0
+US05039,"Dallas County, Arkansas",6901,116,103,13,0,0
+US05041,"Desha County, Arkansas",10961,733,653,0,54,26
+US05043,"Drew County, Arkansas",17294,481,423,15,6,37
+US05045,"Faulkner County, Arkansas",115984,6457,3368,1371,1139,579
+US05047,"Franklin County, Arkansas",16614,340,175,92,73,0
+US05049,"Fulton County, Arkansas",11628,148,84,59,0,5
+US05051,"Garland County, Arkansas",93295,5897,4141,1289,447,20
+US05053,"Grant County, Arkansas",17166,432,367,65,0,0
+US05055,"Greene County, Arkansas",42023,655,434,108,113,0
+US05057,"Hempstead County, Arkansas",20284,2236,2159,43,34,0
+US05059,"Hot Spring County, Arkansas",31966,816,612,88,92,24
+US05061,"Howard County, Arkansas",12379,1609,1442,144,23,0
+US05063,"Independence County, Arkansas",34927,1647,1314,174,159,0
+US05065,"Izard County, Arkansas",12929,389,212,131,37,9
+US05067,"Jackson County, Arkansas",16125,387,306,50,29,2
+US05069,"Jefferson County, Arkansas",65111,2622,1252,623,515,232
+US05071,"Johnson County, Arkansas",24727,3456,3034,196,208,18
+US05073,"Lafayette County, Arkansas",6425,120,84,10,26,0
+US05075,"Lawrence County, Arkansas",15610,224,159,58,7,0
+US05077,"Lee County, Arkansas",8725,250,219,31,0,0
+US05079,"Lincoln County, Arkansas",12903,577,519,19,0,39
+US05081,"Little River County, Arkansas",11628,197,132,23,42,0
+US05083,"Logan County, Arkansas",20401,723,252,101,369,1
+US05085,"Lonoke County, Arkansas",67588,2831,2019,221,499,92
+US05087,"Madison County, Arkansas",15099,689,394,150,145,0
+US05089,"Marion County, Arkansas",15757,306,113,129,64,0
+US05091,"Miller County, Arkansas",40828,1016,715,79,178,44
+US05093,"Mississippi County, Arkansas",39089,1556,1328,101,125,2
+US05095,"Monroe County, Arkansas",6614,93,63,20,10,0
+US05097,"Montgomery County, Arkansas",8537,330,293,15,22,0
+US05099,"Nevada County, Arkansas",7848,13,11,2,0,0
+US05101,"Newton County, Arkansas",7461,44,18,11,6,9
+US05103,"Ouachita County, Arkansas",22382,500,329,116,19,36
+US05105,"Perry County, Arkansas",9775,245,226,19,0,0
+US05107,"Phillips County, Arkansas",17217,200,98,68,0,34
+US05109,"Pike County, Arkansas",10182,536,491,7,26,12
+US05111,"Poinsett County, Arkansas",22365,519,420,99,0,0
+US05113,"Polk County, Arkansas",18915,1255,1061,146,48,0
+US05115,"Pope County, Arkansas",59777,4749,3761,447,449,92
+US05117,"Prairie County, Arkansas",7747,93,52,25,0,16
+US05119,"Pulaski County, Arkansas",366675,29214,17831,4668,4959,1756
+US05121,"Randolph County, Arkansas",16628,421,241,79,101,0
+US05123,"St. Francis County, Arkansas",24234,976,769,95,99,13
+US05125,"Saline County, Arkansas",112433,5704,3895,549,1140,120
+US05127,"Scott County, Arkansas",9635,328,253,0,65,10
+US05129,"Searcy County, Arkansas",7525,62,25,0,17,20
+US05131,"Sebastian County, Arkansas",119180,18029,13373,613,3849,194
+US05133,"Sevier County, Arkansas",15718,5119,4949,10,118,42
+US05135,"Sharp County, Arkansas",16295,173,129,34,10,0
+US05137,"Stone County, Arkansas",11905,172,80,61,31,0
+US05139,"Union County, Arkansas",36818,1574,1275,102,197,0
+US05141,"Van Buren County, Arkansas",15862,300,242,42,16,0
+US05143,"Washington County, Arkansas",216280,38920,28397,2550,7496,477
+US05145,"White County, Arkansas",73880,4563,3383,561,418,201
+US05147,"Woodruff County, Arkansas",6154,17,17,0,0,0
+US05149,"Yell County, Arkansas",20093,3822,3568,56,191,7
+US06001,"Alameda County, California",1559905,711354,254710,127120,304466,25058
+US06003,"Alpine County, California",995,97,57,0,8,32
+US06005,"Amador County, California",36902,3912,2798,538,357,219
+US06007,"Butte County, California",213433,32671,20877,3208,7482,1104
+US06009,"Calaveras County, California",43612,3160,1985,488,491,196
+US06011,"Colusa County, California",19878,10268,9971,205,90,2
+US06013,"Contra Costa County, California",1076802,385060,197309,65979,108487,13285
+US06015,"Del Norte County, California",25963,3154,1849,535,557,213
+US06017,"El Dorado County, California",179893,21903,11419,4946,4896,642
+US06019,"Fresno County, California",906810,404428,313461,30169,53859,6939
+US06021,"Glenn County, California",25927,9855,8967,215,589,84
+US06023,"Humboldt County, California",128705,15054,9468,1552,3122,912
+US06025,"Imperial County, California",165621,126737,124272,690,1406,369
+US06027,"Inyo County, California",16979,2914,2243,320,85,266
+US06029,"Kern County, California",817372,361421,319861,14042,21498,6020
+US06031,"Kings County, California",139049,57662,50960,2238,3755,709
+US06033,"Lake County, California",60464,9814,8710,672,390,42
+US06035,"Lassen County, California",29390,5404,4428,315,546,115
+US06037,"Los Angeles County, California",9470085,5358498,3716660,503528,1032901,105409
+US06039,"Madera County, California",143822,65124,59644,2420,1439,1621
+US06041,"Marin County, California",247779,54220,29478,14659,8230,1853
+US06043,"Mariposa County, California",16684,1598,1117,167,200,114
+US06045,"Mendocino County, California",82148,17620,15054,1197,1213,156
+US06047,"Merced County, California",250071,133339,111962,10605,10113,659
+US06049,"Modoc County, California",8463,1081,973,14,90,4
+US06051,"Mono County, California",13810,3635,2807,216,323,289
+US06053,"Monterey County, California",401907,221837,195450,8973,14682,2732
+US06055,"Napa County, California",132570,46259,35563,3920,6369,407
+US06057,"Nevada County, California",95067,7239,4122,2200,654,263
+US06059,"Orange County, California",2980221,1358516,751190,127031,447749,32546
+US06061,"Placer County, California",364992,56568,24131,16071,14043,2323
+US06063,"Plumas County, California",17852,1407,974,270,163,0
+US06065,"Riverside County, California",2253840,925348,768866,43546,96395,16541
+US06067,"Sacramento County, California",1425477,465669,197243,113173,141230,14023
+US06069,"San Benito County, California",56493,22451,20165,1116,852,318
+US06071,"San Bernardino County, California",1995247,840302,693696,29020,100188,17398
+US06073,"San Diego County, California",3106393,1167855,765532,101178,248518,52627
+US06075,"San Francisco County, California",835425,357995,89589,50109,210209,8088
+US06077,"San Joaquin County, California",690215,282051,180312,35046,62069,4624
+US06079,"San Luis Obispo County, California",269011,48299,35973,5389,5603,1334
+US06081,"San Mateo County, California",723483,330731,133552,49606,140108,7465
+US06083,"Santa Barbara County, California",416670,168015,139625,9957,15677,2756
+US06085,"Santa Clara County, California",1810962,959751,319063,166163,449718,24807
+US06087,"Santa Cruz County, California",259770,83458,67419,7294,7472,1273
+US06089,"Shasta County, California",168668,13953,7561,3149,2773,470
+US06091,"Sierra County, California",2917,283,215,56,12,0
+US06093,"Siskiyou County, California",41141,3654,2582,531,420,121
+US06095,"Solano County, California",415031,124243,70244,9470,42456,2073
+US06097,"Sonoma County, California",474635,121354,94122,11845,12961,2426
+US06099,"Stanislaus County, California",503818,216108,168790,22003,14694,10621
+US06101,"Sutter County, California",89552,33398,18838,13068,1430,62
+US06103,"Tehama County, California",60073,11355,10101,441,559,254
+US06105,"Trinity County, California",12114,1041,760,91,187,3
+US06107,"Tulare County, California",424107,217377,200838,5936,9003,1600
+US06109,"Tuolumne County, California",51611,4076,2656,829,526,65
+US06111,"Ventura County, California",796738,305683,239799,22105,35576,8203
+US06113,"Yolo County, California",205040,77928,45777,14048,16944,1159
+US06115,"Yuba County, California",70367,17830,12728,1242,3481,379
+US08001,"Adams County, Colorado",467689,135585,110522,9240,12436,3387
+US08003,"Alamosa County, Colorado",14991,4508,3786,74,124,524
+US08005,"Arapahoe County, Colorado",604148,141151,75412,23110,25523,17106
+US08007,"Archuleta County, Colorado",12651,1099,900,128,51,20
+US08009,"Baca County, Colorado",3381,250,225,15,0,10
+US08011,"Bent County, Colorado",5590,695,684,7,4,0
+US08013,"Boulder County, Colorado",307715,48182,26848,10717,9064,1553
+US08014,"Broomfield County, Colorado",64188,7832,3291,1774,2470,297
+US08015,"Chaffee County, Colorado",18816,1280,695,328,242,15
+US08017,"Cheyenne County, Colorado",1809,281,204,51,26,0
+US08019,"Clear Creek County, Colorado",9120,613,362,181,25,45
+US08021,"Conejos County, Colorado",7588,2238,1996,200,30,12
+US08023,"Costilla County, Colorado",3589,1563,1541,19,3,0
+US08025,"Crowley County, Colorado",5590,623,520,85,16,2
+US08027,"Custer County, Colorado",4727,266,107,118,0,41
+US08029,"Delta County, Colorado",29057,2791,2199,289,102,201
+US08031,"Denver County, Colorado",662746,169271,126922,15794,15590,10965
+US08033,"Dolores County, Colorado",1735,47,37,6,4,0
+US08035,"Douglas County, Colorado",316161,30142,11531,9824,7581,1206
+US08037,"Eagle County, Colorado",51594,14873,13111,1158,378,226
+US08039,"Elbert County, Colorado",24576,1107,708,272,127,0
+US08041,"El Paso County, Colorado",651807,77378,49391,13641,11428,2918
+US08043,"Fremont County, Colorado",45474,3178,2176,422,153,427
+US08045,"Garfield County, Colorado",55070,14662,13621,731,285,25
+US08047,"Gilpin County, Colorado",5874,396,159,178,0,59
+US08049,"Grand County, Colorado",14728,877,707,75,95,0
+US08051,"Gunnison County, Colorado",16063,1724,1310,391,6,17
+US08053,"Hinsdale County, Colorado",820,27,12,0,15,0
+US08055,"Huerfano County, Colorado",6447,613,526,47,40,0
+US08057,"Jackson County, Colorado",1228,109,109,0,0,0
+US08059,"Jefferson County, Colorado",544918,57599,34171,11369,9708,2351
+US08061,"Kiowa County, Colorado",1312,36,27,9,0,0
+US08063,"Kit Carson County, Colorado",7022,888,828,60,0,0
+US08065,"Lake County, Colorado",7552,1400,1292,62,3,43
+US08067,"La Plata County, Colorado",52717,4960,3224,599,354,783
+US08069,"Larimer County, Colorado",327055,30539,17580,6574,4816,1569
+US08071,"Las Animas County, Colorado",13646,1954,1648,233,45,28
+US08073,"Lincoln County, Colorado",5277,513,458,21,12,22
+US08075,"Logan County, Colorado",20730,2138,1836,88,208,6
+US08077,"Mesa County, Colorado",142616,9769,7771,1199,613,186
+US08079,"Mineral County, Colorado",809,19,9,10,0,0
+US08081,"Moffat County, Colorado",12238,1691,1373,163,103,52
+US08083,"Montezuma County, Colorado",24654,2790,1421,191,179,999
+US08085,"Montrose County, Colorado",39351,6897,6182,345,329,41
+US08087,"Morgan County, Colorado",26465,7157,5822,293,138,904
+US08089,"Otero County, Colorado",17205,2281,2094,65,118,4
+US08091,"Ouray County, Colorado",4591,392,263,124,0,5
+US08093,"Park County, Colorado",17160,433,238,136,7,52
+US08095,"Phillips County, Colorado",3931,888,879,2,7,0
+US08097,"Pitkin County, Colorado",17108,2778,1427,1065,222,64
+US08099,"Prowers County, Colorado",11208,2566,2429,20,59,58
+US08101,"Pueblo County, Colorado",156378,19272,17122,1408,490,252
+US08103,"Rio Blanco County, Colorado",5983,321,303,10,8,0
+US08105,"Rio Grande County, Colorado",10658,2630,2387,209,0,34
+US08107,"Routt County, Colorado",23972,1505,1119,138,57,191
+US08109,"Saguache County, Colorado",6246,1720,1560,126,14,20
+US08111,"San Juan County, Colorado",564,96,66,30,0,0
+US08113,"San Miguel County, Colorado",7747,1215,885,191,139,0
+US08115,"Sedgwick County, Colorado",2082,147,123,7,17,0
+US08117,"Summit County, Colorado",29340,4458,3357,538,238,325
+US08119,"Teller County, Colorado",23626,863,362,458,27,16
+US08121,"Washington County, Colorado",4615,225,163,31,18,13
+US08123,"Weld County, Colorado",283292,54648,48297,2197,2929,1225
+US08125,"Yuma County, Colorado",9277,1725,1685,40,0,0
+US09001,"Fairfield County, Connecticut",891794,264740,143689,88172,23881,8998
+US09003,"Hartford County, Connecticut",845758,211203,109222,68533,22400,11048
+US09005,"Litchfield County, Connecticut",174549,18020,7224,8165,1947,684
+US09007,"Middlesex County, Connecticut",156317,16694,6242,7546,2080,826
+US09009,"New Haven County, Connecticut",813010,180441,106573,44319,18180,11369
+US09011,"New London County, Connecticut",254092,34555,17772,8931,6761,1091
+US09013,"Tolland County, Connecticut",144920,15515,4380,6275,4188,672
+US09015,"Windham County, Connecticut",110826,13588,9748,2339,1127,374
+US10001,"Kent County, Delaware",165657,17140,7741,5615,2552,1232
+US10003,"New Castle County, Delaware",523836,78957,39933,16346,16405,6273
+US10005,"Sussex County, Delaware",212925,23527,16094,5208,1890,335
+US11001,"District of Columbia, District of Columbia",647643,111429,58536,26842,12738,13313
+US12001,"Alachua County, Florida",251345,35631,16230,8812,9374,1215
+US12003,"Baker County, Florida",26425,1251,641,372,144,94
+US12005,"Bay County, Florida",170989,12730,6211,2918,2780,821
+US12007,"Bradford County, Florida",26010,1127,551,393,146,37
+US12009,"Brevard County, Florida",558191,59187,35265,13544,7264,3114
+US12011,"Broward County, Florida",1813971,748671,483401,211255,30585,23430
+US12013,"Calhoun County, Florida",13726,863,707,112,16,28
+US12015,"Charlotte County, Florida",175654,17850,8760,6762,1443,885
+US12017,"Citrus County, Florida",139889,8971,4940,2170,1692,169
+US12019,"Clay County, Florida",199738,22061,13167,4344,4085,465
+US12021,"Collier County, Florida",354770,119598,88017,27350,3129,1102
+US12023,"Columbia County, Florida",65754,4478,2942,920,500,116
+US12027,"DeSoto County, Florida",35042,10178,9629,391,121,37
+US12029,"Dixie County, Florida",15855,672,491,113,63,5
+US12031,"Duval County, Florida",872811,127637,60099,30488,28270,8780
+US12033,"Escambia County, Florida",294564,20575,8489,4594,6612,880
+US12035,"Flagler County, Florida",105546,15795,7049,6809,1680,257
+US12037,"Franklin County, Florida",11293,688,515,113,30,30
+US12039,"Gadsden County, Florida",43241,4723,3930,337,180,276
+US12041,"Gilchrist County, Florida",17065,859,735,77,36,11
+US12043,"Glades County, Florida",13088,2883,2476,270,14,123
+US12045,"Gulf County, Florida",14854,1004,615,252,96,41
+US12047,"Hamilton County, Florida",13697,1384,914,354,45,71
+US12049,"Hardee County, Florida",25374,9570,8925,390,215,40
+US12051,"Hendry County, Florida",37729,18400,17508,193,195,504
+US12053,"Hernando County, Florida",177854,19918,14300,4304,995,319
+US12055,"Highlands County, Florida",98555,18737,16238,1410,1012,77
+US12057,"Hillsborough County, Florida",1334306,395569,304724,46066,30655,14124
+US12059,"Holmes County, Florida",18515,755,568,115,47,25
+US12061,"Indian River County, Florida",147552,19593,13945,3942,1277,429
+US12063,"Jackson County, Florida",45555,2753,1858,475,192,228
+US12065,"Jefferson County, Florida",13557,1018,666,176,46,130
+US12067,"Lafayette County, Florida",8176,1726,1526,115,28,57
+US12069,"Lake County, Florida",328853,47429,36534,6969,3100,826
+US12071,"Lee County, Florida",703124,161207,123455,30050,6415,1287
+US12073,"Leon County, Florida",274717,27358,11924,6687,6511,2236
+US12075,"Levy County, Florida",38376,2760,2267,206,246,41
+US12077,"Liberty County, Florida",8032,370,275,68,0,27
+US12079,"Madison County, Florida",17559,1275,997,208,0,70
+US12081,"Manatee County, Florida",365836,64790,46402,12540,4719,1129
+US12083,"Marion County, Florida",335883,41267,31656,6682,2283,646
+US12085,"Martin County, Florida",152612,20449,14908,3888,1193,460
+US12086,"Miami-Dade County, Florida",2541448,1904760,1681016,183034,24036,16674
+US12087,"Monroe County, Florida",72309,16223,12565,2899,641,118
+US12089,"Nassau County, Florida",78893,4777,2752,1436,358,231
+US12091,"Okaloosa County, Florida",190331,22714,13161,4294,4958,301
+US12093,"Okeechobee County, Florida",38672,8793,8154,330,207,102
+US12095,"Orange County, Florida",1266748,466964,327215,88642,39324,11783
+US12097,"Osceola County, Florida",329600,168946,146792,14239,4453,3462
+US12099,"Palm Beach County, Florida",1389825,446661,264670,145936,20826,15229
+US12101,"Pasco County, Florida",497328,71606,45827,15508,7317,2954
+US12103,"Pinellas County, Florida",922238,132432,60107,44525,21730,6070
+US12105,"Polk County, Florida",646231,144148,117344,17585,7215,2004
+US12107,"Putnam County, Florida",69072,6360,5436,444,441,39
+US12109,"St. Johns County, Florida",232358,19717,9091,6307,3372,947
+US12111,"St. Lucie County, Florida",296682,69510,44865,20044,2691,1910
+US12113,"Santa Rosa County, Florida",164837,10163,5080,2869,1920,294
+US12115,"Sarasota County, Florida",404559,52344,28275,18294,3931,1844
+US12117,"Seminole County, Florida",436952,102211,69452,18586,10518,3655
+US12119,"Sumter County, Florida",122764,8689,5772,1902,830,185
+US12121,"Suwannee County, Florida",41861,3744,3074,369,62,239
+US12123,"Taylor County, Florida",20864,1806,1250,349,163,44
+US12125,"Union County, Florida",14410,806,654,101,51,0
+US12127,"Volusia County, Florida",511129,70961,50999,11713,5688,2561
+US12129,"Wakulla County, Florida",30811,1832,933,573,196,130
+US12131,"Walton County, Florida",64228,5376,3306,1318,611,141
+US12133,"Washington County, Florida",23589,1247,735,205,174,133
+US13001,"Appling County, Georgia",17204,1830,1577,155,74,24
+US13003,"Atkinson County, Georgia",7713,1684,1684,0,0,0
+US13005,"Bacon County, Georgia",10406,737,732,5,0,0
+US13007,"Baker County, Georgia",3031,234,165,17,52,0
+US13009,"Baldwin County, Georgia",42895,1801,684,265,852,0
+US13011,"Banks County, Georgia",17698,1168,1061,66,41,0
+US13013,"Barrow County, Georgia",73530,9659,5895,1458,2109,197
+US13015,"Bartow County, Georgia",98059,8777,7055,1062,569,91
+US13017,"Ben Hill County, Georgia",15938,869,824,25,6,14
+US13019,"Berrien County, Georgia",17944,1070,841,87,142,0
+US13021,"Bibb County, Georgia",142667,7687,3601,1947,1576,563
+US13023,"Bleckley County, Georgia",12053,245,221,0,18,6
+US13025,"Brantley County, Georgia",17636,604,341,184,65,14
+US13027,"Brooks County, Georgia",14607,527,361,58,66,42
+US13029,"Bryan County, Georgia",34357,2946,1513,1101,258,74
+US13031,"Bulloch County, Georgia",71796,3658,2117,644,704,193
+US13033,"Burke County, Georgia",20874,672,519,87,63,3
+US13035,"Butts County, Georgia",22759,993,650,216,93,34
+US13037,"Calhoun County, Georgia",6164,477,342,60,24,51
+US13039,"Camden County, Georgia",49411,2951,1692,659,553,47
+US13043,"Candler County, Georgia",10243,931,904,18,9,0
+US13045,"Carroll County, Georgia",109782,7675,5731,1040,719,185
+US13047,"Catoosa County, Georgia",62899,2476,1298,523,655,0
+US13049,"Charlton County, Georgia",12322,1248,1150,55,31,12
+US13051,"Chatham County, Georgia",269991,28192,15497,6424,5075,1196
+US13053,"Chattahoochee County, Georgia",9675,1351,875,276,171,29
+US13055,"Chattooga County, Georgia",23376,1100,898,42,14,146
+US13057,"Cherokee County, Georgia",232617,28241,19602,4635,2531,1473
+US13059,"Clarke County, Georgia",119470,18112,11187,2569,3018,1338
+US13061,"Clay County, Georgia",2840,82,53,29,0,0
+US13063,"Clayton County, Georgia",261911,50202,30200,3467,12363,4172
+US13065,"Clinch County, Georgia",6228,207,128,38,0,41
+US13067,"Cobb County, Georgia",703917,147423,81099,34302,19427,12595
+US13069,"Coffee County, Georgia",40084,4881,4129,616,37,99
+US13071,"Colquitt County, Georgia",42367,7597,7134,214,244,5
+US13073,"Columbia County, Georgia",141111,13369,6056,3134,3316,863
+US13075,"Cook County, Georgia",16052,759,605,100,54,0
+US13077,"Coweta County, Georgia",134547,11099,6462,2575,1475,587
+US13079,"Crawford County, Georgia",11664,189,132,57,0,0
+US13081,"Crisp County, Georgia",21268,943,791,53,90,9
+US13083,"Dade County, Georgia",15421,516,214,215,87,0
+US13085,"Dawson County, Georgia",23221,1162,857,176,106,23
+US13087,"Decatur County, Georgia",24892,824,713,60,51,0
+US13089,"DeKalb County, Georgia",696356,131266,52963,27317,24535,26451
+US13091,"Dodge County, Georgia",19764,634,488,131,15,0
+US13093,"Dooly County, Georgia",13188,772,768,2,2,0
+US13095,"Dougherty County, Georgia",83729,3220,2007,488,473,252
+US13097,"Douglas County, Georgia",134320,16428,11377,2426,1359,1266
+US13099,"Early County, Georgia",9638,75,73,0,2,0
+US13101,"Echols County, Georgia",3806,802,782,0,0,20
+US13103,"Effingham County, Georgia",56321,2670,1716,631,307,16
+US13105,"Elbert County, Georgia",18023,976,851,94,31,0
+US13107,"Emanuel County, Georgia",20951,956,830,100,13,13
+US13109,"Evans County, Georgia",9939,1194,1080,25,88,1
+US13111,"Fannin County, Georgia",24389,675,455,203,5,12
+US13113,"Fayette County, Georgia",107224,13365,6156,3829,2585,795
+US13115,"Floyd County, Georgia",91501,9396,7317,1245,671,163
+US13117,"Forsyth County, Georgia",214525,48252,17013,13504,15918,1817
+US13119,"Franklin County, Georgia",21389,1335,869,195,227,44
+US13121,"Fulton County, Georgia",974271,155513,60468,42356,37422,15267
+US13123,"Gilmer County, Georgia",28811,2961,2393,150,125,293
+US13125,"Glascock County, Georgia",2871,11,1,3,0,7
+US13127,"Glynn County, Georgia",79546,5730,3943,1115,475,197
+US13129,"Gordon County, Georgia",53862,8374,7756,488,130,0
+US13131,"Grady County, Georgia",23457,2534,2336,84,114,0
+US13133,"Greene County, Georgia",16440,1017,864,141,12,0
+US13135,"Gwinnett County, Georgia",853929,302006,163159,53118,63223,22506
+US13137,"Habersham County, Georgia",42020,6739,5623,109,867,140
+US13139,"Hall County, Georgia",185566,53198,48529,2357,2104,208
+US13141,"Hancock County, Georgia",8183,213,159,46,0,8
+US13143,"Haralson County, Georgia",27388,372,234,124,14,0
+US13145,"Harris County, Georgia",32404,1615,922,556,136,1
+US13147,"Hart County, Georgia",24404,1263,827,267,72,97
+US13149,"Heard County, Georgia",11080,271,186,65,20,0
+US13151,"Henry County, Georgia",212373,21788,11841,5475,3522,950
+US13153,"Houston County, Georgia",143203,13465,7144,2448,3199,674
+US13155,"Irwin County, Georgia",8897,291,233,20,38,0
+US13157,"Jackson County, Georgia",63436,5340,3754,640,880,66
+US13159,"Jasper County, Georgia",13143,491,449,16,26,0
+US13161,"Jeff Davis County, Georgia",14009,1042,1013,10,16,3
+US13163,"Jefferson County, Georgia",14668,642,552,52,38,0
+US13165,"Jenkins County, Georgia",8207,723,527,41,155,0
+US13167,"Johnson County, Georgia",9143,237,112,113,12,0
+US13169,"Jones County, Georgia",27120,460,214,21,211,14
+US13171,"Lamar County, Georgia",17588,487,271,102,18,96
+US13173,"Lanier County, Georgia",9628,157,140,9,0,8
+US13175,"Laurens County, Georgia",44282,1446,1050,227,169,0
+US13177,"Lee County, Georgia",27715,1371,434,309,443,185
+US13179,"Liberty County, Georgia",55087,7054,4594,1160,1112,188
+US13181,"Lincoln County, Georgia",7456,183,166,15,2,0
+US13183,"Long County, Georgia",17291,2135,1676,341,118,0
+US13185,"Lowndes County, Georgia",107207,6189,3873,877,1131,308
+US13187,"Lumpkin County, Georgia",30993,1616,1188,204,224,0
+US13189,"McDuffie County, Georgia",20038,943,413,219,253,58
+US13191,"McIntosh County, Georgia",13698,399,106,290,0,3
+US13193,"Macon County, Georgia",12726,984,457,465,60,2
+US13195,"Madison County, Georgia",27528,1798,1530,136,109,23
+US13197,"Marion County, Georgia",8010,786,740,18,0,28
+US13199,"Meriwether County, Georgia",19852,301,216,47,38,0
+US13201,"Miller County, Georgia",5456,25,6,11,8,0
+US13205,"Mitchell County, Georgia",20953,1537,959,104,384,90
+US13207,"Monroe County, Georgia",25837,775,364,246,107,58
+US13209,"Montgomery County, Georgia",8556,570,459,83,25,3
+US13211,"Morgan County, Georgia",17461,424,322,77,5,20
+US13213,"Murray County, Georgia",37224,4212,4041,96,75,0
+US13215,"Muscogee County, Georgia",181558,15066,8660,3495,2424,487
+US13217,"Newton County, Georgia",101159,6503,4207,1131,682,483
+US13219,"Oconee County, Georgia",36086,3147,1494,558,1023,72
+US13221,"Oglethorpe County, Georgia",14071,713,655,32,26,0
+US13223,"Paulding County, Georgia",149355,10014,6173,2175,728,938
+US13225,"Peach County, Georgia",25674,2102,1773,105,224,0
+US13227,"Pickens County, Georgia",29860,912,704,103,105,0
+US13229,"Pierce County, Georgia",17988,639,509,128,2,0
+US13231,"Pike County, Georgia",17438,327,230,17,80,0
+US13233,"Polk County, Georgia",39055,4697,4407,174,0,116
+US13235,"Pulaski County, Georgia",10676,214,160,24,30,0
+US13237,"Putnam County, Georgia",20705,1325,859,331,102,33
+US13239,"Quitman County, Georgia",2126,160,42,114,4,0
+US13241,"Rabun County, Georgia",15911,1378,1106,240,17,15
+US13243,"Randolph County, Georgia",6568,71,63,8,0,0
+US13245,"Richmond County, Georgia",188087,11979,6283,2783,2289,624
+US13247,"Rockdale County, Georgia",84488,9664,7119,1248,878,419
+US13249,"Schley County, Georgia",4882,78,70,8,0,0
+US13251,"Screven County, Georgia",13118,332,188,72,72,0
+US13253,"Seminole County, Georgia",7873,110,35,0,65,10
+US13255,"Spalding County, Georgia",61348,2518,1944,370,143,61
+US13257,"Stephens County, Georgia",24053,780,545,188,47,0
+US13259,"Stewart County, Georgia",6134,1400,799,251,117,233
+US13261,"Sumter County, Georgia",28214,1740,1136,127,283,194
+US13263,"Talbot County, Georgia",6040,112,65,8,39,0
+US13265,"Taliaferro County, Georgia",1557,86,66,4,12,4
+US13267,"Tattnall County, Georgia",24057,3155,2774,139,52,190
+US13269,"Taylor County, Georgia",7707,344,190,154,0,0
+US13271,"Telfair County, Georgia",15274,1906,1898,4,4,0
+US13273,"Terrell County, Georgia",8188,178,98,1,76,3
+US13275,"Thomas County, Georgia",41814,1784,1434,261,36,53
+US13277,"Tift County, Georgia",37715,4525,3796,330,371,28
+US13279,"Toombs County, Georgia",25066,2988,2712,121,155,0
+US13281,"Towns County, Georgia",11231,370,239,92,30,9
+US13283,"Treutlen County, Georgia",6386,231,223,4,4,0
+US13285,"Troup County, Georgia",65357,3415,1781,767,818,49
+US13287,"Turner County, Georgia",7412,472,333,102,37,0
+US13289,"Twiggs County, Georgia",7799,190,79,110,1,0
+US13291,"Union County, Georgia",22326,837,583,200,54,0
+US13293,"Upson County, Georgia",24468,700,420,268,12,0
+US13295,"Walker County, Georgia",65167,1487,898,253,325,11
+US13297,"Walton County, Georgia",85848,4588,2656,1508,328,96
+US13299,"Ware County, Georgia",33352,1338,834,394,39,71
+US13301,"Warren County, Georgia",5018,67,41,26,0,0
+US13303,"Washington County, Georgia",19290,558,343,173,12,30
+US13305,"Wayne County, Georgia",27809,1560,1245,106,183,26
+US13307,"Webster County, Georgia",2551,245,225,20,0,0
+US13309,"Wheeler County, Georgia",7677,85,85,0,0,0
+US13311,"White County, Georgia",28203,1202,793,245,143,21
+US13313,"Whitfield County, Georgia",97286,30333,28553,974,562,244
+US13315,"Wilcox County, Georgia",8362,434,424,0,0,10
+US13317,"Wilkes County, Georgia",9293,533,470,27,36,0
+US13319,"Wilkinson County, Georgia",8510,209,203,6,0,0
+US13321,"Worth County, Georgia",19260,439,330,10,99,0
+US15001,"Hawaii County, Hawaii",187560,47914,5741,2942,32983,6248
+US15003,"Honolulu County, Hawaii",922126,257108,18070,10716,224377,3945
+US15005,"Kalawao County, Hawaii",65,13,1,0,11,1
+US15007,"Kauai County, Hawaii",67429,13655,814,576,11805,460
+US15009,"Maui County, Hawaii",156072,35654,5896,1647,27466,645
+US16001,"Ada County, Idaho",430126,37379,18426,7886,6926,4141
+US16003,"Adams County, Idaho",3944,137,84,45,8,0
+US16005,"Bannock County, Idaho",79545,5893,2949,988,1046,910
+US16007,"Bear Lake County, Idaho",5589,213,153,11,18,31
+US16009,"Benewah County, Idaho",8609,338,142,98,25,73
+US16011,"Bingham County, Idaho",42349,6221,5263,282,144,532
+US16013,"Blaine County, Idaho",21208,4729,4310,149,169,101
+US16015,"Boise County, Idaho",7138,390,231,103,56,0
+US16017,"Bonner County, Idaho",41486,1084,588,347,149,0
+US16019,"Bonneville County, Idaho",104679,11913,10259,957,538,159
+US16021,"Boundary County, Idaho",11098,388,69,262,10,47
+US16023,"Butte County, Idaho",2429,40,30,10,0,0
+US16025,"Camas County, Idaho",974,17,17,0,0,0
+US16027,"Canyon County, Idaho",201226,37575,33699,2219,1293,364
+US16029,"Caribou County, Idaho",6487,255,241,9,5,0
+US16031,"Cassia County, Idaho",21742,4523,4135,171,152,65
+US16033,"Clark County, Idaho",846,414,402,6,0,6
+US16035,"Clearwater County, Idaho",8362,363,193,64,47,59
+US16037,"Custer County, Idaho",4037,77,71,6,0,0
+US16039,"Elmore County, Idaho",24630,3535,2711,309,473,42
+US16041,"Franklin County, Idaho",12447,479,392,42,13,32
+US16043,"Fremont County, Idaho",12190,1352,1197,53,102,0
+US16045,"Gem County, Idaho",16354,1317,1066,122,105,24
+US16047,"Gooding County, Idaho",14116,3476,3374,55,43,4
+US16049,"Idaho County, Idaho",15640,739,345,143,30,221
+US16051,"Jefferson County, Idaho",26105,2398,2006,102,234,56
+US16053,"Jerome County, Idaho",21700,6509,6316,63,111,19
+US16055,"Kootenai County, Idaho",147913,4883,2622,1392,551,318
+US16057,"Latah County, Idaho",37488,2324,750,601,571,402
+US16059,"Lemhi County, Idaho",7455,146,75,46,1,24
+US16061,"Lewis County, Idaho",3629,139,34,34,18,53
+US16063,"Lincoln County, Idaho",4981,1240,1180,30,24,6
+US16065,"Madison County, Idaho",35253,3865,2368,602,859,36
+US16067,"Minidoka County, Idaho",19125,5535,5444,60,31,0
+US16069,"Nez Perce County, Idaho",37849,1735,563,328,267,577
+US16071,"Oneida County, Idaho",4113,217,209,0,2,6
+US16073,"Owyhee County, Idaho",10792,2361,2285,11,4,61
+US16075,"Payette County, Idaho",21739,3020,2756,53,121,90
+US16077,"Power County, Idaho",7105,1992,1919,15,17,41
+US16079,"Shoshone County, Idaho",11807,523,259,55,50,159
+US16081,"Teton County, Idaho",10699,1544,1441,95,8,0
+US16083,"Twin Falls County, Idaho",78594,11351,8097,1914,795,545
+US16085,"Valley County, Idaho",10227,557,461,92,2,2
+US16087,"Washington County, Idaho",9564,1099,1030,38,31,0
+US17001,"Adams County, Illinois",62020,1281,554,313,332,82
+US17003,"Alexander County, Illinois",5843,47,47,0,0,0
+US17005,"Bond County, Illinois",15900,677,494,104,29,50
+US17007,"Boone County, Illinois",50483,10321,9099,752,390,80
+US17009,"Brown County, Illinois",6332,332,215,101,0,16
+US17011,"Bureau County, Illinois",31430,2378,1810,310,241,17
+US17013,"Calhoun County, Illinois",4586,58,31,24,3,0
+US17015,"Carroll County, Illinois",13696,368,149,133,66,20
+US17017,"Cass County, Illinois",11683,2028,1740,246,5,37
+US17019,"Champaign County, Illinois",198391,34915,9348,8639,15351,1577
+US17021,"Christian County, Illinois",31202,715,382,173,134,26
+US17023,"Clark County, Illinois",14813,264,124,73,60,7
+US17025,"Clay County, Illinois",12543,226,125,81,19,1
+US17027,"Clinton County, Illinois",35541,1458,997,307,147,7
+US17029,"Coles County, Illinois",48975,1880,610,695,392,183
+US17031,"Cook County, Illinois",4876082,1720467,1012973,412738,201166,93590
+US17033,"Crawford County, Illinois",17955,769,424,219,80,46
+US17035,"Cumberland County, Illinois",10152,147,96,26,25,0
+US17037,"DeKalb County, Illinois",98357,11707,7067,2063,1510,1067
+US17039,"De Witt County, Illinois",15075,509,439,54,15,1
+US17041,"Douglas County, Illinois",18294,3031,1009,1934,46,42
+US17043,"DuPage County, Illinois",874210,240332,91818,94020,45336,9158
+US17045,"Edgar County, Illinois",16512,166,75,53,38,0
+US17047,"Edwards County, Illinois",6088,125,68,27,16,14
+US17049,"Effingham County, Illinois",31876,1193,754,231,195,13
+US17051,"Fayette County, Illinois",20380,952,547,258,98,49
+US17053,"Ford County, Illinois",12550,474,338,58,78,0
+US17055,"Franklin County, Illinois",36648,490,256,152,78,4
+US17057,"Fulton County, Illinois",33427,1214,754,373,62,25
+US17059,"Gallatin County, Illinois",4809,53,27,20,6,0
+US17061,"Greene County, Illinois",12466,132,92,36,4,0
+US17063,"Grundy County, Illinois",47542,3681,2800,688,154,39
+US17065,"Hamilton County, Illinois",7729,127,38,89,0,0
+US17067,"Hancock County, Illinois",17017,292,84,135,58,15
+US17069,"Hardin County, Illinois",3824,23,18,5,0,0
+US17071,"Henderson County, Illinois",6481,130,83,45,0,2
+US17073,"Henry County, Illinois",46563,2149,1733,208,197,11
+US17075,"Iroquois County, Illinois",26324,1618,1409,165,21,23
+US17077,"Jackson County, Illinois",54848,4877,1996,1461,1038,382
+US17079,"Jasper County, Illinois",8997,253,124,104,25,0
+US17081,"Jefferson County, Illinois",35582,1596,630,739,162,65
+US17083,"Jersey County, Illinois",20894,356,159,95,67,35
+US17085,"Jo Daviess County, Illinois",20670,681,462,112,88,19
+US17087,"Johnson County, Illinois",11928,425,314,67,44,0
+US17089,"Kane County, Illinois",497298,156358,128443,14936,10287,2692
+US17091,"Kankakee County, Illinois",104104,9741,7918,1163,491,169
+US17093,"Kendall County, Illinois",117363,21439,15074,3358,1991,1016
+US17095,"Knox County, Illinois",47707,3033,1775,637,320,301
+US17097,"Lake County, Illinois",660770,190193,114481,41911,29578,4223
+US17099,"LaSalle County, Illinois",103628,7926,5935,1172,773,46
+US17101,"Lawrence County, Illinois",15250,886,682,105,84,15
+US17103,"Lee County, Illinois",32672,1566,1116,257,138,55
+US17105,"Livingston County, Illinois",34085,1311,911,209,93,98
+US17107,"Logan County, Illinois",27450,1261,779,334,103,45
+US17109,"McDonough County, Illinois",29118,1455,519,525,295,116
+US17111,"McHenry County, Illinois",290796,41193,25774,10019,4414,986
+US17113,"McLean County, Illinois",162297,12827,4660,3287,4566,314
+US17115,"Macon County, Illinois",99025,3430,1668,966,577,219
+US17117,"Macoupin County, Illinois",43171,680,285,190,179,26
+US17119,"Madison County, Illinois",249469,9703,4979,2347,1760,617
+US17121,"Marion County, Illinois",35320,588,248,182,113,45
+US17123,"Marshall County, Illinois",11028,337,205,103,22,7
+US17125,"Mason County, Illinois",12920,214,121,67,26,0
+US17127,"Massac County, Illinois",13428,327,268,8,22,29
+US17129,"Menard County, Illinois",11629,191,100,42,37,12
+US17131,"Mercer County, Illinois",14777,198,90,19,51,38
+US17133,"Monroe County, Illinois",32305,1009,219,377,291,122
+US17135,"Montgomery County, Illinois",27337,549,302,220,24,3
+US17137,"Morgan County, Illinois",32455,1326,685,454,94,93
+US17139,"Moultrie County, Illinois",13683,1522,117,1400,5,0
+US17141,"Ogle County, Illinois",48280,3561,2985,456,109,11
+US17143,"Peoria County, Illinois",170083,13839,5725,3520,3610,984
+US17145,"Perry County, Illinois",20176,748,415,275,58,0
+US17147,"Piatt County, Illinois",15418,447,177,167,89,14
+US17149,"Pike County, Illinois",14704,225,117,42,60,6
+US17151,"Pope County, Illinois",4049,78,38,25,15,0
+US17153,"Pulaski County, Illinois",5230,50,26,20,4,0
+US17155,"Putnam County, Illinois",5482,310,248,52,10,0
+US17157,"Randolph County, Illinois",30695,1304,805,322,130,47
+US17159,"Richland County, Illinois",14715,456,249,110,51,46
+US17161,"Rock Island County, Illinois",134886,18532,11352,2977,2322,1881
+US17163,"St. Clair County, Illinois",245702,13936,6565,4371,2139,861
+US17165,"Saline County, Illinois",22496,770,294,337,105,34
+US17167,"Sangamon County, Illinois",185476,9082,3132,3065,2121,764
+US17169,"Schuyler County, Illinois",6663,234,19,211,4,0
+US17171,"Scott County, Illinois",4762,69,36,22,11,0
+US17173,"Shelby County, Illinois",20573,167,65,49,53,0
+US17175,"Stark County, Illinois",5155,109,59,28,22,0
+US17177,"Stephenson County, Illinois",42554,1600,999,330,222,49
+US17179,"Tazewell County, Illinois",125377,3480,1562,793,1010,115
+US17181,"Union County, Illinois",16033,730,595,61,74,0
+US17183,"Vermilion County, Illinois",72504,3388,2372,386,464,166
+US17185,"Wabash County, Illinois",10827,412,219,145,37,11
+US17187,"Warren County, Illinois",16143,1620,973,238,344,65
+US17189,"Washington County, Illinois",13272,257,114,95,42,6
+US17191,"Wayne County, Illinois",15376,526,133,374,19,0
+US17193,"White County, Illinois",13088,237,130,43,56,8
+US17195,"Whiteside County, Illinois",52829,4074,2773,847,266,188
+US17197,"Will County, Illinois",648683,133152,80948,28383,16960,6861
+US17199,"Williamson County, Illinois",63166,2251,1269,351,512,119
+US17201,"Winnebago County, Illinois",266882,39295,26621,5582,4368,2724
+US17203,"Woodford County, Illinois",36356,719,384,189,139,7
+US18001,"Adams County, Indiana",32007,4725,593,4036,96,0
+US18003,"Allen County, Indiana",346342,38581,17731,8575,10834,1441
+US18005,"Bartholomew County, Indiana",77014,9270,3775,2915,2428,152
+US18007,"Benton County, Indiana",8113,296,269,12,15,0
+US18009,"Blackford County, Indiana",11376,324,142,73,47,62
+US18011,"Boone County, Indiana",61366,3450,1393,753,1217,87
+US18013,"Brown County, Indiana",14481,257,118,18,121,0
+US18015,"Carroll County, Indiana",19012,687,521,120,37,9
+US18017,"Cass County, Indiana",35543,5481,4729,196,451,105
+US18019,"Clark County, Indiana",109165,5973,4215,1021,573,164
+US18021,"Clay County, Indiana",24599,455,285,118,52,0
+US18023,"Clinton County, Indiana",30044,3824,3655,111,58,0
+US18025,"Crawford County, Indiana",9980,118,103,0,11,4
+US18027,"Daviess County, Indiana",30520,6162,1374,4728,60,0
+US18029,"Dearborn County, Indiana",46929,918,463,248,161,46
+US18031,"Decatur County, Indiana",24834,899,306,347,204,42
+US18033,"DeKalb County, Indiana",40234,1263,551,562,64,86
+US18035,"Delaware County, Indiana",109249,3763,1579,823,1290,71
+US18037,"Dubois County, Indiana",39713,2391,2060,321,1,9
+US18039,"Elkhart County, Indiana",189083,36190,24124,10381,1262,423
+US18041,"Fayette County, Indiana",21987,323,211,82,8,22
+US18043,"Floyd County, Indiana",72794,2374,1208,445,656,65
+US18045,"Fountain County, Indiana",15495,542,251,210,57,24
+US18047,"Franklin County, Indiana",21464,492,104,188,174,26
+US18049,"Fulton County, Indiana",18921,1215,803,405,7,0
+US18051,"Gibson County, Indiana",31577,788,373,281,95,39
+US18053,"Grant County, Indiana",62755,1634,975,297,255,107
+US18055,"Greene County, Indiana",30447,508,245,227,36,0
+US18057,"Hamilton County, Indiana",301583,28939,8127,7616,11232,1964
+US18059,"Hancock County, Indiana",70795,2281,1071,761,343,106
+US18061,"Harrison County, Indiana",37659,880,507,200,121,52
+US18063,"Hendricks County, Indiana",154101,9573,3585,3425,1573,990
+US18065,"Henry County, Indiana",45857,870,396,299,137,38
+US18067,"Howard County, Indiana",77358,2717,1433,668,486,130
+US18069,"Huntington County, Indiana",34321,1246,709,415,107,15
+US18071,"Jackson County, Indiana",41130,2991,2002,224,697,68
+US18073,"Jasper County, Indiana",31517,1585,1130,337,111,7
+US18075,"Jay County, Indiana",19381,801,193,461,121,26
+US18077,"Jefferson County, Indiana",30176,610,326,108,154,22
+US18079,"Jennings County, Indiana",25976,594,496,54,44,0
+US18081,"Johnson County, Indiana",143828,9549,3885,3119,2035,510
+US18083,"Knox County, Indiana",34881,845,351,232,243,19
+US18085,"Kosciusko County, Indiana",73912,7759,4202,2842,621,94
+US18087,"LaGrange County, Indiana",35563,15508,1054,14347,15,92
+US18089,"Lake County, Indiana",456356,67134,48009,12403,3815,2907
+US18091,"LaPorte County, Indiana",103638,5925,3880,1455,392,198
+US18093,"Lawrence County, Indiana",43079,742,342,251,149,0
+US18095,"Madison County, Indiana",122087,4637,3342,713,414,168
+US18097,"Marion County, Indiana",882233,119926,72725,14742,19863,12596
+US18099,"Marshall County, Indiana",43514,5067,3038,1763,178,88
+US18101,"Martin County, Indiana",9593,159,129,13,17,0
+US18103,"Miami County, Indiana",33938,1284,652,527,71,34
+US18105,"Monroe County, Indiana",140043,14162,2693,3487,6894,1088
+US18107,"Montgomery County, Indiana",36025,1573,1278,164,131,0
+US18109,"Morgan County, Indiana",65886,1047,533,178,286,50
+US18111,"Newton County, Indiana",13250,502,475,27,0,0
+US18113,"Noble County, Indiana",44376,5662,3681,1249,180,552
+US18115,"Ohio County, Indiana",5573,91,79,0,7,5
+US18117,"Orange County, Indiana",18374,407,90,257,24,36
+US18119,"Owen County, Indiana",19711,544,131,309,83,21
+US18121,"Parke County, Indiana",15896,1323,254,1069,0,0
+US18123,"Perry County, Indiana",18019,128,57,23,48,0
+US18125,"Pike County, Indiana",11682,116,53,35,28,0
+US18127,"Porter County, Indiana",159464,9388,5329,2134,1526,399
+US18129,"Posey County, Indiana",24168,228,174,20,34,0
+US18131,"Pulaski County, Indiana",11910,292,119,42,131,0
+US18133,"Putnam County, Indiana",35521,1036,329,244,456,7
+US18135,"Randolph County, Indiana",23476,714,490,192,32,0
+US18137,"Ripley County, Indiana",26744,817,460,296,56,5
+US18139,"Rush County, Indiana",15714,429,129,298,2,0
+US18141,"St. Joseph County, Indiana",252836,25252,14225,4940,4111,1976
+US18143,"Scott County, Indiana",22335,707,307,246,107,47
+US18145,"Shelby County, Indiana",41904,1771,1333,223,215,0
+US18147,"Spencer County, Indiana",19329,583,406,92,46,39
+US18149,"Starke County, Indiana",21656,657,313,281,63,0
+US18151,"Steuben County, Indiana",32572,1279,785,324,81,89
+US18153,"Sullivan County, Indiana",19672,226,134,61,31,0
+US18155,"Switzerland County, Indiana",10035,444,80,236,56,72
+US18157,"Tippecanoe County, Indiana",180237,29280,11087,6236,10698,1259
+US18159,"Tipton County, Indiana",14358,340,265,75,0,0
+US18161,"Union County, Indiana",6661,168,45,20,103,0
+US18163,"Vanderburgh County, Indiana",170341,6783,3251,1372,1697,463
+US18165,"Vermillion County, Indiana",14709,316,83,119,35,79
+US18167,"Vigo County, Indiana",101290,4629,1668,1331,1012,618
+US18169,"Wabash County, Indiana",29798,1011,686,210,59,56
+US18171,"Warren County, Indiana",7780,66,43,8,9,6
+US18173,"Warrick County, Indiana",58775,2471,999,579,837,56
+US18175,"Washington County, Indiana",26245,583,267,223,78,15
+US18177,"Wayne County, Indiana",62484,3310,1360,1312,486,152
+US18179,"Wells County, Indiana",26301,738,340,353,40,5
+US18181,"White County, Indiana",22659,1779,1514,244,21,0
+US18183,"Whitley County, Indiana",31689,1258,230,785,104,139
+US19001,"Adair County, Iowa",6699,214,100,78,36,0
+US19003,"Adams County, Iowa",3451,52,49,3,0,0
+US19005,"Allamakee County, Iowa",12865,1452,768,511,26,147
+US19007,"Appanoose County, Iowa",11779,345,33,254,54,4
+US19009,"Audubon County, Iowa",5241,73,31,27,15,0
+US19011,"Benton County, Iowa",24061,680,367,301,10,2
+US19013,"Black Hawk County, Iowa",123997,11468,4081,5087,1578,722
+US19015,"Boone County, Iowa",24849,636,508,121,1,6
+US19017,"Bremer County, Iowa",23399,594,169,222,141,62
+US19019,"Buchanan County, Iowa",19643,648,212,407,0,29
+US19021,"Buena Vista County, Iowa",18561,6040,4146,61,1789,44
+US19023,"Butler County, Iowa",13836,233,85,110,36,2
+US19025,"Calhoun County, Iowa",9177,148,66,30,18,34
+US19027,"Carroll County, Iowa",18975,461,397,29,24,11
+US19029,"Cass County, Iowa",12426,325,240,43,42,0
+US19031,"Cedar County, Iowa",17535,304,199,46,20,39
+US19033,"Cerro Gordo County, Iowa",40528,1528,952,481,95,0
+US19035,"Cherokee County, Iowa",10689,293,210,51,27,5
+US19037,"Chickasaw County, Iowa",11303,660,304,337,12,7
+US19039,"Clarke County, Iowa",8686,1061,962,85,14,0
+US19041,"Clay County, Iowa",15153,562,380,64,101,17
+US19043,"Clayton County, Iowa",16676,1006,335,431,45,195
+US19045,"Clinton County, Iowa",44101,817,402,157,196,62
+US19047,"Crawford County, Iowa",15921,4847,4080,79,335,353
+US19049,"Dallas County, Iowa",80339,8895,3728,2297,1978,892
+US19051,"Davis County, Iowa",8115,1618,33,1567,10,8
+US19053,"Decatur County, Iowa",7482,444,111,303,22,8
+US19055,"Delaware County, Iowa",16054,356,195,118,32,11
+US19057,"Des Moines County, Iowa",37089,1217,642,332,195,48
+US19059,"Dickinson County, Iowa",16335,494,206,122,147,19
+US19061,"Dubuque County, Iowa",90864,3872,1805,787,925,355
+US19063,"Emmet County, Iowa",8932,727,663,19,29,16
+US19065,"Fayette County, Iowa",18730,595,331,206,24,34
+US19067,"Floyd County, Iowa",14920,1250,411,581,196,62
+US19069,"Franklin County, Iowa",9558,1037,974,57,6,0
+US19071,"Fremont County, Iowa",6552,203,154,42,5,2
+US19073,"Greene County, Iowa",8433,336,206,39,46,45
+US19075,"Grundy County, Iowa",11636,280,153,107,20,0
+US19077,"Guthrie County, Iowa",10105,269,188,31,50,0
+US19079,"Hamilton County, Iowa",14079,1124,748,75,269,32
+US19081,"Hancock County, Iowa",10196,359,303,43,9,4
+US19083,"Hardin County, Iowa",16220,616,438,127,4,47
+US19085,"Harrison County, Iowa",13267,179,78,48,51,2
+US19087,"Henry County, Iowa",18832,1094,556,85,388,65
+US19089,"Howard County, Iowa",8598,354,49,274,30,1
+US19091,"Humboldt County, Iowa",8983,433,363,43,23,4
+US19093,"Ida County, Iowa",6508,115,78,8,19,10
+US19095,"Iowa County, Iowa",15241,471,217,210,42,2
+US19097,"Jackson County, Iowa",18243,235,120,64,51,0
+US19099,"Jasper County, Iowa",34806,1107,507,337,131,132
+US19101,"Jefferson County, Iowa",17349,1632,449,693,310,180
+US19103,"Johnson County, Iowa",139733,21501,5630,5988,6194,3689
+US19105,"Jones County, Iowa",19525,449,254,57,138,0
+US19107,"Keokuk County, Iowa",9570,148,93,35,18,2
+US19109,"Kossuth County, Iowa",14101,330,213,71,37,9
+US19111,"Lee County, Iowa",32176,785,638,70,54,23
+US19113,"Linn County, Iowa",209751,12234,4030,3579,2547,2078
+US19115,"Louisa County, Iowa",10545,1879,1479,58,315,27
+US19117,"Lucas County, Iowa",8076,419,134,285,0,0
+US19119,"Lyon County, Iowa",10907,351,236,89,26,0
+US19121,"Madison County, Iowa",15094,477,190,156,131,0
+US19123,"Mahaska County, Iowa",20693,543,157,79,301,6
+US19125,"Marion County, Iowa",31303,929,448,244,213,24
+US19127,"Marshall County, Iowa",37305,8447,6964,165,1183,135
+US19129,"Mills County, Iowa",14216,393,228,116,45,4
+US19131,"Mitchell County, Iowa",10001,581,143,399,39,0
+US19133,"Monona County, Iowa",8279,72,38,18,0,16
+US19135,"Monroe County, Iowa",7369,201,10,191,0,0
+US19137,"Montgomery County, Iowa",9449,346,299,44,0,3
+US19139,"Muscatine County, Iowa",40159,5451,4654,343,248,206
+US19141,"O'Brien County, Iowa",12970,686,514,55,97,20
+US19143,"Osceola County, Iowa",5691,453,414,35,4,0
+US19145,"Page County, Iowa",14485,400,245,18,92,45
+US19147,"Palo Alto County, Iowa",8397,323,177,113,14,19
+US19149,"Plymouth County, Iowa",23519,1273,981,172,101,19
+US19151,"Pocahontas County, Iowa",6436,356,200,41,113,2
+US19153,"Polk County, Iowa",445363,59195,25477,12196,13748,7774
+US19155,"Pottawattamie County, Iowa",87716,5934,4727,424,702,81
+US19157,"Poweshiek County, Iowa",17489,858,441,161,214,42
+US19159,"Ringgold County, Iowa",4668,171,86,42,42,1
+US19161,"Sac County, Iowa",9222,299,206,93,0,0
+US19163,"Scott County, Iowa",161351,10635,5120,2426,2540,549
+US19165,"Shelby County, Iowa",11021,321,269,32,20,0
+US19167,"Sioux County, Iowa",32270,2921,2593,144,154,30
+US19169,"Story County, Iowa",92491,10092,1803,2059,5813,417
+US19171,"Tama County, Iowa",15946,1909,1176,115,4,614
+US19173,"Taylor County, Iowa",5825,416,391,8,17,0
+US19175,"Union County, Iowa",11668,616,193,213,173,37
+US19177,"Van Buren County, Iowa",6734,434,52,380,2,0
+US19179,"Wapello County, Iowa",32906,3911,2875,336,348,352
+US19181,"Warren County, Iowa",47072,1136,632,418,86,0
+US19183,"Washington County, Iowa",20609,1806,920,742,144,0
+US19185,"Wayne County, Iowa",5968,624,61,514,14,35
+US19187,"Webster County, Iowa",34420,1391,911,115,210,155
+US19189,"Winnebago County, Iowa",9969,481,265,85,131,0
+US19191,"Winneshiek County, Iowa",19409,680,333,219,74,54
+US19193,"Woodbury County, Iowa",95200,15527,11680,655,2414,778
+US19195,"Worth County, Iowa",7033,90,29,35,23,3
+US19197,"Wright County, Iowa",11964,1175,1068,22,85,0
+US20001,"Allen County, Kansas",11834,285,138,39,103,5
+US20003,"Anderson County, Kansas",7357,164,31,131,2,0
+US20005,"Atchison County, Kansas",15349,200,67,78,55,0
+US20007,"Barber County, Kansas",4311,222,115,32,75,0
+US20009,"Barton County, Kansas",24840,2622,2403,133,74,12
+US20011,"Bourbon County, Kansas",13585,227,27,119,81,0
+US20013,"Brown County, Kansas",9005,186,61,46,36,43
+US20015,"Butler County, Kansas",62731,2519,1316,487,518,198
+US20017,"Chase County, Kansas",2516,87,63,11,13,0
+US20019,"Chautauqua County, Kansas",3131,34,16,7,0,11
+US20021,"Cherokee County, Kansas",19069,398,210,82,81,25
+US20023,"Cheyenne County, Kansas",2518,208,172,36,0,0
+US20025,"Clark County, Kansas",1869,99,69,15,15,0
+US20027,"Clay County, Kansas",7577,170,39,76,46,9
+US20029,"Cloud County, Kansas",8327,306,252,51,0,3
+US20031,"Coffey County, Kansas",7819,80,68,3,7,2
+US20033,"Comanche County, Kansas",1673,53,51,2,0,0
+US20035,"Cowley County, Kansas",33161,2207,1683,142,339,43
+US20037,"Crawford County, Kansas",36637,2113,1225,291,563,34
+US20039,"Decatur County, Kansas",2698,120,106,7,7,0
+US20041,"Dickinson County, Kansas",17684,449,242,139,68,0
+US20043,"Doniphan County, Kansas",7308,136,74,31,5,26
+US20045,"Douglas County, Kansas",114197,11705,4017,2664,4067,957
+US20047,"Edwards County, Kansas",2695,523,472,27,24,0
+US20049,"Elk County, Kansas",2397,85,66,10,9,0
+US20051,"Ellis County, Kansas",27049,1762,859,468,359,76
+US20053,"Ellsworth County, Kansas",5906,204,135,36,33,0
+US20055,"Finney County, Kansas",33480,15199,12954,515,1219,511
+US20057,"Ford County, Kansas",31094,16299,15361,264,451,223
+US20059,"Franklin County, Kansas",24024,482,366,64,24,28
+US20061,"Geary County, Kansas",29921,4746,2756,593,1005,392
+US20063,"Gove County, Kansas",2487,65,51,7,7,0
+US20065,"Graham County, Kansas",2400,58,13,10,29,6
+US20067,"Grant County, Kansas",6876,2522,2427,82,13,0
+US20069,"Gray County, Kansas",5586,1134,771,362,0,1
+US20071,"Greeley County, Kansas",1108,255,235,20,0,0
+US20073,"Greenwood County, Kansas",5784,82,45,19,18,0
+US20075,"Hamilton County, Kansas",2492,663,631,32,0,0
+US20077,"Harper County, Kansas",5210,288,243,34,0,11
+US20079,"Harvey County, Kansas",32364,1934,1430,271,179,54
+US20081,"Haskell County, Kansas",3746,1436,956,473,3,4
+US20083,"Hodgeman County, Kansas",1756,149,102,20,27,0
+US20085,"Jackson County, Kansas",12397,390,131,72,25,162
+US20087,"Jefferson County, Kansas",17900,293,177,107,3,6
+US20089,"Jewell County, Kansas",2736,38,28,10,0,0
+US20091,"Johnson County, Kansas",553561,65833,27407,15112,16276,7038
+US20093,"Kearny County, Kansas",3595,869,699,155,15,0
+US20095,"Kingman County, Kansas",6957,249,129,117,2,1
+US20097,"Kiowa County, Kansas",2338,178,69,102,4,3
+US20099,"Labette County, Kansas",18795,690,163,516,10,1
+US20101,"Lane County, Kansas",1461,87,65,2,20,0
+US20103,"Leavenworth County, Kansas",75540,3565,1990,642,757,176
+US20105,"Lincoln County, Kansas",2899,70,66,4,0,0
+US20107,"Linn County, Kansas",9136,78,23,16,28,11
+US20109,"Logan County, Kansas",2608,74,36,34,0,4
+US20111,"Lyon County, Kansas",31289,5608,4767,150,540,151
+US20113,"McPherson County, Kansas",26958,1023,699,284,34,6
+US20115,"Marion County, Kansas",11356,312,155,73,81,3
+US20117,"Marshall County, Kansas",9132,278,100,157,21,0
+US20119,"Meade County, Kansas",3917,830,655,151,24,0
+US20121,"Miami County, Kansas",31514,657,367,128,152,10
+US20123,"Mitchell County, Kansas",5741,112,65,41,4,2
+US20125,"Montgomery County, Kansas",30475,1293,1033,96,90,74
+US20127,"Morris County, Kansas",5249,198,144,28,26,0
+US20129,"Morton County, Kansas",2622,562,444,112,6,0
+US20131,"Nemaha County, Kansas",9376,208,131,71,6,0
+US20133,"Neosho County, Kansas",15001,498,420,50,18,10
+US20135,"Ness County, Kansas",2687,298,268,29,0,1
+US20137,"Norton County, Kansas",5108,147,128,4,15,0
+US20139,"Osage County, Kansas",14998,310,155,131,15,9
+US20141,"Osborne County, Kansas",3323,82,38,20,4,20
+US20143,"Ottawa County, Kansas",5522,104,87,16,0,1
+US20145,"Pawnee County, Kansas",6308,176,131,32,4,9
+US20147,"Phillips County, Kansas",5033,121,48,37,36,0
+US20149,"Pottawatomie County, Kansas",21985,1012,742,139,121,10
+US20151,"Pratt County, Kansas",8708,642,558,74,10,0
+US20153,"Rawlins County, Kansas",2362,184,138,18,0,28
+US20155,"Reno County, Kansas",59224,3906,2214,1457,162,73
+US20157,"Republic County, Kansas",4416,73,35,20,0,18
+US20159,"Rice County, Kansas",9075,688,541,51,71,25
+US20161,"Riley County, Kansas",70844,7955,3154,1759,2421,621
+US20163,"Rooks County, Kansas",4730,69,39,13,10,7
+US20165,"Rush County, Kansas",2837,63,2,51,10,0
+US20167,"Russell County, Kansas",6549,274,165,94,14,1
+US20169,"Saline County, Kansas",51210,5054,3557,563,877,57
+US20171,"Scott County, Kansas",4578,622,548,71,3,0
+US20173,"Sedgwick County, Kansas",477154,70297,46377,5283,15339,3298
+US20175,"Seward County, Kansas",20333,11985,10943,252,413,377
+US20177,"Shawnee County, Kansas",166629,13785,10804,1292,1534,155
+US20179,"Sheridan County, Kansas",2367,142,99,31,0,12
+US20181,"Sherman County, Kansas",5543,632,472,102,52,6
+US20183,"Smith County, Kansas",3439,41,9,25,5,2
+US20185,"Stafford County, Kansas",3920,377,348,9,20,0
+US20187,"Stanton County, Kansas",1901,665,648,4,13,0
+US20189,"Stevens County, Kansas",5184,1795,1572,205,18,0
+US20191,"Sumner County, Kansas",21720,538,337,83,78,40
+US20193,"Thomas County, Kansas",7247,377,273,29,75,0
+US20195,"Trego County, Kansas",2736,14,14,0,0,0
+US20197,"Wabaunsee County, Kansas",6483,127,52,25,26,24
+US20199,"Wallace County, Kansas",1471,60,52,8,0,0
+US20201,"Washington County, Kansas",5127,165,136,27,2,0
+US20203,"Wichita County, Kansas",2016,539,525,0,14,0
+US20205,"Wilson County, Kansas",8103,117,55,50,8,4
+US20207,"Woodson County, Kansas",2971,30,21,6,0,3
+US20209,"Wyandotte County, Kansas",151574,42653,33953,2367,5266,1067
+US21001,"Adair County, Kentucky",18249,482,297,68,93,24
+US21003,"Allen County, Kentucky",19592,1247,341,880,26,0
+US21005,"Anderson County, Kentucky",20975,451,288,118,45,0
+US21007,"Ballard County, Kentucky",7611,303,66,189,20,28
+US21009,"Barren County, Kentucky",41070,1786,934,707,145,0
+US21011,"Bath County, Kentucky",11525,506,256,194,56,0
+US21013,"Bell County, Kentucky",25188,117,107,10,0,0
+US21015,"Boone County, Kentucky",122131,8944,3926,2434,1624,960
+US21017,"Bourbon County, Kentucky",18823,1332,1095,83,154,0
+US21019,"Boyd County, Kentucky",44910,835,415,226,117,77
+US21021,"Boyle County, Kentucky",28466,1112,630,106,209,167
+US21023,"Bracken County, Kentucky",7775,161,114,37,10,0
+US21025,"Breathitt County, Kentucky",12162,86,28,24,19,15
+US21027,"Breckinridge County, Kentucky",19020,659,276,357,26,0
+US21029,"Bullitt County, Kentucky",76087,1914,1026,618,144,126
+US21031,"Butler County, Kentucky",12020,530,323,106,12,89
+US21033,"Caldwell County, Kentucky",12007,271,206,63,2,0
+US21035,"Calloway County, Kentucky",36859,1760,698,234,419,409
+US21037,"Campbell County, Kentucky",87473,3221,1506,1086,522,107
+US21039,"Carlisle County, Kentucky",4470,65,23,26,14,2
+US21041,"Carroll County, Kentucky",9879,564,464,62,32,6
+US21043,"Carter County, Kentucky",25500,271,174,66,4,27
+US21045,"Casey County, Kentucky",14945,613,172,417,4,20
+US21047,"Christian County, Kentucky",64742,6348,3178,2165,694,311
+US21049,"Clark County, Kentucky",33732,998,685,256,57,0
+US21051,"Clay County, Kentucky",19152,286,265,21,0,0
+US21053,"Clinton County, Kentucky",9528,292,229,63,0,0
+US21055,"Crittenden County, Kentucky",8513,544,85,459,0,0
+US21057,"Cumberland County, Kentucky",6275,233,76,157,0,0
+US21059,"Daviess County, Kentucky",93701,4468,2402,883,988,195
+US21061,"Edmonson County, Kentucky",11585,150,67,46,10,27
+US21063,"Elliott County, Kentucky",7160,161,49,71,0,41
+US21065,"Estill County, Kentucky",13438,32,30,0,0,2
+US21067,"Fayette County, Kentucky",301038,39312,18844,8472,7088,4908
+US21069,"Fleming County, Kentucky",13458,521,110,410,1,0
+US21071,"Floyd County, Kentucky",34280,315,83,121,84,27
+US21073,"Franklin County, Kentucky",47631,2819,1455,892,288,184
+US21075,"Fulton County, Kentucky",5737,119,20,72,10,17
+US21077,"Gallatin County, Kentucky",8167,331,315,0,13,3
+US21079,"Garrard County, Kentucky",16456,505,321,143,41,0
+US21081,"Grant County, Kentucky",23186,638,605,22,1,10
+US21083,"Graves County, Kentucky",35030,2220,1781,225,116,98
+US21085,"Grayson County, Kentucky",24616,406,228,147,25,6
+US21087,"Green County, Kentucky",10391,142,96,32,14,0
+US21089,"Greenup County, Kentucky",33658,379,195,104,60,20
+US21091,"Hancock County, Kentucky",8146,217,92,83,42,0
+US21093,"Hardin County, Kentucky",101282,6643,3068,2068,1358,149
+US21095,"Harlan County, Kentucky",25019,427,234,94,78,21
+US21097,"Harrison County, Kentucky",17583,494,225,249,20,0
+US21099,"Hart County, Kentucky",17380,1157,83,1003,71,0
+US21101,"Henderson County, Kentucky",43093,1076,732,195,132,17
+US21103,"Henry County, Kentucky",14968,543,395,129,7,12
+US21105,"Hickman County, Kentucky",4312,89,30,3,15,41
+US21107,"Hopkins County, Kentucky",42661,690,345,125,185,35
+US21109,"Jackson County, Kentucky",12555,150,55,95,0,0
+US21111,"Jefferson County, Kentucky",718882,69020,30110,16870,11833,10207
+US21113,"Jessamine County, Kentucky",49607,3024,1306,1090,341,287
+US21115,"Johnson County, Kentucky",21265,470,112,105,219,34
+US21117,"Kenton County, Kentucky",154578,7005,3800,1695,1153,357
+US21119,"Knott County, Kentucky",14443,167,80,38,27,22
+US21121,"Knox County, Kentucky",29356,352,122,132,97,1
+US21123,"Larue County, Kentucky",13440,416,361,40,15,0
+US21125,"Laurel County, Kentucky",56675,899,462,306,109,22
+US21127,"Lawrence County, Kentucky",14628,122,41,25,56,0
+US21129,"Lee County, Kentucky",6512,93,82,11,0,0
+US21131,"Leslie County, Kentucky",9706,91,30,49,12,0
+US21133,"Letcher County, Kentucky",21005,240,148,55,37,0
+US21135,"Lewis County, Kentucky",12614,203,73,100,30,0
+US21137,"Lincoln County, Kentucky",22851,770,187,573,5,5
+US21139,"Livingston County, Kentucky",8718,151,138,13,0,0
+US21141,"Logan County, Kentucky",25178,776,404,309,62,1
+US21143,"Lyon County, Kentucky",7998,214,84,70,12,48
+US21145,"McCracken County, Kentucky",61219,1642,835,335,390,82
+US21147,"McCreary County, Kentucky",16380,526,342,127,20,37
+US21149,"McLean County, Kentucky",8770,61,53,3,5,0
+US21151,"Madison County, Kentucky",85656,3589,1866,672,604,447
+US21153,"Magoffin County, Kentucky",11714,20,3,4,13,0
+US21155,"Marion County, Kentucky",18096,502,355,117,30,0
+US21157,"Marshall County, Kentucky",29455,429,263,49,117,0
+US21159,"Martin County, Kentucky",11090,345,231,71,11,32
+US21161,"Mason County, Kentucky",16088,928,476,299,153,0
+US21163,"Meade County, Kentucky",26675,628,312,195,121,0
+US21165,"Menifee County, Kentucky",6080,97,75,2,20,0
+US21167,"Mercer County, Kentucky",20332,934,574,303,48,9
+US21169,"Metcalfe County, Kentucky",9395,244,78,126,40,0
+US21171,"Monroe County, Kentucky",9949,460,378,68,0,14
+US21173,"Montgomery County, Kentucky",26033,503,417,71,15,0
+US21175,"Morgan County, Kentucky",12652,219,94,23,81,21
+US21177,"Muhlenberg County, Kentucky",29300,912,624,110,178,0
+US21179,"Nelson County, Kentucky",42782,914,629,120,153,12
+US21181,"Nicholas County, Kentucky",6685,374,57,317,0,0
+US21183,"Ohio County, Kentucky",22666,548,476,24,43,5
+US21185,"Oldham County, Kentucky",62602,2887,1591,819,380,97
+US21187,"Owen County, Kentucky",10246,90,45,17,28,0
+US21189,"Owsley County, Kentucky",4087,32,32,0,0,0
+US21191,"Pendleton County, Kentucky",13682,247,198,15,9,25
+US21193,"Perry County, Kentucky",24944,641,335,71,224,11
+US21195,"Pike County, Kentucky",56233,569,126,256,179,8
+US21197,"Powell County, Kentucky",11500,171,106,17,22,26
+US21199,"Pulaski County, Kentucky",60531,1738,1112,399,227,0
+US21201,"Robertson County, Kentucky",1972,70,4,66,0,0
+US21203,"Rockcastle County, Kentucky",15884,170,122,41,0,7
+US21205,"Rowan County, Kentucky",23172,1077,568,348,58,103
+US21207,"Russell County, Kentucky",16731,566,330,145,88,3
+US21209,"Scott County, Kentucky",51073,2578,1746,349,447,36
+US21211,"Shelby County, Kentucky",44194,4050,3358,422,212,58
+US21213,"Simpson County, Kentucky",17011,462,233,131,89,9
+US21215,"Spencer County, Kentucky",17651,293,230,52,11,0
+US21217,"Taylor County, Kentucky",23946,439,160,155,119,5
+US21219,"Todd County, Kentucky",11467,1313,369,944,0,0
+US21221,"Trigg County, Kentucky",13578,818,363,393,54,8
+US21223,"Trimble County, Kentucky",8111,93,78,15,0,0
+US21225,"Union County, Kentucky",13840,363,163,85,57,58
+US21227,"Warren County, Kentucky",120378,14387,4732,4070,3679,1906
+US21229,"Washington County, Kentucky",11297,627,410,182,35,0
+US21231,"Wayne County, Kentucky",19350,558,338,205,15,0
+US21233,"Webster County, Kentucky",12284,699,569,64,66,0
+US21235,"Whitley County, Kentucky",33414,595,295,219,81,0
+US21237,"Wolfe County, Kentucky",6752,155,141,0,14,0
+US21239,"Woodford County, Kentucky",24847,1599,1378,132,88,1
+US22001,"Acadia Parish, Louisiana",58084,5802,887,4787,26,102
+US22003,"Allen Parish, Louisiana",23993,2385,1349,819,114,103
+US22005,"Ascension Parish, Louisiana",114376,6963,4929,1019,845,170
+US22007,"Assumption Parish, Louisiana",21259,2677,439,2222,16,0
+US22009,"Avoyelles Parish, Louisiana",37956,4108,371,3457,208,72
+US22011,"Beauregard Parish, Louisiana",34558,1866,1022,671,152,21
+US22013,"Bienville Parish, Louisiana",12732,187,83,81,2,21
+US22015,"Bossier Parish, Louisiana",117718,7095,4474,736,1380,505
+US22017,"Caddo Parish, Louisiana",229029,7864,3892,1991,1662,319
+US22019,"Calcasieu Parish, Louisiana",187275,12651,5221,5645,1474,311
+US22021,"Caldwell Parish, Louisiana",9369,263,221,0,42,0
+US22023,"Cameron Parish, Louisiana",6522,702,444,233,25,0
+US22025,"Catahoula Parish, Louisiana",9192,105,96,9,0,0
+US22027,"Claiborne Parish, Louisiana",15188,144,64,58,22,0
+US22029,"Concordia Parish, Louisiana",18534,518,352,132,0,34
+US22031,"De Soto Parish, Louisiana",25524,526,376,149,0,1
+US22033,"East Baton Rouge Parish, Louisiana",414516,34604,15381,6241,10412,2570
+US22035,"East Carroll Parish, Louisiana",6622,154,98,41,0,15
+US22037,"East Feliciana Parish, Louisiana",18444,512,199,238,53,22
+US22039,"Evangeline Parish, Louisiana",31315,5919,829,4872,63,155
+US22041,"Franklin Parish, Louisiana",18837,185,56,101,19,9
+US22043,"Grant Parish, Louisiana",21080,1363,981,267,34,81
+US22045,"Iberia Parish, Louisiana",66666,6874,2008,3317,1398,151
+US22047,"Iberville Parish, Louisiana",30989,1120,436,629,17,38
+US22049,"Jackson Parish, Louisiana",14996,369,216,99,32,22
+US22051,"Jefferson Parish, Louisiana",406628,72487,47324,8186,12368,4609
+US22053,"Jefferson Davis Parish, Louisiana",29215,2172,300,1672,139,61
+US22055,"Lafayette Parish, Louisiana",225304,22737,6707,11931,3193,906
+US22057,"Lafourche Parish, Louisiana",91799,12799,3081,9000,676,42
+US22059,"LaSalle Parish, Louisiana",14057,271,203,59,0,9
+US22061,"Lincoln Parish, Louisiana",44537,2165,870,554,455,286
+US22063,"Livingston Parish, Louisiana",129706,5516,3596,1248,449,223
+US22065,"Madison Parish, Louisiana",10485,328,210,98,13,7
+US22067,"Morehouse Parish, Louisiana",23879,248,142,38,68,0
+US22069,"Natchitoches Parish, Louisiana",36282,824,356,187,86,195
+US22071,"Orleans Parish, Louisiana",367733,30653,14955,6328,8118,1252
+US22073,"Ouachita Parish, Louisiana",144686,4306,2224,705,937,440
+US22075,"Plaquemines Parish, Louisiana",21751,2269,890,581,741,57
+US22077,"Pointe Coupee Parish, Louisiana",20711,835,338,461,36,0
+US22079,"Rapides Parish, Louisiana",122077,6370,3102,1765,975,528
+US22081,"Red River Parish, Louisiana",8019,76,50,26,0,0
+US22083,"Richland Parish, Louisiana",19098,516,280,86,78,72
+US22085,"Sabine Parish, Louisiana",22532,593,319,198,68,8
+US22087,"St. Bernard Parish, Louisiana",42859,3974,2342,665,681,286
+US22089,"St. Charles Parish, Louisiana",49519,3496,2108,848,394,146
+US22091,"St. Helena Parish, Louisiana",9742,358,256,76,26,0
+US22093,"St. James Parish, Louisiana",20040,497,263,207,18,9
+US22095,"St. John the Baptist Parish, Louisiana",40401,2767,2020,605,100,42
+US22097,"St. Landry Parish, Louisiana",77025,6179,891,5130,29,129
+US22099,"St. Martin Parish, Louisiana",50039,8198,938,6993,258,9
+US22101,"St. Mary Parish, Louisiana",47456,4019,2256,1072,596,95
+US22103,"St. Tammany Parish, Louisiana",239842,15814,9568,3455,2173,618
+US22105,"Tangipahoa Parish, Louisiana",122550,5306,3518,995,631,162
+US22107,"Tensas Parish, Louisiana",4260,111,79,18,5,9
+US22109,"Terrebonne Parish, Louisiana",104146,10179,3959,4522,1429,269
+US22111,"Union Parish, Louisiana",21068,540,409,98,33,0
+US22113,"Vermilion Parish, Louisiana",55798,8735,1224,6348,1134,29
+US22115,"Vernon Parish, Louisiana",45510,3686,1854,715,842,275
+US22117,"Washington Parish, Louisiana",43418,1875,918,801,119,37
+US22119,"Webster Parish, Louisiana",36874,745,412,266,57,10
+US22121,"West Baton Rouge Parish, Louisiana",24332,788,515,193,44,36
+US22123,"West Carroll Parish, Louisiana",10440,489,403,62,0,24
+US22125,"West Feliciana Parish, Louisiana",14793,482,233,156,86,7
+US22127,"Winn Parish, Louisiana",13542,237,183,47,0,7
+US23001,"Androscoggin County, Maine",101203,10486,1056,7497,548,1385
+US23003,"Aroostook County, Maine",64453,9672,444,8793,223,212
+US23005,"Cumberland County, Maine",278267,20191,3238,8891,3612,4450
+US23007,"Franklin County, Maine",28584,562,141,320,77,24
+US23009,"Hancock County, Maine",52177,1771,403,796,517,55
+US23011,"Kennebec County, Maine",115840,5081,909,2897,972,303
+US23013,"Knox County, Maine",38001,1231,377,622,179,53
+US23015,"Lincoln County, Maine",32835,891,169,528,134,60
+US23017,"Oxford County, Maine",55002,1576,309,1043,137,87
+US23019,"Penobscot County, Maine",144684,6193,1133,3206,1003,851
+US23021,"Piscataquis County, Maine",16116,542,169,220,136,17
+US23023,"Sagadahoc County, Maine",33658,1537,269,921,324,23
+US23025,"Somerset County, Maine",48167,1482,328,990,132,32
+US23027,"Waldo County, Maine",37744,1476,327,992,132,25
+US23029,"Washington County, Maine",29996,1807,461,470,98,778
+US23031,"York County, Maine",194730,12814,1771,8842,1356,845
+US24001,"Allegany County, Maryland",68232,2728,1237,744,466,281
+US24003,"Anne Arundel County, Maryland",536096,61176,29650,13612,12582,5332
+US24005,"Baltimore County, Maryland",779029,115514,34496,37413,22548,21057
+US24009,"Calvert County, Maryland",86675,3681,1521,1402,662,96
+US24011,"Caroline County, Maryland",31040,2571,1897,419,122,133
+US24013,"Carroll County, Maryland",158772,7976,3022,3346,1422,186
+US24015,"Cecil County, Maryland",96814,5338,2838,1502,917,81
+US24017,"Charles County, Maryland",149861,12267,5327,2827,2777,1336
+US24019,"Dorchester County, Maryland",30321,1896,1426,232,200,38
+US24021,"Frederick County, Maryland",236627,34537,17016,8413,6324,2784
+US24023,"Garrett County, Maryland",27812,856,169,584,91,12
+US24025,"Harford County, Maryland",238091,17586,7188,6030,2976,1392
+US24027,"Howard County, Maryland",299917,76208,15050,21544,31873,7741
+US24029,"Kent County, Maryland",18757,1160,648,273,163,76
+US24031,"Montgomery County, Maryland",977513,402283,167430,97520,92132,45201
+US24033,"Prince George's County, Maryland",848758,231502,141648,30492,22646,36716
+US24035,"Queen Anne's County, Maryland",47119,2644,1530,613,419,82
+US24037,"St. Mary's County, Maryland",105144,7669,3183,2353,1776,357
+US24039,"Somerset County, Maryland",24485,1439,395,270,319,455
+US24041,"Talbot County, Maryland",35506,2779,1834,710,188,47
+US24043,"Washington County, Maryland",141450,10609,5447,2756,1269,1137
+US24045,"Wicomico County, Maryland",96354,10780,4230,4320,1418,812
+US24047,"Worcester County, Maryland",49634,2721,978,781,622,340
+US24510,"Baltimore city, Maryland",569973,56188,23583,15023,8508,9074
+US25001,"Barnstable County, Massachusetts",205651,18807,4613,11392,1415,1387
+US25003,"Berkshire County, Massachusetts",121074,9597,4235,3458,1305,599
+US25005,"Bristol County, Massachusetts",531420,112436,29694,72296,6497,3949
+US25007,"Dukes County, Massachusetts",16676,2084,114,1865,59,46
+US25009,"Essex County, Massachusetts",739518,195635,129268,44024,15326,7017
+US25011,"Franklin County, Massachusetts",67515,4443,1621,1937,655,230
+US25013,"Hampden County, Massachusetts",441817,113610,78101,24848,7191,3470
+US25015,"Hampshire County, Massachusetts",155497,19671,5333,7945,5119,1274
+US25017,"Middlesex County, Massachusetts",1514413,402059,91042,175069,110039,25909
+US25019,"Nantucket County, Massachusetts",10464,1226,461,571,95,99
+US25021,"Norfolk County, Massachusetts",662934,147255,21193,60713,53976,11373
+US25023,"Plymouth County, Massachusetts",487969,66204,12883,47065,3702,2554
+US25025,"Suffolk County, Massachusetts",754314,300686,147404,84872,50299,18111
+US25027,"Worcester County, Massachusetts",780275,153593,66474,48481,24024,14614
+US26001,"Alcona County, Michigan",10037,221,100,62,50,9
+US26003,"Alger County, Michigan",8822,133,75,22,2,34
+US26005,"Allegan County, Michigan",108948,6586,5214,994,309,69
+US26007,"Alpena County, Michigan",27158,818,201,405,156,56
+US26009,"Antrim County, Michigan",22203,512,297,158,39,18
+US26011,"Arenac County, Michigan",14388,257,143,49,47,18
+US26013,"Baraga County, Michigan",8071,260,82,14,18,146
+US26015,"Barry County, Michigan",57183,1433,696,483,232,22
+US26017,"Bay County, Michigan",98979,2127,847,687,288,305
+US26019,"Benzie County, Michigan",16779,628,244,327,31,26
+US26021,"Berrien County, Michigan",145176,11066,5508,3137,1703,718
+US26023,"Branch County, Michigan",40906,3306,1212,1097,308,689
+US26025,"Calhoun County, Michigan",125909,8048,3826,1262,2371,589
+US26027,"Cass County, Michigan",48948,1551,886,244,322,99
+US26029,"Charlevoix County, Michigan",25034,737,188,384,100,65
+US26031,"Cheboygan County, Michigan",24400,816,325,269,55,167
+US26033,"Chippewa County, Michigan",35797,1140,392,258,250,240
+US26035,"Clare County, Michigan",28974,1553,154,1324,35,40
+US26037,"Clinton County, Michigan",74023,3178,1366,812,768,232
+US26039,"Crawford County, Michigan",13243,315,123,144,23,25
+US26041,"Delta County, Michigan",34217,646,250,216,81,99
+US26043,"Dickinson County, Michigan",24178,444,118,166,119,41
+US26045,"Eaton County, Michigan",103452,6933,2906,2721,995,311
+US26047,"Emmet County, Michigan",31501,1057,305,376,109,267
+US26049,"Genesee County, Michigan",383691,13866,4634,3473,2357,3402
+US26051,"Gladwin County, Michigan",23947,857,86,766,0,5
+US26053,"Gogebic County, Michigan",14502,374,112,96,64,102
+US26055,"Grand Traverse County, Michigan",87381,3384,1318,1494,467,105
+US26057,"Gratiot County, Michigan",38929,1451,885,390,134,42
+US26059,"Hillsdale County, Michigan",43020,1862,500,1111,118,133
+US26061,"Houghton County, Michigan",34186,2137,349,673,658,457
+US26063,"Huron County, Michigan",29814,1090,390,565,105,30
+US26065,"Ingham County, Michigan",274322,34888,8887,8481,12509,5011
+US26067,"Ionia County, Michigan",60631,1760,1048,394,225,93
+US26069,"Iosco County, Michigan",24070,903,439,283,104,77
+US26071,"Iron County, Michigan",10731,259,92,86,50,31
+US26073,"Isabella County, Michigan",67390,3948,994,1390,815,749
+US26075,"Jackson County, Michigan",149578,4670,2079,1444,875,272
+US26077,"Kalamazoo County, Michigan",246881,18043,6985,5314,3119,2625
+US26079,"Kalkaska County, Michigan",16694,499,335,116,33,15
+US26081,"Kent County, Michigan",604210,75566,44544,12934,11795,6293
+US26083,"Keweenaw County, Michigan",2036,24,5,10,0,9
+US26085,"Lake County, Michigan",11339,330,165,128,30,7
+US26087,"Lapeer County, Michigan",83727,3427,2220,786,339,82
+US26089,"Leelanau County, Michigan",20772,954,598,289,31,36
+US26091,"Lenawee County, Michigan",93105,4695,3353,808,259,275
+US26093,"Livingston County, Michigan",180123,5258,1859,1995,923,481
+US26095,"Luce County, Michigan",6074,298,157,68,30,43
+US26097,"Mackinac County, Michigan",10391,509,70,245,48,146
+US26099,"Macomb County, Michigan",822586,116929,12120,51224,15294,38291
+US26101,"Manistee County, Michigan",23527,905,417,242,64,182
+US26103,"Marquette County, Michigan",63498,1821,471,504,366,480
+US26105,"Mason County, Michigan",27456,979,672,214,58,35
+US26107,"Mecosta County, Michigan",41173,1391,434,594,233,130
+US26109,"Menominee County, Michigan",22064,457,133,189,67,68
+US26111,"Midland County, Michigan",78760,3493,728,1365,1175,225
+US26113,"Missaukee County, Michigan",14039,452,270,155,11,16
+US26115,"Monroe County, Michigan",141887,4747,1957,1337,466,987
+US26117,"Montcalm County, Michigan",59829,2162,1095,845,144,78
+US26119,"Montmorency County, Michigan",8947,132,56,51,12,13
+US26121,"Muskegon County, Michigan",162682,5619,3683,1010,548,378
+US26123,"Newaygo County, Michigan",45580,2543,1622,721,85,115
+US26125,"Oakland County, Michigan",1185129,181851,31763,64059,52074,33955
+US26127,"Oceana County, Michigan",24970,3253,2956,248,16,33
+US26129,"Ogemaw County, Michigan",19933,397,129,172,52,44
+US26131,"Ontonagon County, Michigan",5732,120,11,43,0,66
+US26133,"Osceola County, Michigan",21997,866,182,662,12,10
+US26135,"Oscoda County, Michigan",7816,611,82,453,7,69
+US26137,"Otsego County, Michigan",23220,388,66,191,60,71
+US26139,"Ottawa County, Michigan",268695,25593,17342,2966,4736,549
+US26141,"Presque Isle County, Michigan",12219,495,142,303,48,2
+US26143,"Roscommon County, Michigan",22977,378,149,166,43,20
+US26145,"Saginaw County, Michigan",180798,8060,4252,1965,1125,718
+US26147,"St. Clair County, Michigan",151253,4499,1774,1710,432,583
+US26149,"St. Joseph County, Michigan",56803,5612,3450,2024,88,50
+US26151,"Sanilac County, Michigan",39150,2107,788,1167,93,59
+US26153,"Schoolcraft County, Michigan",7713,122,24,69,29,0
+US26155,"Shiawassee County, Michigan",64765,1128,510,348,171,99
+US26157,"Tuscola County, Michigan",50195,1288,572,571,80,65
+US26159,"Van Buren County, Michigan",70782,6790,5755,548,397,90
+US26161,"Washtenaw County, Michigan",348965,52974,10441,15786,20235,6512
+US26163,"Wayne County, Michigan",1641916,240082,68558,58474,20769,92281
+US26165,"Wexford County, Michigan",31245,734,161,420,92,61
+US27001,"Aitkin County, Minnesota",15265,411,95,134,52,130
+US27003,"Anoka County, Minnesota",328375,37922,10265,7732,9824,10101
+US27005,"Becker County, Minnesota",31848,945,237,243,145,320
+US27007,"Beltrami County, Minnesota",43166,1803,360,328,215,900
+US27009,"Benton County, Minnesota",37322,1837,525,373,192,747
+US27011,"Big Stone County, Minnesota",4702,181,71,108,0,2
+US27013,"Blue Earth County, Minnesota",63131,4344,1437,968,703,1236
+US27015,"Brown County, Minnesota",23773,1146,770,277,82,17
+US27017,"Carlton County, Minnesota",33759,1184,202,313,116,553
+US27019,"Carver County, Minnesota",95352,7024,3150,1225,1936,713
+US27021,"Cass County, Minnesota",27619,947,192,216,106,433
+US27023,"Chippewa County, Minnesota",11105,926,690,54,137,45
+US27025,"Chisago County, Minnesota",52214,1542,804,202,481,55
+US27027,"Clay County, Minnesota",58915,4048,1033,1055,672,1288
+US27029,"Clearwater County, Minnesota",8269,329,61,170,21,77
+US27031,"Cook County, Minnesota",5139,348,121,113,41,73
+US27033,"Cottonwood County, Minnesota",10525,1055,560,127,350,18
+US27035,"Crow Wing County, Minnesota",60693,1226,383,407,257,179
+US27037,"Dakota County, Minnesota",394124,51366,19591,9829,11639,10307
+US27039,"Dodge County, Minnesota",19362,1080,810,104,163,3
+US27041,"Douglas County, Minnesota",35386,747,283,274,131,59
+US27043,"Faribault County, Minnesota",12979,578,487,50,39,2
+US27045,"Fillmore County, Minnesota",19594,1108,186,850,45,27
+US27047,"Freeborn County, Minnesota",28769,2670,1827,187,589,67
+US27049,"Goodhue County, Minnesota",43624,1819,1160,355,217,87
+US27051,"Grant County, Minnesota",5588,94,57,36,0,1
+US27053,"Hennepin County, Minnesota",1165038,213118,66184,37318,55630,53986
+US27055,"Houston County, Minnesota",17626,396,181,142,55,18
+US27057,"Hubbard County, Minnesota",19886,623,264,183,103,73
+US27059,"Isanti County, Minnesota",37088,1125,321,248,420,136
+US27061,"Itasca County, Minnesota",42753,1019,343,306,86,284
+US27063,"Jackson County, Minnesota",9391,509,206,171,132,0
+US27065,"Kanabec County, Minnesota",15261,424,74,237,108,5
+US27067,"Kandiyohi County, Minnesota",39939,5721,3626,358,364,1373
+US27069,"Kittson County, Minnesota",4067,118,52,40,15,11
+US27071,"Koochiching County, Minnesota",12007,519,148,198,24,149
+US27073,"Lac qui Parle County, Minnesota",6409,272,117,92,39,24
+US27075,"Lake County, Minnesota",10071,180,35,53,38,54
+US27077,"Lake of the Woods County, Minnesota",3561,36,23,9,3,1
+US27079,"Le Sueur County, Minnesota",26506,1581,1193,192,85,111
+US27081,"Lincoln County, Minnesota",5331,69,29,30,0,10
+US27083,"Lyon County, Minnesota",23892,2722,1174,186,854,508
+US27085,"McLeod County, Minnesota",33755,1902,1424,285,153,40
+US27087,"Mahnomen County, Minnesota",5019,412,33,96,10,273
+US27089,"Marshall County, Minnesota",8811,402,261,92,26,23
+US27091,"Martin County, Minnesota",18779,707,504,107,82,14
+US27093,"Meeker County, Minnesota",21692,825,633,121,40,31
+US27095,"Mille Lacs County, Minnesota",24203,745,217,176,59,293
+US27097,"Morrison County, Minnesota",31143,854,466,285,93,10
+US27099,"Mower County, Minnesota",37219,6571,3725,300,1535,1011
+US27101,"Murray County, Minnesota",7858,424,262,66,92,4
+US27103,"Nicollet County, Minnesota",31972,1907,980,190,373,364
+US27105,"Nobles County, Minnesota",19909,6402,4682,59,1256,405
+US27107,"Norman County, Minnesota",6163,286,117,61,43,65
+US27109,"Olmsted County, Minnesota",143989,20051,4734,3687,5566,6064
+US27111,"Otter Tail County, Minnesota",54792,2753,1324,808,273,348
+US27113,"Pennington County, Minnesota",13249,689,427,137,67,58
+US27115,"Pine County, Minnesota",27851,1253,597,322,118,216
+US27117,"Pipestone County, Minnesota",8580,620,415,34,19,152
+US27119,"Polk County, Minnesota",29357,2060,875,455,236,494
+US27121,"Pope County, Minnesota",10422,226,117,75,31,3
+US27123,"Ramsey County, Minnesota",506421,118446,26662,12548,58621,20615
+US27125,"Red Lake County, Minnesota",3755,123,67,35,0,21
+US27127,"Redwood County, Minnesota",14334,638,166,79,303,90
+US27129,"Renville County, Minnesota",13762,1051,927,67,48,9
+US27131,"Rice County, Minnesota",62427,8442,4368,792,1150,2132
+US27133,"Rock County, Minnesota",8771,228,112,78,37,1
+US27135,"Roseau County, Minnesota",14464,516,55,156,288,17
+US27137,"St. Louis County, Minnesota",189588,7100,2058,1967,1223,1852
+US27139,"Scott County, Minnesota",135128,18053,5818,3941,5591,2703
+US27141,"Sherburne County, Minnesota",88233,4323,1658,936,746,983
+US27143,"Sibley County, Minnesota",14045,1332,1107,145,34,46
+US27145,"Stearns County, Minnesota",148257,14582,4236,1964,2210,6172
+US27147,"Steele County, Minnesota",34393,2681,1546,181,194,760
+US27149,"Stevens County, Minnesota",9235,854,578,71,170,35
+US27151,"Swift County, Minnesota",8825,488,318,94,63,13
+US27153,"Todd County, Minnesota",22839,2403,1270,1004,48,81
+US27155,"Traverse County, Minnesota",3151,122,74,15,6,27
+US27157,"Wabasha County, Minnesota",20352,697,477,155,37,28
+US27159,"Wadena County, Minnesota",12718,423,77,137,33,176
+US27161,"Waseca County, Minnesota",17660,901,631,50,75,145
+US27163,"Washington County, Minnesota",240609,23488,6355,5017,8806,3310
+US27165,"Watonwan County, Minnesota",10142,2155,1944,11,78,122
+US27167,"Wilkin County, Minnesota",5924,84,31,47,2,4
+US27169,"Winona County, Minnesota",48282,2973,932,1067,812,162
+US27171,"Wright County, Minnesota",125009,5075,2810,1053,795,417
+US27173,"Yellow Medicine County, Minnesota",9203,370,237,49,35,49
+US28001,"Adams County, Mississippi",29361,2670,2383,151,61,75
+US28003,"Alcorn County, Mississippi",34912,960,808,52,52,48
+US28005,"Amite County, Mississippi",11739,123,61,47,15,0
+US28007,"Attala County, Mississippi",17252,392,329,21,42,0
+US28009,"Benton County, Mississippi",7918,208,179,29,0,0
+US28011,"Bolivar County, Mississippi",29664,991,697,126,110,58
+US28013,"Calhoun County, Mississippi",13640,717,670,0,11,36
+US28015,"Carroll County, Mississippi",9619,3,3,0,0,0
+US28017,"Chickasaw County, Mississippi",15942,556,503,42,11,0
+US28019,"Choctaw County, Mississippi",7853,28,19,0,2,7
+US28021,"Claiborne County, Mississippi",8543,207,36,106,3,62
+US28023,"Clarke County, Mississippi",14868,75,47,28,0,0
+US28025,"Clay County, Mississippi",18522,163,66,60,37,0
+US28027,"Coahoma County, Mississippi",21353,294,81,68,38,107
+US28029,"Copiah County, Mississippi",26755,765,616,123,0,26
+US28031,"Covington County, Mississippi",17686,209,114,52,0,43
+US28033,"DeSoto County, Mississippi",168004,9306,6430,666,1660,550
+US28035,"Forrest County, Mississippi",70206,2509,1500,438,425,146
+US28037,"Franklin County, Mississippi",7305,28,1,9,0,18
+US28039,"George County, Mississippi",22179,821,659,26,107,29
+US28041,"Greene County, Mississippi",13004,191,180,9,0,2
+US28043,"Grenada County, Mississippi",19750,162,66,48,40,8
+US28045,"Hancock County, Mississippi",44332,1591,814,446,268,63
+US28047,"Harrison County, Mississippi",190987,13021,6576,1593,4169,683
+US28049,"Hinds County, Mississippi",223213,6218,3506,1359,850,503
+US28051,"Holmes County, Mississippi",16532,153,104,46,3,0
+US28053,"Humphreys County, Mississippi",7875,166,159,0,3,4
+US28055,"Issaquena County, Mississippi",1269,8,8,0,0,0
+US28057,"Itawamba County, Mississippi",22211,318,213,89,0,16
+US28059,"Jackson County, Mississippi",134271,8949,5906,817,2087,139
+US28061,"Jasper County, Mississippi",15484,65,3,48,14,0
+US28063,"Jefferson County, Mississippi",6773,157,87,33,30,7
+US28065,"Jefferson Davis County, Mississippi",10818,86,22,58,0,6
+US28067,"Jones County, Mississippi",63523,2723,2371,135,120,97
+US28069,"Kemper County, Mississippi",9524,175,12,7,0,156
+US28071,"Lafayette County, Mississippi",50741,2661,1088,430,595,548
+US28073,"Lamar County, Mississippi",57919,2624,1262,341,670,351
+US28075,"Lauderdale County, Mississippi",71556,2156,1252,463,175,266
+US28077,"Lawrence County, Mississippi",11846,183,114,26,20,23
+US28079,"Leake County, Mississippi",21396,1538,933,77,62,466
+US28081,"Lee County, Mississippi",79295,2645,1614,252,593,186
+US28083,"Leflore County, Mississippi",27029,843,690,20,133,0
+US28085,"Lincoln County, Mississippi",32153,355,155,165,35,0
+US28087,"Lowndes County, Mississippi",55266,1696,817,265,436,178
+US28089,"Madison County, Mississippi",97949,6233,2330,2500,817,586
+US28091,"Marion County, Mississippi",23543,689,552,31,98,8
+US28093,"Marshall County, Mississippi",33579,1625,1455,101,0,69
+US28095,"Monroe County, Mississippi",33591,438,380,27,31,0
+US28097,"Montgomery County, Mississippi",9467,133,88,16,29,0
+US28099,"Neshoba County, Mississippi",27304,2571,481,26,114,1950
+US28101,"Newton County, Mississippi",20021,793,277,29,77,410
+US28103,"Noxubee County, Mississippi",9917,99,88,11,0,0
+US28105,"Oktibbeha County, Mississippi",46944,2414,442,589,1189,194
+US28107,"Panola County, Mississippi",31715,579,461,0,80,38
+US28109,"Pearl River County, Mississippi",52137,1269,856,277,130,6
+US28111,"Perry County, Mississippi",11287,113,30,36,7,40
+US28113,"Pike County, Mississippi",36837,1009,687,196,109,17
+US28115,"Pontotoc County, Mississippi",29388,1985,1705,265,15,0
+US28117,"Prentiss County, Mississippi",23695,702,289,24,389,0
+US28119,"Quitman County, Mississippi",6739,30,20,0,10,0
+US28121,"Rankin County, Mississippi",143507,6398,3579,940,1466,413
+US28123,"Scott County, Mississippi",26443,3070,2847,57,26,140
+US28125,"Sharkey County, Mississippi",4187,6,6,0,0,0
+US28127,"Simpson County, Mississippi",25359,420,120,266,34,0
+US28129,"Smith County, Mississippi",15109,301,184,0,117,0
+US28131,"Stone County, Mississippi",17300,327,161,141,17,8
+US28133,"Sunflower County, Mississippi",24609,342,321,15,5,1
+US28135,"Tallahatchie County, Mississippi",13394,1013,938,19,53,3
+US28137,"Tate County, Mississippi",26767,731,594,55,57,25
+US28139,"Tippah County, Mississippi",20638,899,824,29,17,29
+US28141,"Tishomingo County, Mississippi",18362,329,303,0,14,12
+US28143,"Tunica County, Mississippi",9048,331,75,24,153,79
+US28145,"Union County, Mississippi",26682,962,866,14,0,82
+US28147,"Walthall County, Mississippi",13625,182,121,61,0,0
+US28149,"Warren County, Mississippi",43576,1319,601,478,36,204
+US28151,"Washington County, Mississippi",42603,1058,636,324,37,61
+US28153,"Wayne County, Mississippi",18983,329,303,0,26,0
+US28155,"Webster County, Mississippi",9199,55,21,13,21,0
+US28157,"Wilkinson County, Mississippi",8368,7,0,0,7,0
+US28159,"Winston County, Mississippi",17299,312,154,0,2,156
+US28161,"Yalobusha County, Mississippi",11596,264,181,53,21,9
+US28163,"Yazoo County, Mississippi",26916,1962,1662,215,35,50
+US29001,"Adair County, Missouri",24049,1429,295,676,436,22
+US29003,"Andrew County, Missouri",16508,393,265,126,2,0
+US29005,"Atchison County, Missouri",4971,57,33,10,14,0
+US29007,"Audrain County, Missouri",24047,1040,543,464,14,19
+US29009,"Barry County, Missouri",33477,2810,2307,181,322,0
+US29011,"Barton County, Missouri",11137,290,166,120,4,0
+US29013,"Bates County, Missouri",15309,316,89,148,39,40
+US29015,"Benton County, Missouri",18280,661,99,550,12,0
+US29017,"Bollinger County, Missouri",11589,167,20,103,44,0
+US29019,"Boone County, Missouri",167245,13769,3573,3723,4781,1692
+US29021,"Buchanan County, Missouri",82794,5165,3274,670,833,388
+US29023,"Butler County, Missouri",40023,970,508,289,145,28
+US29025,"Caldwell County, Missouri",8505,255,96,118,40,1
+US29027,"Callaway County, Missouri",42425,896,433,146,272,45
+US29029,"Camden County, Missouri",43519,1588,867,676,45,0
+US29031,"Cape Girardeau County, Missouri",73970,2754,903,665,966,220
+US29033,"Carroll County, Missouri",8248,371,46,247,43,35
+US29035,"Carter County, Missouri",5769,24,16,0,8,0
+US29037,"Cass County, Missouri",97479,3617,2352,607,498,160
+US29039,"Cedar County, Missouri",13119,326,159,167,0,0
+US29041,"Chariton County, Missouri",6995,56,6,50,0,0
+US29043,"Christian County, Missouri",80241,2886,1543,791,431,121
+US29045,"Clark County, Missouri",6380,374,35,314,25,0
+US29047,"Clay County, Missouri",226715,16475,6861,3073,3699,2842
+US29049,"Clinton County, Missouri",19404,285,100,98,56,31
+US29051,"Cole County, Missouri",72131,3207,1430,962,405,410
+US29053,"Cooper County, Missouri",16683,470,95,271,57,47
+US29055,"Crawford County, Missouri",22783,413,305,89,19,0
+US29057,"Dade County, Missouri",7216,238,59,91,88,0
+US29059,"Dallas County, Missouri",15569,849,133,685,31,0
+US29061,"Daviess County, Missouri",7744,937,57,861,19,0
+US29063,"DeKalb County, Missouri",11955,152,60,55,31,6
+US29065,"Dent County, Missouri",14679,316,119,193,0,4
+US29067,"Douglas County, Missouri",12554,137,114,23,0,0
+US29069,"Dunklin County, Missouri",27960,2130,1880,198,43,9
+US29071,"Franklin County, Missouri",96965,1811,738,624,369,80
+US29073,"Gasconade County, Missouri",13966,231,64,144,15,8
+US29075,"Gentry County, Missouri",6151,238,15,177,37,9
+US29077,"Greene County, Missouri",272340,13936,6160,2651,4336,789
+US29079,"Grundy County, Missouri",9277,737,214,424,91,8
+US29081,"Harrison County, Missouri",7921,503,133,337,8,25
+US29083,"Henry County, Missouri",20484,702,397,252,36,17
+US29085,"Hickory County, Missouri",8999,386,27,351,8,0
+US29087,"Holt County, Missouri",4212,49,36,10,3,0
+US29089,"Howard County, Missouri",9467,134,74,12,43,5
+US29091,"Howell County, Missouri",37521,806,318,451,23,14
+US29093,"Iron County, Missouri",9632,205,113,57,35,0
+US29095,"Jackson County, Missouri",649868,61116,39480,7248,8271,6117
+US29097,"Jasper County, Missouri",111810,8469,6569,703,1008,189
+US29099,"Jefferson County, Missouri",210696,6252,2530,2368,1083,271
+US29101,"Johnson County, Missouri",50266,1953,546,451,697,259
+US29103,"Knox County, Missouri",3702,251,61,190,0,0
+US29105,"Laclede County, Missouri",33164,704,342,223,139,0
+US29107,"Lafayette County, Missouri",30816,624,259,237,116,12
+US29109,"Lawrence County, Missouri",35633,2759,2317,426,9,7
+US29111,"Lewis County, Missouri",9387,213,69,116,0,28
+US29113,"Lincoln County, Missouri",52713,922,503,294,116,9
+US29115,"Linn County, Missouri",11386,204,99,69,34,2
+US29117,"Livingston County, Missouri",14219,239,72,105,62,0
+US29119,"McDonald County, Missouri",21189,2877,1869,360,431,217
+US29121,"Macon County, Missouri",14305,464,100,268,68,28
+US29123,"Madison County, Missouri",11513,206,89,72,45,0
+US29125,"Maries County, Missouri",8393,419,66,268,85,0
+US29127,"Marion County, Missouri",26825,321,113,66,142,0
+US29129,"Mercer County, Missouri",3404,202,47,155,0,0
+US29131,"Miller County, Missouri",23544,588,393,174,18,3
+US29133,"Mississippi County, Missouri",12950,194,149,21,5,19
+US29135,"Moniteau County, Missouri",14988,1445,570,845,23,7
+US29137,"Monroe County, Missouri",8167,410,47,333,30,0
+US29139,"Montgomery County, Missouri",10780,223,129,40,22,32
+US29141,"Morgan County, Missouri",18951,1722,163,1442,108,9
+US29143,"New Madrid County, Missouri",16454,469,343,102,24,0
+US29145,"Newton County, Missouri",54575,3259,1768,580,732,179
+US29147,"Nodaway County, Missouri",21334,756,209,415,106,26
+US29149,"Oregon County, Missouri",10016,186,81,48,24,33
+US29151,"Osage County, Missouri",12825,195,42,130,5,18
+US29153,"Ozark County, Missouri",8812,141,85,1,55,0
+US29155,"Pemiscot County, Missouri",15425,527,433,78,6,10
+US29157,"Perry County, Missouri",18073,576,184,262,130,0
+US29159,"Pettis County, Missouri",39442,4448,2538,1716,182,12
+US29161,"Phelps County, Missouri",42112,2842,329,889,1126,498
+US29163,"Pike County, Missouri",17378,538,250,253,35,0
+US29165,"Platte County, Missouri",94565,7463,2580,1499,1870,1514
+US29167,"Polk County, Missouri",29809,1090,131,888,25,46
+US29169,"Pulaski County, Missouri",48983,5836,3221,1493,900,222
+US29171,"Putnam County, Missouri",4463,198,38,160,0,0
+US29173,"Ralls County, Missouri",9710,97,43,34,12,8
+US29175,"Randolph County, Missouri",23407,548,200,198,130,20
+US29177,"Ray County, Missouri",21553,508,97,336,74,1
+US29179,"Reynolds County, Missouri",6026,66,18,39,4,5
+US29181,"Ripley County, Missouri",12718,187,38,73,64,12
+US29183,"St. Charles County, Missouri",370773,21506,8782,6429,5477,818
+US29185,"St. Clair County, Missouri",8890,149,38,90,11,10
+US29186,"Ste. Genevieve County, Missouri",16959,370,192,117,61,0
+US29187,"St. Francois County, Missouri",63052,1041,527,199,267,48
+US29189,"St. Louis County, Missouri",938369,87639,19639,32122,25996,9882
+US29195,"Saline County, Missouri",21537,2073,1756,150,167,0
+US29197,"Schuyler County, Missouri",4201,145,57,71,12,5
+US29199,"Scotland County, Missouri",4494,417,17,400,0,0
+US29201,"Scott County, Missouri",36147,964,450,402,27,85
+US29203,"Shannon County, Missouri",7759,89,55,8,9,17
+US29205,"Shelby County, Missouri",5666,204,50,142,12,0
+US29207,"Stoddard County, Missouri",27683,374,248,84,3,39
+US29209,"Stone County, Missouri",30382,624,380,190,45,9
+US29211,"Sullivan County, Missouri",5856,980,894,16,15,55
+US29213,"Taney County, Missouri",52006,2916,2010,500,365,41
+US29215,"Texas County, Missouri",24204,710,90,479,124,17
+US29217,"Vernon County, Missouri",19316,745,145,526,45,29
+US29219,"Warren County, Missouri",32232,871,560,200,87,24
+US29221,"Washington County, Missouri",23412,244,95,122,27,0
+US29223,"Wayne County, Missouri",12529,141,43,51,47,0
+US29225,"Webster County, Missouri",35792,2319,368,1733,119,99
+US29227,"Worth County, Missouri",1915,19,3,16,0,0
+US29229,"Wright County, Missouri",16909,918,63,800,35,20
+US29510,"St. Louis city, Missouri",288501,27870,9136,6880,6322,5532
+US30001,"Beaverhead County, Montana",8963,460,378,66,8,8
+US30003,"Big Horn County, Montana",12229,3514,203,41,18,3252
+US30005,"Blaine County, Montana",6151,469,58,66,20,325
+US30007,"Broadwater County, Montana",5673,215,105,86,0,24
+US30009,"Carbon County, Montana",10220,347,89,198,56,4
+US30011,"Carter County, Montana",1249,13,0,13,0,0
+US30013,"Cascade County, Montana",76130,2252,839,948,400,65
+US30015,"Chouteau County, Montana",5417,109,52,32,11,14
+US30017,"Custer County, Montana",11061,282,69,179,20,14
+US30019,"Daniels County, Montana",1643,29,7,15,7,0
+US30021,"Dawson County, Montana",8442,99,54,22,19,4
+US30023,"Deer Lodge County, Montana",8763,385,235,57,33,60
+US30025,"Fallon County, Montana",2741,62,1,10,51,0
+US30027,"Fergus County, Montana",10516,373,108,211,0,54
+US30029,"Flathead County, Montana",94201,3200,1751,1025,310,114
+US30031,"Gallatin County, Montana",101919,4343,1864,1276,736,467
+US30033,"Garfield County, Montana",967,2,0,0,0,2
+US30035,"Glacier County, Montana",12475,475,122,107,26,220
+US30037,"Golden Valley County, Montana",705,33,18,13,2,0
+US30039,"Granite County, Montana",3188,40,26,10,0,4
+US30041,"Hill County, Montana",14984,362,108,126,41,87
+US30043,"Jefferson County, Montana",11448,148,54,64,0,30
+US30045,"Judith Basin County, Montana",1860,35,3,32,0,0
+US30047,"Lake County, Montana",28169,1351,358,186,125,682
+US30049,"Lewis and Clark County, Montana",63957,1718,974,461,153,130
+US30051,"Liberty County, Montana",2236,536,0,536,0,0
+US30053,"Lincoln County, Montana",18696,990,340,522,57,71
+US30055,"McCone County, Montana",1673,116,47,69,0,0
+US30057,"Madison County, Montana",7982,334,260,41,10,23
+US30059,"Meagher County, Montana",1736,47,25,15,0,7
+US30061,"Mineral County, Montana",4065,55,41,1,7,6
+US30063,"Missoula County, Montana",111494,5532,1669,1782,1433,648
+US30065,"Musselshell County, Montana",4575,182,5,106,43,28
+US30067,"Park County, Montana",15589,369,144,189,28,8
+US30069,"Petroleum County, Montana",419,9,0,9,0,0
+US30071,"Phillips County, Montana",3798,81,65,5,3,8
+US30073,"Pondera County, Montana",5563,262,2,205,2,53
+US30075,"Powder River County, Montana",1501,22,2,20,0,0
+US30077,"Powell County, Montana",6603,219,46,108,2,63
+US30079,"Prairie County, Montana",1199,51,7,44,0,0
+US30081,"Ravalli County, Montana",40594,1419,446,685,84,204
+US30083,"Richland County, Montana",10513,561,491,61,0,9
+US30085,"Roosevelt County, Montana",10155,479,118,76,10,275
+US30087,"Rosebud County, Montana",8485,828,201,122,10,495
+US30089,"Sanders County, Montana",11138,400,85,244,39,32
+US30091,"Sheridan County, Montana",3251,45,31,8,6,0
+US30093,"Silver Bow County, Montana",32722,1038,305,348,45,340
+US30095,"Stillwater County, Montana",9036,314,202,62,47,3
+US30097,"Sweet Grass County, Montana",3508,45,27,5,13,0
+US30099,"Teton County, Montana",5687,144,15,126,3,0
+US30101,"Toole County, Montana",4631,375,157,191,13,14
+US30103,"Treasure County, Montana",633,30,3,7,20,0
+US30105,"Valley County, Montana",7039,174,78,51,24,21
+US30107,"Wheatland County, Montana",2011,358,49,292,7,10
+US30109,"Wibaux County, Montana",1007,67,47,0,15,5
+US30111,"Yellowstone County, Montana",149004,5847,2519,1432,724,1172
+US31001,"Adams County, Nebraska",29578,2548,2124,79,280,65
+US31003,"Antelope County, Nebraska",5931,241,188,42,11,0
+US31005,"Arthur County, Nebraska",412,21,21,0,0,0
+US31007,"Banner County, Nebraska",659,37,27,0,10,0
+US31009,"Blaine County, Nebraska",450,7,4,3,0,0
+US31011,"Boone County, Nebraska",4950,78,51,24,0,3
+US31013,"Box Butte County, Nebraska",10255,909,679,52,117,61
+US31015,"Boyd County, Nebraska",1860,36,2,5,25,4
+US31017,"Brown County, Nebraska",2861,103,31,63,9,0
+US31019,"Buffalo County, Nebraska",45858,3649,2553,411,490,195
+US31021,"Burt County, Nebraska",6179,163,112,27,22,2
+US31023,"Butler County, Nebraska",7555,415,236,122,31,26
+US31025,"Cass County, Nebraska",24390,536,398,111,13,14
+US31027,"Cedar County, Nebraska",7936,100,88,12,0,0
+US31029,"Chase County, Nebraska",3599,422,386,18,18,0
+US31031,"Cherry County, Nebraska",5381,72,50,12,0,10
+US31033,"Cheyenne County, Nebraska",8954,276,187,65,2,22
+US31035,"Clay County, Nebraska",5786,448,386,62,0,0
+US31037,"Colfax County, Nebraska",9762,4444,4069,64,71,240
+US31039,"Cuming County, Nebraska",8396,722,694,16,12,0
+US31041,"Custer County, Nebraska",10143,406,318,79,8,1
+US31043,"Dakota County, Nebraska",18435,7897,6600,150,337,810
+US31045,"Dawes County, Nebraska",8362,162,82,48,26,6
+US31047,"Dawson County, Nebraska",21702,6573,5701,34,111,727
+US31049,"Deuel County, Nebraska",1726,46,30,9,7,0
+US31051,"Dixon County, Nebraska",5321,588,574,7,2,5
+US31053,"Dodge County, Nebraska",34186,4096,3664,271,107,54
+US31055,"Douglas County, Nebraska",518358,79199,48406,11119,12414,7260
+US31057,"Dundy County, Nebraska",1784,217,217,0,0,0
+US31059,"Fillmore County, Nebraska",5277,196,120,59,15,2
+US31061,"Franklin County, Nebraska",2839,78,43,24,11,0
+US31063,"Frontier County, Nebraska",2511,18,15,0,1,2
+US31065,"Furnas County, Nebraska",4467,146,141,3,2,0
+US31067,"Gage County, Nebraska",20347,532,301,118,110,3
+US31069,"Garden County, Nebraska",1785,87,80,4,3,0
+US31071,"Garfield County, Nebraska",1912,22,3,15,4,0
+US31073,"Gosper County, Nebraska",1936,67,59,6,2,0
+US31075,"Grant County, Nebraska",665,2,0,0,0,2
+US31077,"Greeley County, Nebraska",2231,68,45,21,0,2
+US31079,"Hall County, Nebraska",56561,12708,11013,310,632,753
+US31081,"Hamilton County, Nebraska",8651,225,164,31,25,5
+US31083,"Harlan County, Nebraska",3209,95,89,2,0,4
+US31085,"Hayes County, Nebraska",834,73,73,0,0,0
+US31087,"Hitchcock County, Nebraska",2653,24,16,8,0,0
+US31089,"Holt County, Nebraska",9541,414,327,67,6,14
+US31091,"Hooker County, Nebraska",668,15,10,5,0,0
+US31093,"Howard County, Nebraska",6027,153,102,46,5,0
+US31095,"Jefferson County, Nebraska",6745,216,158,43,15,0
+US31097,"Johnson County, Nebraska",4926,470,375,0,93,2
+US31099,"Kearney County, Nebraska",6109,239,222,12,5,0
+US31101,"Keith County, Nebraska",7699,420,224,134,53,9
+US31103,"Keya Paha County, Nebraska",720,11,11,0,0,0
+US31105,"Kimball County, Nebraska",3492,133,108,24,0,1
+US31107,"Knox County, Nebraska",7884,396,152,161,14,69
+US31109,"Lancaster County, Nebraska",293073,33221,12226,7105,9933,3957
+US31111,"Lincoln County, Nebraska",33208,1724,1083,351,181,109
+US31113,"Logan County, Nebraska",865,36,34,2,0,0
+US31115,"Loup County, Nebraska",566,0,0,0,0,0
+US31117,"McPherson County, Nebraska",383,3,0,3,0,0
+US31119,"Madison County, Nebraska",32506,4519,4013,113,375,18
+US31121,"Merrick County, Nebraska",7306,438,305,93,40,0
+US31123,"Morrill County, Nebraska",4491,452,423,14,14,1
+US31125,"Nance County, Nebraska",3346,52,19,33,0,0
+US31127,"Nemaha County, Nebraska",6586,193,118,21,49,5
+US31129,"Nuckolls County, Nebraska",4021,150,53,35,62,0
+US31131,"Otoe County, Nebraska",14853,907,818,34,44,11
+US31133,"Pawnee County, Nebraska",2486,212,26,170,0,16
+US31135,"Perkins County, Nebraska",2707,143,102,41,0,0
+US31137,"Phelps County, Nebraska",8574,298,241,57,0,0
+US31139,"Pierce County, Nebraska",6680,93,57,14,21,1
+US31141,"Platte County, Nebraska",30774,5176,4911,134,106,25
+US31143,"Polk County, Nebraska",4959,298,247,30,3,18
+US31145,"Red Willow County, Nebraska",10165,227,174,51,0,2
+US31147,"Richardson County, Nebraska",7527,63,21,34,0,8
+US31149,"Rock County, Nebraska",1311,25,21,4,0,0
+US31151,"Saline County, Nebraska",13349,3043,2552,85,192,214
+US31153,"Sarpy County, Nebraska",167929,14005,8319,2195,2786,705
+US31155,"Saunders County, Nebraska",19865,463,200,207,51,5
+US31157,"Scotts Bluff County, Nebraska",33671,4017,3554,291,122,50
+US31159,"Seward County, Nebraska",16159,532,317,162,23,30
+US31161,"Sheridan County, Nebraska",4968,219,151,42,3,23
+US31163,"Sherman County, Nebraska",2882,94,68,22,4,0
+US31165,"Sioux County, Nebraska",1098,31,28,3,0,0
+US31167,"Stanton County, Nebraska",5578,297,238,19,13,27
+US31169,"Thayer County, Nebraska",4751,127,84,39,0,4
+US31171,"Thomas County, Nebraska",610,13,8,0,5,0
+US31173,"Thurston County, Nebraska",6482,243,66,2,32,143
+US31175,"Valley County, Nebraska",3956,92,39,37,0,16
+US31177,"Washington County, Nebraska",19155,463,317,107,39,0
+US31179,"Wayne County, Nebraska",8855,569,401,141,22,5
+US31181,"Webster County, Nebraska",3340,76,49,13,13,1
+US31183,"Wheeler County, Nebraska",717,13,12,0,1,0
+US31185,"York County, Nebraska",12888,683,449,162,23,49
+US32001,"Churchill County, Nevada",22582,3345,2567,196,456,126
+US32003,"Clark County, Nevada",2043921,697502,477089,54007,142318,24088
+US32005,"Douglas County, Nevada",46457,4990,3596,858,317,219
+US32007,"Elko County, Nevada",48532,8713,7580,436,399,298
+US32009,"Esmeralda County, Nevada",941,139,139,0,0,0
+US32011,"Eureka County, Nevada",1753,78,12,0,13,53
+US32013,"Humboldt County, Nevada",15585,3287,2828,115,117,227
+US32015,"Lander County, Nevada",5333,1341,1133,159,6,43
+US32017,"Lincoln County, Nevada",4986,265,197,21,38,9
+US32019,"Lyon County, Nevada",51409,7345,5880,656,575,234
+US32021,"Mineral County, Nevada",4273,510,264,22,57,167
+US32023,"Nye County, Nevada",42360,4755,3707,368,571,109
+US32027,"Pershing County, Nevada",6276,1219,1032,74,55,58
+US32029,"Storey County, Nevada",3775,223,21,171,12,19
+US32031,"Washoe County, Nevada",429697,101924,75731,9801,14103,2289
+US32033,"White Pine County, Nevada",9166,845,680,110,36,19
+US32510,"Carson City, Nevada",51802,11696,9258,1116,997,325
+US33001,"Belknap County, New Hampshire",58219,1945,309,1164,302,170
+US33003,"Carroll County, New Hampshire",46241,1163,328,512,208,115
+US33005,"Cheshire County, New Hampshire",72584,2092,366,1002,648,76
+US33007,"Coos County, New Hampshire",30472,3211,616,2424,114,57
+US33009,"Grafton County, New Hampshire",86065,6018,851,2813,2022,332
+US33011,"Hillsborough County, New Hampshire",391369,52068,18733,20416,8822,4097
+US33013,"Merrimack County, New Hampshire",142783,8550,1707,4497,1425,921
+US33015,"Rockingham County, New Hampshire",292402,18274,5695,8070,3677,832
+US33017,"Strafford County, New Hampshire",123040,8369,1502,2973,3199,695
+US33019,"Sullivan County, New Hampshire",41106,1557,185,634,387,351
+US34001,"Atlantic County, New Jersey",251264,67934,40043,16277,10254,1360
+US34003,"Bergen County, New Jersey",881087,352404,136685,94842,99774,21103
+US34005,"Burlington County, New Jersey",422630,55408,19558,19449,11370,5031
+US34007,"Camden County, New Jersey",475766,97613,60036,17799,16009,3769
+US34009,"Cape May County, New Jersey",88836,7574,4728,1944,546,356
+US34011,"Cumberland County, New Jersey",142241,39573,35027,2976,923,647
+US34013,"Essex County, New Jersey",742689,266778,145403,78184,21291,21900
+US34015,"Gloucester County, New Jersey",275792,24819,10270,7590,4827,2132
+US34017,"Hudson County, New Jersey",623083,367765,237642,66444,44244,19435
+US34019,"Hunterdon County, New Jersey",119747,13405,5182,5248,2077,898
+US34021,"Mercer County, New Jersey",347046,105900,50826,30930,18996,5148
+US34023,"Middlesex County, New Jersey",777852,346386,132927,121987,70787,20685
+US34025,"Monmouth County, New Jersey",590842,105724,43440,39215,16550,6519
+US34027,"Morris County, New Jersey",468719,114333,50130,36949,23577,3677
+US34029,"Ocean County, New Jersey",554417,67063,32446,22696,5910,6011
+US34031,"Passaic County, New Jersey",469414,228854,168372,36308,10677,13497
+US34033,"Salem County, New Jersey",59549,4721,3534,841,248,98
+US34035,"Somerset County, New Jersey",312820,98227,35792,30957,26707,4771
+US34037,"Sussex County, New Jersey",135165,12863,6118,4459,1575,711
+US34039,"Union County, New Jersey",518935,228344,148085,57728,14224,8307
+US34041,"Warren County, New Jersey",101085,12082,5712,4113,1395,862
+US35001,"Bernalillo County, New Mexico",639133,186490,149370,10028,11789,15303
+US35003,"Catron County, New Mexico",3424,517,443,74,0,0
+US35005,"Chaves County, New Mexico",60725,20740,19735,290,418,297
+US35006,"Cibola County, New Mexico",25115,9958,4554,132,224,5048
+US35007,"Colfax County, New Mexico",11579,2778,2586,72,74,46
+US35009,"Curry County, New Mexico",45645,12637,11894,197,426,120
+US35011,"De Baca County, New Mexico",1906,514,464,45,0,5
+US35013,"Doña Ana County, New Mexico",202056,103605,99205,1353,1412,1635
+US35015,"Eddy County, New Mexico",53497,10618,10228,81,131,178
+US35017,"Grant County, New Mexico",26190,7773,7255,216,62,240
+US35019,"Guadalupe County, New Mexico",4067,1957,1752,5,0,200
+US35021,"Harding County, New Mexico",423,139,136,0,3,0
+US35023,"Hidalgo County, New Mexico",4032,1554,1531,12,4,7
+US35025,"Lea County, New Mexico",64755,24193,23525,347,136,185
+US35027,"Lincoln County, New Mexico",18547,3894,3785,30,42,37
+US35028,"Los Alamos County, New Mexico",17612,2521,1193,483,756,89
+US35029,"Luna County, New Mexico",22294,11072,10813,27,120,112
+US35031,"McKinley County, New Mexico",67042,35792,3348,107,513,31824
+US35033,"Mora County, New Mexico",4417,2972,2906,37,0,29
+US35035,"Otero County, New Mexico",61661,16578,13863,1140,610,965
+US35037,"Quay County, New Mexico",7838,1702,1593,44,21,44
+US35039,"Rio Arriba County, New Mexico",36602,21846,17598,294,208,3746
+US35041,"Roosevelt County, New Mexico",17560,5010,4666,248,52,44
+US35043,"Sandoval County, New Mexico",134889,35713,21658,1171,989,11895
+US35045,"San Juan County, New Mexico",117880,37718,11386,512,456,25364
+US35047,"San Miguel County, New Mexico",26376,14160,13429,269,212,250
+US35049,"Santa Fe County, New Mexico",142790,48368,42748,2605,919,2096
+US35051,"Sierra County, New Mexico",10534,2153,1986,74,79,14
+US35053,"Socorro County, New Mexico",16057,6285,4167,365,396,1357
+US35055,"Taos County, New Mexico",31323,14226,12191,314,240,1481
+US35057,"Torrance County, New Mexico",14726,3185,2981,117,62,25
+US35059,"Union County, New Mexico",3907,774,704,39,1,30
+US35061,"Valencia County, New Mexico",71702,21913,19946,338,191,1438
+US36001,"Albany County, New York",291388,38430,9426,15086,10753,3165
+US36003,"Allegany County, New York",44280,2163,433,1287,374,69
+US36005,"Bronx County, New York",1330182,788678,635334,71913,19292,62139
+US36007,"Broome County, New York",183082,17209,4334,7034,4712,1129
+US36009,"Cattaraugus County, New York",72722,3405,837,1943,228,397
+US36011,"Cayuga County, New York",73535,3365,1538,1146,238,443
+US36013,"Chautauqua County, New York",121493,9542,5583,3243,523,193
+US36015,"Chemung County, New York",79957,3479,1330,1310,705,134
+US36017,"Chenango County, New York",45353,1599,784,595,158,62
+US36019,"Clinton County, New York",76665,4328,1538,1990,504,296
+US36021,"Columbia County, New York",57814,4108,1560,2066,346,136
+US36023,"Cortland County, New York",45489,1500,326,859,242,73
+US36025,"Delaware County, New York",43243,2854,1285,1215,211,143
+US36027,"Dutchess County, New York",280217,43612,22246,11815,6135,3416
+US36029,"Erie County, New York",869005,93274,31317,31257,15894,14806
+US36031,"Essex County, New York",35981,2194,964,1044,64,122
+US36033,"Franklin County, New York",47992,4020,1187,1550,134,1149
+US36035,"Fulton County, New York",50936,1479,553,614,223,89
+US36037,"Genesee County, New York",54841,2030,1195,624,162,49
+US36039,"Greene County, New York",45405,3561,1603,1685,207,66
+US36041,"Hamilton County, New York",4370,191,57,128,2,4
+US36043,"Herkimer County, New York",58892,3111,548,2163,302,98
+US36045,"Jefferson County, New York",103924,8650,4424,2505,1150,571
+US36047,"Kings County, New York",2399015,1078921,372207,419096,208930,78688
+US36049,"Lewis County, New York",24884,715,276,373,29,37
+US36051,"Livingston County, New York",60852,4214,1618,1068,457,1071
+US36053,"Madison County, New York",67844,2884,706,1377,487,314
+US36055,"Monroe County, New York",702055,98115,42516,30897,16251,8451
+US36057,"Montgomery County, New York",46195,6852,4528,1976,197,151
+US36059,"Nassau County, New York",1282281,368439,166237,124205,61935,16062
+US36061,"New York County, New York",1553220,611624,333730,121591,126399,29904
+US36063,"Niagara County, New York",199721,8606,2927,3979,1087,613
+US36065,"Oneida County, New York",216943,26460,7996,9250,7263,1951
+US36067,"Onondaga County, New York",436505,48085,14169,15926,10526,7464
+US36069,"Ontario County, New York",104075,6364,2937,2067,985,375
+US36071,"Orange County, New York",354932,87248,47342,31709,5276,2921
+US36073,"Orleans County, New York",38841,2373,1329,731,145,168
+US36075,"Oswego County, New York",111875,4478,1694,1913,610,261
+US36077,"Otsego County, New York",57433,3554,1310,1543,454,247
+US36079,"Putnam County, New York",94394,17280,9154,6394,1130,602
+US36081,"Queens County, New York",2144309,1194002,504898,332694,319920,36490
+US36083,"Rensselaer County, New York",150899,11736,3947,3890,2861,1038
+US36085,"Richmond County, New York",447619,146040,48594,54799,27883,14764
+US36087,"Rockland County, New York",298769,118110,40699,61079,11370,4962
+US36089,"St. Lawrence County, New York",103242,7370,1671,4311,767,621
+US36091,"Saratoga County, New York",216798,13832,3385,6019,3611,817
+US36093,"Schenectady County, New York",145804,14085,5027,6110,2197,751
+US36095,"Schoharie County, New York",29906,1420,481,688,155,96
+US36097,"Schuyler County, New York",17021,569,145,331,93,0
+US36099,"Seneca County, New York",32549,2361,730,1380,217,34
+US36101,"Steuben County, New York",91088,4633,915,2674,872,172
+US36103,"Suffolk County, New York",1404033,318666,201049,78795,29806,9016
+US36105,"Sullivan County, New York",70859,11130,6570,3896,351,313
+US36107,"Tioga County, New York",46212,1158,514,395,231,18
+US36109,"Tompkins County, New York",98521,14820,2659,4436,7022,703
+US36111,"Ulster County, New York",170809,18892,10049,5989,1985,869
+US36113,"Warren County, New York",61495,3153,840,1832,410,71
+US36115,"Washington County, New York",58720,3033,1237,1465,269,62
+US36117,"Wayne County, New York",85555,4418,2241,1617,504,56
+US36119,"Westchester County, New York",914339,306601,182860,74687,33516,15538
+US36121,"Wyoming County, New York",38225,1568,1024,375,105,64
+US36123,"Yates County, New York",23515,3575,312,3169,94,0
+US37001,"Alamance County, North Carolina",153816,19331,16060,1474,1393,404
+US37003,"Alexander County, North Carolina",35344,2122,1559,333,214,16
+US37005,"Alleghany County, North Carolina",10552,804,773,10,21,0
+US37007,"Anson County, North Carolina",23730,1249,913,73,255,8
+US37009,"Ashe County, North Carolina",25721,1374,1137,73,146,18
+US37011,"Avery County, North Carolina",16916,1059,818,176,28,37
+US37013,"Beaufort County, North Carolina",44830,2873,2601,196,43,33
+US37015,"Bertie County, North Carolina",18555,645,444,69,124,8
+US37017,"Bladen County, North Carolina",31647,2561,2223,295,33,10
+US37019,"Brunswick County, North Carolina",126530,6404,4491,1387,377,149
+US37021,"Buncombe County, North Carolina",244083,20269,13365,5011,1667,226
+US37023,"Burke County, North Carolina",85706,7910,4500,330,2412,668
+US37025,"Cabarrus County, North Carolina",193415,25216,15804,4091,4005,1316
+US37027,"Caldwell County, North Carolina",77769,4265,3222,452,349,242
+US37029,"Camden County, North Carolina",10066,477,175,155,103,44
+US37031,"Carteret County, North Carolina",66153,3540,2164,729,501,146
+US37033,"Caswell County, North Carolina",21636,903,749,65,89,0
+US37035,"Catawba County, North Carolina",148724,19780,13361,1304,4957,158
+US37037,"Chatham County, North Carolina",67877,9757,7901,1050,737,69
+US37039,"Cherokee County, North Carolina",26890,899,576,151,156,16
+US37041,"Chowan County, North Carolina",13458,290,150,100,0,40
+US37043,"Clay County, North Carolina",10538,267,181,48,38,0
+US37045,"Cleveland County, North Carolina",91851,3921,2598,502,623,198
+US37047,"Columbus County, North Carolina",53187,3187,2634,355,169,29
+US37049,"Craven County, North Carolina",95964,8070,4738,922,2244,166
+US37051,"Cumberland County, North Carolina",307616,35659,21519,6205,6524,1411
+US37053,"Currituck County, North Carolina",24937,1035,883,91,61,0
+US37055,"Dare County, North Carolina",34654,2852,2364,377,102,9
+US37057,"Davidson County, North Carolina",156335,12399,9276,856,2153,114
+US37059,"Davie County, North Carolina",40195,2962,2471,297,149,45
+US37061,"Duplin County, North Carolina",55274,11764,11328,267,129,40
+US37063,"Durham County, North Carolina",291376,54219,34371,7970,7501,4377
+US37065,"Edgecombe County, North Carolina",49590,2271,2052,88,84,47
+US37067,"Forsyth County, North Carolina",352535,51851,39333,5378,5592,1548
+US37069,"Franklin County, North Carolina",62637,4686,3833,410,175,268
+US37071,"Gaston County, North Carolina",206191,16819,12143,2028,2133,515
+US37073,"Gates County, North Carolina",11087,203,45,96,50,12
+US37075,"Graham County, North Carolina",8130,196,127,0,8,61
+US37077,"Granville County, North Carolina",56388,4359,3464,376,234,285
+US37079,"Greene County, North Carolina",19982,3154,2926,168,36,24
+US37081,"Guilford County, North Carolina",496586,66249,31168,13488,14624,6969
+US37083,"Halifax County, North Carolina",48423,1668,1116,247,221,84
+US37085,"Harnett County, North Carolina",122431,13208,10616,1286,1078,228
+US37087,"Haywood County, North Carolina",58039,2176,1485,311,247,133
+US37089,"Henderson County, North Carolina",109307,10995,8162,1363,1128,342
+US37091,"Hertford County, North Carolina",22903,1182,894,92,146,50
+US37093,"Hoke County, North Carolina",49287,5833,4765,423,490,155
+US37095,"Hyde County, North Carolina",4960,606,597,0,0,9
+US37097,"Iredell County, North Carolina",165845,15649,10327,2090,2997,235
+US37099,"Jackson County, North Carolina",40908,2477,1632,271,136,438
+US37101,"Johnston County, North Carolina",184405,23888,20561,1682,1016,629
+US37103,"Jones County, North Carolina",9175,403,353,42,8,0
+US37105,"Lee County, North Carolina",56581,9948,9083,320,526,19
+US37107,"Lenoir County, North Carolina",53511,4239,3815,127,239,58
+US37109,"Lincoln County, North Carolina",78634,5533,4719,446,296,72
+US37111,"McDowell County, North Carolina",43182,2800,2419,131,233,17
+US37113,"Macon County, North Carolina",33129,2337,1951,240,115,31
+US37115,"Madison County, North Carolina",20497,473,253,175,45,0
+US37117,"Martin County, North Carolina",21597,952,769,66,107,10
+US37119,"Mecklenburg County, North Carolina",1002251,200415,113200,39626,33174,14415
+US37121,"Mitchell County, North Carolina",14298,891,731,94,41,25
+US37123,"Montgomery County, North Carolina",25580,3916,3422,92,369,33
+US37125,"Moore County, North Carolina",91644,7063,5025,1136,807,95
+US37127,"Nash County, North Carolina",88789,5723,4466,311,482,464
+US37129,"New Hanover County, North Carolina",216672,14542,8245,3434,1998,865
+US37131,"Northampton County, North Carolina",19083,482,336,80,56,10
+US37133,"Onslow County, North Carolina",177697,18928,12474,2526,3171,757
+US37135,"Orange County, North Carolina",138232,23574,9922,5558,7368,726
+US37137,"Pamlico County, North Carolina",12288,602,411,117,52,22
+US37139,"Pasquotank County, North Carolina",36900,2187,1526,381,269,11
+US37141,"Pender County, North Carolina",57001,4084,3222,547,254,61
+US37143,"Perquimans County, North Carolina",12831,219,94,77,48,0
+US37145,"Person County, North Carolina",37144,1795,1276,263,99,157
+US37147,"Pitt County, North Carolina",168056,11505,7502,1262,2153,588
+US37149,"Polk County, North Carolina",19876,1434,911,364,140,19
+US37151,"Randolph County, North Carolina",135064,16848,14795,1049,842,162
+US37153,"Richmond County, North Carolina",42288,2623,2198,110,315,0
+US37155,"Robeson County, North Carolina",123649,9770,8490,445,392,443
+US37157,"Rockingham County, North Carolina",86343,5058,4367,402,156,133
+US37159,"Rowan County, North Carolina",132360,12464,10559,980,782,143
+US37161,"Rutherford County, North Carolina",63192,3142,2343,577,80,142
+US37163,"Sampson County, North Carolina",59297,10811,10060,176,211,364
+US37165,"Scotland County, North Carolina",32841,1298,874,155,205,64
+US37167,"Stanly County, North Carolina",58269,3794,2473,441,824,56
+US37169,"Stokes County, North Carolina",43813,1439,1160,174,105,0
+US37171,"Surry County, North Carolina",68290,6712,6132,286,261,33
+US37173,"Swain County, North Carolina",13346,785,394,56,30,305
+US37175,"Transylvania County, North Carolina",32440,1454,970,414,47,23
+US37177,"Tyrrell County, North Carolina",3966,332,300,4,18,10
+US37179,"Union County, North Carolina",217741,32399,20699,7328,2950,1422
+US37181,"Vance County, North Carolina",41717,3245,2633,216,263,133
+US37183,"Wake County, North Carolina",1002381,172467,82711,39593,36704,13459
+US37185,"Warren County, North Carolina",18999,711,559,41,53,58
+US37187,"Washington County, North Carolina",11371,267,214,26,26,1
+US37189,"Watauga County, North Carolina",53082,2361,1262,535,449,115
+US37191,"Wayne County, North Carolina",115359,15532,11950,1960,1112,510
+US37193,"Wilkes County, North Carolina",65043,4133,3286,300,355,192
+US37195,"Wilson County, North Carolina",76621,8332,6759,686,508,379
+US37197,"Yadkin County, North Carolina",35652,3461,3069,360,26,6
+US37199,"Yancey County, North Carolina",17000,771,642,81,48,0
+US38001,"Adams County, North Dakota",2191,83,34,0,43,6
+US38003,"Barnes County, North Dakota",10202,291,25,124,104,38
+US38005,"Benson County, North Dakota",6137,457,14,39,6,398
+US38007,"Billings County, North Dakota",831,31,5,26,0,0
+US38009,"Bottineau County, North Dakota",6140,177,131,36,8,2
+US38011,"Bowman County, North Dakota",2941,143,110,17,0,16
+US38013,"Burke County, North Dakota",1967,44,25,10,9,0
+US38015,"Burleigh County, North Dakota",88322,3668,958,1913,415,382
+US38017,"Cass County, North Dakota",164457,12994,2046,4926,2215,3807
+US38019,"Cavalier County, North Dakota",3551,117,44,63,0,10
+US38021,"Dickey County, North Dakota",4655,368,130,216,0,22
+US38023,"Divide County, North Dakota",2251,48,0,16,29,3
+US38025,"Dunn County, North Dakota",4100,334,120,105,50,59
+US38027,"Eddy County, North Dakota",2140,83,4,32,0,47
+US38029,"Emmons County, North Dakota",3129,257,2,224,31,0
+US38031,"Foster County, North Dakota",3076,62,10,52,0,0
+US38033,"Golden Valley County, North Dakota",1737,16,4,12,0,0
+US38035,"Grand Forks County, North Dakota",65434,4519,998,1666,981,874
+US38037,"Grant County, North Dakota",2217,101,9,72,19,1
+US38039,"Griggs County, North Dakota",2243,42,11,31,0,0
+US38041,"Hettinger County, North Dakota",2408,94,60,30,0,4
+US38043,"Kidder County, North Dakota",2308,109,57,50,0,2
+US38045,"LaMoure County, North Dakota",3923,399,45,340,9,5
+US38047,"Logan County, North Dakota",1746,161,3,153,0,5
+US38049,"McHenry County, North Dakota",5545,150,69,63,16,2
+US38051,"McIntosh County, North Dakota",2471,510,63,432,12,3
+US38053,"McKenzie County, North Dakota",11958,1581,944,352,46,239
+US38055,"McLean County, North Dakota",9032,306,65,153,6,82
+US38057,"Mercer County, North Dakota",7941,535,120,369,46,0
+US38059,"Morton County, North Dakota",28941,1183,557,518,28,80
+US38061,"Mountrail County, North Dakota",9418,711,443,45,9,214
+US38063,"Nelson County, North Dakota",2748,131,69,41,1,20
+US38065,"Oliver County, North Dakota",1712,60,14,42,4,0
+US38067,"Pembina County, North Dakota",6558,219,92,105,5,17
+US38069,"Pierce County, North Dakota",3856,50,18,23,9,0
+US38071,"Ramsey County, North Dakota",10848,438,181,147,87,23
+US38073,"Ransom County, North Dakota",5027,254,12,98,98,46
+US38075,"Renville County, North Dakota",2224,78,8,65,5,0
+US38077,"Richland County, North Dakota",15344,424,264,115,34,11
+US38079,"Rolette County, North Dakota",13144,328,72,84,30,142
+US38081,"Sargent County, North Dakota",3670,219,75,57,9,78
+US38083,"Sheridan County, North Dakota",1328,45,3,42,0,0
+US38085,"Sioux County, North Dakota",3942,208,17,9,3,179
+US38087,"Slope County, North Dakota",710,8,6,2,0,0
+US38089,"Stark County, North Dakota",28556,1329,627,474,115,113
+US38091,"Steele County, North Dakota",1668,32,0,32,0,0
+US38093,"Stutsman County, North Dakota",19770,630,297,236,62,35
+US38095,"Towner County, North Dakota",2142,96,79,4,3,10
+US38097,"Traill County, North Dakota",7545,251,154,69,19,9
+US38099,"Walsh County, North Dakota",10019,767,565,147,47,8
+US38101,"Ward County, North Dakota",63506,3879,1429,1262,794,394
+US38103,"Wells County, North Dakota",3756,65,35,21,9,0
+US38105,"Williams County, North Dakota",32017,2914,1822,589,181,322
+US39001,"Adams County, Ohio",26105,441,53,362,19,7
+US39003,"Allen County, Ohio",96854,2977,1149,982,521,325
+US39005,"Ashland County, Ohio",50500,2595,333,1887,240,135
+US39007,"Ashtabula County, Ohio",92328,6534,2070,3974,327,163
+US39009,"Athens County, Ohio",63362,3347,708,813,1073,753
+US39011,"Auglaize County, Ohio",42865,833,405,294,125,9
+US39013,"Belmont County, Ohio",64691,1154,382,506,252,14
+US39015,"Brown County, Ohio",41060,599,384,122,84,9
+US39017,"Butler County, Ohio",356843,29517,12535,7072,6935,2975
+US39019,"Carroll County, Ohio",25968,735,172,537,21,5
+US39021,"Champaign County, Ohio",36763,561,276,128,157,0
+US39023,"Clark County, Ohio",126770,4566,2994,858,489,225
+US39025,"Clermont County, Ohio",192338,5739,2310,2197,1089,143
+US39027,"Clinton County, Ohio",39387,881,465,266,105,45
+US39029,"Columbiana County, Ohio",97864,2558,1341,767,61,389
+US39031,"Coshocton County, Ohio",34272,2947,227,2618,83,19
+US39033,"Crawford County, Ohio",39402,781,310,231,227,13
+US39035,"Cuyahoga County, Ohio",1175681,143457,50822,53396,20366,18873
+US39037,"Darke County, Ohio",48437,884,375,323,142,44
+US39039,"Defiance County, Ohio",35939,1619,1229,301,30,59
+US39041,"Delaware County, Ohio",188676,16656,2874,5702,6442,1638
+US39043,"Erie County, Ohio",70770,2304,1009,899,323,73
+US39045,"Fairfield County, Ohio",145324,6434,1963,2169,831,1471
+US39047,"Fayette County, Ohio",26877,616,325,167,102,22
+US39049,"Franklin County, Ohio",1198375,162172,45654,39158,34700,42660
+US39051,"Fulton County, Ohio",39768,1696,1174,368,99,55
+US39053,"Gallia County, Ohio",28166,1028,111,763,117,37
+US39055,"Geauga County, Ohio",88904,12010,852,10503,398,257
+US39057,"Greene County, Ohio",157135,9742,2271,3075,2566,1830
+US39059,"Guernsey County, Ohio",36784,1517,339,1036,105,37
+US39061,"Hamilton County, Ohio",759986,57685,20028,17318,10548,9791
+US39063,"Hancock County, Ohio",71271,3715,1752,623,972,368
+US39065,"Hardin County, Ohio",29541,1774,350,1082,206,136
+US39067,"Harrison County, Ohio",14400,657,15,574,21,47
+US39069,"Henry County, Ohio",25614,1233,907,199,80,47
+US39071,"Highland County, Ohio",40361,1050,149,819,82,0
+US39073,"Hocking County, Ohio",26792,351,171,107,64,9
+US39075,"Holmes County, Ohio",40296,19105,126,18875,43,61
+US39077,"Huron County, Ohio",54677,2783,1820,848,64,51
+US39079,"Jackson County, Ohio",30392,1122,271,695,56,100
+US39081,"Jefferson County, Ohio",63047,1538,505,663,329,41
+US39083,"Knox County, Ohio",57836,2723,508,2016,162,37
+US39085,"Lake County, Ohio",218532,16523,7148,7131,1379,865
+US39087,"Lawrence County, Ohio",56736,600,325,244,23,8
+US39089,"Licking County, Ohio",163260,6135,2004,2871,750,510
+US39091,"Logan County, Ohio",42549,1519,368,751,342,58
+US39093,"Lorain County, Ohio",290258,20848,13172,4690,1979,1007
+US39095,"Lucas County, Ohio",403447,27199,10976,6226,4378,5619
+US39097,"Madison County, Ohio",41919,1606,587,781,133,105
+US39099,"Mahoning County, Ohio",217955,12834,7062,3940,673,1159
+US39101,"Marion County, Ohio",61484,2980,1459,788,366,367
+US39103,"Medina County, Ohio",168495,7341,1802,4209,830,500
+US39105,"Meigs County, Ohio",21919,214,180,32,2,0
+US39107,"Mercer County, Ohio",37979,687,199,140,308,40
+US39109,"Miami County, Ohio",99218,2746,837,903,746,260
+US39111,"Monroe County, Ohio",13244,207,21,141,45,0
+US39113,"Montgomery County, Ohio",498993,29996,9691,6171,9146,4988
+US39115,"Morgan County, Ohio",13929,352,60,242,42,8
+US39117,"Morrow County, Ohio",33154,1579,267,1249,63,0
+US39119,"Muskingum County, Ohio",80919,1615,426,777,182,230
+US39121,"Noble County, Ohio",13712,468,79,316,0,73
+US39123,"Ottawa County, Ohio",38932,1032,714,212,50,56
+US39125,"Paulding County, Ohio",17725,544,471,29,26,18
+US39127,"Perry County, Ohio",33852,604,376,166,62,0
+US39129,"Pickaway County, Ohio",54689,1339,739,434,89,77
+US39131,"Pike County, Ohio",26376,458,6,350,72,30
+US39133,"Portage County, Ohio",155014,7882,1752,2613,1816,1701
+US39135,"Preble County, Ohio",38813,854,388,284,164,18
+US39137,"Putnam County, Ohio",31640,1371,1219,102,36,14
+US39139,"Richland County, Ohio",114174,4595,1273,2593,420,309
+US39141,"Ross County, Ohio",72762,1365,541,514,280,30
+US39143,"Sandusky County, Ohio",55730,2530,2172,170,115,73
+US39145,"Scioto County, Ohio",71656,901,385,248,229,39
+US39147,"Seneca County, Ohio",52376,2020,1165,427,280,148
+US39149,"Shelby County, Ohio",45561,1046,352,462,214,18
+US39151,"Stark County, Ohio",351464,11923,4155,5414,1682,672
+US39153,"Summit County, Ohio",510931,34236,7052,14936,8345,3903
+US39155,"Trumbull County, Ohio",189776,9299,1689,6536,586,488
+US39157,"Tuscarawas County, Ohio",86568,6660,1894,4587,79,100
+US39159,"Union County, Ohio",53217,3131,477,976,1518,160
+US39161,"Van Wert County, Ohio",26525,607,347,157,90,13
+US39163,"Vinton County, Ohio",12335,424,63,233,45,83
+US39165,"Warren County, Ohio",215917,18466,4532,6657,6288,989
+US39167,"Washington County, Ohio",57465,1227,561,289,266,111
+US39169,"Wayne County, Ohio",108362,12339,1621,9980,548,190
+US39171,"Williams County, Ohio",34691,955,676,86,182,11
+US39173,"Wood County, Ohio",123251,5814,2470,1634,949,761
+US39175,"Wyandot County, Ohio",20761,725,536,74,115,0
+US40001,"Adair County, Oklahoma",20598,1713,601,11,152,949
+US40003,"Alfalfa County, Oklahoma",5535,303,236,45,14,8
+US40005,"Atoka County, Oklahoma",13028,443,170,76,105,92
+US40007,"Beaver County, Oklahoma",5063,1007,993,10,0,4
+US40009,"Beckham County, Oklahoma",20678,2235,2061,23,57,94
+US40011,"Blaine County, Oklahoma",9038,998,911,34,0,53
+US40013,"Bryan County, Oklahoma",43441,2471,1506,306,253,406
+US40015,"Caddo County, Oklahoma",27224,2829,2103,122,92,512
+US40017,"Canadian County, Oklahoma",130875,11347,6849,1280,2846,372
+US40019,"Carter County, Oklahoma",45025,3021,2065,282,518,156
+US40021,"Cherokee County, Oklahoma",45773,3662,1927,204,248,1283
+US40023,"Choctaw County, Oklahoma",13807,523,329,5,51,138
+US40025,"Cimarron County, Oklahoma",2028,393,357,35,0,1
+US40027,"Cleveland County, Oklahoma",264087,27072,12998,3728,8948,1398
+US40029,"Coal County, Oklahoma",5214,212,77,88,6,41
+US40031,"Comanche County, Oklahoma",113215,9942,5062,2089,2023,768
+US40033,"Cotton County, Oklahoma",5580,178,99,17,5,57
+US40035,"Craig County, Oklahoma",13593,431,282,11,43,95
+US40037,"Creek County, Oklahoma",66964,2134,1471,272,122,269
+US40039,"Custer County, Oklahoma",27021,4230,3585,98,240,307
+US40041,"Delaware County, Oklahoma",40265,1956,724,79,406,747
+US40043,"Dewey County, Oklahoma",4599,272,202,7,6,57
+US40045,"Ellis County, Oklahoma",3773,197,148,49,0,0
+US40047,"Garfield County, Oklahoma",57466,7368,5064,290,1710,304
+US40049,"Garvin County, Oklahoma",25967,1570,1399,100,30,41
+US40051,"Grady County, Oklahoma",51881,1936,1620,132,127,57
+US40053,"Grant County, Oklahoma",4153,115,91,12,12,0
+US40055,"Greer County, Oklahoma",5547,438,407,16,0,15
+US40057,"Harmon County, Oklahoma",2600,520,489,5,20,6
+US40059,"Harper County, Oklahoma",3508,682,678,2,0,2
+US40061,"Haskell County, Oklahoma",11880,395,312,24,34,25
+US40063,"Hughes County, Oklahoma",12618,691,398,26,2,265
+US40065,"Jackson County, Oklahoma",23102,3617,2990,228,327,72
+US40067,"Jefferson County, Oklahoma",5753,296,290,4,0,2
+US40069,"Johnston County, Oklahoma",10392,356,227,47,12,70
+US40071,"Kay County, Oklahoma",41441,2595,1936,277,102,280
+US40073,"Kingfisher County, Oklahoma",14615,2212,2127,40,41,4
+US40075,"Kiowa County, Oklahoma",8341,663,484,72,64,43
+US40077,"Latimer County, Oklahoma",9760,292,144,30,35,83
+US40079,"Le Flore County, Oklahoma",46820,2740,2259,168,230,83
+US40081,"Lincoln County, Oklahoma",32807,509,258,91,41,119
+US40083,"Logan County, Oklahoma",43905,2224,1835,166,116,107
+US40085,"Love County, Oklahoma",9434,1235,1157,33,45,0
+US40087,"McClain County, Oklahoma",36943,2216,1935,121,72,88
+US40089,"McCurtain County, Oklahoma",30670,1617,795,108,454,260
+US40091,"McIntosh County, Oklahoma",18703,241,142,24,7,68
+US40093,"Major County, Oklahoma",7179,478,454,9,0,15
+US40095,"Marshall County, Oklahoma",15550,2472,2346,61,51,14
+US40097,"Mayes County, Oklahoma",38591,1863,570,583,140,570
+US40099,"Murray County, Oklahoma",13112,557,439,48,21,49
+US40101,"Muskogee County, Oklahoma",64156,3269,2296,303,231,439
+US40103,"Noble County, Oklahoma",10624,206,108,34,8,56
+US40105,"Nowata County, Oklahoma",9708,206,128,35,34,9
+US40107,"Okfuskee County, Oklahoma",11382,697,179,247,14,257
+US40109,"Oklahoma County, Oklahoma",727726,126426,95734,8540,16316,5836
+US40111,"Okmulgee County, Oklahoma",36363,1333,583,201,83,466
+US40113,"Osage County, Oklahoma",44819,1350,894,151,156,149
+US40115,"Ottawa County, Oklahoma",29295,1737,1159,79,288,211
+US40117,"Pawnee County, Oklahoma",15466,276,130,14,45,87
+US40119,"Payne County, Oklahoma",77460,6401,1977,1273,2035,1116
+US40121,"Pittsburg County, Oklahoma",41543,1809,1355,182,130,142
+US40123,"Pontotoc County, Oklahoma",35825,1745,968,257,132,388
+US40125,"Pottawatomie County, Oklahoma",67687,3027,1736,387,449,455
+US40127,"Pushmataha County, Oklahoma",10491,272,127,28,39,78
+US40129,"Roger Mills County, Oklahoma",3435,149,145,3,0,1
+US40131,"Rogers County, Oklahoma",86024,4516,2634,600,994,288
+US40133,"Seminole County, Oklahoma",23201,1133,561,119,62,391
+US40135,"Sequoyah County, Oklahoma",39056,1560,709,136,150,565
+US40137,"Stephens County, Oklahoma",41072,2342,1986,223,75,58
+US40139,"Texas County, Oklahoma",19041,8347,7630,153,404,160
+US40141,"Tillman County, Oklahoma",6990,1343,1312,24,0,7
+US40143,"Tulsa County, Oklahoma",600019,87525,60882,7436,14538,4669
+US40145,"Wagoner County, Oklahoma",74189,4643,3030,508,894,211
+US40147,"Washington County, Oklahoma",48617,3350,1939,419,840,152
+US40149,"Washita County, Oklahoma",10487,456,403,50,0,3
+US40151,"Woods County, Oklahoma",8485,469,291,50,86,42
+US40153,"Woodward County, Oklahoma",19231,2353,2213,66,31,43
+US41001,"Baker County, Oregon",15229,622,388,174,55,5
+US41003,"Benton County, Oregon",87434,12243,4711,2103,4648,781
+US41005,"Clackamas County, Oregon",388445,47121,21819,12420,11320,1562
+US41007,"Clatsop County, Oregon",37088,2761,2037,402,230,92
+US41009,"Columbia County, Oregon",48675,1727,1053,281,352,41
+US41011,"Coos County, Oregon",60527,3289,2266,629,354,40
+US41013,"Crook County, Oregon",21836,1282,968,174,140,0
+US41015,"Curry County, Oregon",21717,1230,783,423,16,8
+US41017,"Deschutes County, Oregon",176697,12766,8925,2483,1120,238
+US41019,"Douglas County, Oregon",103467,4167,2405,1005,608,149
+US41021,"Gilliam County, Oregon",1804,72,61,0,11,0
+US41023,"Grant County, Oregon",6859,328,193,101,28,6
+US41025,"Harney County, Oregon",6885,325,240,38,13,34
+US41027,"Hood River County, Oregon",21760,6363,5970,214,179,0
+US41029,"Jackson County, Oregon",204663,21111,16633,2233,1941,304
+US41031,"Jefferson County, Oregon",22130,3595,2976,115,95,409
+US41033,"Josephine County, Oregon",82005,3228,2301,462,383,82
+US41035,"Klamath County, Oregon",62820,5387,4407,497,270,213
+US41037,"Lake County, Oregon",7460,488,361,57,57,13
+US41039,"Lane County, Oregon",354917,29349,16727,4860,6735,1027
+US41041,"Lincoln County, Oregon",46372,3356,2543,316,444,53
+US41043,"Linn County, Oregon",117557,9249,7333,891,825,200
+US41045,"Malheur County, Oregon",28351,7174,6842,97,153,82
+US41047,"Marion County, Oregon",316989,80451,65312,7687,6747,705
+US41049,"Morrow County, Oregon",10457,3546,3428,47,64,7
+US41051,"Multnomah County, Oregon",760424,151759,64058,32326,45095,10280
+US41053,"Polk County, Oregon",78339,10950,8265,867,1340,478
+US41055,"Sherman County, Oregon",1582,54,26,14,7,7
+US41057,"Tillamook County, Oregon",25167,2445,2066,185,105,89
+US41059,"Umatilla County, Oregon",71943,16444,15514,319,387,224
+US41061,"Union County, Oregon",24807,1229,524,226,433,46
+US41063,"Wallowa County, Oregon",6662,187,135,29,18,5
+US41065,"Wasco County, Oregon",24476,3797,3328,187,176,106
+US41067,"Washington County, Oregon",553510,137068,67971,24994,37604,6499
+US41069,"Wheeler County, Oregon",1312,55,47,6,1,1
+US41071,"Yamhill County, Oregon",98880,13642,11477,1199,826,140
+US42001,"Adams County, Pennsylvania",97279,6126,4886,894,304,42
+US42003,"Allegheny County, Pennsylvania",1157574,86628,16355,38122,23932,8219
+US42005,"Armstrong County, Pennsylvania",62642,1562,322,1089,140,11
+US42007,"Beaver County, Pennsylvania",157419,4421,1467,2138,631,185
+US42009,"Bedford County, Pennsylvania",46004,1294,349,806,116,23
+US42011,"Berks County, Pennsylvania",393824,74825,60481,9460,3106,1778
+US42013,"Blair County, Pennsylvania",116661,2721,483,1728,481,29
+US42015,"Bradford County, Pennsylvania",57321,1601,497,761,242,101
+US42017,"Bucks County, Pennsylvania",596512,73824,20212,37822,12788,3002
+US42019,"Butler County, Pennsylvania",177369,6029,1929,2610,1390,100
+US42021,"Cambria County, Pennsylvania",126400,3083,1264,1278,360,181
+US42023,"Cameron County, Pennsylvania",4404,109,79,15,13,2
+US42025,"Carbon County, Pennsylvania",60929,2789,1431,1119,234,5
+US42027,"Centre County, Pennsylvania",155581,18862,3178,7217,7153,1314
+US42029,"Chester County, Pennsylvania",490568,61880,26538,20338,12971,2033
+US42031,"Clarion County, Pennsylvania",36730,1520,213,1088,211,8
+US42033,"Clearfield County, Pennsylvania",76130,3251,1402,1331,330,188
+US42035,"Clinton County, Pennsylvania",36838,2336,351,1697,210,78
+US42037,"Columbia County, Pennsylvania",62775,1683,587,711,217,168
+US42039,"Crawford County, Pennsylvania",80977,4447,530,3493,328,96
+US42041,"Cumberland County, Pennsylvania",235971,21981,5714,9372,5127,1768
+US42043,"Dauphin County, Pennsylvania",258429,30879,14150,8945,5297,2487
+US42045,"Delaware County, Pennsylvania",530820,65356,14094,25345,17767,8150
+US42047,"Elk County, Pennsylvania",28811,371,126,208,31,6
+US42049,"Erie County, Pennsylvania",258377,17612,6199,6840,2165,2408
+US42051,"Fayette County, Pennsylvania",124609,4004,1585,1638,403,378
+US42053,"Forest County, Pennsylvania",7159,426,301,67,7,51
+US42055,"Franklin County, Pennsylvania",144841,9925,6058,2947,803,117
+US42057,"Fulton County, Pennsylvania",13810,186,96,68,19,3
+US42059,"Greene County, Pennsylvania",34928,1031,430,380,111,110
+US42061,"Huntingdon County, Pennsylvania",43340,1751,686,636,292,137
+US42063,"Indiana County, Pennsylvania",81041,5178,683,3644,758,93
+US42065,"Jefferson County, Pennsylvania",41358,2189,170,1907,74,38
+US42067,"Juniata County, Pennsylvania",23208,2377,937,1305,22,113
+US42069,"Lackawanna County, Pennsylvania",199513,19829,9679,6960,2478,712
+US42071,"Lancaster County, Pennsylvania",505520,86010,35397,40321,6468,3824
+US42073,"Lawrence County, Pennsylvania",82210,3535,959,2252,225,99
+US42075,"Lebanon County, Pennsylvania",131315,17342,12158,3302,1033,849
+US42077,"Lehigh County, Pennsylvania",343511,84423,60223,10007,7071,7122
+US42079,"Luzerne County, Pennsylvania",301350,36463,27423,6080,2042,918
+US42081,"Lycoming County, Pennsylvania",108093,4027,1339,2046,380,262
+US42083,"McKean County, Pennsylvania",39347,1206,713,266,177,50
+US42085,"Mercer County, Pennsylvania",106152,4473,870,3040,440,123
+US42087,"Mifflin County, Pennsylvania",43417,4091,435,3584,20,52
+US42089,"Monroe County, Pennsylvania",160466,25170,14430,7476,1797,1467
+US42091,"Montgomery County, Pennsylvania",778260,106491,27683,38708,33189,6911
+US42093,"Montour County, Pennsylvania",17207,1028,282,536,195,15
+US42095,"Northampton County, Pennsylvania",288098,38249,22884,9575,4328,1462
+US42097,"Northumberland County, Pennsylvania",87029,3275,1523,1420,240,92
+US42099,"Perry County, Pennsylvania",43408,2379,567,1696,101,15
+US42101,"Philadelphia County, Pennsylvania",1472512,341722,155101,82298,77288,27035
+US42103,"Pike County, Pennsylvania",53559,6206,3111,2348,418,329
+US42105,"Potter County, Pennsylvania",15926,395,106,225,41,23
+US42107,"Schuylkill County, Pennsylvania",135682,7039,4067,2169,493,310
+US42109,"Snyder County, Pennsylvania",38314,3489,657,2625,140,67
+US42111,"Somerset County, Pennsylvania",70906,2876,979,1582,148,167
+US42113,"Sullivan County, Pennsylvania",5940,158,91,26,3,38
+US42115,"Susquehanna County, Pennsylvania",39125,974,396,451,119,8
+US42117,"Tioga County, Pennsylvania",38802,523,236,160,96,31
+US42119,"Union County, Pennsylvania",43026,4582,1781,2192,505,104
+US42121,"Venango County, Pennsylvania",49258,909,261,518,98,32
+US42123,"Warren County, Pennsylvania",37769,1269,310,818,88,53
+US42125,"Washington County, Pennsylvania",196754,5653,1849,2352,1017,435
+US42127,"Wayne County, Pennsylvania",49273,2353,1141,916,197,99
+US42129,"Westmoreland County, Pennsylvania",336580,8753,2526,4106,1743,378
+US42131,"Wyoming County, Pennsylvania",26009,453,234,186,29,4
+US42133,"York County, Pennsylvania",419997,32499,20106,7535,3496,1362
+US44001,"Bristol County, Rhode Island",46752,5407,547,4307,462,91
+US44003,"Kent County, Rhode Island",155792,14254,4643,6293,2746,572
+US44005,"Newport County, Rhode Island",79219,7557,2514,3681,953,409
+US44007,"Providence County, Rhode Island",599407,189825,113472,51038,17706,7609
+US44009,"Washington County, Rhode Island",121389,7516,2238,3436,1482,360
+US45001,"Abbeville County, South Carolina",23336,656,201,388,7,60
+US45003,"Aiken County, South Carolina",158604,10128,7816,1249,1002,61
+US45005,"Allendale County, South Carolina",8614,342,252,26,56,8
+US45007,"Anderson County, South Carolina",186483,8404,5640,1991,558,215
+US45009,"Bamberg County, South Carolina",13709,366,188,138,33,7
+US45011,"Barnwell County, South Carolina",20020,480,468,12,0,0
+US45013,"Beaufort County, South Carolina",176189,19487,15399,2120,1350,618
+US45015,"Berkeley County, South Carolina",201139,16670,9386,3537,3276,471
+US45017,"Calhoun County, South Carolina",13918,604,485,81,38,0
+US45019,"Charleston County, South Carolina",377377,26146,14831,6635,3823,857
+US45021,"Cherokee County, South Carolina",53581,2224,1618,351,226,29
+US45023,"Chester County, South Carolina",30488,818,675,106,37,0
+US45025,"Chesterfield County, South Carolina",43355,1707,1474,162,63,8
+US45027,"Clarendon County, South Carolina",32334,1303,910,198,155,40
+US45029,"Colleton County, South Carolina",35472,1151,1083,58,10,0
+US45031,"Darlington County, South Carolina",63119,1301,857,288,141,15
+US45033,"Dillon County, South Carolina",28613,1102,669,55,26,352
+US45035,"Dorchester County, South Carolina",148683,9412,5281,2198,1805,128
+US45037,"Edgefield County, South Carolina",25925,1470,1295,51,50,74
+US45039,"Fairfield County, South Carolina",21543,527,487,38,2,0
+US45041,"Florence County, South Carolina",129973,4874,2426,1282,853,313
+US45043,"Georgetown County, South Carolina",58999,1956,1257,405,267,27
+US45045,"Greenville County, South Carolina",475086,57084,37874,9552,8117,1541
+US45047,"Greenwood County, South Carolina",66049,3128,2526,212,352,38
+US45049,"Hampton County, South Carolina",18488,943,708,148,43,44
+US45051,"Horry County, South Carolina",316340,23072,14478,4243,3128,1223
+US45053,"Jasper County, South Carolina",26931,3491,3177,166,141,7
+US45055,"Kershaw County, South Carolina",61456,2976,2516,276,149,35
+US45057,"Lancaster County, South Carolina",86813,5618,4125,704,755,34
+US45059,"Laurens County, South Carolina",62998,3184,2488,393,259,44
+US45061,"Lee County, South Carolina",16510,437,426,11,0,0
+US45063,"Lexington County, South Carolina",273191,19300,12711,3367,2744,478
+US45065,"McCormick County, South Carolina",9246,161,58,72,3,28
+US45067,"Marion County, South Carolina",29366,1060,785,106,169,0
+US45069,"Marlboro County, South Carolina",25345,746,568,90,15,73
+US45071,"Newberry County, South Carolina",35957,3045,2637,247,16,145
+US45073,"Oconee County, South Carolina",73593,4074,3132,524,186,232
+US45075,"Orangeburg County, South Carolina",82872,2885,1942,423,312,208
+US45077,"Pickens County, South Carolina",117789,5247,2372,1445,1316,114
+US45079,"Richland County, South Carolina",387446,33593,15771,7660,7513,2649
+US45081,"Saluda County, South Carolina",19067,2812,2649,158,0,5
+US45083,"Spartanburg County, South Carolina",288889,29301,16833,7868,4045,555
+US45085,"Sumter County, South Carolina",99648,5576,3374,915,1079,208
+US45087,"Union County, South Carolina",25945,367,328,23,12,4
+US45089,"Williamsburg County, South Carolina",29696,981,666,100,109,106
+US45091,"York County, South Carolina",249680,18472,10682,4524,2812,454
+US46003,"Aurora County, South Dakota",2562,198,161,23,0,14
+US46005,"Beadle County, South Dakota",16824,2821,1117,316,1370,18
+US46007,"Bennett County, South Dakota",3089,328,13,14,8,293
+US46009,"Bon Homme County, South Dakota",6596,440,158,89,21,172
+US46011,"Brookings County, South Dakota",32425,2226,577,667,569,413
+US46013,"Brown County, South Dakota",36497,2673,635,635,867,536
+US46015,"Brule County, South Dakota",4934,483,32,368,1,82
+US46017,"Buffalo County, South Dakota",1796,185,3,0,0,182
+US46019,"Butte County, South Dakota",9621,68,15,39,0,14
+US46021,"Campbell County, South Dakota",1400,49,1,45,1,2
+US46023,"Charles Mix County, South Dakota",8576,523,59,85,5,374
+US46025,"Clark County, South Dakota",3336,158,121,19,14,4
+US46027,"Clay County, South Dakota",13240,791,198,144,266,183
+US46029,"Codington County, South Dakota",26292,620,204,205,41,170
+US46031,"Corson County, South Dakota",3710,552,10,20,1,521
+US46033,"Custer County, South Dakota",8372,387,247,112,15,13
+US46035,"Davison County, South Dakota",18742,650,441,46,33,130
+US46037,"Day County, South Dakota",5193,61,19,28,3,11
+US46039,"Deuel County, South Dakota",4039,105,77,19,3,6
+US46041,"Dewey County, South Dakota",5107,719,32,10,0,677
+US46043,"Douglas County, South Dakota",2724,91,29,62,0,0
+US46045,"Edmunds County, South Dakota",3658,130,42,81,0,7
+US46047,"Fall River County, South Dakota",6460,318,57,69,67,125
+US46049,"Faulk County, South Dakota",2128,60,28,29,0,3
+US46051,"Grant County, South Dakota",6740,527,290,188,37,12
+US46053,"Gregory County, South Dakota",3925,149,6,34,58,51
+US46055,"Haakon County, South Dakota",1886,14,6,8,0,0
+US46057,"Hamlin County, South Dakota",5464,272,202,50,14,6
+US46059,"Hand County, South Dakota",3068,61,12,30,19,0
+US46061,"Hanson County, South Dakota",3125,207,6,199,0,2
+US46063,"Harding County, South Dakota",1236,43,9,11,0,23
+US46065,"Hughes County, South Dakota",16415,623,263,141,0,219
+US46067,"Hutchinson County, South Dakota",6684,367,105,256,3,3
+US46069,"Hyde County, South Dakota",1242,6,6,0,0,0
+US46071,"Jackson County, South Dakota",2932,375,4,22,7,342
+US46073,"Jerauld County, South Dakota",1910,72,30,12,0,30
+US46075,"Jones County, South Dakota",767,9,0,9,0,0
+US46077,"Kingsbury County, South Dakota",4625,156,115,30,8,3
+US46079,"Lake County, South Dakota",11966,394,152,86,152,4
+US46081,"Lawrence County, South Dakota",24417,735,273,136,197,129
+US46083,"Lincoln County, South Dakota",52603,2480,713,1042,345,380
+US46085,"Lyman County, South Dakota",3498,274,21,19,9,225
+US46087,"McCook County, South Dakota",5118,179,90,61,0,28
+US46089,"McPherson County, South Dakota",2129,178,29,141,8,0
+US46091,"Marshall County, South Dakota",4512,200,157,30,0,13
+US46093,"Meade County, South Dakota",26122,1058,601,188,142,127
+US46095,"Mellette County, South Dakota",1887,134,12,4,0,118
+US46097,"Miner County, South Dakota",2108,85,11,74,0,0
+US46099,"Minnehaha County, South Dakota",174210,16109,5922,3892,1456,4839
+US46101,"Moody County, South Dakota",6078,581,151,161,138,131
+US46102,"Oglala Lakota County, South Dakota",12866,3009,49,122,0,2838
+US46103,"Pennington County, South Dakota",103325,4527,1657,856,892,1122
+US46105,"Perkins County, South Dakota",2725,60,19,26,0,15
+US46107,"Potter County, South Dakota",2158,50,15,11,24,0
+US46109,"Roberts County, South Dakota",9496,267,105,24,13,125
+US46111,"Sanborn County, South Dakota",2158,74,47,19,8,0
+US46115,"Spink County, South Dakota",6092,343,58,260,0,25
+US46117,"Stanley County, South Dakota",2813,53,11,26,0,16
+US46119,"Sully County, South Dakota",1242,18,0,18,0,0
+US46121,"Todd County, South Dakota",8900,1001,29,14,181,777
+US46123,"Tripp County, South Dakota",5140,206,32,101,35,38
+US46125,"Turner County, South Dakota",7776,209,104,72,17,16
+US46127,"Union County, South Dakota",14473,494,250,135,70,39
+US46129,"Walworth County, South Dakota",5128,183,64,66,0,53
+US46135,"Yankton County, South Dakota",21347,920,552,196,29,143
+US46137,"Ziebach County, South Dakota",2612,591,4,3,15,569
+US47001,"Anderson County, Tennessee",71946,3437,1765,930,563,179
+US47003,"Bedford County, Tennessee",45081,5234,4414,218,94,508
+US47005,"Benton County, Tennessee",15400,168,69,72,12,15
+US47007,"Bledsoe County, Tennessee",13993,383,321,36,10,16
+US47009,"Blount County, Tennessee",123416,4461,2546,905,691,319
+US47011,"Bradley County, Tennessee",99695,7950,5053,1713,834,350
+US47013,"Campbell County, Tennessee",37583,455,283,135,14,23
+US47015,"Cannon County, Tennessee",13421,216,98,94,0,24
+US47017,"Carroll County, Tennessee",26285,689,478,130,59,22
+US47019,"Carter County, Tennessee",53933,1093,662,161,155,115
+US47021,"Cheatham County, Tennessee",38002,1541,1095,292,93,61
+US47023,"Chester County, Tennessee",16087,362,242,90,30,0
+US47025,"Claiborne County, Tennessee",30069,654,316,154,179,5
+US47027,"Clay County, Tennessee",7282,242,238,0,4,0
+US47029,"Cocke County, Tennessee",33554,706,472,119,66,49
+US47031,"Coffee County, Tennessee",51704,1758,1267,193,298,0
+US47033,"Crockett County, Tennessee",13527,1149,1105,4,30,10
+US47035,"Cumberland County, Tennessee",56427,1810,842,704,174,90
+US47037,"Davidson County, Tennessee",641084,111352,56831,19673,15288,19560
+US47039,"Decatur County, Tennessee",11060,56,47,9,0,0
+US47041,"DeKalb County, Tennessee",18715,1396,1337,16,43,0
+US47043,"Dickson County, Tennessee",49475,1357,1021,178,147,11
+US47045,"Dyer County, Tennessee",35188,1179,679,217,196,87
+US47047,"Fayette County, Tennessee",38139,1013,546,141,207,119
+US47049,"Fentress County, Tennessee",17173,197,98,72,23,4
+US47051,"Franklin County, Tennessee",39623,1263,774,267,102,120
+US47053,"Gibson County, Tennessee",46140,1254,768,385,75,26
+US47055,"Giles County, Tennessee",27592,647,500,80,67,0
+US47057,"Grainger County, Tennessee",21987,914,832,49,33,0
+US47059,"Greene County, Tennessee",65589,1719,1060,418,225,16
+US47061,"Grundy County, Tennessee",12586,125,47,53,24,1
+US47063,"Hamblen County, Tennessee",60220,5828,5207,183,401,37
+US47065,"Hamilton County, Tennessee",340041,24232,14499,4429,4533,771
+US47067,"Hancock County, Tennessee",6248,134,103,31,0,0
+US47069,"Hardeman County, Tennessee",24426,705,359,101,194,51
+US47071,"Hardin County, Tennessee",24409,588,453,76,59,0
+US47073,"Hawkins County, Tennessee",53818,915,544,149,219,3
+US47075,"Haywood County, Tennessee",16571,778,589,91,13,85
+US47077,"Henderson County, Tennessee",26472,463,375,52,36,0
+US47079,"Henry County, Tennessee",30571,801,491,120,157,33
+US47081,"Hickman County, Tennessee",23458,458,202,238,18,0
+US47083,"Houston County, Tennessee",7776,72,31,27,14,0
+US47085,"Humphreys County, Tennessee",17508,376,172,39,147,18
+US47087,"Jackson County, Tennessee",11181,272,194,62,5,11
+US47089,"Jefferson County, Tennessee",51090,2334,1450,572,227,85
+US47091,"Johnson County, Tennessee",17022,384,264,59,61,0
+US47093,"Knox County, Tennessee",434639,25400,11972,5587,5538,2303
+US47095,"Lake County, Tennessee",7082,148,123,7,18,0
+US47097,"Lauderdale County, Tennessee",24496,672,538,59,51,24
+US47099,"Lawrence County, Tennessee",40397,2020,605,1362,50,3
+US47101,"Lewis County, Tennessee",11371,425,252,126,35,12
+US47103,"Lincoln County, Tennessee",32090,924,668,92,158,6
+US47105,"Loudon County, Tennessee",49653,4344,3757,382,200,5
+US47107,"McMinn County, Tennessee",50150,2071,1579,304,174,14
+US47109,"McNairy County, Tennessee",24419,651,324,228,23,76
+US47111,"Macon County, Tennessee",22155,860,757,18,85,0
+US47113,"Madison County, Tennessee",91575,4288,3190,404,476,218
+US47115,"Marion County, Tennessee",26894,307,235,41,20,11
+US47117,"Marshall County, Tennessee",30977,1728,1376,280,46,26
+US47119,"Maury County, Tennessee",85850,4695,3703,346,542,104
+US47121,"Meigs County, Tennessee",11478,164,128,10,26,0
+US47123,"Monroe County, Tennessee",43407,1437,1227,137,68,5
+US47125,"Montgomery County, Tennessee",183316,16748,10124,2848,2701,1075
+US47127,"Moore County, Tennessee",6037,154,1,139,14,0
+US47129,"Morgan County, Tennessee",20496,354,203,119,3,29
+US47131,"Obion County, Tennessee",28639,1163,811,172,53,127
+US47133,"Overton County, Tennessee",20873,422,158,105,159,0
+US47135,"Perry County, Tennessee",7462,445,89,329,27,0
+US47137,"Pickett County, Tennessee",4854,14,14,0,0,0
+US47139,"Polk County, Tennessee",16015,364,238,109,17,0
+US47141,"Putnam County, Tennessee",72987,4489,3241,487,595,166
+US47143,"Rhea County, Tennessee",30588,1423,1148,234,36,5
+US47145,"Roane County, Tennessee",50653,1435,680,544,211,0
+US47147,"Robertson County, Tennessee",65857,4074,3293,312,302,167
+US47149,"Rutherford County, Tennessee",295129,33441,19177,3478,7377,3409
+US47151,"Scott County, Tennessee",20632,209,185,14,10,0
+US47153,"Sequatchie County, Tennessee",14100,422,355,67,0,0
+US47155,"Sevier County, Tennessee",91834,6306,4450,955,688,213
+US47157,"Shelby County, Tennessee",870121,83320,47814,10746,15500,9260
+US47159,"Smith County, Tennessee",18616,355,151,47,111,46
+US47161,"Stewart County, Tennessee",12611,315,128,105,82,0
+US47163,"Sullivan County, Tennessee",149311,3950,2468,757,571,154
+US47165,"Sumner County, Tennessee",172283,11100,6318,2799,1061,922
+US47167,"Tipton County, Tennessee",57713,1618,1259,133,195,31
+US47169,"Trousdale County, Tennessee",9636,209,172,17,20,0
+US47171,"Unicoi County, Tennessee",17087,925,776,96,53,0
+US47173,"Union County, Tennessee",18463,383,176,108,99,0
+US47175,"Van Buren County, Tennessee",5452,244,101,132,3,8
+US47177,"Warren County, Tennessee",38258,2674,2066,385,180,43
+US47179,"Washington County, Tennessee",121354,5791,2735,1268,1202,586
+US47181,"Wayne County, Tennessee",15871,276,119,87,70,0
+US47183,"Weakley County, Tennessee",31791,621,409,91,61,60
+US47185,"White County, Tennessee",25186,331,156,98,34,43
+US47187,"Williamson County, Tennessee",211953,18035,7680,4542,5153,660
+US47189,"Wilson County, Tennessee",128540,7859,3790,1950,758,1361
+US48001,"Anderson County, Texas",54765,8103,7432,212,233,226
+US48003,"Andrews County, Texas",16485,7199,7053,113,28,5
+US48005,"Angelina County, Texas",81413,15046,13986,330,677,53
+US48007,"Aransas County, Texas",23326,4643,4224,97,312,10
+US48009,"Archer County, Texas",8260,472,455,2,15,0
+US48011,"Armstrong County, Texas",1855,119,116,0,0,3
+US48013,"Atascosa County, Texas",45891,17669,17364,291,14,0
+US48015,"Austin County, Texas",27978,5789,5368,338,56,27
+US48017,"Bailey County, Texas",6642,3194,3133,0,46,15
+US48019,"Bandera County, Texas",21265,2400,2170,177,53,0
+US48021,"Bastrop County, Texas",79003,23313,21816,1059,398,40
+US48023,"Baylor County, Texas",3424,157,103,14,40,0
+US48025,"Bee County, Texas",30710,10642,10268,178,145,51
+US48027,"Bell County, Texas",318854,61888,45312,6621,8134,1821
+US48029,"Bexar County, Texas",1813726,718570,646897,27296,33581,10796
+US48031,"Blanco County, Texas",10992,1234,963,124,145,2
+US48033,"Borden County, Texas",513,82,47,6,0,29
+US48035,"Bosque County, Texas",17317,2270,2071,116,66,17
+US48037,"Bowie County, Texas",87386,4895,3796,246,718,135
+US48039,"Brazoria County, Texas",335654,89107,67041,5015,14563,2488
+US48041,"Brazos County, Texas",209299,50627,34770,5572,8722,1563
+US48043,"Brewster County, Texas",8762,3016,2789,130,97,0
+US48045,"Briscoe County, Texas",1405,342,331,11,0,0
+US48047,"Brooks County, Texas",6563,4053,4036,0,17,0
+US48049,"Brown County, Texas",35890,4543,4170,135,201,37
+US48051,"Burleson County, Texas",16979,2737,2556,181,0,0
+US48053,"Burnet County, Texas",44113,6433,6030,183,177,43
+US48055,"Caldwell County, Texas",39512,14311,13903,308,7,93
+US48057,"Calhoun County, Texas",20222,6563,5447,17,1073,26
+US48059,"Callahan County, Texas",13160,1020,825,151,44,0
+US48061,"Cameron County, Texas",386880,276315,273157,1001,1683,474
+US48063,"Camp County, Texas",11993,2495,2312,117,66,0
+US48065,"Carson County, Texas",5590,382,342,27,13,0
+US48067,"Cass County, Texas",28351,1183,975,98,110,0
+US48069,"Castro County, Texas",7078,3704,3634,0,30,40
+US48071,"Chambers County, Texas",38519,6913,6024,359,336,194
+US48073,"Cherokee County, Texas",48389,9787,9422,158,201,6
+US48075,"Childress County, Texas",6953,1628,1602,0,26,0
+US48077,"Clay County, Texas",9945,668,529,11,117,11
+US48079,"Cochran County, Texas",2675,1233,1194,39,0,0
+US48081,"Coke County, Texas",3210,348,344,4,0,0
+US48083,"Coleman County, Texas",7870,791,761,4,23,3
+US48085,"Collin County, Texas",913077,261612,106103,62398,76255,16856
+US48087,"Collingsworth County, Texas",2782,652,570,82,0,0
+US48089,"Colorado County, Texas",19834,4293,4006,252,20,15
+US48091,"Comal County, Texas",133458,23967,20813,2204,772,178
+US48093,"Comanche County, Texas",12759,2810,2713,78,19,0
+US48095,"Concho County, Texas",3172,1120,1060,39,13,8
+US48097,"Cooke County, Texas",37310,5539,4939,260,288,52
+US48099,"Coryell County, Texas",70009,9581,6650,1558,1154,219
+US48101,"Cottle County, Texas",1487,297,284,13,0,0
+US48103,"Crane County, Texas",4417,1995,1891,0,104,0
+US48105,"Crockett County, Texas",3314,1654,1654,0,0,0
+US48107,"Crosby County, Texas",5446,1888,1837,7,44,0
+US48109,"Culberson County, Texas",1984,1248,1235,0,13,0
+US48111,"Dallam County, Texas",6612,2882,2404,447,30,1
+US48113,"Dallas County, Texas",2411921,1049352,847590,65585,92334,43843
+US48115,"Dawson County, Texas",11908,4539,4421,66,14,38
+US48117,"Deaf Smith County, Texas",17081,9481,9332,17,81,51
+US48119,"Delta County, Texas",4952,219,190,16,9,4
+US48121,"Denton County, Texas",780767,183621,105735,29089,39226,9571
+US48123,"DeWitt County, Texas",19013,3686,3570,109,7,0
+US48125,"Dickens County, Texas",2087,384,355,28,0,1
+US48127,"Dimmit County, Texas",9687,6061,5945,4,104,8
+US48129,"Donley County, Texas",3175,175,158,9,7,1
+US48131,"Duval County, Texas",10463,5948,5907,41,0,0
+US48133,"Eastland County, Texas",17185,2217,2007,70,121,19
+US48135,"Ector County, Texas",145951,66652,64059,919,1037,637
+US48137,"Edwards County, Texas",1836,789,776,13,0,0
+US48139,"Ellis County, Texas",162107,29258,27361,725,667,505
+US48141,"El Paso County, Texas",772180,545226,530201,6112,6507,2406
+US48143,"Erath County, Texas",39266,6185,5580,412,193,0
+US48145,"Falls County, Texas",16229,3016,2657,323,7,29
+US48147,"Fannin County, Texas",32797,3182,2605,508,49,20
+US48149,"Fayette County, Texas",23873,4602,3927,530,145,0
+US48151,"Fisher County, Texas",3555,714,671,31,12,0
+US48153,"Floyd County, Texas",5438,2022,2022,0,0,0
+US48155,"Foard County, Texas",1225,183,183,0,0,0
+US48157,"Fort Bend County, Texas",712576,281435,125521,59858,74453,21603
+US48159,"Franklin County, Texas",10120,1340,1188,115,5,32
+US48161,"Freestone County, Texas",18577,2602,2366,161,0,75
+US48163,"Frio County, Texas",18576,11199,10848,190,70,91
+US48165,"Gaines County, Texas",18434,10629,5651,4889,58,31
+US48167,"Galveston County, Texas",311612,62516,49376,4765,6914,1461
+US48169,"Garza County, Texas",5810,2645,2512,10,115,8
+US48171,"Gillespie County, Texas",25143,4821,4001,795,17,8
+US48173,"Glasscock County, Texas",1446,494,481,13,0,0
+US48175,"Goliad County, Texas",7273,1396,1150,190,55,1
+US48177,"Gonzales County, Texas",19216,6442,6342,31,47,22
+US48179,"Gray County, Texas",20801,4160,3951,110,43,56
+US48181,"Grayson County, Texas",122743,13349,11151,717,1343,138
+US48183,"Gregg County, Texas",114349,19008,17089,801,934,184
+US48185,"Grimes County, Texas",26454,5016,4793,184,32,7
+US48187,"Guadalupe County, Texas",148973,33042,29415,1584,1848,195
+US48189,"Hale County, Texas",31528,11652,11349,113,92,98
+US48191,"Hall County, Texas",2943,872,855,0,17,0
+US48193,"Hamilton County, Texas",7840,748,690,17,41,0
+US48195,"Hansford County, Texas",5073,2186,2186,0,0,0
+US48197,"Hardeman County, Texas",3747,567,557,2,0,8
+US48199,"Hardin County, Texas",53034,2808,1751,293,218,546
+US48201,"Harris County, Texas",4294160,1904585,1504602,133848,198764,67371
+US48203,"Harrison County, Texas",62307,5113,4647,143,217,106
+US48205,"Hartley County, Texas",5359,1067,917,77,72,1
+US48207,"Haskell County, Texas",5494,1123,1059,39,17,8
+US48209,"Hays County, Texas",200350,51715,46044,2394,1863,1414
+US48211,"Hemphill County, Texas",3757,1220,1195,25,0,0
+US48213,"Henderson County, Texas",76582,8214,7288,462,440,24
+US48215,"Hidalgo County, Texas",776573,647944,639614,2079,5762,489
+US48217,"Hill County, Texas",33585,5421,5080,180,109,52
+US48219,"Hockley County, Texas",21514,6766,6538,101,70,57
+US48221,"Hood County, Texas",55146,5202,4690,446,64,2
+US48223,"Hopkins County, Texas",34175,4679,4284,316,79,0
+US48225,"Houston County, Texas",21782,1916,1773,14,100,29
+US48227,"Howard County, Texas",34039,10194,9670,197,208,119
+US48229,"Hudspeth County, Texas",4204,3135,3062,15,34,24
+US48231,"Hunt County, Texas",88256,12494,11155,462,771,106
+US48233,"Hutchinson County, Texas",19949,2379,2286,59,34,0
+US48235,"Irion County, Texas",1554,300,300,0,0,0
+US48237,"Jack County, Texas",8374,1059,1039,20,0,0
+US48239,"Jackson County, Texas",13806,3070,2852,101,116,1
+US48241,"Jasper County, Texas",33412,2219,1680,381,135,23
+US48243,"Jeff Davis County, Texas",2180,937,882,55,0,0
+US48245,"Jefferson County, Texas",236765,53510,41887,3697,6318,1608
+US48247,"Jim Hogg County, Texas",4711,3075,3075,0,0,0
+US48249,"Jim Wells County, Texas",37863,18043,17702,304,29,8
+US48251,"Johnson County, Texas",156197,24718,21787,1146,1492,293
+US48253,"Jones County, Texas",19069,3532,3338,64,81,49
+US48255,"Karnes County, Texas",14633,4853,4486,166,161,40
+US48257,"Kaufman County, Texas",114926,19655,17522,600,937,596
+US48259,"Kendall County, Texas",41650,5320,4729,374,202,15
+US48261,"Kenedy County, Texas",468,400,400,0,0,0
+US48263,"Kent County, Texas",625,68,68,0,0,0
+US48265,"Kerr County, Texas",49191,7280,6799,305,145,31
+US48267,"Kimble County, Texas",4093,688,674,6,0,8
+US48269,"King County, Texas",223,74,74,0,0,0
+US48271,"Kinney County, Texas",3559,1561,1561,0,0,0
+US48273,"Kleberg County, Texas",28849,11789,11088,110,382,209
+US48275,"Knox County, Texas",3442,851,778,71,2,0
+US48277,"Lamar County, Texas",46295,3968,2937,574,188,269
+US48279,"Lamb County, Texas",12159,4996,4923,16,57,0
+US48281,"Lampasas County, Texas",19742,2242,1697,310,232,3
+US48283,"La Salle County, Texas",7093,4291,4248,12,5,26
+US48285,"Lavaca County, Texas",18819,3060,2452,535,73,0
+US48287,"Lee County, Texas",15998,2816,2410,232,169,5
+US48289,"Leon County, Texas",16178,1868,1698,38,132,0
+US48291,"Liberty County, Texas",77733,16671,15909,391,309,62
+US48293,"Limestone County, Texas",21949,4154,3894,48,166,46
+US48295,"Lipscomb County, Texas",3144,794,751,14,29,0
+US48297,"Live Oak County, Texas",11479,3500,3235,100,139,26
+US48299,"Llano County, Texas",20226,1290,1117,73,100,0
+US48301,"Loving County, Texas",77,15,15,0,0,0
+US48303,"Lubbock County, Texas",284371,61388,51721,3891,3856,1920
+US48305,"Lynn County, Texas",5442,1573,1405,161,5,2
+US48307,"McCulloch County, Texas",7545,1619,1537,82,0,0
+US48309,"McLennan County, Texas",233525,44751,39655,2168,2530,398
+US48311,"McMullen County, Texas",710,75,69,6,0,0
+US48313,"Madison County, Texas",13318,2584,2248,137,193,6
+US48315,"Marion County, Texas",9576,366,288,15,63,0
+US48317,"Martin County, Texas",5189,1754,1600,154,0,0
+US48319,"Mason County, Texas",3914,830,639,161,30,0
+US48321,"Matagorda County, Texas",34162,10500,9848,54,593,5
+US48323,"Maverick County, Texas",52723,48669,48025,0,296,348
+US48325,"Medina County, Texas",47127,14848,14526,204,110,8
+US48327,"Menard County, Texas",2110,644,644,0,0,0
+US48329,"Midland County, Texas",153413,52605,47937,839,2980,849
+US48331,"Milam County, Texas",23251,4001,3724,127,128,22
+US48333,"Mills County, Texas",4722,625,618,7,0,0
+US48335,"Mitchell County, Texas",8087,2049,2029,9,0,11
+US48337,"Montague County, Texas",18348,1866,1786,80,0,0
+US48339,"Montgomery County, Texas",533248,122778,101097,10489,8859,2333
+US48341,"Moore County, Texas",19489,10073,8471,181,1062,359
+US48343,"Morris County, Texas",11690,1109,967,122,20,0
+US48345,"Motley County, Texas",1201,177,177,0,0,0
+US48347,"Nacogdoches County, Texas",61070,10386,9325,437,472,152
+US48349,"Navarro County, Texas",45419,11236,10312,421,431,72
+US48351,"Newton County, Texas",13282,349,243,73,17,16
+US48353,"Nolan County, Texas",13826,3485,3323,78,16,68
+US48355,"Nueces County, Texas",337129,121197,113119,2261,4739,1078
+US48357,"Ochiltree County, Texas",9281,4250,4250,0,0,0
+US48359,"Oldham County, Texas",1974,247,210,5,32,0
+US48361,"Orange County, Texas",78312,5417,3776,912,694,35
+US48363,"Palo Pinto County, Texas",26804,3935,3649,161,125,0
+US48365,"Panola County, Texas",21931,1553,1455,88,10,0
+US48367,"Parker County, Texas",125555,11301,9945,788,455,113
+US48369,"Parmer County, Texas",8964,4621,4494,94,33,0
+US48371,"Pecos County, Texas",14800,7852,7611,79,114,48
+US48373,"Polk County, Texas",46322,6562,5741,299,265,257
+US48375,"Potter County, Texas",110209,36053,28266,557,5164,2066
+US48377,"Presidio County, Texas",6483,5204,5109,0,94,1
+US48379,"Rains County, Texas",11174,929,819,27,83,0
+US48381,"Randall County, Texas",125362,14878,11544,1207,1558,569
+US48383,"Reagan County, Texas",3438,1887,1868,13,6,0
+US48385,"Real County, Texas",3178,433,412,14,2,5
+US48387,"Red River County, Texas",11633,513,494,17,0,2
+US48389,"Reeves County, Texas",14592,8326,8129,20,173,4
+US48391,"Refugio County, Texas",6720,1944,1899,26,19,0
+US48393,"Roberts County, Texas",777,41,41,0,0,0
+US48395,"Robertson County, Texas",15889,2845,2432,101,16,296
+US48397,"Rockwall County, Texas",91175,14956,10965,1688,1508,795
+US48399,"Runnels County, Texas",9710,1241,1216,10,11,4
+US48401,"Rusk County, Texas",50665,7366,6783,401,109,73
+US48403,"Sabine County, Texas",9980,345,301,16,7,21
+US48405,"San Augustine County, Texas",7868,358,350,6,0,2
+US48407,"San Jacinto County, Texas",26725,3434,3365,60,9,0
+US48409,"San Patricio County, Texas",62146,21931,21226,374,331,0
+US48411,"San Saba County, Texas",5681,1313,1285,19,9,0
+US48413,"Schleicher County, Texas",2766,1275,1268,0,7,0
+US48415,"Scurry County, Texas",15953,4194,4103,19,49,23
+US48417,"Shackelford County, Texas",3092,218,205,1,12,0
+US48419,"Shelby County, Texas",23542,4280,4192,38,50,0
+US48421,"Sherman County, Texas",2885,1050,1049,1,0,0
+US48423,"Smith County, Texas",211920,35657,31359,1561,2109,628
+US48425,"Somervell County, Texas",8412,855,816,0,24,15
+US48427,"Starr County, Texas",57733,54960,54948,4,7,1
+US48429,"Stephens County, Texas",8883,1516,1440,26,27,23
+US48431,"Sterling County, Texas",1154,312,312,0,0,0
+US48433,"Stonewall County, Texas",1352,188,185,0,0,3
+US48435,"Sutton County, Texas",3494,1882,1817,28,15,22
+US48437,"Swisher County, Texas",6979,2071,2068,3,0,0
+US48439,"Tarrant County, Texas",1905211,552141,404782,48405,65225,33729
+US48441,"Taylor County, Texas",126801,21981,17040,2003,1936,1002
+US48443,"Terrell County, Texas",870,498,488,10,0,0
+US48445,"Terry County, Texas",11489,4602,4097,497,0,8
+US48447,"Throckmorton County, Texas",1359,136,134,0,0,2
+US48449,"Titus County, Texas",30121,11790,11388,279,108,15
+US48451,"Tom Green County, Texas",109965,28289,26149,755,949,436
+US48453,"Travis County, Texas",1148527,357821,265387,36622,43523,12289
+US48455,"Trinity County, Texas",13891,1134,1058,29,47,0
+US48457,"Tyler County, Texas",20502,1964,1675,166,112,11
+US48459,"Upshur County, Texas",38648,2346,2205,26,95,20
+US48461,"Upton County, Texas",3400,1321,1303,0,18,0
+US48463,"Uvalde County, Texas",24944,12886,12526,157,195,8
+US48465,"Val Verde County, Texas",44837,30294,29828,182,280,4
+US48467,"Van Zandt County, Texas",51974,4021,3621,223,86,91
+US48469,"Victoria County, Texas",85618,21466,19958,521,872,115
+US48471,"Walker County, Texas",69256,12107,9957,331,621,1198
+US48473,"Waller County, Texas",48449,12814,12179,239,328,68
+US48475,"Ward County, Texas",10807,3910,3795,4,111,0
+US48477,"Washington County, Texas",33051,4845,4189,205,398,53
+US48479,"Webb County, Texas",247446,222390,220881,419,972,118
+US48481,"Wharton County, Texas",38741,10025,9604,284,99,38
+US48483,"Wheeler County, Texas",4978,998,973,5,3,17
+US48485,"Wichita County, Texas",123069,17030,12824,1190,2233,783
+US48487,"Wilbarger County, Texas",12132,2084,1922,43,107,12
+US48489,"Willacy County, Texas",20200,12819,12785,25,0,9
+US48491,"Williamson County, Texas",511512,111293,71478,17273,19368,3174
+US48493,"Wilson County, Texas",46231,9518,8790,625,95,8
+US48495,"Winkler County, Texas",7245,2812,2812,0,0,0
+US48497,"Wise County, Texas",62060,9942,9403,221,260,58
+US48499,"Wood County, Texas",42221,3751,3186,219,236,110
+US48501,"Yoakum County, Texas",7841,4779,4438,341,0,0
+US48503,"Young County, Texas",16976,2373,2270,35,57,11
+US48505,"Zapata County, Texas",12976,11588,11495,93,0,0
+US48507,"Zavala County, Texas",11149,8049,8040,3,0,6
+US49001,"Beaver County, Utah",5906,713,665,4,0,44
+US49003,"Box Elder County, Utah",49551,3668,2828,450,246,144
+US49005,"Cache County, Utah",113374,12025,7872,1555,2026,572
+US49007,"Carbon County, Utah",19088,972,779,111,60,22
+US49009,"Daggett County, Utah",589,20,10,0,0,10
+US49011,"Davis County, Utah",315978,31741,21116,5086,5146,393
+US49013,"Duchesne County, Utah",18215,1343,965,40,151,187
+US49015,"Emery County, Utah",9462,692,524,114,44,10
+US49017,"Garfield County, Utah",4685,526,306,116,7,97
+US49019,"Grand County, Utah",9159,1068,628,88,56,296
+US49021,"Iron County, Utah",47128,3629,2542,502,317,268
+US49023,"Juab County, Utah",10334,362,305,30,10,17
+US49025,"Kane County, Utah",7052,211,74,54,27,56
+US49027,"Millard County, Utah",11829,1551,1361,48,123,19
+US49029,"Morgan County, Utah",10691,478,265,170,29,14
+US49031,"Piute County, Utah",1758,73,55,6,2,10
+US49033,"Rich County, Utah",2244,170,170,0,0,0
+US49035,"Salt Lake County, Utah",1047288,222487,142917,31636,37819,10115
+US49037,"San Juan County, Utah",14101,5651,314,141,42,5154
+US49039,"Sanpete County, Utah",28033,3091,2373,199,285,234
+US49041,"Sevier County, Utah",19765,1206,933,140,19,114
+US49043,"Summit County, Utah",39096,5716,4285,840,410,181
+US49045,"Tooele County, Utah",61893,5087,3805,566,488,228
+US49047,"Uintah County, Utah",32897,3045,1436,416,159,1034
+US49049,"Utah County, Utah",547526,82817,58536,11495,11170,1616
+US49051,"Wasatch County, Utah",29285,3627,3086,262,232,47
+US49053,"Washington County, Utah",154569,14954,11456,1615,1439,444
+US49055,"Wayne County, Utah",2519,254,183,19,52,0
+US49057,"Weber County, Utah",231948,32473,27162,2630,2333,348
+US50001,"Addison County, Vermont",35354,2130,588,837,576,129
+US50003,"Bennington County, Vermont",34042,1558,406,867,226,59
+US50005,"Caledonia County, Vermont",28844,1086,260,627,130,69
+US50007,"Chittenden County, Vermont",154990,15887,2016,9235,2866,1770
+US50009,"Essex County, Vermont",5936,377,14,338,19,6
+US50011,"Franklin County, Vermont",46163,1656,293,1219,91,53
+US50013,"Grand Isle County, Vermont",6720,355,104,211,27,13
+US50015,"Lamoille County, Vermont",24030,886,180,516,154,36
+US50017,"Orange County, Vermont",27539,930,291,563,52,24
+US50019,"Orleans County, Vermont",25606,1388,131,1214,22,21
+US50021,"Rutland County, Vermont",56272,2540,961,1014,455,110
+US50023,"Washington County, Vermont",55559,2101,470,1256,281,94
+US50025,"Windham County, Vermont",40877,1576,457,749,251,119
+US50027,"Windsor County, Vermont",52813,2220,600,1179,253,188
+US51001,"Accomack County, Virginia",30791,3544,2486,845,171,42
+US51003,"Albemarle County, Virginia",101622,11893,4610,3628,2908,747
+US51005,"Alleghany County, Virginia",14484,264,193,55,16,0
+US51007,"Amelia County, Virginia",12190,461,344,117,0,0
+US51009,"Amherst County, Virginia",30051,854,439,208,133,74
+US51011,"Appomattox County, Virginia",14813,246,215,19,5,7
+US51013,"Arlington County, Virginia",219590,65133,29632,14531,12580,8390
+US51015,"Augusta County, Virginia",71671,2471,1615,612,213,31
+US51017,"Bath County, Virginia",4103,84,56,0,15,13
+US51019,"Bedford County, Virginia",74667,3279,1081,1111,583,504
+US51021,"Bland County, Virginia",6113,145,102,17,19,7
+US51023,"Botetourt County, Virginia",31924,904,428,383,84,9
+US51025,"Brunswick County, Virginia",15811,452,274,77,78,23
+US51027,"Buchanan County, Virginia",20924,426,69,93,62,202
+US51029,"Buckingham County, Virginia",16304,363,222,83,22,36
+US51031,"Campbell County, Virginia",52396,1593,831,325,377,60
+US51033,"Caroline County, Virginia",28228,1623,1149,362,38,74
+US51035,"Carroll County, Virginia",28306,709,500,190,4,15
+US51036,"Charles City County, Virginia",6730,208,85,80,41,2
+US51037,"Charlotte County, Virginia",11442,245,20,179,40,6
+US51041,"Chesterfield County, Virginia",322925,38480,23440,6715,6008,2317
+US51043,"Clarke County, Virginia",13785,834,553,156,104,21
+US51045,"Craig County, Virginia",4807,34,32,2,0,0
+US51047,"Culpeper County, Virginia",47813,5927,4303,849,397,378
+US51049,"Cumberland County, Virginia",9364,328,25,238,60,5
+US51051,"Dickenson County, Virginia",14029,61,40,21,0,0
+US51053,"Dinwiddie County, Virginia",26978,1118,856,131,111,20
+US51057,"Essex County, Virginia",10358,373,141,111,89,32
+US51059,"Fairfax County, Virginia",1071858,421367,149180,94037,129435,48715
+US51061,"Fauquier County, Virginia",65735,5978,4043,1051,698,186
+US51063,"Floyd County, Virginia",14961,394,264,97,21,12
+US51065,"Fluvanna County, Virginia",25407,1225,531,458,190,46
+US51067,"Franklin County, Virginia",53575,1761,1164,407,140,50
+US51069,"Frederick County, Virginia",81267,7913,6474,770,502,167
+US51071,"Giles County, Virginia",15904,295,225,35,22,13
+US51073,"Gloucester County, Virginia",35337,1030,390,399,194,47
+US51075,"Goochland County, Virginia",22024,1111,453,350,253,55
+US51077,"Grayson County, Virginia",15050,766,625,56,65,20
+US51079,"Greene County, Virginia",18410,1403,992,240,163,8
+US51081,"Greensville County, Virginia",11076,436,322,84,7,23
+US51083,"Halifax County, Virginia",32677,1475,644,421,155,255
+US51085,"Hanover County, Virginia",100281,4392,2111,982,1013,286
+US51087,"Henrico County, Virginia",307420,47193,13413,12852,15782,5146
+US51089,"Henry County, Virginia",48904,3301,2672,330,274,25
+US51091,"Highland County, Virginia",2119,16,16,0,0,0
+US51093,"Isle of Wight County, Virginia",34735,1659,750,549,206,154
+US51095,"James City County, Virginia",71330,5701,2433,1691,1192,385
+US51097,"King and Queen County, Virginia",6671,66,66,0,0,0
+US51099,"King George County, Virginia",24615,1226,837,217,130,42
+US51101,"King William County, Virginia",15768,409,142,201,64,2
+US51103,"Lancaster County, Virginia",10294,367,128,212,27,0
+US51105,"Lee County, Virginia",22861,606,426,66,24,90
+US51107,"Loudoun County, Virginia",366827,115858,39846,33998,33851,8163
+US51109,"Louisa County, Virginia",34034,1628,862,519,129,118
+US51111,"Lunenburg County, Virginia",11720,565,180,133,196,56
+US51113,"Madison County, Virginia",12545,453,151,184,118,0
+US51115,"Mathews County, Virginia",8455,239,61,122,56,0
+US51117,"Mecklenburg County, Virginia",29171,597,362,129,29,77
+US51119,"Middlesex County, Virginia",10247,386,196,139,40,11
+US51121,"Montgomery County, Virginia",93826,9639,2054,2986,3913,686
+US51125,"Nelson County, Virginia",14168,612,313,182,51,66
+US51127,"New Kent County, Virginia",20484,861,465,254,142,0
+US51131,"Northampton County, Virginia",11256,1076,825,184,67,0
+US51133,"Northumberland County, Virginia",11829,398,179,117,35,67
+US51135,"Nottoway County, Virginia",14613,589,496,16,9,68
+US51137,"Orange County, Virginia",33975,1948,1476,437,10,25
+US51139,"Page County, Virginia",22636,521,270,173,59,19
+US51141,"Patrick County, Virginia",16959,708,483,135,71,19
+US51143,"Pittsylvania County, Virginia",58696,2012,1286,497,161,68
+US51145,"Powhatan County, Virginia",27524,674,333,287,30,24
+US51147,"Prince Edward County, Virginia",21846,1453,955,292,189,17
+US51149,"Prince George County, Virginia",35979,2798,1548,802,273,175
+US51153,"Prince William County, Virginia",427305,144209,83634,26343,17600,16632
+US51155,"Pulaski County, Virginia",32576,791,449,180,95,67
+US51157,"Rappahannock County, Virginia",7026,375,217,87,63,8
+US51159,"Richmond County, Virginia",8630,737,615,19,40,63
+US51161,"Roanoke County, Virginia",89405,6206,2254,1798,1778,376
+US51163,"Rockbridge County, Virginia",21590,715,390,272,53,0
+US51165,"Rockingham County, Virginia",75751,7065,4456,1554,284,771
+US51167,"Russell County, Virginia",25877,512,308,136,62,6
+US51169,"Scott County, Virginia",21024,352,145,112,42,53
+US51171,"Shenandoah County, Virginia",40885,3023,2411,390,150,72
+US51173,"Smyth County, Virginia",29293,765,459,179,62,65
+US51175,"Southampton County, Virginia",17008,278,94,135,13,36
+US51177,"Spotsylvania County, Virginia",124580,12593,8396,1961,1594,642
+US51179,"Stafford County, Virginia",137410,19744,12125,3504,2447,1668
+US51181,"Surry County, Virginia",6237,79,8,36,22,13
+US51183,"Sussex County, Virginia",10890,516,259,120,20,117
+US51185,"Tazewell County, Virginia",39409,465,119,151,135,60
+US51187,"Warren County, Virginia",37167,2251,1288,463,363,137
+US51191,"Washington County, Virginia",51855,991,576,264,106,45
+US51193,"Westmoreland County, Virginia",16844,986,730,156,82,18
+US51195,"Wise County, Virginia",36628,640,321,243,60,16
+US51197,"Wythe County, Virginia",27487,383,116,119,133,15
+US51199,"York County, Virginia",64203,7154,2408,2171,2194,381
+US51510,"Alexandria city, Virginia",146399,49060,21112,9127,4980,13841
+US51520,"Bristol city, Virginia",15976,392,89,270,14,19
+US51530,"Buena Vista city, Virginia",6154,169,126,26,17,0
+US51540,"Charlottesville city, Virginia",44730,7017,2088,2144,1852,933
+US51550,"Chesapeake city, Virginia",224838,18639,9181,3974,4200,1284
+US51570,"Colonial Heights city, Virginia",16363,1690,531,473,438,248
+US51580,"Covington city, Virginia",5266,122,42,29,51,0
+US51590,"Danville city, Virginia",38651,2010,1322,530,94,64
+US51595,"Emporia city, Virginia",5170,334,315,5,14,0
+US51600,"Fairfax city, Virginia",21836,7398,3092,1286,2536,484
+US51610,"Falls Church city, Virginia",13383,2577,756,819,854,148
+US51620,"Franklin city, Virginia",7601,207,131,49,27,0
+US51630,"Fredericksburg city, Virginia",26625,3298,1553,1067,311,367
+US51640,"Galax city, Virginia",6185,786,727,30,29,0
+US51650,"Hampton city, Virginia",126762,8236,4270,952,2365,649
+US51660,"Harrisonburg city, Virginia",50545,12902,8290,2278,1268,1066
+US51670,"Hopewell city, Virginia",20789,1765,1047,342,285,91
+US51678,"Lexington city, Virginia",7074,436,194,67,175,0
+US51680,"Lynchburg city, Virginia",75684,5087,2225,1070,1273,519
+US51683,"Manassas city, Virginia",37730,15228,12055,1354,1163,656
+US51685,"Manassas Park city, Virginia",15888,7636,5244,1219,943,230
+US51690,"Martinsville city, Virginia",11806,824,497,214,79,34
+US51700,"Newport News city, Virginia",166556,17757,9200,4013,3256,1288
+US51710,"Norfolk city, Virginia",228523,23769,11391,4415,5982,1981
+US51720,"Norton city, Virginia",3614,146,0,37,109,0
+US51730,"Petersburg city, Virginia",29079,2009,1366,227,139,277
+US51735,"Poquoson city, Virginia",11536,544,137,215,192,0
+US51740,"Portsmouth city, Virginia",87988,4035,2344,553,1020,118
+US51750,"Radford city, Virginia",17139,871,441,221,103,106
+US51760,"Richmond city, Virginia",213270,20133,12433,3435,2454,1811
+US51770,"Roanoke city, Virginia",92446,7991,3952,2336,1056,647
+US51775,"Salem city, Virginia",24182,1175,517,463,67,128
+US51790,"Staunton city, Virginia",22982,1238,329,356,280,273
+US51800,"Suffolk city, Virginia",84134,4287,1966,1260,836,225
+US51810,"Virginia Beach city, Virginia",421625,52602,20282,9556,20857,1907
+US51820,"Waynesboro city, Virginia",20730,1410,1039,151,185,35
+US51830,"Williamsburg city, Virginia",14412,2002,564,546,569,323
+US51840,"Winchester city, Virginia",26025,5190,4233,374,365,218
+US53001,"Adams County, Washington",17673,9722,8945,192,68,517
+US53003,"Asotin County, Washington",21302,894,492,185,198,19
+US53005,"Benton County, Washington",183453,38450,29478,4711,3196,1065
+US53007,"Chelan County, Washington",71571,18691,17470,885,241,95
+US53009,"Clallam County, Washington",71847,3802,1834,796,877,295
+US53011,"Clark County, Washington",444060,66665,26826,23066,15019,1754
+US53013,"Columbia County, Washington",3818,341,198,89,54,0
+US53015,"Cowlitz County, Washington",100343,6910,4536,1190,1045,139
+US53017,"Douglas County, Washington",39272,11455,10667,487,243,58
+US53019,"Ferry County, Washington",7267,400,234,71,33,62
+US53021,"Franklin County, Washington",83656,40753,37764,1482,1255,252
+US53023,"Garfield County, Washington",2118,100,0,23,77,0
+US53025,"Grant County, Washington",87810,32414,30240,1398,655,121
+US53027,"Grays Harbor County, Washington",68884,5997,4600,614,632,151
+US53029,"Island County, Washington",78217,7003,2731,1221,2905,146
+US53031,"Jefferson County, Washington",30341,1442,548,610,263,21
+US53033,"King County, Washington",2067175,574330,137400,135636,246785,54509
+US53035,"Kitsap County, Washington",250529,17779,5976,3023,8314,466
+US53037,"Kittitas County, Washington",43758,3877,2423,402,672,380
+US53039,"Klickitat County, Washington",20630,2420,2026,308,79,7
+US53041,"Lewis County, Washington",73559,6597,5163,824,562,48
+US53043,"Lincoln County, Washington",10042,213,86,58,64,5
+US53045,"Mason County, Washington",60453,5196,3958,375,707,156
+US53047,"Okanogan County, Washington",39257,7257,6502,305,106,344
+US53049,"Pacific County, Washington",20770,2119,1572,115,388,44
+US53051,"Pend Oreille County, Washington",12772,446,219,111,38,78
+US53053,"Pierce County, Washington",818443,118805,47567,21319,44182,5737
+US53055,"San Juan County, Washington",16309,1103,688,285,116,14
+US53057,"Skagit County, Washington",118031,20139,15842,2097,1524,676
+US53059,"Skamania County, Washington",11244,456,338,68,50,0
+US53061,"Snohomish County, Washington",748088,160244,51111,39632,56255,13246
+US53063,"Spokane County, Washington",474707,34951,11616,12805,8298,2232
+US53065,"Stevens County, Washington",42269,1761,867,626,215,53
+US53067,"Thurston County, Washington",263398,30571,12201,5871,11660,839
+US53069,"Wahkiakum County, Washington",4100,215,114,15,79,7
+US53071,"Walla Walla County, Washington",57035,11078,9342,972,617,147
+US53073,"Whatcom County, Washington",209008,24251,12715,6559,4414,563
+US53075,"Whitman County, Washington",47141,7159,2118,1698,2712,631
+US53077,"Yakima County, Washington",229393,94433,90613,1387,1504,929
+US54001,"Barbour County, West Virginia",15780,385,116,141,115,13
+US54003,"Berkeley County, West Virginia",108182,5791,3035,1335,808,613
+US54005,"Boone County, West Virginia",21263,82,74,8,0,0
+US54007,"Braxton County, West Virginia",13456,73,56,17,0,0
+US54009,"Brooke County, West Virginia",21482,428,115,233,79,1
+US54011,"Cabell County, West Virginia",89058,2229,763,479,812,175
+US54013,"Calhoun County, West Virginia",6943,112,18,63,0,31
+US54015,"Clay County, West Virginia",8216,70,21,22,27,0
+US54017,"Doddridge County, West Virginia",8232,64,8,23,33,0
+US54019,"Fayette County, West Virginia",41077,790,523,196,57,14
+US54021,"Gilmer County, West Virginia",7655,309,205,45,45,14
+US54023,"Grant County, West Virginia",11029,258,177,53,23,5
+US54025,"Greenbrier County, West Virginia",33337,920,499,248,171,2
+US54027,"Hampshire County, West Virginia",22199,209,122,87,0,0
+US54029,"Hancock County, West Virginia",27980,474,94,284,90,6
+US54031,"Hardy County, West Virginia",13059,617,203,83,220,111
+US54033,"Harrison County, West Virginia",64021,933,392,294,179,68
+US54035,"Jackson County, West Virginia",27353,271,89,105,51,26
+US54037,"Jefferson County, West Virginia",53402,3442,1822,937,425,258
+US54039,"Kanawha County, West Virginia",173372,4094,1051,1347,1100,596
+US54041,"Lewis County, West Virginia",15175,247,142,51,54,0
+US54043,"Lincoln County, West Virginia",19653,88,38,18,32,0
+US54045,"Logan County, West Virginia",31274,191,87,63,36,5
+US54047,"McDowell County, West Virginia",17634,350,257,30,23,40
+US54049,"Marion County, West Virginia",53109,1207,644,361,172,30
+US54051,"Marshall County, West Virginia",29718,491,236,65,184,6
+US54053,"Mason County, West Virginia",25332,254,77,94,83,0
+US54055,"Mercer County, West Virginia",56493,1228,410,348,180,290
+US54057,"Mineral County, West Virginia",25801,691,476,74,130,11
+US54059,"Mingo County, West Virginia",22836,144,76,28,19,21
+US54061,"Monongalia County, West Virginia",100185,8048,1815,2640,1983,1610
+US54063,"Monroe County, West Virginia",12787,207,77,130,0,0
+US54065,"Morgan County, West Virginia",16906,119,52,65,0,2
+US54067,"Nicholas County, West Virginia",23798,423,153,155,68,47
+US54069,"Ohio County, West Virginia",39970,901,171,332,346,52
+US54071,"Pendleton County, West Virginia",6686,73,45,24,4,0
+US54073,"Pleasants County, West Virginia",7143,149,114,35,0,0
+US54075,"Pocahontas County, West Virginia",8045,118,60,49,0,9
+US54077,"Preston County, West Virginia",31941,1086,797,104,85,100
+US54079,"Putnam County, West Virginia",53536,1004,359,362,283,0
+US54081,"Raleigh County, West Virginia",71243,2462,1181,614,586,81
+US54083,"Randolph County, West Virginia",27435,268,148,50,36,34
+US54085,"Ritchie County, West Virginia",9380,75,21,54,0,0
+US54087,"Roane County, West Virginia",13349,127,34,93,0,0
+US54089,"Summers County, West Virginia",12365,132,75,57,0,0
+US54091,"Taylor County, West Virginia",15980,216,119,38,41,18
+US54093,"Tucker County, West Virginia",6666,45,11,22,8,4
+US54095,"Tyler County, West Virginia",8364,134,43,19,72,0
+US54097,"Upshur County, West Virginia",23169,277,121,94,47,15
+US54099,"Wayne County, West Virginia",38228,562,265,179,77,41
+US54101,"Webster County, West Virginia",7972,9,0,7,2,0
+US54103,"Wetzel County, West Virginia",14660,92,17,29,10,36
+US54105,"Wirt County, West Virginia",5506,140,98,42,0,0
+US54107,"Wood County, West Virginia",80125,1432,584,523,229,96
+US54109,"Wyoming County, West Virginia",20205,37,9,4,24,0
+US55001,"Adams County, Wisconsin",19443,961,489,316,85,71
+US55003,"Ashland County, Wisconsin",14777,478,140,148,52,138
+US55005,"Barron County, Wisconsin",42793,1779,760,605,195,219
+US55007,"Bayfield County, Wisconsin",14370,557,161,141,38,217
+US55009,"Brown County, Wisconsin",244498,26319,17011,2863,5127,1318
+US55011,"Buffalo County, Wisconsin",12444,373,255,116,2,0
+US55013,"Burnett County, Wisconsin",14634,406,154,107,40,105
+US55015,"Calumet County, Wisconsin",47211,2678,1494,378,806,0
+US55017,"Chippewa County, Wisconsin",60335,1895,508,693,488,206
+US55019,"Clark County, Wisconsin",31741,5480,1224,4147,73,36
+US55021,"Columbia County, Wisconsin",54059,2861,1338,1250,223,50
+US55023,"Crawford County, Wisconsin",15438,437,108,273,44,12
+US55025,"Dane County, Wisconsin",505526,56168,22934,12346,17441,3447
+US55027,"Dodge County, Wisconsin",83658,3916,2602,934,333,47
+US55029,"Door County, Wisconsin",26440,1134,582,422,125,5
+US55031,"Douglas County, Wisconsin",41161,1231,324,360,391,156
+US55033,"Dunn County, Wisconsin",42421,2195,642,337,1064,152
+US55035,"Eau Claire County, Wisconsin",97635,6897,2118,1203,3450,126
+US55037,"Florence County, Wisconsin",4142,54,31,20,0,3
+US55039,"Fond du Lac County, Wisconsin",96982,5518,3403,1214,794,107
+US55041,"Forest County, Wisconsin",8469,351,97,68,39,147
+US55043,"Grant County, Wisconsin",48962,2363,751,1355,200,57
+US55045,"Green County, Wisconsin",34988,1386,887,288,148,63
+US55047,"Green Lake County, Wisconsin",17696,1810,680,1127,0,3
+US55049,"Iowa County, Wisconsin",22275,678,247,330,64,37
+US55051,"Iron County, Wisconsin",5531,154,55,74,7,18
+US55053,"Jackson County, Wisconsin",19290,1333,576,469,50,238
+US55055,"Jefferson County, Wisconsin",80392,4997,3963,733,204,97
+US55057,"Juneau County, Wisconsin",25123,865,451,275,84,55
+US55059,"Kenosha County, Wisconsin",158816,19034,13531,3632,1477,394
+US55061,"Kewaunee County, Wisconsin",19412,562,400,115,47,0
+US55063,"La Crosse County, Wisconsin",111829,7239,2154,1532,3347,206
+US55065,"Lafayette County, Wisconsin",15659,1205,546,620,7,32
+US55067,"Langlade County, Wisconsin",18209,528,216,137,13,162
+US55069,"Lincoln County, Wisconsin",26506,689,300,276,112,1
+US55071,"Manitowoc County, Wisconsin",75066,4103,1913,723,1424,43
+US55073,"Marathon County, Wisconsin",127386,10432,2546,2252,5551,83
+US55075,"Marinette County, Wisconsin",38570,1069,599,316,122,32
+US55077,"Marquette County, Wisconsin",14551,586,239,290,45,12
+US55078,"Menominee County, Wisconsin",4184,137,14,11,0,112
+US55079,"Milwaukee County, Wisconsin",885421,152207,94929,23940,23787,9551
+US55081,"Monroe County, Wisconsin",42752,3297,1272,1635,247,143
+US55083,"Oconto County, Wisconsin",35789,1020,482,407,100,31
+US55085,"Oneida County, Wisconsin",33783,738,259,316,90,73
+US55087,"Outagamie County, Wisconsin",174047,11429,4695,1965,4327,442
+US55089,"Ozaukee County, Wisconsin",84035,4705,1580,2163,690,272
+US55091,"Pepin County, Wisconsin",6871,323,89,225,9,0
+US55093,"Pierce County, Wisconsin",39939,1457,524,431,404,98
+US55095,"Polk County, Wisconsin",41292,981,397,356,155,73
+US55097,"Portage County, Wisconsin",67160,4125,1369,1415,1307,34
+US55099,"Price County, Wisconsin",12907,451,124,153,145,29
+US55101,"Racine County, Wisconsin",183683,17194,12834,2755,1132,473
+US55103,"Richland County, Wisconsin",16587,851,310,411,129,1
+US55105,"Rock County, Wisconsin",152302,12313,9242,1724,1136,211
+US55107,"Rusk County, Wisconsin",13401,379,70,269,36,4
+US55109,"St. Croix County, Wisconsin",83288,3250,1513,1006,467,264
+US55111,"Sauk County, Wisconsin",60134,3820,1874,1408,279,259
+US55113,"Sawyer County, Wisconsin",15668,709,175,79,48,407
+US55115,"Shawano County, Wisconsin",38654,1100,488,445,89,78
+US55117,"Sheboygan County, Wisconsin",108770,10475,3861,1521,4868,225
+US55119,"Taylor County, Wisconsin",19181,840,243,588,6,3
+US55121,"Trempealeau County, Wisconsin",27425,2482,1780,580,80,42
+US55123,"Vernon County, Wisconsin",28525,2789,226,2453,107,3
+US55125,"Vilas County, Wisconsin",20937,604,228,261,30,85
+US55127,"Walworth County, Wisconsin",97820,9285,7515,1171,562,37
+US55129,"Washburn County, Wisconsin",15002,280,72,133,40,35
+US55131,"Washington County, Wisconsin",127784,5093,2229,1967,817,80
+US55133,"Waukesha County, Wisconsin",379914,26813,10608,9148,6492,565
+US55135,"Waupaca County, Wisconsin",48821,1927,1166,627,61,73
+US55137,"Waushara County, Wisconsin",23022,1802,1202,569,30,1
+US55139,"Winnebago County, Wisconsin",161039,10260,4682,1788,3275,515
+US55141,"Wood County, Wisconsin",68957,3201,1235,994,915,57
+US56001,"Albany County, Wyoming",36594,3934,1699,941,788,506
+US56003,"Big Horn County, Wyoming",11144,839,710,79,31,19
+US56005,"Campbell County, Wyoming",43769,2615,2305,43,219,48
+US56007,"Carbon County, Wyoming",14242,2203,1792,210,84,117
+US56009,"Converse County, Wyoming",12937,1106,874,125,61,46
+US56011,"Crook County, Wyoming",6954,246,91,110,45,0
+US56013,"Fremont County, Wyoming",37050,3302,917,282,149,1954
+US56015,"Goshen County, Wyoming",12515,676,495,83,38,60
+US56017,"Hot Springs County, Wyoming",4317,163,97,8,26,32
+US56019,"Johnson County, Wyoming",8062,236,101,124,0,11
+US56021,"Laramie County, Wyoming",92146,5955,4282,756,722,195
+US56023,"Lincoln County, Wyoming",17937,754,622,61,56,15
+US56025,"Natrona County, Wyoming",74949,4550,2955,686,591,318
+US56027,"Niobrara County, Wyoming",2345,123,86,6,28,3
+US56029,"Park County, Wyoming",27596,1124,565,283,266,10
+US56031,"Platte County, Wyoming",8174,675,638,33,4,0
+US56033,"Sheridan County, Wyoming",28627,910,414,194,157,145
+US56035,"Sublette County, Wyoming",9297,787,542,240,1,4
+US56037,"Sweetwater County, Wyoming",40506,4209,3334,528,253,94
+US56039,"Teton County, Wyoming",22119,4237,3624,448,113,52
+US56041,"Uinta County, Wyoming",18981,939,713,140,75,11
+US56043,"Washakie County, Wyoming",7566,554,476,66,12,0
+US56045,"Weston County, Wyoming",6656,116,62,8,39,7
+US72001,"Adjuntas Municipio, Puerto Rico",17088,16200,16200,0,0,0
+US72003,"Aguada Municipio, Puerto Rico",36412,34823,34823,0,0,0
+US72005,"Aguadilla Municipio, Puerto Rico",50585,48369,48284,67,18,0
+US72007,"Aguas Buenas Municipio, Puerto Rico",24735,23650,23650,0,0,0
+US72009,"Aibonito Municipio, Puerto Rico",21940,20918,20918,0,0,0
+US72011,"Añasco Municipio, Puerto Rico",25906,25014,25014,0,0,0
+US72013,"Arecibo Municipio, Puerto Rico",81745,77712,77670,18,0,24
+US72015,"Arroyo Municipio, Puerto Rico",17009,16127,16127,0,0,0
+US72017,"Barceloneta Municipio, Puerto Rico",22929,22114,22114,0,0,0
+US72019,"Barranquitas Municipio, Puerto Rico",26818,25346,25324,0,0,22
+US72021,"Bayamón Municipio, Puerto Rico",170718,159434,159116,207,88,23
+US72023,"Cabo Rojo Municipio, Puerto Rico",46715,45063,45028,0,35,0
+US72025,"Caguas Municipio, Puerto Rico",123670,115910,115850,41,19,0
+US72027,"Camuy Municipio, Puerto Rico",30281,28678,28678,0,0,0
+US72029,"Canóvanas Municipio, Puerto Rico",43448,41852,41839,0,13,0
+US72031,"Carolina Municipio, Puerto Rico",147389,133410,132846,301,230,33
+US72033,"Cataño Municipio, Puerto Rico",23159,21925,21845,23,57,0
+US72035,"Cayey Municipio, Puerto Rico",41977,40444,40444,0,0,0
+US72037,"Ceiba Municipio, Puerto Rico",11038,10663,10637,0,0,26
+US72039,"Ciales Municipio, Puerto Rico",15699,14951,14932,19,0,0
+US72041,"Cidra Municipio, Puerto Rico",37783,36643,36552,27,64,0
+US72043,"Coamo Municipio, Puerto Rico",37261,35738,35653,4,0,81
+US72045,"Comerío Municipio, Puerto Rico",18355,16999,16999,0,0,0
+US72047,"Corozal Municipio, Puerto Rico",31892,30549,30549,0,0,0
+US72049,"Culebra Municipio, Puerto Rico",1261,1169,1153,5,11,0
+US72051,"Dorado Municipio, Puerto Rico",35121,33109,33005,68,36,0
+US72053,"Fajardo Municipio, Puerto Rico",29646,28444,28400,0,44,0
+US72054,"Florida Municipio, Puerto Rico",11123,10874,10874,0,0,0
+US72055,"Guánica Municipio, Puerto Rico",15483,14606,14606,0,0,0
+US72057,"Guayama Municipio, Puerto Rico",39133,37019,37011,8,0,0
+US72059,"Guayanilla Municipio, Puerto Rico",17659,16941,16930,0,11,0
+US72061,"Guaynabo Municipio, Puerto Rico",83614,78732,78490,234,8,0
+US72063,"Gurabo Municipio, Puerto Rico",45045,42694,42618,54,22,0
+US72065,"Hatillo Municipio, Puerto Rico",38436,37020,36997,0,0,23
+US72067,"Hormigueros Municipio, Puerto Rico",15409,14397,14397,0,0,0
+US72069,"Humacao Municipio, Puerto Rico",50218,47496,47366,0,113,17
+US72071,"Isabela Municipio, Puerto Rico",40098,37782,37745,37,0,0
+US72073,"Jayuya Municipio, Puerto Rico",13795,13153,13153,0,0,0
+US72075,"Juana Díaz Municipio, Puerto Rico",43818,42609,42609,0,0,0
+US72077,"Juncos Municipio, Puerto Rico",36968,33636,33636,0,0,0
+US72079,"Lajas Municipio, Puerto Rico",21947,20701,20701,0,0,0
+US72081,"Lares Municipio, Puerto Rico",24542,23944,23944,0,0,0
+US72083,"Las Marías Municipio, Puerto Rico",8134,8063,8063,0,0,0
+US72085,"Las Piedras Municipio, Puerto Rico",35929,35033,35033,0,0,0
+US72087,"Loíza Municipio, Puerto Rico",24667,23462,23416,6,40,0
+US72089,"Luquillo Municipio, Puerto Rico",17478,16517,16507,10,0,0
+US72091,"Manatí Municipio, Puerto Rico",37048,35715,35652,8,55,0
+US72093,"Maricao Municipio, Puerto Rico",5800,5621,5621,0,0,0
+US72095,"Maunabo Municipio, Puerto Rico",10315,10112,10104,8,0,0
+US72097,"Mayagüez Municipio, Puerto Rico",72317,67185,67113,63,0,9
+US72099,"Moca Municipio, Puerto Rico",34534,33259,33229,0,0,30
+US72101,"Morovis Municipio, Puerto Rico",29548,28606,28606,0,0,0
+US72103,"Naguabo Municipio, Puerto Rico",24917,24398,24398,0,0,0
+US72105,"Naranjito Municipio, Puerto Rico",26730,25117,25117,0,0,0
+US72107,"Orocovis Municipio, Puerto Rico",19904,19012,19012,0,0,0
+US72109,"Patillas Municipio, Puerto Rico",16254,15919,15884,35,0,0
+US72111,"Peñuelas Municipio, Puerto Rico",19266,18652,18643,9,0,0
+US72113,"Ponce Municipio, Puerto Rico",132957,123516,123376,106,0,34
+US72115,"Quebradillas Municipio, Puerto Rico",22611,21715,21715,0,0,0
+US72117,"Rincón Municipio, Puerto Rico",13519,12952,12952,0,0,0
+US72119,"Río Grande Municipio, Puerto Rico",47598,45519,45276,56,57,130
+US72121,"Sabana Grande Municipio, Puerto Rico",21560,19533,19533,0,0,0
+US72123,"Salinas Municipio, Puerto Rico",26790,25874,25860,0,14,0
+US72125,"San Germán Municipio, Puerto Rico",30040,28490,28490,0,0,0
+US72127,"San Juan Municipio, Puerto Rico",320882,296920,295148,1249,431,92
+US72129,"San Lorenzo Municipio, Puerto Rico",35670,34248,34248,0,0,0
+US72131,"San Sebastián Municipio, Puerto Rico",35577,34147,34065,69,13,0
+US72133,"Santa Isabel Municipio, Puerto Rico",20756,20023,20017,6,0,0
+US72135,"Toa Alta Municipio, Puerto Rico",69819,66314,66167,25,101,21
+US72137,"Toa Baja Municipio, Puerto Rico",74403,69317,69223,94,0,0
+US72139,"Trujillo Alto Municipio, Puerto Rico",63647,60809,60742,48,0,19
+US72141,"Utuado Municipio, Puerto Rico",27441,26008,25930,10,68,0
+US72143,"Vega Alta Municipio, Puerto Rico",35416,34044,33974,20,0,50
+US72145,"Vega Baja Municipio, Puerto Rico",49837,47034,47016,0,0,18
+US72147,"Vieques Municipio, Puerto Rico",8207,7281,7243,38,0,0
+US72149,"Villalba Municipio, Puerto Rico",21255,20258,20258,0,0,0
+US72151,"Yabucoa Municipio, Puerto Rico",32174,30923,30923,0,0,0
+US72153,"Yauco Municipio, Puerto Rico",33956,31190,31171,19,0,0
