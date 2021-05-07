@@ -14,19 +14,21 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LanguageSelect({allLanguages, handleLanguageChange}) {
+export default function LanguageSelect({mapOption, allLanguages, handleLanguageChange}) {
   const classes = useStyles();
+
+  const languages = mapOption === "Counties" ? ["Population 5 Years And Over","Speak A Language Other Than English", "Spanish", "IndoEuropean", "Asian Pacific Island", "Other"] : allLanguages;
 
   return (
     <div style={{ display: "flex", justifyContent: "center", width: '100%'}}>
       <Autocomplete
         id="language-select"
         style={{ width: 300, marginTop: 10}}
-        options={allLanguages}
+        options={languages}
         classes={{option: classes.option}}
         blurOnSelect
         getOptionLabel={(option) => option}
-        onChange={(event, d) => handleLanguageChange(d)}
+        onChange={(event, d) => handleLanguageChange(d !== null ? d.replace(/\s+/g, '') : d)}
         renderOption={(option) => (
           <React.Fragment>
             {option}

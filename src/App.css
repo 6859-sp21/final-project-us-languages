@@ -172,7 +172,6 @@ body {
 }
 
 .feature {
-  fill: #ccc;
   cursor: pointer;
   stroke: #fff;
   stroke-linecap: round;

@@ -23,15 +23,17 @@ const theme = createMuiTheme({
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false)
-  const [statesData, setStatesData] = useState({})
+  const [bordersData, setBordersData] = useState({})
   const [locationsData, setLocationsData] = useState({})
+  const [countiesData, setCountiesData] = useState({})
   const [languagesData, setLanguagesData] = useState({})
   const [allLanguages, setAllLanguages] = useState([])
   const [countriesData, setCountriesData] = useState({})
-  const [selectedLanguage, setSelectedLanguage] = useState("")
+  const [selectedLanguage, setSelectedLanguage] = useState(null)
   const [selectedLocation, setSelectedLocation] = useState("")
   const [sortedLocLanguages, setSortedLocLanguages] = useState({sortedLocLangData: [], selectedLangIndex: 0})
   const [hidden, setHidden] = useState(false);
+  const mapOption = "Counties"; // either 'Metro', 'Counties', or 'States'
 
   const [open, setOpen] = useState(false);
 
@@ -51,23 +53,26 @@ function App() {
   useEffect(() => {
     axios
       .all([
-        axios.get('/api/datasets/states'),
+        axios.get('/api/datasets/borders'),
         axios.get('/api/datasets/locations'),
         axios.get('/api/datasets/languages'),
         axios.get('/api/datasets/allLanguages'),
         axios.get('/api/datasets/countries'),
+        axios.get('/api/datasets/counties'),
       ])
       .then(res => {
-        setStatesData(res[0].data.statesData);
+        setBordersData(res[0].data.bordersData);
         setLocationsData(res[1].data.locationsData);
         setLanguagesData(res[2].data.langData);
         setAllLanguages(res[3].data.allLanguagesData);
         setCountriesData(res[4].data.countriesData);
+        setCountiesData(res[5].data.countyData);
         setIsLoaded(true);
       });
     }, [])
     
   function handleLanguageChange(newLanguage) {
+    console.log(newLanguage);
     setSelectedLanguage(newLanguage);
   };
 
@@ -94,15 +99,17 @@ function App() {
               { isLoaded ? 
                 (
                   <div className="main-container">
-                    <LanguageSelect allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
+                    <LanguageSelect mapOption={mapOption} allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
                     <div className="content-container">
                       <Map 
                         sizeVw={vw*1.35}
                         sizeVh={vh*1.35}
+                        mapOption={mapOption}
                         handleLocationClick={handleLocationClick}
                         allLanguages={allLanguages}
-                        statesData={statesData} 
-                        locationsData={locationsData} 
+                        bordersData={bordersData}
+                        locationsData={locationsData}
+                        countiesData={countiesData}
                         languagesData={languagesData} 
                         setSortedLocLanguages={setSortedLocLanguages}
                         selectedLanguage={selectedLanguage}/>

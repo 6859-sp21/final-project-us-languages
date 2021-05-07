@@ -7,18 +7,19 @@ const router = express.Router();
 // Some CSV files may be generated with, or contain a leading Byte Order Mark. This may cause issues parsing headers and/or data from your file.
 const stripBom = require('strip-bom-stream');
 
-const countyLanguagesFile = path.resolve(__dirname, '../datasets/2019_state_languages_breakdown.csv');
-const stateLanguagesFile = path.resolve(__dirname, '../datasets/2019_county_languages_breakdown_5year_est.txt');
+const stateLanguagesFile = path.resolve(__dirname, '../datasets/2019_state_languages_breakdown.csv');
+const countyLanguagesFile = path.resolve(__dirname, '../datasets/2019_county_languages_breakdown_5year_est.txt');
 const locationsFile = path.resolve(__dirname, '../datasets/location_coordinates.txt');
-const statesFile = path.resolve(__dirname, '../datasets/us.json');
+const bordersFile = path.resolve(__dirname, '../datasets/us.json');
 const languagesWithLocFile = path.resolve(__dirname, '../datasets/languages_total.txt')
 const languagesOnlyFile = path.resolve(__dirname, '../datasets/languages_only.txt')
 const countriesFiles = path.resolve(__dirname, '../datasets/ne_110m_admin_0_countries.geo.json');
 
 const countyLanguagesData = [];
+const formattedCountyLanguagesData = {};
 const stateLanguagesData = [];
 const countriesData = fs.readFileSync(countriesFiles);
-const statesData = fs.readFileSync(statesFile);
+const bordersData = fs.readFileSync(bordersFile);
 const locationsData = [];
 const languagesWithLocData = [];
 const languagesOnlyData = [];
@@ -30,6 +31,7 @@ fs.createReadStream(countyLanguagesFile)
   .pipe(csv({separator: '\t'}))
   .on('data', (row) => {
     countyLanguagesData.push(row)
+    formattedCountyLanguagesData[parseInt(row.GEOID.slice(2))] = row;
   })
   .on('end', () => {
     console.log('Counties CSV file successfully processed', countyLanguagesData);
@@ -96,13 +98,13 @@ router.get('/countries', async(req, res) => {
 })
 
 /**
- * GET /api/datasets/states
+ * GET /api/datasets/borders
  * 
- * Sends parsed topojson data of states
+ * Sends parsed topojson data of the borders for states and counties
  */ 
-router.get('/states', async(req, res) => { 
-   const states = JSON.parse(statesData);
-   res.send({statesData: states});
+router.get('/borders', async(req, res) => { 
+   const borders = JSON.parse(bordersData);
+   res.send({bordersData: borders});
 })
 
 /**
@@ -120,7 +122,7 @@ router.get('/locations', async(req, res) => {
  * Sends parsed csv data of languages spoken in the US by county
  */ 
   router.get('/counties', async(req, res) => { 
-    res.send({countyData: countyLanguagesData});
+    res.send({countyData: formattedCountyLanguagesData});
  })
 
 
@@ -132,8 +134,6 @@ router.get('/locations', async(req, res) => {
   router.get('/state-languages', async(req, res) => { 
     res.send({stateLanguagesData: stateLanguagesData});
  })
-
-
 
  /**
  * GET /api/datasets/languages
