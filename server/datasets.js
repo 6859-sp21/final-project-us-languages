@@ -7,41 +7,49 @@ const router = express.Router();
 // Some CSV files may be generated with, or contain a leading Byte Order Mark. This may cause issues parsing headers and/or data from your file.
 const stripBom = require('strip-bom-stream');
 
-const stateLanguagesFile = path.resolve(__dirname, '../datasets/2019_state_languages_breakdown.csv');
-const countyLanguagesFile = path.resolve(__dirname, '../datasets/2019_county_languages_breakdown_5year_est.txt');
+// latitude/longitude of metro areas
 const locationsFile = path.resolve(__dirname, '../datasets/location_coordinates.txt');
+
+// borders of US states and counties, borders of countries
 const bordersFile = path.resolve(__dirname, '../datasets/us.json');
-const languagesWithLocFile = path.resolve(__dirname, '../datasets/languages_total.txt')
-const languagesOnlyFile = path.resolve(__dirname, '../datasets/languages_only.txt')
 const countriesFiles = path.resolve(__dirname, '../datasets/ne_110m_admin_0_countries.geo.json');
 
-const countyLanguagesData = [];
+// contains the languages spoken by metro area, state, and county
+const languagesWithMetroFile = path.resolve(__dirname, '../datasets/languages_total_metro.txt')
+const languagesWithStatesFile = path.resolve(__dirname, '../datasets/2019_state_languages_breakdown.csv');
+const languagesWithCountiesFile = path.resolve(__dirname, '../datasets/2019_county_languages_breakdown_5year_est.txt');
+
+// contains only the unique languages by metro, state
+const languagesOnlyMetroFile = path.resolve(__dirname, '../datasets/languages_only_metro.txt')
+const languagesOnlyStatesFile = path.resolve(__dirname, '../datasets/languages_only_states.csv')
+
+// const countyLanguagesData = [];
 const formattedCountyLanguagesData = {};
-const stateLanguagesData = [];
+const langStateData = [];
 const countriesData = fs.readFileSync(countriesFiles);
 const bordersData = fs.readFileSync(bordersFile);
 const locationsData = [];
-const languagesWithLocData = [];
-const languagesOnlyData = [];
-let allLanguagesData = [];
+const langMetroData = [];
+const languagesOnlyMetroData = [];
+const languagesOnlyStatesData = [];
 const formattedLocationsData = {};
 
-fs.createReadStream(countyLanguagesFile)  
+fs.createReadStream(languagesWithCountiesFile)  
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
   .pipe(csv({separator: '\t'}))
   .on('data', (row) => {
-    countyLanguagesData.push(row)
+    // countyLanguagesData.push(row)
     formattedCountyLanguagesData[parseInt(row.GEOID.slice(2))] = row;
   })
   .on('end', () => {
     console.log('Counties CSV file successfully processed');
 });
 
-fs.createReadStream(stateLanguagesFile)
+fs.createReadStream(languagesWithStatesFile)
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
-  .pipe(csv({separator: '\t'}))
+  .pipe(csv({separator: ','}))
   .on('data', (row) => {
-    stateLanguagesData.push(row)
+    langStateData.push(row)
   })
   .on('end', () => {
     console.log('State languages CSV file successfully processed');
@@ -66,24 +74,33 @@ fs.createReadStream(locationsFile)
     console.log('Locations CSV file successfully processed');
 });
 
-fs.createReadStream(languagesWithLocFile)
+fs.createReadStream(languagesWithMetroFile)
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
   .pipe(csv({separator: '\t'}))
   .on('data', (row) => {
-    languagesWithLocData.push(row)
+    langMetroData.push(row)
   })
   .on('end', () => {
     console.log('Languages CSV file successfully processed');
 });
 
-fs.createReadStream(languagesOnlyFile)
+fs.createReadStream(languagesOnlyMetroFile)
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
   .pipe(csv({separator: '\t'}))
   .on('data', (row) => {
-    languagesOnlyData.push(row.Language)
+    languagesOnlyMetroData.push(row.Language)
   })
   .on('end', () => {
-    allLanguagesData = languagesOnlyData;
+    console.log('Languages Only CSV file successfully processed');
+});
+
+fs.createReadStream(languagesOnlyStatesFile)
+  .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
+  .pipe(csv({separator: ','}))
+  .on('data', (row) => {
+    languagesOnlyStatesData.push(row.Language)
+  })
+  .on('end', () => {
     console.log('Languages Only CSV file successfully processed');
 });
 
@@ -117,11 +134,11 @@ router.get('/locations', async(req, res) => {
  })
 
 /**
- * GET /api/datasets/counties
+ * GET /api/datasets/counties-languages
  * 
  * Sends parsed csv data of languages spoken in the US by county
  */ 
-  router.get('/counties', async(req, res) => { 
+  router.get('/counties-languages', async(req, res) => { 
     res.send({countyData: formattedCountyLanguagesData});
  })
 
@@ -129,28 +146,37 @@ router.get('/locations', async(req, res) => {
 /**
  * GET /api/datasets/state-languages
  * 
- * Sends parsed csv data of languages spoken in the US
+ * Sends parsed csv data of languages spoken in the US corresponding to state
  */ 
   router.get('/state-languages', async(req, res) => { 
-    res.send({stateLanguagesData: stateLanguagesData});
+    res.send({langStateData: langStateData});
  })
 
  /**
- * GET /api/datasets/languages
+ * GET /api/datasets/metro-languages
  * 
- * Sends parsed csv data of languages spoken in the US
+ * Sends parsed csv data of languages spoken in the US corresponding to metro area
  */ 
- router.get('/languages', async(req, res) => { 
-    res.send({langData: languagesWithLocData});
+ router.get('/metro-languages', async(req, res) => { 
+    res.send({langMetroData: langMetroData});
  })
 
-  /**
- * GET /api/datasets/allLanguages
+/**
+ * GET /api/datasets/metro-languages-only
  * 
- * Sends parsed csv data of all languages in the US
+ * Sends parsed csv data of all unique languages in the US by metro area
  */ 
-   router.get('/allLanguages', async(req, res) => { 
-    res.send({allLanguagesData: allLanguagesData});
+   router.get('/metro-languages-only', async(req, res) => { 
+    res.send({languagesOnlyMetroData: languagesOnlyMetroData});
  })
+
+   /**
+ * GET /api/datasets/state-languages-only
+ * 
+ * Sends parsed csv data of all unique languages in the US by state
+ */ 
+    router.get('/state-languages-only', async(req, res) => { 
+      res.send({languagesOnlyStatesData: languagesOnlyStatesData});
+   })
 
  module.exports = router;

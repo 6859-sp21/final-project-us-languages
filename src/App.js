@@ -27,13 +27,15 @@ function App() {
   const [bordersData, setBordersData] = useState({})
   const [locationsData, setLocationsData] = useState({})
   const [countiesData, setCountiesData] = useState({})
-  const [languagesData, setLanguagesData] = useState({})
-  const [allLanguages, setAllLanguages] = useState([])
+  const [languagesMetroData, setLanguagesMetroData] = useState([])
+  const [allMetroLanguages, setAllMetroLanguages] = useState([])
+  const [languagesStateData, setLanguagesStateData] = useState([])
+  const [allStateLanguages, setAllStateLanguages] = useState([])
   const [countriesData, setCountriesData] = useState({})
-  const [selectedLanguage, setSelectedLanguage] = useState(null)
+  const [selectedLanguage, setSelectedLanguage] = useState("")
   const [selectedLocation, setSelectedLocation] = useState("")
   const [sortedLocLanguages, setSortedLocLanguages] = useState({sortedLocLangData: [], selectedLangIndex: 0})
-  const [audioMetadata, setAudioMetadta] = useState({})
+  const [audioMetadata, setAudioMetadata] = useState({})
   const [hidden, setHidden] = useState(false);
   const [mapOption, setMapOption] = useState("Metro"); // either 'Metro', 'Counties', or 'States'
 
@@ -57,20 +59,24 @@ function App() {
       .all([
         axios.get('/api/datasets/borders'),
         axios.get('/api/datasets/locations'),
-        axios.get('/api/datasets/languages'),
-        axios.get('/api/datasets/allLanguages'),
+        axios.get('/api/datasets/metro-languages'),
+        axios.get('/api/datasets/metro-languages-only'),
+        axios.get('/api/datasets/state-languages'),
+        axios.get('/api/datasets/state-languages-only'),
         axios.get('/api/datasets/countries'),
         axios.get('/api/audioclips/metadata'),
-        axios.get('/api/datasets/counties'),
+        axios.get('/api/datasets/counties-languages'),
       ])
       .then(res => {
         setBordersData(res[0].data.bordersData);
         setLocationsData(res[1].data.locationsData);
-        setLanguagesData(res[2].data.langData);
-        setAllLanguages(res[3].data.allLanguagesData);
-        setCountriesData(res[4].data.countriesData);
-        setAudioMetadta(res[5].data.metadata);
-        setCountiesData(res[6].data.countyData);
+        setLanguagesMetroData(res[2].data.langMetroData);
+        setAllMetroLanguages(res[3].data.languagesOnlyMetroData);
+        setLanguagesStateData(res[4].data.langStateData);
+        setAllStateLanguages(res[5].data.languagesOnlyMetroData);
+        setCountriesData(res[6].data.countriesData);
+        setAudioMetadata(res[7].data.metadata);
+        setCountiesData(res[8].data.countyData);
         setIsLoaded(true);
       });
     }, [])
@@ -82,7 +88,7 @@ function App() {
 
   function handleMapOptionChange(newMapOption) {
     setMapOption(newMapOption);
-    setSelectedLanguage(null);
+    setSelectedLanguage("");
   }
 
   // set the size of the map based on the size of the user's window
@@ -101,7 +107,7 @@ function App() {
               <LeftDrawer 
                 open={open} 
                 selectedLocation={selectedLocation} 
-                languagesData={languagesData} 
+                languagesMetroData={languagesMetroData} 
                 handleDrawerClose={handleDrawerClose}
                 sortedLocLanguages={sortedLocLanguages}
                 audioMetadata={audioMetadata}
@@ -112,19 +118,21 @@ function App() {
                   <div className="main-container">
                     <div className="row-container">
                       <MapSelect setMapOptionParent={handleMapOptionChange}/>
-                      <LanguageSelect mapOption={mapOption} allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
+                      <LanguageSelect mapOption={mapOption} allMetroLanguages={allMetroLanguages} handleLanguageChange={handleLanguageChange}/>
                     </div>
                     <div className="content-container">
                       <Map 
-                        sizeVw={vw*1.35}
-                        sizeVh={vh*1.35}
+                        sizeVw={vw}
+                        sizeVh={vh}
                         mapOption={mapOption}
                         handleLocationClick={handleLocationClick}
-                        allLanguages={allLanguages}
+                        allMetroLanguages={allMetroLanguages}
+                        allStateLanguages={allStateLanguages}
                         bordersData={bordersData}
                         locationsData={locationsData}
                         countiesData={countiesData}
-                        languagesData={languagesData} 
+                        languagesMetroData={languagesMetroData} 
+                        languagesStateData={languagesStateData}
                         setSortedLocLanguages={setSortedLocLanguages}
                         selectedLanguage={selectedLanguage}/>
                       <Globe 

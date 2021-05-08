@@ -14,9 +14,9 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LanguageSelect({mapOption, allLanguages, handleLanguageChange}) {
+export default function LanguageSelect({mapOption, allMetroLanguages, handleLanguageChange}) {
   const classes = useStyles();
-  const languages = mapOption === "Counties" ? ["Population 5 Years And Over","Speak A Language Other Than English", "Spanish", "IndoEuropean", "Asian Pacific Island", "Other"] : allLanguages;
+  const languages = mapOption === "Counties" ? ["Population 5 Years And Over","Speak A Language Other Than English", "Spanish", "IndoEuropean", "Asian Pacific Island", "Other"] : allMetroLanguages;
 
   return (
     <div style={{ display: "flex", justifyContent: "center", width: '100%'}}>
