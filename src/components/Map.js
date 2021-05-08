@@ -10,14 +10,29 @@ import '../App.css';
  * @param {Object} bordersData TopoJSON object of state and county borders
  * @param {Array} locationsData array of objects with location and coordinate info
  * @param {Object} countiesData object where keys are county codes and values are objects with county data
- * @param {Array} allLanguages array of all languages in the dataset
+ * @param {Array} allMetroLanguages array of all languages in the dataset
  * @param {Integer} size parameter used for width=size and height=size/2
  * @param {String} selectedLanguage the language for which to display data on the map
  * @param {Function} handleLocationClick callback to pass the clicked location to parent
  * @returns 
  */
-export default function Map({mapOption = "Metro", bordersData, locationsData, countiesData, allLanguages, languagesData, sizeVw, sizeVh, selectedLanguage, setSortedLocLanguages, handleLocationClick}) {
-    const width = sizeVw, height = sizeVh;
+export default function Map(props) {
+    const {
+        mapOption = "Metro", 
+        bordersData, 
+        locationsData, 
+        countiesData, 
+        allMetroLanguages, 
+        allStateLanguages,
+        languagesMetroData, 
+        languagesStateData,
+        sizeVw, 
+        sizeVh, 
+        selectedLanguage, 
+        setSortedLocLanguages, 
+        handleLocationClick
+    } = props;
+    const width = sizeVw*1.35, height = sizeVh*1.35;
     const svgRef = useRef();
     const wrapperRef = useRef();
     const circleTransitionSpeed = 400;
@@ -28,7 +43,7 @@ export default function Map({mapOption = "Metro", bordersData, locationsData, co
     const defaultStateColor = "#ccc";
     const defaultCircleColor = "#2b5876";
     const highlightedCircleColor = "#4e4376";
-    const allLanguagesSet = new Set(allLanguages);
+    const allMetroLanguagesSet = new Set(allMetroLanguages);
     let sortedLocLangData = [];
     let selectedLangIndex = 0;
 
@@ -117,7 +132,7 @@ export default function Map({mapOption = "Metro", bordersData, locationsData, co
         const height = 200, width = 400;
         const margin = ({top: 30, right: 70, bottom: 20, left: 80});
 
-        const selectedLocLangData = languagesData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allLanguagesSet.has(entry.Language));
+        const selectedLocLangData = languagesMetroData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allMetroLanguagesSet.has(entry.Language));
         sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
         selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
         const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
@@ -221,7 +236,7 @@ export default function Map({mapOption = "Metro", bordersData, locationsData, co
         .range(d3.schemeBlues[7]);
 
     function fillCounty(d) {
-        if (selectedLanguage === null) {
+        if (selectedLanguage.length === 0) {
             return defaultCountyColor;
         } else {
             const county = countiesData[d.id.toString()];
@@ -292,7 +307,7 @@ export default function Map({mapOption = "Metro", bordersData, locationsData, co
                 .attr("id", "bar-tooltip")
                 .style("opacity", 0);
 
-            const filteredLocations = languagesData.filter(entry => {
+            const filteredLocations = languagesMetroData.filter(entry => {
                 return entry.Language === selectedLanguage && locationsData[entry.Location];
             }).sort((a,b) => {
                 return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
@@ -378,10 +393,10 @@ export default function Map({mapOption = "Metro", bordersData, locationsData, co
                 .style("stroke-width", "1.5px")
                 .attr("transform", "");
         }
-    }, [bordersData, locationsData, allLanguages, languagesData, sizeVw, sizeVh, selectedLanguage, mapOption]);
+    }, [bordersData, locationsData, allMetroLanguages, languagesMetroData, width, height, selectedLanguage, mapOption]);
 
     return (
-        <div id="map" ref={wrapperRef} style={{width: sizeVw}} >
+        <div id="map" ref={wrapperRef} style={{width: width}} >
             <svg
                 width={width} 
                 height={height} 
