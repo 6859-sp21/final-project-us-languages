@@ -14,19 +14,20 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LanguageSelect({mapOption, allLanguages, handleLanguageChange}) {
+export default function LanguageSelect({mapOption, allMetroLanguages, handleLanguageChange}) {
   const classes = useStyles();
-
-  const languages = mapOption === "Counties" ? ["Population 5 Years And Over","Speak A Language Other Than English", "Spanish", "IndoEuropean", "Asian Pacific Island", "Other"] : allLanguages;
+  const languages = mapOption === "Counties" ? ["Population 5 Years And Over","Speak A Language Other Than English", "Spanish", "IndoEuropean", "Asian Pacific Island", "Other"] : allMetroLanguages;
 
   return (
     <div style={{ display: "flex", justifyContent: "center", width: '100%'}}>
       <Autocomplete
+        key={mapOption}
         id="language-select"
         style={{ width: 300, marginTop: 10}}
         options={languages}
         classes={{option: classes.option}}
         blurOnSelect
+        clearOnEscape
         getOptionLabel={(option) => option}
         onChange={(event, d) => handleLanguageChange(d !== null ? d.replace(/\s+/g, '') : d)}
         renderOption={(option) => (
@@ -37,7 +38,7 @@ export default function LanguageSelect({mapOption, allLanguages, handleLanguageC
         renderInput={(params) => (
           <TextField
             {...params}
-            label="Choose a Language"
+            label="Search for a Language"
             variant="outlined"
             inputProps={{
               ...params.inputProps,

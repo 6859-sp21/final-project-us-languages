@@ -91,6 +91,7 @@ fs.createReadStream(languagesOnlyMetroFile)
     languagesOnlyMetroData.push(row.Language)
   })
   .on('end', () => {
+    languagesOnlyMetroData.sort();
     console.log('Languages Only CSV file successfully processed');
 });
 
