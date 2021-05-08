@@ -16,7 +16,7 @@ import '../App.css';
  * @param {Function} handleLocationClick callback to pass the clicked location to parent
  * @returns 
  */
-export default function Map({mapOption = "Metro", bordersData, locationsData, countiesData, allLanguages, languagesData, sizeVw, sizeVh, selectedLanguage, setSortedLocLanguages, handleLocationClick}) {
+export default function Map({mapOption, bordersData, locationsData, countiesData, allLanguages, languagesData, sizeVw, sizeVh, selectedLanguage, setSortedLocLanguages, handleLocationClick}) {
     const width = sizeVw, height = sizeVh;
     const svgRef = useRef();
     const wrapperRef = useRef();
@@ -170,10 +170,6 @@ export default function Map({mapOption = "Metro", bordersData, locationsData, co
             .attr('dy', '-0.5em')
             .text(d.Location);
         
-        // svg.append('g')
-        //     .attr('transform', `translate(0, ${height - margin.bottom})`)
-        //     .call(d3.axisBottom(xMargin));
-        
         const axis = svg.append('g')
             .style('color', "white")
             .attr('transform', `translate(${margin.left}, 0)`)
@@ -226,7 +222,6 @@ export default function Map({mapOption = "Metro", bordersData, locationsData, co
         } else {
             const county = countiesData[d.id.toString()];
             if (county) {
-                console.log(county[selectedLanguage]);
                 return countyColor(county[selectedLanguage]);
             } else {
                 return defaultCountyColor;
@@ -249,7 +244,12 @@ export default function Map({mapOption = "Metro", bordersData, locationsData, co
                 .on("click", reset);
             // createLegend();
         }
-        
+
+        if (svgRef.current["mapOption"] !== mapOption) {
+            svg.selectAll("g").remove();
+            svgRef.current["mapOption"] = mapOption;
+        }
+
         let g = d3.select(null);
         if (svg.selectAll("g").size() === 0) { // Check if the states are already drawn
             g = svg.append("g");

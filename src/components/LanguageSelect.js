@@ -16,17 +16,18 @@ const useStyles = makeStyles({
 
 export default function LanguageSelect({mapOption, allLanguages, handleLanguageChange}) {
   const classes = useStyles();
-
   const languages = mapOption === "Counties" ? ["Population 5 Years And Over","Speak A Language Other Than English", "Spanish", "IndoEuropean", "Asian Pacific Island", "Other"] : allLanguages;
 
   return (
     <div style={{ display: "flex", justifyContent: "center", width: '100%'}}>
       <Autocomplete
+        key={mapOption}
         id="language-select"
         style={{ width: 300, marginTop: 10}}
         options={languages}
         classes={{option: classes.option}}
         blurOnSelect
+        clearOnEscape
         getOptionLabel={(option) => option}
         onChange={(event, d) => handleLanguageChange(d !== null ? d.replace(/\s+/g, '') : d)}
         renderOption={(option) => (

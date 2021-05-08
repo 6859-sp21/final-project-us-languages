@@ -46,6 +46,11 @@
   justify-content: center;
   flex-flow: wrap;
 }
+.row-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 #globe {
   /* position: absolute;
   top: 0;

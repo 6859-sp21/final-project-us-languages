@@ -9,6 +9,7 @@ import LanguageSelect from './components/LanguageSelect';
 import LeftDrawer from './components/LeftDrawer';
 import LandingOverlay from './components/LandingOverlay';
 import Globe from './components/Globe';
+import MapSelect from './components/MapSelect';
 
 const theme = createMuiTheme({
   palette: {
@@ -34,7 +35,7 @@ function App() {
   const [sortedLocLanguages, setSortedLocLanguages] = useState({sortedLocLangData: [], selectedLangIndex: 0})
   const [audioMetadata, setAudioMetadta] = useState({})
   const [hidden, setHidden] = useState(false);
-  const mapOption = "Counties"; // either 'Metro', 'Counties', or 'States'
+  const [mapOption, setMapOption] = useState("Metro"); // either 'Metro', 'Counties', or 'States'
 
   const [open, setOpen] = useState(false);
 
@@ -79,6 +80,11 @@ function App() {
     setSelectedLanguage(newLanguage);
   };
 
+  function handleMapOptionChange(newMapOption) {
+    setMapOption(newMapOption);
+    setSelectedLanguage(null);
+  }
+
   // set the size of the map based on the size of the user's window
   const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) / 2;
   const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) /1.5;
@@ -104,7 +110,10 @@ function App() {
               { isLoaded ? 
                 (
                   <div className="main-container">
-                    <LanguageSelect mapOption={mapOption} allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
+                    <div className="row-container">
+                      <MapSelect setMapOptionParent={handleMapOptionChange}/>
+                      <LanguageSelect mapOption={mapOption} allLanguages={allLanguages} handleLanguageChange={handleLanguageChange}/>
+                    </div>
                     <div className="content-container">
                       <Map 
                         sizeVw={vw*1.35}
