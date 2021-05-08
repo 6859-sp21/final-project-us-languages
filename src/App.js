@@ -31,8 +31,9 @@ function App() {
   const [selectedLanguage, setSelectedLanguage] = useState("")
   const [selectedLocation, setSelectedLocation] = useState("")
   const [sortedLocLanguages, setSortedLocLanguages] = useState({sortedLocLangData: [], selectedLangIndex: 0})
+  const [audioMetadata, setAudioMetadta] = useState({})
   const [hidden, setHidden] = useState(false);
-
+  
   const [open, setOpen] = useState(false);
 
   const handleLocationClick = (data) => {
@@ -56,6 +57,7 @@ function App() {
         axios.get('/api/datasets/languages'),
         axios.get('/api/datasets/allLanguages'),
         axios.get('/api/datasets/countries'),
+        axios.get('/api/audioclips/metadata'),
       ])
       .then(res => {
         setStatesData(res[0].data.statesData);
@@ -63,6 +65,7 @@ function App() {
         setLanguagesData(res[2].data.langData);
         setAllLanguages(res[3].data.allLanguagesData);
         setCountriesData(res[4].data.countriesData);
+        setAudioMetadta(res[5].data.metadata);
         setIsLoaded(true);
       });
     }, [])
@@ -90,6 +93,8 @@ function App() {
                 languagesData={languagesData} 
                 handleDrawerClose={handleDrawerClose}
                 sortedLocLanguages={sortedLocLanguages}
+                audioMetadata={audioMetadata}
+                selectedLanguage={selectedLanguage}
                 />
               { isLoaded ? 
                 (

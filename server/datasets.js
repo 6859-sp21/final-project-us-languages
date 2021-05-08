@@ -32,7 +32,7 @@ fs.createReadStream(countyLanguagesFile)
     countyLanguagesData.push(row)
   })
   .on('end', () => {
-    console.log('Counties CSV file successfully processed', countyLanguagesData);
+    console.log('Counties CSV file successfully processed');
 });
 
 fs.createReadStream(stateLanguagesFile)

@@ -63,8 +63,10 @@ const useStyles = makeStyles((theme) => ({
  * @param {Function} handleDrawerClose closes the drawer 
  * @returns 
  */
-export default function LeftDrawer({open, selectedLocation, sortedLocLanguages, handleDrawerClose}) {
+export default function LeftDrawer({open, audioMetadata, selectedLanguage, selectedLocation, sortedLocLanguages, handleDrawerClose}) {
   const [audioClipUrl, setAudioClipUrl] = useState('')
+  const [audioClipTranslation, setAudioClipTranslation] = useState('')
+  const [audioClipAvailible, setAudioClipAvailible] = useState(false);
   const myRef = useRef(null)
   const classes = useStyles();
   const theme = useTheme();
@@ -83,16 +85,19 @@ export default function LeftDrawer({open, selectedLocation, sortedLocLanguages, 
     myRef.current.play()
   }
   useEffect(() => {
-    axios.get('/api/audioclips/metadata')
-      .then(res => {
-        // const mp3 = new Blob([res.data], { type: 'audio/mp3' });
-        // myRef.current.src = window.URL.createObjectURL(mp3);
-        console.log('mp3: ', res.data);
-        const id = res.data.metadata[0].DriveID;
-        const url = `https://docs.google.com/uc?export=download&id=${id}`
-        setAudioClipUrl(url);
-      });
-    }, [])
+    const language = selectedLanguage.toLowerCase();
+    console.log('selected lang', language, audioMetadata);
+    if (language in audioMetadata) {
+      const id = audioMetadata[language].DriveID;
+      const translation = audioMetadata[language].Translation;
+      const url = `https://docs.google.com/uc?export=download&id=${id}`
+      setAudioClipUrl(url);
+      setAudioClipTranslation(translation);
+      setAudioClipAvailible(true);
+    } else {
+      setAudioClipAvailible(false);
+    }
+    }, [audioMetadata, selectedLanguage])
   //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
   function numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -127,9 +132,16 @@ export default function LeftDrawer({open, selectedLocation, sortedLocLanguages, 
             }
         </div>
         <div className={classes.container}>
-          {/* <AudioPlayer url={audioClip}></AudioPlayer> */}
-          {/* <ReactPlayer url={audioClip} file={{forceAudio: true}}></ReactPlayer> */}
-          <audio src={audioClipUrl} type="audio/mp3" controls="controls"></audio>
+          {audioClipAvailible ? 
+            (
+              <div>
+                <p>Audio clip translation: {audioClipTranslation}</p> 
+                <audio src={audioClipUrl} type="audio/mp3" controls="controls"></audio>
+              </div>
+            )
+          : <p>No audiocips availible</p>
+          }
+
         </div>
         
       </Drawer>

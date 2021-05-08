@@ -37,13 +37,14 @@ async function main() {
       console.log('Audio mapping CSV file successfully processed');
       const auth = await getAuthToken();
       if (refreshDriveFiles) {
+        console.log('Refreshing audio mapping csv');
         await getSoundClips(auth)
       }
       // downloadAudio(auth, audiomapData['spanish'].DriveID)
     });
 }
 
-main()
+main() 
 
 // Source snippet from https://stackoverflow.com/questions/62476413/google-drive-api-downloading-file-nodejs
 // async function downloadAudio(auth, fileId, res) {
@@ -88,10 +89,17 @@ async function getFiles({auth}) {
       const files = res.data.files;
       if (files.length) {
         // slice to skip name of folder
-        files.slice(1).map((file) => {
-          const language = file.name.split('_')[0].toLowerCase();
-          audiomapData[language].DriveID = file.id;
-          console.log(`${file.name} (${file.id})`);
+        files.map((file) => {
+          try { 
+            const language = file.name.split('_')[0].toLowerCase();
+            if (language in audiomapData) {
+              audiomapData[language].DriveID = file.id;
+              audiomapData[language].Filename = file.name;
+              console.log(`${file.name} (${file.id})`);
+            }
+          } catch (error) {
+            console.log(error);
+          }
         });
 
         // write to local csv
@@ -99,7 +107,7 @@ async function getFiles({auth}) {
           header: true
         }, function (err, output) {
           fs.writeFile(audiomapFile, output, (err) => {
-            if (err) console.log(error.message, error.stack);
+            if (err) console.log(err.message, err.stack);
           });
         })
       } else {
@@ -140,7 +148,7 @@ async function getSoundClips(auth) {
  * Sends metadata of audio clip mappings
  */ 
  router.get('/metadata', async(req, res) => { 
-  res.send({metadata: Object.values(audiomapData)});
+  res.send({metadata: audiomapData});
 })
 
 module.exports = router;
