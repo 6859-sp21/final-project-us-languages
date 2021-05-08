@@ -1,382 +1,342 @@
-Language	NumberOfSpeakers	SpeakEnglishLessThanVeryWell
-Spanish	37458470	16344440
-Ladino	130	25
-Pachuco	(D)	(D)
-French	1253560	258730
-Patois	32900	4695
-Cajun	21285	2695
-French Creole	739725	323689
-Italian	708966	191724
-Portuguese	692500	269615
-Papia Mentae	970	190
-German	1063275	174735
-Luxembourgian	500	25
-Yiddish	155582	53116
-Pennsylvania Dutch	133190	44075
-Dutch	141580	25030
-Afrikaans	23010	1885
-Frisian	510	120
-Swedish	55735	5045
-Danish	28285	3030
-Norwegian	39430	4675
-Icelandic	4865	565
-Faroese	30	(B)
-Greek	304932	75799
-Russian	879434	416526
-Polish	580153	235241
-Serbocroatian	144675	62965
-Croatian	53040	15930
-Serbian	70260	24540
-Bielorussian	1805	1035
-Ukrainian	152325	71915
-Czech	47385	11235
-Lusatian	(D)	(B)
-Slovak	27930	7125
-Bulgarian	57785	19455
-Macedonian	22885	8125
-Slovene	6370	1705
-Armenian	237840	106794
-Persian	391113	144876
-Hindi	643337	132631
-Gujarati	373253	132572
-Urdu	397502	116566
-Bengali	257740	105180
-Panjabi	253740	104750
-Marathi	73630	10525
-Bihari	595	260
-Rajasthani	715	215
-Oriya	5385	910
-Assamese	1305	100
-Kashmiri	1775	285
-Nepali	94220	56650
-Sindhi	8965	1775
-Sinhalese	26745	8350
-Romany	1555	480
-Jamaican Creole	21965	5965
-Krio	10560	2820
-Hawaiian Pidgin	365	30
-Pidgin	4445	1100
-Gullah	385	150
-Saramacca	35	(B)
-Catalonian	2325	500
-Romanian	154625	55550
-Rhaeto-Romanic	(D)	(B)
-Welsh	2235	235
-Irish Gaelic	20590	2505
-Scottic Gaelic	1635	190
-Albanian	133870	58820
-Lithuanian	39790	12370
-Latvian	16035	3300
-Pashto	22760	9840
-Kurdish	17020	6870
-Balochi	185	85
-Tadzhik	435	350
-Ossete	50	(D)
-Chinese	1867485	1054885
-Hakka	1350	840
-"Kan, Hsiang"	50	(D)
-Cantonese	458840	257625
-Mandarin	487250	240810
-Fuchow	1450	1175
-Formosan	77675	44140
-Wu	2670	1375
-Japanese	449475	194436
-Korean	1117343	617905
-"Mon-Khmer, Cambodian"	212167	109633
-Hmong	214943	92861
-Thai	152649	79746
-Laotian	152647	75885
-Vietnamese	1399936	839237
-Karakalpak	(D)	(B)
-Kazakh	1480	750
-Kirghiz	550	305
-Karachay	420	140
-Uighur	8905	5895
-Azerbaijani	2085	1025
-Turkish	116515	43495
-Turkmen	205	75
-Mongolian	10180	5430
-Tungus	235	120
-Dravidian	1150	160
-Gondi	1470	270
-Telugu	247760	51635
-Kannada	48620	7425
-Malayalam	146310	41535
-Tamil	190685	33885
-Munda	2030	235
-Burushaski	95	(D)
-Tibetan	16730	9735
-Burmese	62645	44530
-Karen	30185	26440
-Kachin	520	415
-Mien	19010	8220
-Paleo-siberian	530	385
-Tagalog	1613346	516522
-Indonesian	67410	29400
-Achinese	(D)	(D)
-Balinese	795	160
-Cham	1050	500
-Javanese	495	135
-Malagasy	720	225
-Malay	14580	4910
-Minangkabau	15	(D)
-Sundanese	35	35
-Bisayan	29800	11505
-Sebuano	15700	4935
-Pangasinan	2265	1115
-Ilocano	85755	47250
-Bikol	695	200
-Pampangan	5620	2460
-Micronesian	7830	3435
-Carolinian	945	545
-Chamorro	19780	3195
-Gilbertese	170	85
-Kusaiean	1165	445
-Marshallese	18485	9545
-Mokilese	500	190
-Mortlockese	(D)	(D)
-Nauruan	(D)	(D)
-Palau	4140	1290
-Ponapean	3525	1495
-Trukese	8790	5200
-Ulithean	40	(D)
-Woleai-Ulithi	140	(D)
-Yapese	720	350
-Melanesian	1305	295
-Polynesian	435	160
-Samoan	64135	16905
-Tongan	31440	8855
-Niuean	(D)	(B)
-Tokelauan	125	(D)
-Fijian	5755	1360
-Marquesan	135	(B)
-Rarotongan	95	(B)
-Maori	460	145
-Nukuoro	210	85
-Hawaiian	26205	4280
-Navajo	166826	35250
-Aleut	995	170
-Pacific Gulf Yupik	70	(B)
-Eskimo	1270	265
-Inupik	6740	1365
-Yupik	19750	5930
-Algonquian	1030	265
-Arapaho	1065	50
-Atsina	55	(B)
-Blackfoot	1450	65
-Cheyenne	1920	175
-Cree	870	190
-Delaware	240	60
-Fox	400	75
-Kickapoo	820	220
-Menomini	405	85
-French Cree	170	120
-Miami	115	55
-Micmac	205	40
-Ojibwa	9735	1110
-Ottawa	965	155
-Passamaquoddy	845	55
-Penobscot	75	(D)
-Abnaki	55	(D)
-Potawatomi	985	60
-Shawnee	255	(D)
-Yurok	350	25
-Kutenai	215	(D)
-Makah	150	80
-Kwakiutl	175	(D)
-Nootka	(D)	(B)
-Upper Chehalis	4	(D)
-Clallam	145	(D)
-Coeur d'Alene	95	(B)
-Columbia	(D)	(B)
-Salish	1350	100
-Okanogan	230	110
-Puget Sound Salish	215	(D)
-Quinault	145	(D)
-Tillamook	(D)	(B)
-Twana	(D)	(D)
-Haida	180	(D)
-Athapascan	1265	170
-Ahtena	45	(D)
-Han	60	40
-Ingalit	15	(D)
-Koyukon	65	(D)
-Kuchin	1285	305
-Upper Kuskokwim	(D)	(B)
-Tanaina	90	(D)
-Tanana	(D)	(B)
-Upper Tanana	(D)	(B)
-Chasta Costa	165	(D)
-Hupa	70	(B)
-Apache	13445	1595
-Kiowa	750	30
-Tlingit	1240	130
-Mountain Maidu	200	(D)
-Northwest Maidu	(D)	(B)
-Southern Maidu	(D)	(B)
-Sierra Miwok	155	(B)
-Nomlaki	(D)	(D)
-Patwin	4	(B)
-Wintun	135	40
-Foothill North Yokuts	225	85
-Tachi	(D)	(B)
-Santiam	55	(D)
-Siuslaw	10	(D)
-Klamath	205	(D)
-Nez Perce	805	40
-Sahaptian	1295	110
-Upper Chinook	270	50
-Tsimshian	40	15
-Achumawi	(D)	(D)
-Atsugewi	(D)	(B)
-Karok	445	100
-Pomo	485	70
-Washo	215	45
-Cocomaricopa	35	(B)
-Mohave	200	35
-Yuma	290	80
-Diegueno	295	40
-Delta River Yuman	365	10
-Havasupai	145	4
-Walapai	300	4
-Yavapai	245	20
-Chumash	(D)	(B)
-Tonkawa	50	(D)
-Yuchi	165	(B)
-Crow	4160	215
-Hidatsa	625	50
-Mandan	75	20
-Dakota	17855	1330
-Chiwere	105	25
-Winnebago	1720	185
-Kansa	20	(B)
-Omaha	480	15
-Osage	420	(D)
-Ponca	305	25
-Quapaw	(D)	(B)
-Alabama	370	70
-Choctaw	9635	1425
-Mikasuki	290	65
-Koasati	365	25
-Muskogee	4465	710
-Chetemacha	65	(D)
-Keres	13190	2295
-Iroquois	165	65
-Mohawk	1945	225
-Oneida	770	65
-Onondaga	75	(B)
-Cayuga	(D)	(B)
-Seneca	1015	210
-Tuscarora	240	40
-Wyandot	30	(B)
-Cherokee	11465	1460
-Arikara	155	40
-Caddo	115	(B)
-Pawnee	95	(D)
-Wichita	(D)	(B)
-Comanche	1015	90
-Mono	355	105
-Paiute	1305	200
-Northern Paiute	30	(D)
-Southern Paiute	(D)	(D)
-Chemehuevi	(D)	(B)
-Kawaiisu	(D)	(B)
-Ute	1895	145
-Shoshoni	2000	180
-Hopi	6075	1525
-Cahuilla	60	(B)
-Cupeno	20	(D)
-Luiseno	75	15
-Serrano	(D)	(B)
-Pima	6990	720
-Yaqui	640	55
-Picuris	155	(D)
-Tiwa	2180	100
-Sandia	(D)	(B)
-Tewa	4620	360
-Towa	1925	535
-Zuni	9615	1240
-Chinook Jargon	45	(D)
-American Indian	7110	1175
-Jicarilla	510	30
-Chiricahua	155	20
-San Carlos	360	30
-Kalispel	30	(B)
-Spokane	(D)	(B)
-Hungarian	86406	25983
-Arabic	924374	341425
-Hebrew	212747	34912
-Amharic	195260	81385
-Berber	2940	1630
-Chadic	8565	2275
-Cushite	122445	59495
-Sudanic	8510	3935
-Nilotic	6890	2235
-Nilo-Hamitic	1275	575
-Nubian	305	185
-Saharan	80	(D)
-Nilo-Saharan	270	155
-Khoisan	55	20
-Swahili	88685	22055
-Bantu	56685	16635
-Mande	29835	10370
-Fulani	30475	11745
-Gur	1310	405
-"Kru, Ibo, Yoruba"	322255	64690
-Efik	5620	905
-Mbum	715	370
-Finnish	25805	4350
-Estonian	6035	1335
-Lapp	(D)	(B)
-Basque	1860	635
-Syriac	74725	33600
-Aztecan	720	400
-Sonoran	60	60
-Misumalpan	95	35
-Tarascan	60	40
-Mapuche	210	195
-Oto - Manguen	5100	4425
-Quechua	1300	1000
-Arawakian	3150	925
-Chibchan	1095	865
-Tupi-Guarani	245	155
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+Language	NumberOfSpeakers	SpeakEnglishLessThanVeryWell	ISO_2
+Abenaki	55	(D)	
+Achinese	(D)	(D)	
+Achumawi	(D)	(D)	
+Afrikaans	23010	1885	
+Ahtena	45	(D)	
+Alabama	370	70	
+Albanian	133870	58820	
+Aleut	995	170	
+Algonquian	1030	265	
+American Indian	7110	1175	
+Amharic	195260	81385	
+Apache	13445	1595	
+Arabic	924374	341425	
+Arapaho	1065	50	
+Arawakian	3150	925	
+Arikara	155	40	
+Armenian	237840	106794	
+Assamese	1305	100	
+Athapascan	1265	170	
+Atsina	55	(B)	
+Atsugewi	(D)	(B)	
+Azerbaijani	2085	1025	
+Aztecan	720	400	
+Balinese	795	160	
+Balochi	185	85	
+Bantu	56685	16635	
+Basque	1860	635	
+Bengali	257740	105180	
+Berber	2940	1630	
+Bielorussian	1805	1035	
+Bihari	595	260	
+Bikol	695	200	
+Bisayan	29800	11505	
+Blackfoot	1450	65	
+Bulgarian	57785	19455	
+Burmese	62645	44530	
+Burushaski	95	(D)	
+Caddo	115	(B)	
+Cahuilla	60	(B)	
+Cajun	21285	2695	
+Cantonese	458840	257625	
+Carolinian	945	545	
+Catalonian	2325	500	
+Cayuga	(D)	(B)	
+Chadic	8565	2275	
+Cham	1050	500	
+Chamorro	19780	3195	
+Chasta Costa	165	(D)	
+Chemehuevi	(D)	(B)	
+Cherokee	11465	1460	
+Chetemacha	65	(D)	
+Cheyenne	1920	175	
+Chibchan	1095	865	
+Chinese	1867485	1054885	
+Chinook Jargon	45	(D)	
+Chiricahua	155	20	
+Chiwere	105	25	
+Choctaw	9635	1425	
+Chumash	(D)	(B)	
+Clallam	145	(D)	
+Cocomaricopa	35	(B)	
+Coeur d'Alene	95	(B)	
+Columbia	(D)	(B)	
+Comanche	1015	90	
+Cree	870	190	
+Croatian	53040	15930	
+Crow	4160	215	
+Cupeno	20	(D)	
+Cushite	122445	59495	
+Czech	47385	11235	
+Dakota	17855	1330	
+Danish	28285	3030	
+Delaware	240	60	
+Delta River Yuman	365	10	
+Diegueno	295	40	
+Dravidian	1150	160	
+Dutch	141580	25030	
+Efik	5620	905	
+Eskimo	1270	265	
+Estonian	6035	1335	
+Faroese	30	(B)	
+Fijian	5755	1360	
+Finnish	25805	4350	
+Foothill North Yokuts	225	85	
+Formosan	77675	44140	
+Fox	400	75	
+French	1253560	258730	
+French Cree	170	120	
+French Creole	739725	323689	
+Frisian	510	120	
+Fuchow	1450	1175	
+Fulani	30475	11745	
+German	1063275	174735	
+Gilbertese	170	85	
+Gondi	1470	270	
+Greek	304932	75799	
+Gujarati	373253	132572	
+Gullah	385	150	
+Gur	1310	405	
+Haida	180	(D)	
+Hakka	1350	840	
+Han	60	40	
+Havasupai	145	4	
+Hawaiian	26205	4280	
+Hawaiian Pidgin	365	30	
+Hebrew	212747	34912	
+Hidatsa	625	50	
+Hindi	643337	132631	
+Hmong	214943	92861	
+Hopi	6075	1525	
+Hungarian	86406	25983	
+Hupa	70	(B)	
+Icelandic	4865	565	
+Ilocano	85755	47250	
+Indonesian	67410	29400	
+Ingalit	15	(D)	
+Inupik	6740	1365	
+Irish Gaelic	20590	2505	
+Iroquois	165	65	
+Italian	708966	191724	
+Jamaican Creole	21965	5965	
+Japanese	449475	194436	
+Javanese	495	135	
+Jicarilla	510	30	
+Kachin	520	415	
+Kalispel	30	(B)	
+"Kan, Hsiang"	50	(D)	
+Kannada	48620	7425	
+Kansa	20	(B)	
+Karachay	420	140	
+Karakalpak	(D)	(B)	
+Karen	30185	26440	
+Karok	445	100	
+Kashmiri	1775	285	
+Kawaiisu	(D)	(B)	
+Kazakh	1480	750	
+Keres	13190	2295	
+Khoisan	55	20	
+Kickapoo	820	220	
+Kiowa	750	30	
+Kirghiz	550	305	
+Klamath	205	(D)	
+Koasati	365	25	
+Korean	1117343	617905	
+Koyukon	65	(D)	
+Krio	10560	2820	
+"Kru, Ibo, Yoruba"	322255	64690	
+Kuchin	1285	305	
+Kurdish	17020	6870	
+Kusaiean	1165	445	
+Kutenai	215	(D)	
+Kwakiutl	175	(D)	
+Ladino	130	25	
+Laotian	152647	75885	
+Lapp	(D)	(B)	
+Latvian	16035	3300	
+Lithuanian	39790	12370	
+Luiseno	75	15	
+Lusatian	(D)	(B)	
+Luxembourgian	500	25	
+Macedonian	22885	8125	
+Makah	150	80	
+Malagasy	720	225	
+Malay	14580	4910	
+Malayalam	146310	41535	
+Mandan	75	20	
+Mandarin	487250	240810	
+Mande	29835	10370	
+Maori	460	145	
+Mapuche	210	195	
+Marathi	73630	10525	
+Marquesan	135	(B)	
+Marshallese	18485	9545	
+Mbum	715	370	
+Melanesian	1305	295	
+Menomini	405	85	
+Miami	115	55	
+Micmac	205	40	
+Micronesian	7830	3435	
+Mien	19010	8220	
+Mikasuki	290	65	
+Minangkabau	15	(D)	
+Misumalpan	95	35	
+Mohave	200	35	
+Mohawk	1945	225	
+Mokilese	500	190	
+Mongolian	10180	5430	
+"Mon-Khmer, Cambodian"	212167	109633	
+Mono	355	105	
+Mortlockese	(D)	(D)	
+Mountain Maidu	200	(D)	
+Munda	2030	235	
+Muskogee	4465	710	
+Nauruan	(D)	(D)	
+Navajo	166826	35250	
+Nepali	94220	56650	
+Nez Perce	805	40	
+Nilo-Hamitic	1275	575	
+Nilo-Saharan	270	155	
+Nilotic	6890	2235	
+Niuean	(D)	(B)	
+Nomlaki	(D)	(D)	
+Nootka	(D)	(B)	
+Northern Paiute	30	(D)	
+Northwest Maidu	(D)	(B)	
+Norwegian	39430	4675	
+Nubian	305	185	
+Nukuoro	210	85	
+Ojibwa	9735	1110	
+Okanogan	230	110	
+Omaha	480	15	
+Oneida	770	65	
+Onondaga	75	(B)	
+Oriya	5385	910	
+Osage	420	(D)	
+Ossete	50	(D)	
+Oto - Manguen	5100	4425	
+Ottawa	965	155	
+Pachuco	(D)	(D)	
+Pacific Gulf Yupik	70	(B)	
+Paiute	1305	200	
+Palau	4140	1290	
+Paleo-siberian	530	385	
+Pampangan	5620	2460	
+Pangasinan	2265	1115	
+Panjabi	253740	104750	
+Papia Mentae	970	190	
+Pashto	22760	9840	
+Passamaquoddy	845	55	
+Patois	32900	4695	
+Patwin	4	(B)	
+Pawnee	95	(D)	
+Pennsylvania Dutch	133190	44075	
+Penobscot	75	(D)	
+Persian	391113	144876	
+Picuris	155	(D)	
+Pidgin	4445	1100	
+Pima	6990	720	
+Polish	580153	235241	
+Polynesian	435	160	
+Pomo	485	70	
+Ponapean	3525	1495	
+Ponca	305	25	
+Portuguese	692500	269615	
+Potawatomi	985	60	
+Puget Sound Salish	215	(D)	
+Quapaw	(D)	(B)	
+Quechua	1300	1000	
+Quinault	145	(D)	
+Rajasthani	715	215	
+Rarotongan	95	(B)	
+Rhaeto-Romanic	(D)	(B)	
+Romanian	154625	55550	
+Romany	1555	480	
+Russian	879434	416526	
+Sahaptian	1295	110	
+Saharan	80	(D)	
+Salish	1350	100	
+Samoan	64135	16905	
+San Carlos	360	30	
+Sandia	(D)	(B)	
+Santiam	55	(D)	
+Saramacca	35	(B)	
+Scottic Gaelic	1635	190	
+Sebuano	15700	4935	
+Seneca	1015	210	
+Serbian	70260	24540	
+Serbocroatian	144675	62965	
+Serrano	(D)	(B)	
+Shawnee	255	(D)	
+Shoshoni	2000	180	
+Sierra Miwok	155	(B)	
+Sindhi	8965	1775	
+Sinhalese	26745	8350	
+Siuslaw	10	(D)	
+Slovak	27930	7125	
+Slovene	6370	1705	
+Sonoran	60	60	
+Southern Maidu	(D)	(B)	
+Southern Paiute	(D)	(D)	
+Spanish	37458470	16344440	
+Spokane	(D)	(B)	
+Sudanic	8510	3935	
+Sundanese	35	35	
+Swahili	88685	22055	
+Swedish	55735	5045	
+Syriac	74725	33600	
+Tachi	(D)	(B)	
+Tadzhik	435	350	
+Tagalog	1613346	516522	
+Tamil	190685	33885	
+Tanaina	90	(D)	
+Tanana	(D)	(B)	
+Tarascan	60	40	
+Telugu	247760	51635	
+Tewa	4620	360	
+Thai	152649	79746	
+Tibetan	16730	9735	
+Tillamook	(D)	(B)	
+Tiwa	2180	100	
+Tlingit	1240	130	
+Tokelauan	125	(D)	
+Tongan	31440	8855	
+Tonkawa	50	(D)	
+Towa	1925	535	
+Trukese	8790	5200	
+Tsimshian	40	15	
+Tungus	235	120	
+Tupi-Guarani	245	155	
+Turkish	116515	43495	
+Turkmen	205	75	
+Tuscarora	240	40	
+Twana	(D)	(D)	
+Uighur	8905	5895	
+Ukrainian	152325	71915	
+Ulithean	40	(D)	
+Upper Chehalis	4	(D)	
+Upper Chinook	270	50	
+Upper Kuskokwim	(D)	(B)	
+Upper Tanana	(D)	(B)	
+Urdu	397502	116566	
+Ute	1895	145	
+Vietnamese	1399936	839237	
+Walapai	300	4	
+Washo	215	45	
+Welsh	2235	235	
+Wichita	(D)	(B)	
+Winnebago	1720	185	
+Wintun	135	40	
+Woleai-Ulithi	140	(D)	
+Wu	2670	1375	
+Wyandot	30	(B)	
+Yapese	720	350	
+Yaqui	640	55	
+Yavapai	245	20	
+Yiddish	155582	53116	
+Yuchi	165	(B)	
+Yuma	290	80	
+Yupik	19750	5930	
+Yurok	350	25	
+Zuni	9615	1240	

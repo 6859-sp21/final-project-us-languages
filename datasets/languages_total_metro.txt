@@ -1570,7 +1570,7 @@ Boston-Cambridge-Newton, MA-NH	Other Native North American languages	363	189	53	
 Boston-Cambridge-Newton, MA-NH	Algonquian	(D)	(D)	(B)	--
 Boston-Cambridge-Newton, MA-NH	Micmac	20	20	(B)	--
 Boston-Cambridge-Newton, MA-NH	Ojibwa	125	159	(D)	(D)
-Boston-Cambridge-Newton, MA-NH	Abnaki	(D)	(D)	(D)	(D)
+Boston-Cambridge-Newton, MA-NH	Abenaki	(D)	(D)	(D)	(D)
 Boston-Cambridge-Newton, MA-NH	Kuchin	(D)	(D)	(B)	--
 Boston-Cambridge-Newton, MA-NH	Chasta Costa	(D)	(D)	(B)	--
 Boston-Cambridge-Newton, MA-NH	Kiowa	(D)	(D)	(B)	--

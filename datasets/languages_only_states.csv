@@ -1,133 +1,133 @@
-﻿Language
-Afrikaans
-Akan (incl. Twi)
-Albanian
-Aleut languages
-Amharic
-Apache languages
-Arabic
-Armenian
-Assyrian Neo-Aramaic
-Bengali
-Bosnian
-Bulgarian
-Burmese
-Cajun French
-Cantonese
-Cebuano
-Chaldean Neo-Aramaic
-Chamorro
-Cherokee
-Chin languages
-Chinese
-Chuukese
-Croatian
-Czech
-Dakota languages
-Danish
-Dari
-Dutch
-Edoid languages
-English only household
-Farsi
-Filipino
-Finnish
-French
-Fulah
-Ga
-Ganda
-Gbe languages
-German
-Greek
-Gujarati
-Haitian
-Hawaiian
-Hebrew
-Hindi
-Hmong
-Hungarian
-Igbo
-Ilocano
-India N.E.C.
-Indonesian
-Irish
-Italian
-Iu Mien
-Jamaican Creole English
-Japanese
-Kabuverdianu
-Kannada
-Karen languages
-Keres
-Khmer
-Konkani
-Korean
-Kurdish
-Lao
-Latvian
-Lithuanian
-Macedonian
-Malay
-Malayalam
-Mandarin
-Manding languages
-Marathi
-Marshallese
-Min Nan Chinese
-Mongolian
-Muskogean languages
-N/A (GQ/vacant)
-Navajo
-Nepali
-Nilo-Saharan languages
-Norwegian
-Ojibwa
-Oromo
-Other Afro-Asiatic languages
-Other and unspecified languages
-Other Bantu languages
-Other Central and South American languages
-Other Eastern Malayo-Polynesian languages
-Other English-based Creole languages
-Other Indo-European languages
-Other Indo-Iranian languages
-Other languages of Africa
-Other languages of Asia
-Other Mande languages
-Other Native North American languages
-Other Niger-Congo languages
-Other Philippine languages
-Pakistan N.E.C.
-Pashto
-Pennsylvania German
-Polish
-Portuguese
-Punjabi
-Romanian
-Russian
-Samoan
-Serbian
-Serbocroatian
-Shona
-Sinhala
-Slovak
-Somali
-Spanish
-Swahili
-Swedish
-Swiss German
-Tagalog
-Tamil
-Telugu
-Thai
-Tibetan
-Tigrinya
-Tongan
-Turkish
-Ukrainian
-Urdu
-Uto-Aztecan languages
-Vietnamese
-Wolof
-Yiddish
-Yoruba
+Language,ISO
+Afrikaans,afr
+Akan (incl. Twi),
+Albanian,aln
+Aleut languages,
+Amharic,amh
+Apache languages,
+Arabic,arb
+Armenian,hye
+Assyrian Neo-Aramaic,aii
+Bengali,ben
+Bosnian,bos
+Bulgarian,bul
+Burmese,mya
+Cajun French,
+Cantonese,yue
+Cebuano,ceb
+Chaldean Neo-Aramaic,
+Chamorro,cha
+Cherokee,chr
+Chin languages,
+Chinese,cmn
+Chuukese,chk
+Croatian,
+Czech,ces
+Dakota languages,
+Danish,dan
+Dari,prs
+Dutch,nld
+Edoid languages,
+English only household,
+Farsi,
+Filipino,
+Finnish,fin
+French,fra
+Fulah,
+Ga,
+Ganda,
+Gbe languages,
+German,deu
+Greek,ell
+Gujarati,guj
+Haitian,hat
+Hawaiian,haw
+Hebrew,heb
+Hindi,hin
+Hmong,mww
+Hungarian,hun
+Igbo,ibo
+Ilocano,ilo
+India N.E.C.,
+Indonesian,ind
+Irish,gle
+Italian,ita
+Iu Mien,ium
+Jamaican Creole English,jam
+Japanese,jpn
+Kabuverdianu,
+Kannada,kan
+Karen languages,ksw
+Keres,kee
+Khmer,khm
+Konkani,knn
+Korean,kor
+Kurdish,kmr
+Lao,lao
+Latvian,lav
+Lithuanian,lit
+Macedonian,mkd
+Malay,zsm
+Malayalam,mal
+Mandarin,cmn
+Manding languages,
+Marathi,mar
+Marshallese,mah
+Min Nan Chinese,
+Mongolian,khk
+Muskogean languages,
+N/A (GQ/vacant),
+Navajo,nav
+Nepali,nep
+Nilo-Saharan languages,
+Norwegian,nob
+Ojibwa,otw
+Oromo,gax
+Other Afro-Asiatic languages,
+Other and unspecified languages,
+Other Bantu languages,
+Other Central and South American languages,
+Other Eastern Malayo-Polynesian languages,
+Other English-based Creole languages,
+Other Indo-European languages,
+Other Indo-Iranian languages,
+Other languages of Africa,
+Other languages of Asia,
+Other Mande languages,
+Other Native North American languages,
+Other Niger-Congo languages,
+Other Philippine languages,
+Pakistan N.E.C.,
+Pashto,pst
+Pennsylvania German,
+Polish,pol
+Portuguese,por
+Punjabi,
+Romanian,ron
+Russian,rus
+Samoan,smo
+Serbian,
+Serbocroatian,hrv
+Shona,sna
+Sinhala,sin
+Slovak,slk
+Somali,som
+Spanish,spa
+Swahili,swh
+Swedish,swe
+Swiss German,
+Tagalog,tgl
+Tamil,tam
+Telugu,tel
+Thai,tha
+Tibetan,bod
+Tigrinya,tir
+Tongan,ton
+Turkish,tur
+Ukrainian,ukr
+Urdu,urd
+Uto-Aztecan languages,
+Vietnamese,vie
+Wolof,wol
+Yiddish,ydd
+Yoruba,yor
