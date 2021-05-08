@@ -6,21 +6,26 @@ import '../App.css';
 /** 
  * Map of the US that displays the communities where a specified language is present.
  * 
- * @param {Object} statesData TopoJSON object of state borders
+ * @param {String} mapOption either 'Metro', 'Counties', 'States'
+ * @param {Object} bordersData TopoJSON object of state and county borders
  * @param {Array} locationsData array of objects with location and coordinate info
+ * @param {Object} countiesData object where keys are county codes and values are objects with county data
  * @param {Array} allLanguages array of all languages in the dataset
  * @param {Integer} size parameter used for width=size and height=size/2
  * @param {String} selectedLanguage the language for which to display data on the map
  * @param {Function} handleLocationClick callback to pass the clicked location to parent
  * @returns 
  */
-export default function Map({statesData, locationsData, allLanguages, languagesData, sizeVw, sizeVh, selectedLanguage, setSortedLocLanguages, handleLocationClick}) {
+export default function Map({mapOption = "Metro", bordersData, locationsData, countiesData, allLanguages, languagesData, sizeVw, sizeVh, selectedLanguage, setSortedLocLanguages, handleLocationClick}) {
     const width = sizeVw, height = sizeVh;
     const svgRef = useRef();
     const wrapperRef = useRef();
     const circleTransitionSpeed = 400;
+    const countyTransitionSpeed = 500;
     const histogramTransitionSpeed = 500;
     const zoomTransitionSpeed = 750;
+    const defaultCountyColor = "#ccc";
+    const defaultStateColor = "#ccc";
     const defaultCircleColor = "#2b5876";
     const highlightedCircleColor = "#4e4376";
     const allLanguagesSet = new Set(allLanguages);
@@ -118,7 +123,6 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
         
         const graphedLanguages = dataToGraph.map(entry => entry.Language);
-        // const colorScale = d3.scaleOrdinal(d3.schemeTableau10).domain(allLanguages);
         const colorScale = language => language === d.Language ? "#2b5876" : "#ccc";
 
         const xScale = d3.scaleLinear()
@@ -210,9 +214,30 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         d3.select(event.target).style("fill", highlightedCircleColor);
     }
 
+    const countyColor = d3.scaleThreshold()
+        // .domain([1, 100, 1000, 1500, 2000, 2500, 3000, 4000, 5000, 10000])
+        // .range(d3.schemeBlues[9]);
+        .domain([1, 100, 1000, 10000, 10000, 100000, 1000000])
+        .range(d3.schemeBlues[7]);
+
+    function fillCounty(d) {
+        if (selectedLanguage === null) {
+            return defaultCountyColor;
+        } else {
+            const county = countiesData[d.id.toString()];
+            if (county) {
+                console.log(county[selectedLanguage]);
+                return countyColor(county[selectedLanguage]);
+            } else {
+                return defaultCountyColor;
+            }
+        }
+    }
+
     useEffect( () => {
         const svg = d3.select(svgRef.current).attr('zoomedBounds', "");
-        const statesGeoJSON = topojson.feature(statesData, statesData.objects.states);
+        const statesGeoJSON = topojson.feature(bordersData, bordersData.objects.states);
+        const countiesGeoJSON = topojson.feature(bordersData, bordersData.objects.counties);
         const projection = d3.geoAlbersUsa().fitSize([width, height], statesGeoJSON);
         const path = d3.geoPath().projection(projection);
 
@@ -227,70 +252,91 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
         
         let g = d3.select(null);
         if (svg.selectAll("g").size() === 0) { // Check if the states are already drawn
-            g = svg.append("g")
-                .style("stroke-width", "1.5px");
+            g = svg.append("g");
 
-            g.selectAll("path")
-                .data(statesGeoJSON.features)
-                .enter().append("path")
-                .attr("d", path)
-                .attr("class", "feature")
-                .on("click", zoomClick);
+            if (mapOption === "Counties") {
+                g.style("stroke-width", "1px");
+
+                g.selectAll("path")
+                    .data(countiesGeoJSON.features)
+                    .enter().append("path")
+                    .attr("d", path)
+                    .attr("fill", d => fillCounty(d))
+                    .attr("class", "feature")
+                    .on("click", zoomClick);
+            } else {
+                g.style("stroke-width", "1.5px");
+
+                g.selectAll("path")
+                    .data(statesGeoJSON.features)
+                    .enter().append("path")
+                    .attr("d", path)
+                    .attr("fill", defaultStateColor)
+                    .attr("class", "feature")
+                    .on("click", zoomClick);
+            }
         } else {
             g = svg.select("g");
         }
-        
-        const filteredLocations = languagesData.filter(entry => {
-            return entry.Language === selectedLanguage && locationsData[entry.Location];
-        }).sort((a,b) => {
-            return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
-        });
 
-        // Shrink & remove any previous circles, then add the new circles
-        let prevCircles = g.selectAll("circle");
-        if (prevCircles.size() === 0) {
-            addNewCircles();
+        if (mapOption === "Counties") {
+            g.selectAll("path")
+                .transition()
+                .duration(countyTransitionSpeed)
+                .attr("fill", d => fillCounty(d));
         } else {
-            prevCircles.transition()
-                .duration(circleTransitionSpeed)
-                .attr("r", 0)
-                .style("stroke-width", 0)
-                .remove().end()
-                .then(() => addNewCircles());
-        }
-        
-        // Remove any previous tooltip and add a new one
-        d3.selectAll("#bar-tooltip").remove();
-        d3.select(wrapperRef.current)
-            .append("div")
-            .attr("id", "bar-tooltip")
-            .style("opacity", 0);
+            // Remove any previous tooltip and add a new one
+            d3.selectAll("#bar-tooltip").remove();
+            d3.select(wrapperRef.current)
+                .append("div")
+                .attr("id", "bar-tooltip")
+                .style("opacity", 0);
 
-        function addNewCircles() {
-            const circles = g
-                .selectAll("circle")
-                .data(filteredLocations)
-                .enter()
-                    .append("circle")
+            const filteredLocations = languagesData.filter(entry => {
+                return entry.Language === selectedLanguage && locationsData[entry.Location];
+            }).sort((a,b) => {
+                return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
+            });
+        
+            // Shrink & remove any previous circles, then add the new circles
+            let prevCircles = g.selectAll("circle");
+            if (prevCircles.size() === 0) {
+                addNewCircles();
+            } else {
+                prevCircles.transition()
+                    .duration(circleTransitionSpeed)
                     .attr("r", 0)
                     .style("stroke-width", 0)
-                    .style("fill", defaultCircleColor)
-                    .attr("d", d => {
-                        let containerFeature = statesGeoJSON.features.filter(feature => d3.geoContains(feature, [locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]))[0];
-                        d["containerFeature"] = containerFeature;
-                        return d;
-                    })
-                    .on("click", (event,d) => handleClickLocation(event, d))
-                    .on("mouseover", (event,d) => showHistogram(event, d))
-                    .on("mouseout", (event, d) => hideHistogram(event, d))
-                    .attr("transform", function(d) {
-                        return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
-                    });
-                    
-            circles.transition()
-                .duration(circleTransitionSpeed)
-                .attr("r", d => genRadius(d["NumberOfSpeakers"]))
-                .style("stroke-width", 1.5);
+                    .remove().end()
+                    .then(() => addNewCircles());
+            }
+
+            function addNewCircles() {
+                const circles = g
+                    .selectAll("circle")
+                    .data(filteredLocations)
+                    .enter()
+                        .append("circle")
+                        .attr("r", 0)
+                        .style("stroke-width", 0)
+                        .style("fill", defaultCircleColor)
+                        .attr("d", d => {
+                            let containerFeature = statesGeoJSON.features.filter(feature => d3.geoContains(feature, [locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]))[0];
+                            d["containerFeature"] = containerFeature;
+                            return d;
+                        })
+                        .on("click", (event,d) => handleClickLocation(event, d))
+                        .on("mouseover", (event,d) => showHistogram(event, d))
+                        .on("mouseout", (event, d) => hideHistogram(event, d))
+                        .attr("transform", function(d) {
+                            return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
+                        });
+                        
+                circles.transition()
+                    .duration(circleTransitionSpeed)
+                    .attr("r", d => genRadius(d["NumberOfSpeakers"]))
+                    .style("stroke-width", 1.5);
+            }
         }
 
         const handleClickLocation = (event, data) => {
@@ -332,7 +378,7 @@ export default function Map({statesData, locationsData, allLanguages, languagesD
                 .style("stroke-width", "1.5px")
                 .attr("transform", "");
         }
-    }, [statesData, locationsData, allLanguages, languagesData, sizeVw, sizeVh, selectedLanguage]);
+    }, [bordersData, locationsData, allLanguages, languagesData, sizeVw, sizeVh, selectedLanguage, mapOption]);
 
     return (
         <div id="map" ref={wrapperRef} style={{width: sizeVw}} >
