@@ -21,7 +21,7 @@ fs.createReadStream(metroFile)
     .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
     .pipe(csv({separator: ','}))
     .on('data', (row) => {
-        const lang = row.Language.toLowerCase();
+        const lang = row.Language.toLowerCase(); 
         languagesMetro[lang] = row;
     })
     .on('end', async () => {

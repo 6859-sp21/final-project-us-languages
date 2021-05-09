@@ -100,7 +100,7 @@ async function getFiles({auth}) {
           } catch (error) {
             console.log(error);
           }
-        });
+        }); 
 
         // write to local csv
         stringify(Object.values(audiomapData), {

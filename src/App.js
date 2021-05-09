@@ -28,14 +28,17 @@ function App() {
   const [locationsData, setLocationsData] = useState({})
   const [countiesData, setCountiesData] = useState({})
   const [languagesMetroData, setLanguagesMetroData] = useState([])
-  const [allMetroLanguages, setAllMetroLanguages] = useState([])
+  const [allMetroLanguages, setAllMetroLanguages] = useState({})
   const [languagesStateData, setLanguagesStateData] = useState([])
-  const [allStateLanguages, setAllStateLanguages] = useState([])
+  const [allStateLanguages, setAllStateLanguages] = useState({})
   const [countriesData, setCountriesData] = useState({})
-  const [selectedLanguage, setSelectedLanguage] = useState("")
+  const [selectedLanguage, setSelectedLanguage] = useState({})
   const [selectedLocation, setSelectedLocation] = useState("")
   const [sortedLocLanguages, setSortedLocLanguages] = useState({sortedLocLangData: [], selectedLangIndex: 0})
   const [audioMetadata, setAudioMetadata] = useState({})
+  const [originsData, setOriginsData] = useState({})
+  const [countryCodes, setCountryCodes] = useState({})
+
   const [hidden, setHidden] = useState(false);
   const [mapOption, setMapOption] = useState("Metro"); // either 'Metro', 'Counties', or 'States'
 
@@ -66,6 +69,8 @@ function App() {
         axios.get('/api/datasets/countries'),
         axios.get('/api/audioclips/metadata'),
         axios.get('/api/datasets/counties-languages'),
+        axios.get('/api/datasets/country-codes'),
+        axios.get('/api/datasets/global-origins'),
       ])
       .then(res => {
         setBordersData(res[0].data.bordersData);
@@ -77,13 +82,17 @@ function App() {
         setCountriesData(res[6].data.countriesData);
         setAudioMetadata(res[7].data.metadata);
         setCountiesData(res[8].data.countyData);
+        setCountryCodes(res[9].data.countryCodesData);
+        setOriginsData(res[10].data.originsData);
         setIsLoaded(true);
       });
     }, [])
     
   function handleLanguageChange(newLanguage) {
-    console.log(newLanguage);
-    setSelectedLanguage(newLanguage);
+    console.log(newLanguage, allMetroLanguages[newLanguage]);
+    if (newLanguage in allMetroLanguages) {
+      setSelectedLanguage(allMetroLanguages[newLanguage]);
+    }
   };
 
   function handleMapOptionChange(newMapOption) {
@@ -111,14 +120,14 @@ function App() {
                 handleDrawerClose={handleDrawerClose}
                 sortedLocLanguages={sortedLocLanguages}
                 audioMetadata={audioMetadata}
-                selectedLanguage={selectedLanguage}
+                selectedLanguage={selectedLanguage.Language}
                 />
               { isLoaded ? 
                 (
                   <div className="main-container">
                     <div className="row-container">
                       <MapSelect setMapOptionParent={handleMapOptionChange}/>
-                      <LanguageSelect mapOption={mapOption} allMetroLanguages={allMetroLanguages} handleLanguageChange={handleLanguageChange}/>
+                      <LanguageSelect mapOption={mapOption} allMetroLanguages={Object.keys(allMetroLanguages)} handleLanguageChange={handleLanguageChange}/>
                     </div>
                     <div className="content-container">
                       <Map 
@@ -126,7 +135,7 @@ function App() {
                         sizeVh={vh}
                         mapOption={mapOption}
                         handleLocationClick={handleLocationClick}
-                        allMetroLanguages={allMetroLanguages}
+                        allMetroLanguages={Object.keys(allMetroLanguages)}
                         allStateLanguages={allStateLanguages}
                         bordersData={bordersData}
                         locationsData={locationsData}
@@ -134,10 +143,13 @@ function App() {
                         languagesMetroData={languagesMetroData} 
                         languagesStateData={languagesStateData}
                         setSortedLocLanguages={setSortedLocLanguages}
-                        selectedLanguage={selectedLanguage}/>
+                        selectedLanguage={selectedLanguage.Language}/>
                       <Globe 
-                        sizeVw={vw/4}
-                        sizeVh={vw/4}
+                        sizeVw={250}
+                        sizeVh={250}
+                        selectedLanguage={selectedLanguage}
+                        originsData={originsData}
+                        countryCodes={countryCodes}
                         data={countriesData}/>
                     </div>
                   </div>

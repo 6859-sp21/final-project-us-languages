@@ -9,30 +9,73 @@ const stripBom = require('strip-bom-stream');
 
 // latitude/longitude of metro areas
 const locationsFile = path.resolve(__dirname, '../datasets/location_coordinates.txt');
+const locationsData = [];
+const formattedLocationsData = {};
 
 // borders of US states and counties, borders of countries
 const bordersFile = path.resolve(__dirname, '../datasets/us.json');
-const countriesFiles = path.resolve(__dirname, '../datasets/ne_110m_admin_0_countries.geo.json');
+const countriesFile = path.resolve(__dirname, '../datasets/ne_110m_admin_0_countries.geo.json');
+const countriesData = fs.readFileSync(countriesFile);
+const bordersData = fs.readFileSync(bordersFile);
 
 // contains the languages spoken by metro area, state, and county
-const languagesWithMetroFile = path.resolve(__dirname, '../datasets/languages_total_metro.txt')
+const languagesWithMetroFile = path.resolve(__dirname, '../datasets/languages_total_metro.txt');
 const languagesWithStatesFile = path.resolve(__dirname, '../datasets/2019_state_languages_breakdown.csv');
 const languagesWithCountiesFile = path.resolve(__dirname, '../datasets/2019_county_languages_breakdown_5year_est.txt');
+const langMetroData = [];
+const langStateData = [];
+const formattedCountyLanguagesData = {};
 
 // contains only the unique languages by metro, state
-const languagesOnlyMetroFile = path.resolve(__dirname, '../datasets/languages_only_metro.txt')
-const languagesOnlyStatesFile = path.resolve(__dirname, '../datasets/languages_only_states.csv')
+const languagesOnlyMetroFile = path.resolve(__dirname, '../datasets/languages_only_metro.csv');
+const languagesOnlyStatesFile = path.resolve(__dirname, '../datasets/languages_only_states.csv');
+const languagesOnlyMetroData = {};
+const languagesOnlyStatesData = {};
 
-// const countyLanguagesData = [];
-const formattedCountyLanguagesData = {};
-const langStateData = [];
-const countriesData = fs.readFileSync(countriesFiles);
-const bordersData = fs.readFileSync(bordersFile);
-const locationsData = [];
-const langMetroData = [];
-const languagesOnlyMetroData = [];
-const languagesOnlyStatesData = [];
-const formattedLocationsData = {};
+// contains the global origins of languages and country codes for each country
+const originsFile = path.resolve(__dirname, '../datasets/global_language_origins.csv');
+const countryCodesFile = path.resolve(__dirname, '../datasets/country_codes.txt');
+const originsData = {};
+const countryCodesData = {};
+
+fs.createReadStream(originsFile)  
+  .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
+  .pipe(csv({separator: ','}))
+  .on('data', (row) => {
+    const iso = row['iso_code'];
+    const wals = row['wals_code'];
+    if (iso.length !== 0) {
+      if (iso in originsData) {
+        // Some languages have regional variants. Only include the ones that are the default
+        if (row['language'].split(' ').length === 1) { 
+          originsData[iso] = row;
+        }
+      } else {
+        originsData[iso] = row;
+      }
+    } else if (wals.length !== 0) {
+      originsData[wals] = row;
+    }
+  })
+  .on('end', () => {
+    console.log('Origins CSV file successfully processed');
+});
+
+fs.createReadStream(countryCodesFile)  
+  .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
+  .pipe(csv({separator: '\t'}))
+  .on('data', (row) => {
+    const iso2 = row['ISO2'];
+    const iso3 = row['ISO3'];
+    if (iso2.length !== 0) {
+      countryCodesData[iso2] = row;
+    } else if (iso3.length !== 0) {
+      countryCodesData[iso3] = row;
+    }
+  })
+  .on('end', () => {
+    console.log('Country codes CSV file successfully processed');
+});
 
 fs.createReadStream(languagesWithCountiesFile)  
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
@@ -86,12 +129,13 @@ fs.createReadStream(languagesWithMetroFile)
 
 fs.createReadStream(languagesOnlyMetroFile)
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
-  .pipe(csv({separator: '\t'}))
+  .pipe(csv({separator: ','}))
   .on('data', (row) => {
-    languagesOnlyMetroData.push(row.Language)
+    const lang = row.Language;
+    languagesOnlyMetroData[lang] = row;
   })
   .on('end', () => {
-    languagesOnlyMetroData.sort();
+    // languagesOnlyMetroData.sort();
     console.log('Languages Only CSV file successfully processed');
 });
 
@@ -99,11 +143,31 @@ fs.createReadStream(languagesOnlyStatesFile)
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
   .pipe(csv({separator: ','}))
   .on('data', (row) => {
-    languagesOnlyStatesData.push(row.Language)
+    const lang = row.Language;
+    languagesOnlyStatesData[lang] = row;
   })
   .on('end', () => {
     console.log('Languages Only CSV file successfully processed');
 });
+
+/**
+ * GET /api/datasets/country-codes
+ * 
+ * Sends country codes JSON (keys are iso2 codes of each country)
+ */ 
+ router.get('/country-codes', async(req, res) => { 
+  res.send({countryCodesData: countryCodesData});
+})
+
+
+/**
+ * GET /api/datasets/global-origins
+ * 
+ * Sends global origins JSON of languages (keys are iso3 codes of each language)
+ */ 
+ router.get('/global-origins', async(req, res) => { 
+  res.send({originsData: originsData});
+})
 
 /**
  * GET /api/datasets/countries

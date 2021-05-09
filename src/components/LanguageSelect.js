@@ -29,7 +29,7 @@ export default function LanguageSelect({mapOption, allMetroLanguages, handleLang
         blurOnSelect
         clearOnEscape
         getOptionLabel={(option) => option}
-        onChange={(event, d) => handleLanguageChange(d !== null ? d.replace(/\s+/g, '') : d)}
+        onChange={(event, d) => handleLanguageChange(d !== null && mapOption === "Counties" ? d.replace(/\s+/g, '') : d)}
         renderOption={(option) => (
           <React.Fragment>
             {option}

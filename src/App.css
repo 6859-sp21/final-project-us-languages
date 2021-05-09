@@ -67,7 +67,7 @@
   /* position: fixed; */
 }
 #map, #globe svg {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .legend {
   /* position: absolute;
@@ -79,15 +79,15 @@ svg {
   /* width: 100% */
 }
 svg .country {
-  fill: #aaa;
+  /* fill: #aaa; */
   stroke: #ddd;
   stroke-width: 0.5px;
 }
 svg .country:hover {
   /* stroke: rgb(223, 179, 179);
   stroke-width: 5px; */
-  fill: #4e4376;
-  cursor: pointer;
+  fill: #2b5876;
+  /* cursor: pointer; */
 }
 svg .country { 
   transition: fill .4s ease; 

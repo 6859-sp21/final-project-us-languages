@@ -40,24 +40,34 @@ const useStyles = makeStyles((theme) => ({
  * @param {Integer} size parameter used for width and height
  * @returns 
  */
-export default function Globe({open, handleDrawerOpen, submissions, coordData, data, sizeVw, sizeVh}) {
+export default function Globe({open, selectedLanguage, originsData, countryCodes, handleDrawerOpen, submissions, coordData, data, sizeVw, sizeVh}) {
     const svgRef = useRef();
     const wrapperRef = useRef();
     const [selectedCountry, setSelectedCountry] = useState(null)
     const [isRotating, setIsRotating] = useState(true)
-    // const [open, setOpen] = useState(false);
+    const [originInfo, setOriginInfo] = useState({});
+    const [originCountries, setOriginCountries] = useState(new Set())
     const [submissionData, setSubmissionData] = useState([])
     const classes = useStyles();
+    const zoomTransitionSpeed = 750;
+
+    useEffect(() => {
+        const iso = selectedLanguage.ISO;
+        if (iso in originsData) {
+            console.log('items: ', iso, originsData[iso]);
+            const originsCopy = Object.assign({}, originsData[iso]);
+            originsCopy['country_codes'] = originsCopy['country_codes'].split(' ').map(code => countryCodes[code] || '');
+            setOriginCountries(new Set(originsCopy['country_codes'].map(data => data.ISO2)));
+            setOriginInfo(originsCopy);
+            console.log(originsCopy);
+        } else {
+            setOriginCountries(new Set());
+            setOriginInfo({});
+        }
+    }, [selectedLanguage])
 
     const sensitivity = 75
-    // function stopRotate() {
-    //     setIsRotating(false)
-    //     // isRotating.stop();
-    // }
-    // function resumeRotate() {
-    //     setIsRotating(true)
-    //     // isRotating.restart();
-    // }
+
     const handleCountryClick = (e, d) => {
         // setOpen(true);
         handleDrawerOpen();
@@ -71,9 +81,9 @@ export default function Globe({open, handleDrawerOpen, submissions, coordData, d
     }
 
 
-
+    let focused = false;
     useEffect(() => {
-        const svg = d3.select(svgRef.current);
+        const svg = d3.select(svgRef.current).attr('zoomedBounds', "");
         const globe = d3.select(wrapperRef.current)
 
         const projection = d3.geoOrthographic().fitSize([sizeVw, sizeVh], data);
@@ -87,16 +97,44 @@ export default function Globe({open, handleDrawerOpen, submissions, coordData, d
                 return d.properties.NAME || d.properties.FORMAL_EN
         })
 
-        svg.call(tooltip);
-        svg
-            .selectAll('.country')
-            .data(data.features)
-            .join("path")
-            .attr("class", "country")
-            .attr("d", feature => path(feature))
-            .on("mouseover", tooltip.show)
-            .on("mouseout", tooltip.hide)
-            .on("click", handleCountryClick)
+        if (!svgRef.current['isBuilt']) {
+            console.log('rebuilding');
+            svgRef.current['isBuilt'] = true;
+            svg.call(tooltip);
+            svg
+                .selectAll('.country')
+                .data(data.features)
+                .join("path")
+                .attr("class", "country")
+                .attr("d", feature => path(feature))
+                .attr("fill", '#aaa')
+                .on("mouseover", tooltip.show)
+                .on("mouseout", tooltip.hide)
+        }
+
+        if (Object.keys(selectedLanguage).length !== 0) {
+            if (svgRef.current["selectedLanguage"] !== selectedLanguage.Language) {
+                svgRef.current["selectedLanguage"] = selectedLanguage.Language;
+                // Iterate through countries and save the country feature that corresponds to the origin of the language
+                svgRef.current["selectedFeature"] = [];
+                data.features.forEach(feature => {
+                    if (originCountries.has(feature.properties.ISO_A2) && originCountries.size !== 0) {
+                        console.log('originCountries: ',  originCountries);
+                        svgRef.current["selectedFeature"].push(feature);
+                        }
+                    })
+                }
+                if (svgRef.current["selectedFeature"].length !== 0) {
+                    console.log('countries: ',  svgRef.current["selectedFeature"]);
+                    rotateMe(svgRef.current["selectedFeature"][0])
+                    svg.selectAll('.country').attr('fill', feature => svgRef.current["selectedFeature"].includes(feature) ? '#2b5876' : '#aaa');
+                } else {
+                    svg.selectAll('.country').attr('fill','#aaa');
+                }
+        }
+
+
+            // .on("click", handleCountryClick)
             
         // repeat();
 
@@ -113,33 +151,88 @@ export default function Globe({open, handleDrawerOpen, submissions, coordData, d
         //         .on('end',repeat);
         // };
 
-        svg.call(d3.drag().on('drag', (event) => {
-            const rotate = projection.rotate()
-            const k = sensitivity / projection.scale()
-            projection.rotate([
-                rotate[0] + event.dx * k,
-            ])
-            path = d3.geoPath().projection(projection)
-            svg.selectAll("path").attr("d", feature => path(feature))
-            rotateTimer.stop()
-            }))
+        // svg.call(d3.drag().on('drag', (event) => {
+        //     const rotate = projection.rotate()
+        //     const k = sensitivity / projection.scale()
+        //     projection.rotate([
+        //         rotate[0] + event.dx * k,
+        //     ])
+        //     path = d3.geoPath().projection(projection)
+        //     svg.selectAll("path").attr("d", feature => path(feature))
+        //     // rotateTimer.stop()
+        //     }))
 
-        function rotateFunction(elapsed) {
-            const rotate = projection.rotate()
-            const k = sensitivity / projection.scale()
-            projection.rotate([
-                rotate[0] + 1 * k/2,
-            ])
-            path = d3.geoPath().projection(projection)
-            svg.selectAll("path").attr("d", feature => path(feature))
-            }
-        const rotateTimer = d3.timer(rotateFunction,200)
+        // function rotateFunction(elapsed) {
+        //     const rotate = projection.rotate()
+        //     const k = sensitivity / projection.scale()
+        //     projection.rotate([
+        //         rotate[0] + 1 * k/2,
+        //     ])
+        //     path = d3.geoPath().projection(projection)
+        //     svg.selectAll("path").attr("d", feature => path(feature))
+        //     }
 
-    }, [coordData, data, isRotating])
+        // const rotateTimer = d3.timer(rotateFunction,200)
+
+        // Adapted from https://bl.ocks.org/mbostock/4699541
+        function zoomClick(event, d) {
+            let bounds = path.bounds(d);
+            // const boundingClientRect = event.target.getBoundingClientRect();
+            // const customBounds = [[boundingClientRect.left, boundingClientRect.top],[boundingClientRect.right, boundingClientRect.bottom]];
+            if (svg.attr('zoomedBounds') === JSON.stringify(bounds) && this !== undefined) return reset();
+            svg.attr('zoomedBounds', JSON.stringify(bounds));
+            let dx = bounds[1][0] - bounds[0][0],
+                dy = bounds[1][1] - bounds[0][1],
+                x = (bounds[0][0] + bounds[1][0]) / 2,
+                y = (bounds[0][1] + bounds[1][1]) / 2,
+                // scale = .9 / Math.max(dx / sizeVw, dy / sizeVh),
+                scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / sizeVw, dy / sizeVh))),
+                translate = [sizeVw / 2 - scale * x, sizeVh / 2 - scale * y];
+
+            svg.transition()
+                .duration(zoomTransitionSpeed)
+                .style("stroke-width", 1.5 / scale + "px")
+                .attr("transform", "translate(" + translate + ")scale(" + scale + ")");            
+        }
+        // Adapted from https://bl.ocks.org/mbostock/4699541
+        function reset() {
+            // unhighlightCircles();
+            svg.attr('zoomedBounds', "");
+            svg.transition()
+                .duration(zoomTransitionSpeed)
+                .style("stroke-width", "1.5px")
+                .attr("transform", "");
+        }
+
+        // Adapted from https://stackoverflow.com/questions/36526617/d3-center-the-globe-to-the-clicked-country
+        function rotateMe(d) {
+            const rotate = projection.rotate(),
+            focusedCountry = d, //get the clicked country's details
+            p = d3.geoCentroid(focusedCountry);
+          
+          //Globe rotating
+          (function transition() {
+            d3.transition()
+            .duration(2500)
+            .tween("rotate", function() {
+                // resume from the current rotation rather than starting from the default rotation angle
+                const rotation = svgRef.current['rotation'] || projection.rotate();
+
+                const r = d3.interpolate(rotation, [-p[0], -p[1]]);
+                return function(t) {
+                    projection.rotate(r(t));
+                    svgRef.current['rotation'] = projection.rotate();
+                    svg.selectAll("path").attr("d", path)
+                };
+            })
+            })();
+          };
+    }, [originCountries, coordData, data, isRotating])
 
 
     return (
         <div id="globe" ref={wrapperRef} 
+            style={{maxWidth: sizeVw, maxHeight: sizeVh}}
             className={clsx(classes.content, {
             [classes.contentShift]: open,
             })}>

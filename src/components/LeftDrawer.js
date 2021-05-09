@@ -85,8 +85,7 @@ export default function LeftDrawer({open, audioMetadata, selectedLanguage, selec
     myRef.current.play()
   }
   useEffect(() => {
-    const language = selectedLanguage !== null ? selectedLanguage.toLowerCase() : "";
-    console.log('selected lang', language, audioMetadata);
+    const language = selectedLanguage ? selectedLanguage.toLowerCase() : "";
     if (language in audioMetadata) {
       const id = audioMetadata[language].DriveID;
       const translation = audioMetadata[language].Translation;
