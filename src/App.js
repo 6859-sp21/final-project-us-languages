@@ -93,6 +93,7 @@ function App() {
     if (newLanguage in allMetroLanguages) {
       setSelectedLanguage(allMetroLanguages[newLanguage]);
     }
+    handleDrawerClose();
   };
 
   function handleMapOptionChange(newMapOption) {
@@ -117,7 +118,10 @@ function App() {
                 open={open} 
                 selectedLocation={selectedLocation} 
                 languagesMetroData={languagesMetroData} 
+                locationsData={locationsData}
                 handleDrawerClose={handleDrawerClose}
+                languagesMetroData={languagesMetroData}
+                allMetroLanguages={Object.keys(allMetroLanguages)}
                 sortedLocLanguages={sortedLocLanguages}
                 audioMetadata={audioMetadata}
                 selectedLanguage={selectedLanguage.Language}

@@ -43,7 +43,6 @@ fs.createReadStream(originsFile)
   .pipe(csv({separator: ','}))
   .on('data', (row) => {
     const iso = row['iso_code'];
-    const wals = row['wals_code'];
     if (iso.length !== 0) {
       if (iso in originsData) {
         // Some languages have regional variants. Only include the ones that are the default
@@ -53,9 +52,7 @@ fs.createReadStream(originsFile)
       } else {
         originsData[iso] = row;
       }
-    } else if (wals.length !== 0) {
-      originsData[wals] = row;
-    }
+    } 
   })
   .on('end', () => {
     console.log('Origins CSV file successfully processed');

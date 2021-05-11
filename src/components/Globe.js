@@ -54,12 +54,10 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
     useEffect(() => {
         const iso = selectedLanguage.ISO;
         if (iso in originsData) {
-            console.log('items: ', iso, originsData[iso]);
             const originsCopy = Object.assign({}, originsData[iso]);
             originsCopy['country_codes'] = originsCopy['country_codes'].split(' ').map(code => countryCodes[code] || '');
             setOriginCountries(new Set(originsCopy['country_codes'].map(data => data.ISO2)));
             setOriginInfo(originsCopy);
-            console.log(originsCopy);
         } else {
             setOriginCountries(new Set());
             setOriginInfo({});
@@ -93,12 +91,11 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
         const tooltip = tip()
             .attr('class', 'd3-tip')
             .offset([-5, 0])
-            .html(function(event, d) {
+            .html(function(e, d) {
                 return d.properties.NAME || d.properties.FORMAL_EN
         })
 
         if (!svgRef.current['isBuilt']) {
-            console.log('rebuilding');
             svgRef.current['isBuilt'] = true;
             svg.call(tooltip);
             svg
@@ -119,14 +116,16 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
                 svgRef.current["selectedFeature"] = [];
                 data.features.forEach(feature => {
                     if (originCountries.has(feature.properties.ISO_A2) && originCountries.size !== 0) {
-                        console.log('originCountries: ',  originCountries);
                         svgRef.current["selectedFeature"].push(feature);
                         }
                     })
                 }
                 if (svgRef.current["selectedFeature"].length !== 0) {
-                    console.log('countries: ',  svgRef.current["selectedFeature"]);
                     rotateMe(svgRef.current["selectedFeature"][0])
+                    // svg.select(svgRef.current["selectedFeature"][0]).append("text")
+                    //     .attr("x", function (d) { return x(d.x); })
+                    //     .attr("y", function (d) { return y(d.y) - 10; })
+                    //     .text(function(d) { return d.properties.NAME || d.properties.FORMAL_EN });
                     svg.selectAll('.country').attr('fill', feature => svgRef.current["selectedFeature"].includes(feature) ? '#2b5876' : '#aaa');
                 } else {
                     svg.selectAll('.country').attr('fill','#aaa');
@@ -204,24 +203,41 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
                 .attr("transform", "");
         }
 
+
         // Adapted from https://stackoverflow.com/questions/36526617/d3-center-the-globe-to-the-clicked-country
         function rotateMe(d) {
-            const rotate = projection.rotate(),
-            focusedCountry = d, //get the clicked country's details
-            p = d3.geoCentroid(focusedCountry);
-          
+            const focusedCountry = d, //get the clicked country's details
+            p = d3.geoCentroid(focusedCountry),
+            b = path.bounds(d);
+            // currentScale = projection.scale(),
+            // nextScale = currentScale * 1 / Math.max((b[1][0] - b[0][0]) / (sizeVw/3), (b[1][1] - b[0][1]) / (sizeVh/3));
+
+            // resume from the current rotation rather than starting from the default rotation angle
+            const rotation = svgRef.current['rotation'] || projection.rotate();
+            // const scale = svgRef.current['scale'] || projection.scale();
+            // let newScale = scale;
+            // console.log(typeof(b[0][0]), b[0][0] === Infinity);
+            // if(b[0][0] === Infinity) {
+            //     newScale = projection.scale() * 1.5;
+            // } else {
+            //     console.log('changing scales');
+            //     newScale = projection.scale() * 1 / Math.max((b[1][0] - b[0][0]) / (sizeVw/5), (b[1][1] - b[0][1]) / (sizeVh/5));
+            // }
+            // console.log('scales: ', scale, newScale, focusedCountry, b, d3.geoCentroid(focusedCountry));
+
           //Globe rotating
           (function transition() {
             d3.transition()
             .duration(2500)
             .tween("rotate", function() {
-                // resume from the current rotation rather than starting from the default rotation angle
-                const rotation = svgRef.current['rotation'] || projection.rotate();
-
+                // const s = d3.interpolate(scale, newScale);
                 const r = d3.interpolate(rotation, [-p[0], -p[1]]);
                 return function(t) {
-                    projection.rotate(r(t));
+                    projection
+                        .rotate(r(t))
+                        // .scale( scale > newScale ? s(Math.pow(t, .1)) : s(Math.pow(t, 3)));
                     svgRef.current['rotation'] = projection.rotate();
+                    // svgRef.current['scale'] = projection.scale();
                     svg.selectAll("path").attr("d", path)
                 };
             })

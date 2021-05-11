@@ -127,6 +127,7 @@ export default function Map(props) {
     }
 
     function showHistogram(event, d) {
+        console.log('d in map: ', d);
         d3.select("#bar-tooltip").selectAll("svg").remove();
 
         const height = 200, width = 400;
