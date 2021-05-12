@@ -17,7 +17,7 @@ const router = express.Router();
 require('dotenv').config();
 
 const tempAudioFile = path.resolve(__dirname, 'tmp/');
-const audiomapFile = path.resolve(__dirname, '../datasets/audio_mapping3.txt');
+const audiomapFile = path.resolve(__dirname, '../datasets/audio_mapping4.txt');
 const audiomapData = {}
 
 async function main() {

@@ -107,7 +107,7 @@ export default function LeftDrawer(props) {
 
   useEffect(() => {
     console.log('in use ', Object.keys(locationsData).length !== 0 && languagesMetroData.length !== 0 && selectedLocation !== '');
-    if (Object.keys(locationsData).length !== 0 && languagesMetroData.length !== 0 && selectedLocation !== '') {
+    if (Object.keys(locationsData).length !== 0 && languagesMetroData.length !== 0 && selectedLocation !== '' && mapOption === 'Metro') {
       const filteredLocations = languagesMetroData.filter(entry => {
           return entry.Language === selectedLanguage && entry.Location === selectedLocation;
       }).sort((a,b) => {
