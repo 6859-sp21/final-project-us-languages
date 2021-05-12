@@ -38,6 +38,10 @@ const countryCodesFile = path.resolve(__dirname, '../datasets/country_codes.txt'
 const originsData = {};
 const countryCodesData = {};
 
+// maps ids to states names
+const stateIdsFile = path.resolve(__dirname, '../datasets/state_ids.txt');
+const id2state= {};
+
 fs.createReadStream(originsFile)  
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
   .pipe(csv({separator: ','}))
@@ -147,6 +151,15 @@ fs.createReadStream(languagesOnlyStatesFile)
     console.log('Languages Only CSV file successfully processed');
 });
 
+fs.createReadStream(stateIdsFile)  
+  .pipe(csv({separator: '\t'}))
+  .on('data', (row) => {
+    id2state[row.id] = row.name;
+  })
+  .on('end', () => {
+    console.log('State IDS file successfully processed');
+});
+
 /**
  * GET /api/datasets/country-codes
  * 
@@ -240,5 +253,14 @@ router.get('/locations', async(req, res) => {
     router.get('/state-languages-only', async(req, res) => { 
       res.send({languagesOnlyStatesData: languagesOnlyStatesData});
    })
+
+/**
+ * GET /api/datasets/id-2-state
+ * 
+ * Sends parsed data mapping ids to state names
+ */ 
+ router.get('/id-2-state', async(req, res) => { 
+  res.send({'id2state': id2state});
+})
 
  module.exports = router;

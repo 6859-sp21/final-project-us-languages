@@ -179,6 +179,7 @@ body {
 .feature {
   cursor: pointer;
   stroke: #fff;
+  stroke-width: 1px;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
