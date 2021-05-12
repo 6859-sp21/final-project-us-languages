@@ -150,9 +150,9 @@ export default function Map(props) {
     function fillState(d) {
         if (selectedLanguage.length !== 0) {
             const stateName = stateIDs[d.id];
-            const stateSelectedLangData = statesData.filter(e => e.Language === selectedLanguage && e.State === stateName)[0];
+            const stateSelectedLangData = statesData.filter(e => e.Language === selectedLanguage && e.Location === stateName)[0];
             if (stateSelectedLangData) {
-                return stateColor(stateSelectedLangData['Total']);
+                return stateColor(stateSelectedLangData['NumberOfSpeakers']);
             }
         }
         return defaultCountyColor

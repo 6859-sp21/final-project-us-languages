@@ -26,8 +26,8 @@ const useStyles = makeStyles((theme) => ({
       }),
       marginRight: drawerWidth,
     },
-    dynamicGlobe: {
-        // width: '100vw',
+    container: {
+        maxWidth: '16vw',
         // height: '100vh',
     }
   }));
@@ -47,6 +47,7 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
     const [isRotating, setIsRotating] = useState(true)
     const [originInfo, setOriginInfo] = useState({});
     const [originCountries, setOriginCountries] = useState(new Set())
+    const [countryNames, setCountryNames] = useState('')
     const [submissionData, setSubmissionData] = useState([])
     const classes = useStyles();
     const zoomTransitionSpeed = 750;
@@ -57,6 +58,18 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
             const originsCopy = Object.assign({}, originsData[iso]);
             originsCopy['country_codes'] = originsCopy['country_codes'].split(' ').map(code => countryCodes[code] || '');
             setOriginCountries(new Set(originsCopy['country_codes'].map(data => data.ISO2)));
+            const countries = originsCopy['country_codes'].map(data => data.COUNTRY);
+            let stringBuilder = '';
+            if (countries.length === 1) {
+                stringBuilder = countries[0];
+            } else if (countries.length === 2) {
+                stringBuilder = `${countries[0]} and ${countries[1]}`;
+            } else if (countries.length > 2 && countries.length < 5) {
+                stringBuilder = `${countries.slice(0, 3).join(', ')} and ${countries[countries.length-1]}`;
+            } else if (countries.length >= 5) {
+                stringBuilder = `${countries.slice(0, 3).join(', ')} and ${countries.length - 3} other countries`;
+            }
+            setCountryNames(stringBuilder);
             setOriginInfo(originsCopy);
         } else {
             setOriginCountries(new Set());
@@ -247,20 +260,33 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
 
 
     return (
-        <div id="globe" ref={wrapperRef} 
-            style={{maxWidth: sizeVw, maxHeight: sizeVh}}
-            className={clsx(classes.content, {
-            [classes.contentShift]: open,
-            })}>
-            <svg
-                // className={classes.dynamicGlobe}
-                width={sizeVw}
-                height={sizeVh}
-                // onMouseEnter={stopRotate} 
-                // onMouseLeave={resumeRotate} 
-                ref={svgRef}>
-                    {/* <MosaicModal submissionData={submissionData} selectedCountry={selectedCountry} open={open || false} handleClose={closeModal}/> */}
-                </svg>
+        <div className={classes.container}>
+            {
+                selectedLanguage.Language && Object.keys(originInfo).length ? 
+                <div>
+                    {selectedLanguage.Language} is spoken in {countryNames}.
+                    <p>Genus: {originInfo.genus}</p>
+                    <p>Family: {originInfo.family}</p>
+                </div> 
+                
+                : selectedLanguage.Language && !Object.keys(originInfo).length ? <div>Data for this language is not available</div>
+                    : null
+            }
+            <div id="globe" ref={wrapperRef} 
+                style={{maxWidth: sizeVw, maxHeight: sizeVh}}
+                className={clsx(classes.content, {
+                [classes.contentShift]: open,
+                })}>
+                <svg
+                    // className={classes.dynamicGlobe}
+                    width={sizeVw}
+                    height={sizeVh}
+                    // onMouseEnter={stopRotate} 
+                    // onMouseLeave={resumeRotate} 
+                    ref={svgRef}>
+                        {/* <MosaicModal submissionData={submissionData} selectedCountry={selectedCountry} open={open || false} handleClose={closeModal}/> */}
+                    </svg>
+            </div>
         </div>
     )
 }

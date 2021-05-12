@@ -17,16 +17,17 @@ const router = express.Router();
 require('dotenv').config();
 
 const tempAudioFile = path.resolve(__dirname, 'tmp/');
-const audiomapFile = path.resolve(__dirname, '../datasets/audio_mapping.csv');
+const audiomapFile = path.resolve(__dirname, '../datasets/audio_mapping3.txt');
 const audiomapData = {}
 
 async function main() {
   let refreshDriveFiles = false;
 
-  fs.createReadStream(audiomapFile)
+  fs.createReadStream(audiomapFile, {encoding: 'utf16le'})
     .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
     .pipe(csv({separator: ','}))
     .on('data', (row) => {
+      console.log('row', row); 
       const lang = row.Language.toLowerCase();
       audiomapData[lang] = row;
       if (row.DriveID.length === 0) {
@@ -34,7 +35,7 @@ async function main() {
       }
     })
     .on('end', async () => {
-      console.log('Audio mapping CSV file successfully processed');
+      console.log('Audio mapping CSV file successfully processed', audiomapData);
       const auth = await getAuthToken();
       if (refreshDriveFiles) {
         console.log('Refreshing audio mapping csv');
@@ -87,15 +88,14 @@ async function getFiles({auth}) {
     }, (err, res) => {
       if (err) return console.log('The API returned an error: ' + err);
       const files = res.data.files;
-      if (files.length) {
-        // slice to skip name of folder
+      if (files.length !== 0) {
         files.map((file) => {
           try { 
             const language = file.name.split('_')[0].toLowerCase();
             if (language in audiomapData) {
               audiomapData[language].DriveID = file.id;
               audiomapData[language].Filename = file.name;
-              console.log(`${file.name} (${file.id})`);
+              // console.log(`${file.name} (${file.id})`);
             }
           } catch (error) {
             console.log(error);

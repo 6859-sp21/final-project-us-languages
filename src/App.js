@@ -111,6 +111,10 @@ function App() {
   }
 
   // set the size of the map based on the size of the user's window
+  const maxVw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  const maxVh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+  // set the size of the map based on the size of the user's window
   const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) / 2;
   const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) /1.5;
 
@@ -131,9 +135,12 @@ function App() {
                 handleDrawerClose={handleDrawerClose}
                 languagesMetroData={languagesMetroData}
                 allMetroLanguages={Object.keys(allMetroLanguages)}
+                languagesStateData={languagesStateData}
+                allStateLanguages={allStateLanguages}
                 sortedLocLanguages={sortedLocLanguages}
                 audioMetadata={audioMetadata}
                 selectedLanguage={selectedLanguage.Language}
+                mapOption={mapOption}
                 />
               { isLoaded ? 
                 (
@@ -159,10 +166,13 @@ function App() {
                         statesData={languagesStateData}
                         stateIDs={stateIDs}
                         languagesMetroData={languagesMetroData} 
+                        languagesStateData={languagesStateData}
+                        setSortedLocLanguages={setSortedLocLanguages}
+                        selectedLanguage={selectedLanguage.Language || selectedLanguage}
                         selectedLanguage={selectedLanguage.Language}/>
                       <Globe 
-                        sizeVw={250}
-                        sizeVh={250}
+                        sizeVw={13* maxVw / 100}
+                        sizeVh={13* maxVw / 100}
                         selectedLanguage={selectedLanguage}
                         originsData={originsData}
                         countryCodes={countryCodes}
