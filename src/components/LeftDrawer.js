@@ -71,18 +71,24 @@ export default function LeftDrawer(props) {
     handleDrawerClose,
     languagesMetroData,
     allMetroLanguages,
+    languagesStateData,
+    allStateLanguages,
     locationsData,
+    mapOption,
   } = props;
-  const allMetroLanguagesSet = new Set(allMetroLanguages);
+  
 
   const [audioClipUrl, setAudioClipUrl] = useState('')
-  const [audioClipTranslation, setAudioClipTranslation] = useState('')
+  const [audioClipDetails, setAudioClipDetails] = useState({})
   const [audioClipAvailible, setAudioClipAvailible] = useState(false);
+  const [sortedLocLangData, setSortedLocLangData] = useState([]);
+  const [selectedLangIndex, setSelectedLangIndex] = useState(0);
+
   const histoRef = useRef()
   const wrapperRef = useRef()
   const classes = useStyles();
   const theme = useTheme();
-  const {sortedLocLangData, selectedLangIndex} = sortedLocLanguages;
+  // const {sortedLocLangData, selectedLangIndex} = sortedLocLanguages;
   // let sortedLocLangData = [];
   const metroArea = selectedLocation.split(',')[0];
   const abbrev = ['st', 'nd', 'rd', 'th']
@@ -100,14 +106,13 @@ export default function LeftDrawer(props) {
   }
 
   useEffect(() => {
-    if (sortedLocLangData.length && languagesMetroData.length) {
-
-  
-      // const filteredLocations = languagesMetroData.filter(entry => {
-      //     return entry.Language === selectedLanguage && locationsData[entry.Location];
-      // }).sort((a,b) => {
-      //     return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
-      // });
+    console.log('in use ', Object.keys(locationsData).length !== 0 && languagesMetroData.length !== 0 && selectedLocation !== '');
+    if (Object.keys(locationsData).length !== 0 && languagesMetroData.length !== 0 && selectedLocation !== '') {
+      const filteredLocations = languagesMetroData.filter(entry => {
+          return entry.Language === selectedLanguage && entry.Location === selectedLocation;
+      }).sort((a,b) => {
+          return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
+      });
       
       function showHistogram(d) {
         d3.select("#drawer-histogram").selectAll("svg").remove();
@@ -123,12 +128,18 @@ export default function LeftDrawer(props) {
           .attr('width', width)
           .attr('height', height);
 
-        // const selectedLocLangData = languagesMetroData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allMetroLanguagesSet.has(entry.Language));
-        // sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
-        // selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
+        const allMetroLanguagesSet = new Set(allMetroLanguages);
+        console.log('1',d);
+        const selectedLocLangData = languagesMetroData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allMetroLanguagesSet.has(entry.Language));
+        const sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
+        const selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
         const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
-        console.log('data to graph: ', dataToGraph, sortedLocLangData);
         const graphedLanguages = dataToGraph.map(entry => entry.Language);
+
+        setSortedLocLangData(sortedLocLangData);
+        setSelectedLangIndex(selectedLangIndex);
+        console.log('sortedloclang data', sortedLocLangData);
+        
         const colorScale = language => language === d.Language ? "#2b5876" : "#ccc";
   
         const xScale = d3.scaleLinear()
@@ -203,23 +214,25 @@ export default function LeftDrawer(props) {
         document.getElementById("drawer-histogram").appendChild(svg.node());
       }
   
-      showHistogram(sortedLocLangData[selectedLangIndex]);
+      showHistogram(filteredLocations[0]);
     }
-  }, [selectedLanguage, sortedLocLangData])
+  }, [selectedLocation, selectedLanguage])
 
   useEffect(() => {
     const language = selectedLanguage ? selectedLanguage.toLowerCase() : "";
+    console.log('language selected', language, audioMetadata);
     if (language in audioMetadata) {
       const id = audioMetadata[language].DriveID;
-      const translation = audioMetadata[language].Translation;
+      const details = audioMetadata[language];
       const url = `https://docs.google.com/uc?export=download&id=${id}`
       setAudioClipUrl(url);
-      setAudioClipTranslation(translation);
+      setAudioClipDetails(details);
       setAudioClipAvailible(true);
     } else {
       setAudioClipAvailible(false);
     }
     }, [audioMetadata, selectedLanguage])
+
   //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
   function numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -237,7 +250,7 @@ export default function LeftDrawer(props) {
       >
         <div className={classes.drawerHeader}>
           <div className={classes.titleContainer}>
-            <Typography className={classes.title}>{selectedLocation.split(',')[0]}</Typography>
+            <Typography className={classes.title} title={selectedLocation.split(',')[0]}>{selectedLocation.split(',')[0]}</Typography>
           </div>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
@@ -245,9 +258,9 @@ export default function LeftDrawer(props) {
         </div>
         <Divider />
         <div className={classes.container} id="description">
-            {sortedLocLangData.length !== 0 ?
+            {sortedLocLangData.length !== 0 && mapOption === 'Metro' ?
             (<p>
-              <b>{sortedLocLangData[selectedLangIndex].Language}</b> is the <b>{stringifyNumber(selectedLangIndex)}</b> most spoken language in {metroArea} (excluding English). There 
+              <b>{sortedLocLangData[selectedLangIndex].Language}</b> is the <b>{stringifyNumber(selectedLangIndex)}</b> most spoken language in {metroArea}. There 
               are {numberWithCommas(sortedLocLangData[selectedLangIndex].NumberOfSpeakers)} speakers in the area.            
             </p>)
             : null
@@ -261,11 +274,13 @@ export default function LeftDrawer(props) {
           {audioClipAvailible ? 
             (
               <div>
-                <p>Audio clip translation: {audioClipTranslation}</p> 
+                <p>Audio clip translation: {audioClipDetails.Translation}</p> 
+                <p>Audio clip transliteration: {audioClipDetails.Script}</p> 
                 <audio src={audioClipUrl} type="audio/mp3" controls="controls"></audio>
+                <a target="_blank" href={audioClipDetails.Source}>Learn more</a> 
               </div>
             )
-          : <p>No audiocips availible</p>
+          : <p>No audioclip availible</p>
           }
 
         </div>

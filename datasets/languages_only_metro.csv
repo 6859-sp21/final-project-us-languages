@@ -1,311 +1,294 @@
 Language,NumberOfSpeakers,SpeakEnglishLessThanVeryWell,ISO
-Afrikaans,23010,1885,afr
-Ahtena,45,(D),
-Alabama,370,70,akz
-Albanian,133870,58820,aln
-Aleut,995,170,ale
-Algonquian,1030,265,alq
-American Indian,7110,1175,
-Amharic,195260,81385,amh
-Apache,13445,1595,
-Arabic,924374,341425,arb
-Arapaho,1065,50,arp
-Arawakian,3150,925,
-Arikara,155,40,ari
-Armenian,237840,106794,arm
-Assamese,1305,100,asm
-Athapascan,1265,170,
-Atsina,55,(B),
 Atsugewi,(D),(B),atw
-Azerbaijani,2085,1025,azb
-Aztecan,720,400,
-Balinese,795,160,ban
-Balochi,185,85,
-Bantu,56685,16635,
-Basque,1860,635,eus
-Bengali,257740,105180,ben
-Berber,2940,1630,
-Bielorussian,1805,1035,
-Bihari,595,260,
-Bikol,695,200,bcl
-Bisayan,29800,11505,
-Blackfoot,1450,65,bla
-Bulgarian,57785,19455,bul
-Burmese,62645,44530,mya
-Burushaski,95,(D),bsk
-Caddo,115,(B),cad
-Cahuilla,60,(B),chl
-Cajun,21285,2695,
-Cantonese,458840,257625,yue
-Carolinian,945,545,cal
-Catalonian,2325,500,
 Cayuga,(D),(B),cay
-Chadic,8565,2275,
-Cham,1050,500,
-Chamorro,19780,3195,cha
-Chasta Costa,165,(D),
 Chemehuevi,(D),(B),ute
-Cherokee,11465,1460,chr
-Chetemacha,65,(D),
-Cheyenne,1920,175,chy
-Chibchan,1095,865,
-Chinese,1867485,1054885,cmn
-Chinook Jargon,45,(D),
-Chiricahua,155,20,
-Chiwere,105,25,
-Choctaw,9635,1425,cho
-Chumash,(D),(B),
-Clallam,145,(D),clm
-Cocomaricopa,35,(B),
-Coeur d'Alene,95,(B),crd
-Columbia,(D),(B),
-Comanche,1015,90,com
-Cree,870,190,
-Croatian,53040,15930,
-Crow,4160,215,cro
-Cupeno,20,(D),
-Cushite,122445,59495,
-Czech,47385,11235,ces
-Dakota,17855,1330,dak
-Danish,28285,3030,dan
-Delaware,240,60,
-Delta River Yuman,365,10,
-Diegueno,295,40,
-Dravidian,1150,160,
-Dutch,141580,25030,nld
-Efik,5620,905,efi
-Eskimo,1270,265,
-Estonian,6035,1335,est
-Faroese,30,(B),fao
-Fijian,5755,1360,fij
-Finnish,25805,4350,fin
-Foothill North Yokuts,225,85,
-Formosan,77675,44140,
-Fox,400,75,sac
-French,1253560,258730,fra
-French Cree,170,120,
-French Creole,739725,323689,
-Frisian,510,120,frs
-Fuchow,1450,1175,cdo
-Fulani,30475,11745,
-German,1063275,174735,deu
-Gilbertese,170,85,
-Gondi,1470,270,ggo
-Greek,304932,75799,ell
-Gujarati,373253,132572,guj
-Gullah,385,150,
-Gur,1310,405,
-Haida,180,(D),hax
-Hakka,1350,840,hak
-Han,60,40,
-Havasupai,145,4,yuf
-Hawaiian,26205,4280,haw
-Hawaiian Pidgin,365,30,
-Hebrew,212747,34912,
-Hidatsa,625,50,hid
-Hindi,643337,132631,hin
-Hmong,214943,92861,mww
-Hopi,6075,1525,hop
-Hungarian,86406,25983,hun
-Hupa,70,(B),hup
-Icelandic,4865,565,isl
-Ilocano,85755,47250,ilo
-Indonesian,67410,29400,ind
-Ingalit,15,(D),
-Inupik,6740,1365,
-Irish Gaelic,20590,2505,
-Iroquois,165,65,
-Italian,708966,191724,ita
-Jamaican Creole,21965,5965,jam
-Japanese,449475,194436,jpn
-Javanese,495,135,jav
-Jicarilla,510,30,
-Kachin,520,415,
-Kalispel,30,(B),fla
-"Kan, Hsiang",50,(D),
-Kannada,48620,7425,kan
-Kansa,20,(B),
-Karachay,420,140,
 Karakalpak,(D),(B),kaa
-Karen,30185,26440,bwe
-Karok,445,100,kyh
-Kashmiri,1775,285,kas
 Kawaiisu,(D),(B),xaw
-Kazakh,1480,750,kaz
-Keres,13190,2295,
-Khoisan,55,20,
-Kickapoo,820,220,kic
-Kiowa,750,30,kio
-Kirghiz,550,305,kir
-Klamath,205,(D),kla
-Koasati,365,25,cku
-Korean,1117343,617905,kor
-Koyukon,65,(D),koy
-Krio,10560,2820,
-"Kru, Ibo, Yoruba",322255,64690,
-Kuchin,1285,305,
-Kurdish,17020,6870,
-Kusaiean,1165,445,
-Kutenai,215,(D),kut
-Kwakiutl,175,(D),
-Ladino,130,25,lad
-Laotian,152647,75885,
-Lapp,(D),(B),
-Latvian,16035,3300,lav
-Lithuanian,39790,12370,lit
-Luiseno,75,15,
-Lusatian,(D),(B),
-Luxembourgian,500,25,
-Macedonian,22885,8125,mkd
-Makah,150,80,myh
-Malagasy,720,225,plt
-Malay,14580,4910,zsm
-Malayalam,146310,41535,mal
-Mandan,75,20,mhq
-Mandarin,487250,240810,cmn
-Mande,29835,10370,
-Maori,460,145,mri
-Mapuche,210,195,
-Marathi,73630,10525,mar
-Marquesan,135,(B),mrq
-Marshallese,18485,9545,mah
-Mbum,715,370,mdd
-Melanesian,1305,295,
-Menomini,405,85,mez
-Miami,115,55,
-Micmac,205,40,mic
-Micronesian,7830,3435,
-Mien,19010,8220,ium
-Mikasuki,290,65,mik
-Minangkabau,15,(D),min
-Misumalpan,95,35,
-Mohave,200,35,mov
-Mohawk,1945,225,moh
-Mokilese,500,190,mkj
-Mongolian,10180,5430,
-"Mon-Khmer, Cambodian",212167,109633,khm
-Mono,355,105,
-Mortlockese,(D),(D),
-Mountain Maidu,200,(D),
-Munda,2030,235,
-Muskogee,4465,710,
 Nauruan,(D),(D),nau
-Navajo,166826,35250,nav
-Nepali,94220,56650,nep
-Nez Perce,805,40,nez
-Nilo-Hamitic,1275,575,
-Nilo-Saharan,270,155,
-Nilotic,6890,2235,
 Niuean,(D),(B),niu
-Nomlaki,(D),(D),
-Nootka,(D),(B),
-Northern Paiute,30,(D),
-Northwest Maidu,(D),(B),
-Norwegian,39430,4675,nob
-Nubian,305,185,
-Nukuoro,210,85,nkr
-Ojibwa,9735,1110,
-Okanogan,230,110,
-Omaha,480,15,oma
-Oneida,770,65,one
-Onondaga,75,(B),ono
-Oriya,5385,910,ori
-Osage,420,(D),osa
-Ossete,50,(D),
-Oto - Manguen,5100,4425,
-Ottawa,965,155,
-Pachuco,(D),(D),
-Pacific Gulf Yupik,70,(B),
-Paiute,1305,200,
-Palau,4140,1290,
-Paleo-siberian,530,385,
-Pampangan,5620,2460,
-Pangasinan,2265,1115,pag
-Panjabi,253740,104750,pan
-Papia Mentae,970,190,
-Pashto,22760,9840,pst
-Passamaquoddy,845,55,
-Patois,32900,4695,
-Patwin,4,(B),wit
-Pawnee,95,(D),paw
-Pennsylvania Dutch,133190,44075,
-Penobscot,75,(D),
-Persian,391113,144876,pes
-Picuris,155,(D),
-Pidgin,4445,1100,
-Pima,6990,720,
-Polish,580153,235241,pol
-Polynesian,435,160,
-Pomo,485,70,
-Ponapean,3525,1495,
-Ponca,305,25,
-Portuguese,692500,269615,por
-Potawatomi,985,60,pot
-Puget Sound Salish,215,(D),
-Quapaw,(D),(B),
-Quechua,1300,1000,
-Quinault,145,(D),
-Rajasthani,715,215,
-Rarotongan,95,(B),
-Rhaeto-Romanic,(D),(B),
-Romanian,154625,55550,ron
-Romany,1555,480,
-Russian,879434,416526,rus
-Sahaptian,1295,110,
-Saharan,80,(D),
-Salish,1350,100,
-Samoan,64135,16905,smo
-San Carlos,360,30,
-Sandia,(D),(B),
-Santiam,55,(D),
-Saramacca,35,(B),
-Scottic Gaelic,1635,190,
-Sebuano,15700,4935,
-Seneca,1015,210,see
-Serbian,70260,24540,
-Serbocroatian,144675,62965,hrv
 Serrano,(D),(B),ser
-Shawnee,255,(D),sjw
-Shoshoni,2000,180,
-Sierra Miwok,155,(B),
-Sindhi,8965,1775,snd
-Sinhalese,26745,8350,
-Siuslaw,10,(D),sis
-Slovak,27930,7125,slk
-Slovene,6370,1705,slv
-Sonoran,60,60,
-Southern Maidu,(D),(B),
-Southern Paiute,(D),(D),
-Spanish,37458470,16344440,spa
-Speak only English at home,231122908,(X),
 Spokane,(D),(B),spo
-Sudanic,8510,3935,
-Sundanese,35,35,sun
-Swahili,88685,22055,swh
-Swedish,55735,5045,swe
-Syriac,74725,33600,
-Tachi,(D),(B),
-Tadzhik,435,350,
-Tagalog,1613346,516522,tgl
-Tamil,190685,33885,tam
-Tanaina,90,(D),tfn
-Tanana,(D),(B),
-Thai,152649,79746,tha
-Tongan,31440,8855,ton
-Tonkawa,50,(D),tqw
-Tsimshian,40,15,
 Twana,(D),(D),twa
-Ulithean,40,(D),
-Upper Chehalis,4,(D),
-Upper Chinook,270,50,
 Upper Kuskokwim,(D),(B),kuu
-Upper Tanana,(D),(B),
-Urdu,397502,116566,urd
-Vietnamese,1399936,839237,vie
-Washo,215,45,was
 Wichita,(D),(B),wic
-Wintun,135,40,
-Woleai-Ulithi,140,(D),
-Wyandot,30,(B),wya
+Speak only English at home,231122908,(X),
+Spanish,37458470,16344440,spa
+Chinese,1867485,1054885,cmn
+Tagalog,1613346,516522,tgl
+Vietnamese,1399936,839237,vie
+French,1253560,258730,fra
+Korean,1117343,617905,kor
+German,1063275,174735,deu
+Arabic,924374,341425,arb
+Russian,879434,416526,rus
+French Creole,739725,323689,
+Italian,708966,191724,ita
+Portuguese,692500,269615,por
+Hindi,643337,132631,hin
+Polish,580153,235241,pol
+Mandarin,487250,240810,cmn
+Cantonese,458840,257625,yue
+Japanese,449475,194436,jpn
+Urdu,397502,116566,urd
+Persian,391113,144876,pes
+Gujarati,373253,132572,guj
+"Kru, Ibo, Yoruba",322255,64690,
+Greek,304932,75799,ell
+Bengali,257740,105180,ben
+Panjabi,253740,104750,pan
+Armenian,237840,106794,arm
+Hmong,214943,92861,mww
+Hebrew,212747,34912,heb
+"Mon-Khmer, Cambodian",212167,109633,khm
+Amharic,195260,81385,amh
+Tamil,190685,33885,tam
+Navajo,166826,35250,nav
 Yiddish,155582,53116,ydd
+Romanian,154625,55550,ron
+Thai,152649,79746,tha
+Laotian,152647,75885,
+Malayalam,146310,41535,mal
+Serbocroatian,144675,62965,hrv
+Dutch,141580,25030,nld
+Albanian,133870,58820,aln
+Pennsylvania Dutch,133190,44075,
+Cushite,122445,59495,
+Nepali,94220,56650,nep
+Swahili,88685,22055,swh
+Hungarian,86406,25983,hun
+Ilocano,85755,47250,ilo
+Formosan,77675,44140,
+Syriac,74725,33600,
+Marathi,73630,10525,mar
+Serbian,70260,24540,
+Indonesian,67410,29400,ind
+Samoan,64135,16905,smo
+Burmese,62645,44530,mya
+Bulgarian,57785,19455,bul
+Bantu,56685,16635,
+Swedish,55735,5045,swe
+Croatian,53040,15930,hrv
+Kannada,48620,7425,kan
+Czech,47385,11235,ces
+Lithuanian,39790,12370,lit
+Norwegian,39430,4675,nob
+Patois,32900,4695,
+Tongan,31440,8855,ton
+Fulani,30475,11745,
+Karen,30185,26440,bwe
+Mande,29835,10370,
+Bisayan,29800,11505,
+Danish,28285,3030,dan
+Slovak,27930,7125,slk
+Sinhalese,26745,8350,
+Hawaiian,26205,4280,haw
+Finnish,25805,4350,fin
+Afrikaans,23010,1885,afr
+Macedonian,22885,8125,mkd
+Pashto,22760,9840,pst
+Jamaican Creole,21965,5965,jam
+Cajun,21285,2695,
+Irish Gaelic,20590,2505,
+Chamorro,19780,3195,cha
+Mien,19010,8220,ium
+Marshallese,18485,9545,mah
+Dakota,17855,1330,dak
+Kurdish,17020,6870,
+Latvian,16035,3300,lav
+Sebuano,15700,4935,
+Malay,14580,4910,zsm
+Apache,13445,1595,
+Keres,13190,2295,
+Cherokee,11465,1460,chr
+Krio,10560,2820,
+Mongolian,10180,5430,
+Ojibwa,9735,1110,
+Choctaw,9635,1425,cho
+Sindhi,8965,1775,snd
+Chadic,8565,2275,
+Sudanic,8510,3935,
+Micronesian,7830,3435,
+American Indian,7110,1175,
+Pima,6990,720,
+Nilotic,6890,2235,
+Inupik,6740,1365,
+Slovene,6370,1705,slv
+Hopi,6075,1525,hop
+Estonian,6035,1335,est
+Fijian,5755,1360,fij
+Efik,5620,905,efi
+Pampangan,5620,2460,
+Oriya,5385,910,ori
+Oto - Manguen,5100,4425,
+Icelandic,4865,565,isl
+Muskogee,4465,710,
+Pidgin,4445,1100,
+Crow,4160,215,cro
+Palau,4140,1290,
+Ponapean,3525,1495,
+Arawakian,3150,925,
+Berber,2940,1630,
+Catalonian,2325,500,cat
+Pangasinan,2265,1115,pag
+Azerbaijani,2085,1025,azb
+Munda,2030,235,
+Shoshoni,2000,180,
+Mohawk,1945,225,moh
+Cheyenne,1920,175,chy
+Basque,1860,635,eus
+Bielorussian,1805,1035,
+Kashmiri,1775,285,kas
+Scottic Gaelic,1635,190,gla
+Romany,1555,480,
+Kazakh,1480,750,kaz
+Gondi,1470,270,ggo
+Blackfoot,1450,65,bla
+Fuchow,1450,1175,cdo
+Hakka,1350,840,hak
+Salish,1350,100,
+Gur,1310,405,
+Assamese,1305,100,asm
+Melanesian,1305,295,
+Paiute,1305,200,
+Quechua,1300,1000,
+Sahaptian,1295,110,
+Kuchin,1285,305,
+Nilo-Hamitic,1275,575,
+Eskimo,1270,265,
+Athapascan,1265,170,
+Kusaiean,1165,445,
+Dravidian,1150,160,
+Chibchan,1095,865,
+Arapaho,1065,50,arp
+Cham,1050,500,
+Algonquian,1030,265,alq
+Comanche,1015,90,com
+Seneca,1015,210,see
+Aleut,995,170,ale
+Potawatomi,985,60,pot
+Papia Mentae,970,190,
+Ottawa,965,155,
+Carolinian,945,545,cal
+Cree,870,190,
+Passamaquoddy,845,55,
+Kickapoo,820,220,kic
+Nez Perce,805,40,nez
+Balinese,795,160,ban
+Oneida,770,65,one
+Kiowa,750,30,kio
+Aztecan,720,400,
+Malagasy,720,225,plt
+Mbum,715,370,mdd
+Rajasthani,715,215,
+Bikol,695,200,bcl
+Hidatsa,625,50,hid
+Bihari,595,260,
+Kirghiz,550,305,kir
+Paleo-siberian,530,385,
+Kachin,520,415,
+Frisian,510,120,frs
+Jicarilla,510,30,
+Luxembourgian,500,25,
+Mokilese,500,190,mkj
+Javanese,495,135,jav
+Pomo,485,70,
+Omaha,480,15,oma
+Maori,460,145,mri
+Karok,445,100,kyh
+Polynesian,435,160,
+Tadzhik,435,350,
+Karachay,420,140,
+Osage,420,(D),osa
+Menomini,405,85,mez
+Fox,400,75,sac
+Gullah,385,150,
+Alabama,370,70,akz
+Delta River Yuman,365,10,
+Hawaiian Pidgin,365,30,
+Koasati,365,25,cku
+San Carlos,360,30,
+Mono,355,105,
+Nubian,305,185,
+Ponca,305,25,
+Diegueno,295,40,
+Mikasuki,290,65,mik
+Nilo-Saharan,270,155,
+Upper Chinook,270,50,
+Shawnee,255,(D),sjw
+Delaware,240,60,
+Okanogan,230,110,
+Foothill North Yokuts,225,85,
+Kutenai,215,(D),kut
+Puget Sound Salish,215,(D),
+Washo,215,45,was
+Mapuche,210,195,
+Nukuoro,210,85,nkr
+Klamath,205,(D),kla
+Micmac,205,40,mic
+Mohave,200,35,mov
+Mountain Maidu,200,(D),
+Balochi,185,85,
+Haida,180,(D),hax
+Kwakiutl,175,(D),
+French Cree,170,120,
+Gilbertese,170,85,
+Chasta Costa,165,(D),
+Iroquois,165,65,
 Yuchi,165,(B),yuc
+Arikara,155,40,ari
+Chiricahua,155,20,
+Picuris,155,(D),
+Sierra Miwok,155,(B),
+Makah,150,80,myh
+Clallam,145,(D),clm
+Havasupai,145,4,yuf
+Quinault,145,(D),
+Woleai-Ulithi,140,(D),
+Marquesan,135,(B),mrq
+Wintun,135,40,
+Ladino,130,25,lad
+Caddo,115,(B),cad
+Miami,115,55,
+Chiwere,105,25,
+Burushaski,95,(D),bsk
+Coeur d'Alene,95,(B),crd
+Misumalpan,95,35,
+Pawnee,95,(D),paw
+Rarotongan,95,(B),
+Tanaina,90,(D),tfn
+Saharan,80,(D),
+Luiseno,75,15,
+Mandan,75,20,mhq
+Onondaga,75,(B),ono
+Penobscot,75,(D),
+Hupa,70,(B),hup
+Pacific Gulf Yupik,70,(B),
+Chetemacha,65,(D),
+Koyukon,65,(D),koy
+Cahuilla,60,(B),chl
+Han,60,40,
+Sonoran,60,60,
+Atsina,55,(B),
+Khoisan,55,20,
+Santiam,55,(D),
+"Kan, Hsiang",50,(D),
+Ossete,50,(D),
+Tonkawa,50,(D),tqw
+Ahtena,45,(D),
+Chinook Jargon,45,(D),
+Tsimshian,40,15,
+Ulithean,40,(D),
+Cocomaricopa,35,(B),
+Saramacca,35,(B),
+Sundanese,35,35,sun
+Faroese,30,(B),fao
+Kalispel,30,(B),fla
+Northern Paiute,30,(D),
+Wyandot,30,(B),wya
+Cupeno,20,(D),
+Kansa,20,(B),
+Ingalit,15,(D),
+Minangkabau,15,(D),min
+Siuslaw,10,(D),sis
+Patwin,4,(B),wit
+Upper Chehalis,4,(D),
