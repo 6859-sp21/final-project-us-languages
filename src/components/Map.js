@@ -10,7 +10,6 @@ import '../App.css';
  * @param {Object} bordersData TopoJSON object of state and county borders
  * @param {Array} locationsData array of objects with location and coordinate info
  * @param {Object} countiesData object where keys are county codes and values are objects with county data
- * @param {Array} allMetroLanguages array of all languages in the dataset
  * @param {Integer} size parameter used for width=size and height=size/2
  * @param {String} selectedLanguage the language for which to display data on the map
  * @param {Function} handleLocationClick callback to pass the clicked location to parent
@@ -18,18 +17,16 @@ import '../App.css';
  */
 export default function Map(props) {
     const {
-        mapOption = "Metro", 
+        mapOption, 
         bordersData, 
         locationsData, 
-        countiesData, 
-        allMetroLanguages, 
-        allStateLanguages,
-        languagesMetroData, 
-        languagesStateData,
+        countiesData,
+        statesData,
+        languagesMetroData,
+        stateIDs,
         sizeVw, 
         sizeVh, 
         selectedLanguage, 
-        setSortedLocLanguages, 
         handleLocationClick
     } = props;
     const width = sizeVw*1.35, height = sizeVh*1.35;
@@ -37,15 +34,11 @@ export default function Map(props) {
     const wrapperRef = useRef();
     const circleTransitionSpeed = 400;
     const countyTransitionSpeed = 500;
-    const histogramTransitionSpeed = 500;
     const zoomTransitionSpeed = 750;
     const defaultCountyColor = "#ccc";
     const defaultStateColor = "#ccc";
     const defaultCircleColor = "#2b5876";
     const highlightedCircleColor = "#4e4376";
-    const allMetroLanguagesSet = new Set(allMetroLanguages);
-    let sortedLocLangData = [];
-    let selectedLangIndex = 0;
 
     function genRadius(val) {
         val = parseInt(val);
@@ -126,98 +119,6 @@ export default function Map(props) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    function showHistogram(event, d) {
-        console.log('d in map: ', d);
-        d3.select("#bar-tooltip").selectAll("svg").remove();
-
-        const height = 200, width = 400;
-        const margin = ({top: 30, right: 70, bottom: 20, left: 80});
-
-        const selectedLocLangData = languagesMetroData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allMetroLanguagesSet.has(entry.Language));
-        sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
-        selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
-        const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
-        
-        const graphedLanguages = dataToGraph.map(entry => entry.Language);
-        const colorScale = language => language === d.Language ? "#2b5876" : "#ccc";
-
-        const xScale = d3.scaleLinear()
-            .domain([0, parseInt(dataToGraph[0].NumberOfSpeakers)])
-            .range([0, width]);
-        const xMargin = xScale.copy().range([margin.left, width - margin.right]);
-
-        const yScale = d3.scaleBand()
-            .domain(graphedLanguages)
-            .range([height, 0])
-            .paddingInner(0.25);
-        const yMargin = yScale.copy().range([height - margin.bottom, margin.top]);
-
-        const svg = d3.create('svg')
-            .attr('width', width)
-            .attr('height', height);
-        
-        const g = svg.selectAll('g')
-            .data(dataToGraph)
-            .enter() 
-            .append('g')
-                .attr('transform', d => `translate(${margin.left}, ${yMargin(d.Language)})`);
-        
-        g.append('rect')
-            .attr('width', 0)
-            .attr('height', yMargin.bandwidth())
-            .style('fill', d => colorScale(d.Language))
-            .style('padding-bottom', 5)
-            .style('stroke', '#fff');
-        
-        g.append('text')
-            .attr('x', 0)
-            .attr('dx', 4)
-            .attr('dy', '1.25em')
-            .attr('fill', 'white')
-            .style('font-size', 'small')
-            .text(d => numberWithCommas(d.NumberOfSpeakers))
-
-        svg.append('text')
-            .attr('text-anchor', 'middle')
-            .attr('fill', '#fff')
-            .style('font-size', 'medium')
-            .attr('x', width/2)
-            .attr('y', margin.top)
-            .attr('dy', '-0.5em')
-            .text(d.Location);
-        
-        const axis = svg.append('g')
-            .style('color', "white")
-            .attr('transform', `translate(${margin.left}, 0)`)
-            .call(d3.axisLeft(yMargin).tickSize(0));
-
-        axis.select(".domain").remove();
-        axis.selectAll('text')
-            .attr('dx', -2)
-            .style("font-size", 'small');
-
-        g.selectAll('rect')
-            .transition()
-            .duration(histogramTransitionSpeed)
-            .attr('width', (d) => xMargin(parseInt(d.NumberOfSpeakers)) - xMargin(0))
-
-        g.selectAll('text')
-            .transition()
-            .duration(histogramTransitionSpeed)
-            .attr('x', (d) => xMargin(parseInt(d.NumberOfSpeakers)) - xMargin(0))
-
-        d3.select("#bar-tooltip")
-            .style("left", (event.pageX + 15) + "px")
-            .style("top", (event.pageY - 15) + "px")
-            .style("opacity", 1);
-
-        document.getElementById("bar-tooltip").appendChild(svg.node());
-    }
-
-    function hideHistogram(event, d) {
-        d3.select("#bar-tooltip").style("opacity", 0);
-    }
-
     function unhighlightCircles() {
         d3.selectAll('circle').style("fill", defaultCircleColor);
     }
@@ -233,22 +134,37 @@ export default function Map(props) {
         .range(d3.schemeBlues[7]);
 
     function fillCounty(d) {
-        if (selectedLanguage.length === 0) {
-            return defaultCountyColor;
-        } else {
+        if (selectedLanguage.length !== 0) {
             const county = countiesData[d.id.toString()];
             if (county) {
                 return countyColor(county[selectedLanguage]);
-            } else {
-                return defaultCountyColor;
             }
         }
+        return defaultCountyColor;
+    }
+
+    const stateColor = d3.scaleThreshold()
+        .domain([1, 100, 1000, 10000, 10000, 100000, 1000000])
+        .range(d3.schemeBlues[7]);
+
+    function fillState(d) {
+        if (selectedLanguage.length !== 0) {
+            const stateName = stateIDs[d.id];
+            const stateSelectedLangData = statesData.filter(e => e.Language === selectedLanguage && e.State === stateName)[0];
+            if (stateSelectedLangData) {
+                return stateColor(stateSelectedLangData['Total']);
+            }
+        }
+        return defaultCountyColor
     }
 
     useEffect( () => {
         const svg = d3.select(svgRef.current).attr('zoomedBounds', "");
         const statesGeoJSON = topojson.feature(bordersData, bordersData.objects.states);
         const countiesGeoJSON = topojson.feature(bordersData, bordersData.objects.counties);
+        const landGeoJSON = topojson.feature(bordersData, bordersData.objects.land);
+        console.log(countiesGeoJSON);
+        console.log(landGeoJSON);
         const projection = d3.geoAlbersUsa().fitSize([width, height], statesGeoJSON);
         const path = d3.geoPath().projection(projection);
 
@@ -269,10 +185,7 @@ export default function Map(props) {
         let g = d3.select(null);
         if (svg.selectAll("g").size() === 0) { // Check if the states are already drawn
             g = svg.append("g");
-
             if (mapOption === "Counties") {
-                g.style("stroke-width", "1px");
-
                 g.selectAll("path")
                     .data(countiesGeoJSON.features)
                     .enter().append("path")
@@ -280,9 +193,7 @@ export default function Map(props) {
                     .attr("fill", d => fillCounty(d))
                     .attr("class", "feature")
                     .on("click", zoomClick);
-            } else {
-                g.style("stroke-width", "1.5px");
-
+            } else if (mapOption === "States") {
                 g.selectAll("path")
                     .data(statesGeoJSON.features)
                     .enter().append("path")
@@ -290,6 +201,14 @@ export default function Map(props) {
                     .attr("fill", defaultStateColor)
                     .attr("class", "feature")
                     .on("click", zoomClick);
+            } else {
+                g.selectAll("path")
+                    .data([landGeoJSON])
+                    .enter().append("path")
+                    .attr("d", path)
+                    .attr("fill", defaultStateColor)
+                    .attr("class", "feature")
+                    .on("click", reset);
             }
         } else {
             g = svg.select("g");
@@ -300,6 +219,11 @@ export default function Map(props) {
                 .transition()
                 .duration(countyTransitionSpeed)
                 .attr("fill", d => fillCounty(d));
+        } else if (mapOption === "States") {
+            g.selectAll("path")
+                .transition()
+                .duration(countyTransitionSpeed)
+                .attr("fill", d => fillState(d));
         } else {
             // Remove any previous tooltip and add a new one
             d3.selectAll("#bar-tooltip").remove();
@@ -342,8 +266,8 @@ export default function Map(props) {
                             return d;
                         })
                         .on("click", (event,d) => handleClickLocation(event, d))
-                        .on("mouseover", (event,d) => showHistogram(event, d))
-                        .on("mouseout", (event, d) => hideHistogram(event, d))
+                        // .on("mouseover", (event,d) => showHistogram(event, d))
+                        // .on("mouseout", (event, d) => hideHistogram(event, d))
                         .attr("transform", function(d) {
                             return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
                         });
@@ -356,7 +280,6 @@ export default function Map(props) {
         }
 
         const handleClickLocation = (event, data) => {
-            setSortedLocLanguages({selectedLangIndex, sortedLocLangData});
             handleLocationClick(data);
             unhighlightCircles();
             highlightClickedCircle(event);
@@ -368,6 +291,7 @@ export default function Map(props) {
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function zoomClick(event, d) {
             let bounds = path.bounds(d);
+            console.log(d);
             // const boundingClientRect = event.target.getBoundingClientRect();
             // const customBounds = [[boundingClientRect.left, boundingClientRect.top],[boundingClientRect.right, boundingClientRect.bottom]];
             if (svg.attr('zoomedBounds') === JSON.stringify(bounds) && this !== undefined) return reset();
@@ -394,7 +318,7 @@ export default function Map(props) {
                 .style("stroke-width", "1.5px")
                 .attr("transform", "");
         }
-    }, [bordersData, locationsData, allMetroLanguages, languagesMetroData, width, height, selectedLanguage, mapOption]);
+    }, [bordersData, locationsData, languagesMetroData, width, height, selectedLanguage, mapOption]);
 
     return (
         <div id="map" ref={wrapperRef} style={{width: width}} >

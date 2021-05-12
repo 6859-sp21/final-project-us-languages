@@ -14,9 +14,21 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LanguageSelect({mapOption, allMetroLanguages, handleLanguageChange}) {
+export default function LanguageSelect({mapOption, allMetroLanguages, allStateLanguages,handleLanguageChange}) {
   const classes = useStyles();
-  const languages = mapOption === "Counties" ? ["Population 5 Years And Over","Speak A Language Other Than English", "Spanish", "IndoEuropean", "Asian Pacific Island", "Other"] : allMetroLanguages;
+  function switchLanguages(mapOption) {
+    switch (mapOption) {
+      case 'Metro':
+        return  allMetroLanguages;
+      case 'Counties':
+        return  ["Population 5 Years And Over","Speak A Language Other Than English", "Spanish", "IndoEuropean", "Asian Pacific Island", "Other"];
+      case 'States':
+        return  allStateLanguages;
+      default:
+        return [];
+    }
+  }
+  const languages = switchLanguages(mapOption);
 
   return (
     <div style={{ display: "flex", justifyContent: "center", width: '100%'}}>
@@ -28,6 +40,7 @@ export default function LanguageSelect({mapOption, allMetroLanguages, handleLang
         classes={{option: classes.option}}
         blurOnSelect
         clearOnEscape
+        disableClearable={true}
         getOptionLabel={(option) => option}
         onChange={(event, d) => handleLanguageChange(d !== null && mapOption === "Counties" ? d.replace(/\s+/g, '') : d)}
         renderOption={(option) => (
