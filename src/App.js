@@ -92,9 +92,15 @@ function App() {
     }, [])
     
   function handleLanguageChange(newLanguage) {
-    console.log(newLanguage, allMetroLanguages[newLanguage]);
     if (newLanguage in allMetroLanguages) {
+      console.log(newLanguage, allMetroLanguages[newLanguage]);
       setSelectedLanguage(allMetroLanguages[newLanguage]);
+    } else if (newLanguage in allStateLanguages) {
+      console.log(newLanguage, allStateLanguages[newLanguage]);
+      setSelectedLanguage(allStateLanguages[newLanguage]);
+    } else {
+      console.log(newLanguage, {'Language': newLanguage});
+      setSelectedLanguage({'Language': newLanguage});
     }
     handleDrawerClose();
   };
