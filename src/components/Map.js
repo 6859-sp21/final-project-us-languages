@@ -163,8 +163,6 @@ export default function Map(props) {
         const statesGeoJSON = topojson.feature(bordersData, bordersData.objects.states);
         const countiesGeoJSON = topojson.feature(bordersData, bordersData.objects.counties);
         const landGeoJSON = topojson.feature(bordersData, bordersData.objects.land);
-        console.log(countiesGeoJSON);
-        console.log(landGeoJSON);
         const projection = d3.geoAlbersUsa().fitSize([width, height], statesGeoJSON);
         const path = d3.geoPath().projection(projection);
 
