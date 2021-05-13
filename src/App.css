@@ -184,11 +184,19 @@ body {
   stroke-linejoin: round;
 }
 
+.land-feature {
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .feature:hover {
   fill: #4e4376;
 }
 
 circle {
+  cursor: pointer;
   stroke: #fff;
   stroke-opacity: .5;
   opacity: .75;
