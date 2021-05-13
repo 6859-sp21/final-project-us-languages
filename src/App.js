@@ -110,13 +110,13 @@ function App() {
     setSelectedLanguage({'Language': ""});
   }
 
-  // set the size of the map based on the size of the user's window
+  // get the max size of the user's window
   const maxVw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
   const maxVh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
   // set the size of the map based on the size of the user's window
-  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) / 2;
-  const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) /1.5;
+  const vw = maxVw / 2;
+  const vh = maxVh /1.5;
 
   return (
     <div className="App">
@@ -131,7 +131,6 @@ function App() {
                 open={open} 
                 selectedLocation={selectedLocation} 
                 languagesMetroData={languagesMetroData} 
-                locationsData={locationsData}
                 handleDrawerClose={handleDrawerClose}
                 languagesMetroData={languagesMetroData}
                 allMetroLanguages={Object.keys(allMetroLanguages)}

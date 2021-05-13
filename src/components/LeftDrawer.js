@@ -73,7 +73,6 @@ export default function LeftDrawer(props) {
     allMetroLanguages,
     languagesStateData,
     allStateLanguages,
-    locationsData,
     mapOption,
   } = props;
   
@@ -105,14 +104,42 @@ export default function LeftDrawer(props) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+  function sortLanguages(languageData, allLanguages) {
+    const filteredLocations = languageData.filter(entry => {
+      return entry.Language === selectedLanguage && entry.Location === selectedLocation;
+    }).sort((a,b) => {
+        return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
+    });
+
+    if (filteredLocations.length) {
+      // showHistogram(filteredLocations[0]);
+    }
+    const d = filteredLocations[0];
+
+    const allLanguagesSet = new Set(allLanguages);
+    const selectedLocLangData = languageData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allLanguagesSet.has(entry.Language));
+    const sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
+    const selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
+    const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
+    const graphedLanguages = dataToGraph.map(entry => entry.Language);
+
+    setSortedLocLangData(sortedLocLangData);
+    setSelectedLangIndex(selectedLangIndex);
+    return {dataToGraph, graphedLanguages};
+  }
+
   useEffect(() => {
-    console.log('in use ', Object.keys(locationsData).length !== 0 && languagesMetroData.length !== 0 && selectedLocation !== '');
-    if (Object.keys(locationsData).length !== 0 && languagesMetroData.length !== 0 && selectedLocation !== '' && mapOption === 'Metro') {
-      const filteredLocations = languagesMetroData.filter(entry => {
-          return entry.Language === selectedLanguage && entry.Location === selectedLocation;
-      }).sort((a,b) => {
-          return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
-      });
+    // console.log('in use ', Object.keys(locationsData).length !== 0 && languagesMetroData.length !== 0 && selectedLocation !== '');
+
+    if (mapOption === 'Metro') {
+
+    } else if (mapOption === 'States') {
+
+    } else if (mapOption === 'Counties') {
+
+    }
+    if (languagesMetroData.length !== 0 && selectedLocation !== '' && mapOption === 'Metro') {
+
       
       function showHistogram(d) {
         d3.select("#drawer-histogram").selectAll("svg").remove();
@@ -129,15 +156,14 @@ export default function LeftDrawer(props) {
           .attr('height', height);
 
         const allMetroLanguagesSet = new Set(allMetroLanguages);
-        console.log('1',d);
+        
         const selectedLocLangData = languagesMetroData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allMetroLanguagesSet.has(entry.Language));
         const sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
         const selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
         const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
         const graphedLanguages = dataToGraph.map(entry => entry.Language);
 
-        setSortedLocLangData(sortedLocLangData);
-        setSelectedLangIndex(selectedLangIndex);
+
         console.log('sortedloclang data', sortedLocLangData);
         
         const colorScale = language => language === d.Language ? "#2b5876" : "#ccc";
@@ -213,14 +239,14 @@ export default function LeftDrawer(props) {
   
         document.getElementById("drawer-histogram").appendChild(svg.node());
       }
-  
-      showHistogram(filteredLocations[0]);
+      // if (filteredLocations.length) {
+      //   showHistogram(filteredLocations[0]);
+      // }
     }
   }, [selectedLocation, selectedLanguage])
 
   useEffect(() => {
     const language = selectedLanguage ? selectedLanguage.toLowerCase() : "";
-    console.log('language selected', language, audioMetadata);
     if (language in audioMetadata) {
       const id = audioMetadata[language].DriveID;
       const details = audioMetadata[language];
