@@ -119,14 +119,6 @@ export default function Map(props) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    function unhighlightCircles() {
-        d3.selectAll('circle').style("fill", defaultCircleColor);
-    }
-
-    function highlightClickedCircle(event) {
-        d3.select(event.target).style("fill", highlightedCircleColor);
-    }
-
     const countyColor = d3.scaleThreshold()
         // .domain([1, 100, 1000, 1500, 2000, 2500, 3000, 4000, 5000, 10000])
         // .range(d3.schemeBlues[9]);
@@ -205,7 +197,7 @@ export default function Map(props) {
                     .enter().append("path")
                     .attr("d", path)
                     .attr("fill", defaultStateColor)
-                    .attr("class", "feature")
+                    .attr("class", "land-feature")
                     .on("click", reset);
             }
         } else {
@@ -264,8 +256,14 @@ export default function Map(props) {
                             return d;
                         })
                         .on("click", (event,d) => handleClickLocation(event, d))
-                        // .on("mouseover", (event,d) => showHistogram(event, d))
-                        // .on("mouseout", (event, d) => hideHistogram(event, d))
+                        .on("mouseover", (event,d) => {
+                            d3.select(event.target).style("fill", highlightedCircleColor);
+                        })
+                        .on("mouseout", (event, d) => {
+                            if (svgRef.current["activeLocation"] !== d.Location) {
+                                d3.select(event.target).style("fill", defaultCircleColor);
+                            }
+                        })
                         .attr("transform", function(d) {
                             return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
                         });
@@ -278,22 +276,22 @@ export default function Map(props) {
         }
 
         const handleClickLocation = (event, data) => {
+            svgRef.current["activeLocation"] = data.Location;
+            d3.selectAll('circle').style("fill", defaultCircleColor);
+            d3.select(event.target).style("fill", highlightedCircleColor);
             handleLocationClick(data);
-            unhighlightCircles();
-            highlightClickedCircle(event);
             if (data['containerFeature'] !== undefined) {
-                zoomClick(event, data['containerFeature'])
+                zoomClick(event, data)
             }
         }
 
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function zoomClick(event, d) {
-            let bounds = path.bounds(d);
-            console.log(d);
+            let bounds = path.bounds(d.containerFeature);
             // const boundingClientRect = event.target.getBoundingClientRect();
             // const customBounds = [[boundingClientRect.left, boundingClientRect.top],[boundingClientRect.right, boundingClientRect.bottom]];
-            if (svg.attr('zoomedBounds') === JSON.stringify(bounds) && this !== undefined) return reset();
-            svg.attr('zoomedBounds', JSON.stringify(bounds));
+            if (svgRef.current["zoomedLocation"] === d.Location) return reset();
+            svgRef.current["zoomedLocation"] = d.Location;
             let dx = bounds[1][0] - bounds[0][0],
                 dy = bounds[1][1] - bounds[0][1],
                 x = (bounds[0][0] + bounds[1][0]) / 2,
@@ -309,8 +307,9 @@ export default function Map(props) {
             
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function reset() {
-            unhighlightCircles();
-            svg.attr('zoomedBounds', "");
+            d3.selectAll('circle').style("fill", defaultCircleColor)
+            svgRef.current["zoomedLocation"] = "";
+            svgRef.current["activeLocation"] = "";
             g.transition()
                 .duration(zoomTransitionSpeed)
                 .style("stroke-width", "1.5px")
