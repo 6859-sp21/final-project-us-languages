@@ -262,19 +262,6 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
 
     return (
         <div className={classes.container}>
-            {
-                selectedLanguage.Language && Object.keys(originInfo).length ? 
-                <div>
-                    <p style={{ fontSize: 20, margin: 1 }}>{selectedLanguage.Language} is spoken in {countryNames}.</p>
-                    <Box display="flex" justifyContent="flex-start" flexWrap="wrap" alignItems="flex-start">
-                        <p style={{ width: '100%',  margin: 0}}>Genus: {originInfo.genus}</p>
-                        <p style={{ width: '100%',  margin: 0 }}>Family: {originInfo.family}</p>
-                    </Box>
-                </div> 
-                
-                : selectedLanguage.Language && !Object.keys(originInfo).length ? <div>Data for this language is not available</div>
-                    : null
-            }
             <div id="globe" ref={wrapperRef} 
                 style={{maxWidth: sizeVw, maxHeight: sizeVh}}
                 className={clsx(classes.content, {
@@ -290,6 +277,19 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
                         {/* <MosaicModal submissionData={submissionData} selectedCountry={selectedCountry} open={open || false} handleClose={closeModal}/> */}
                     </svg>
             </div>
+            {
+                selectedLanguage.Language && Object.keys(originInfo).length ? 
+                <div>
+                    <p style={{ fontSize: 20, margin: 1 }}>{selectedLanguage.Language} is spoken in {countryNames}.</p>
+                    <Box display="flex" justifyContent="flex-start" flexWrap="wrap" alignItems="flex-start">
+                        <p style={{ width: '100%',  margin: 0}}>Genus: {originInfo.genus}</p>
+                        <p style={{ width: '100%',  margin: 0 }}>Family: {originInfo.family}</p>
+                    </Box>
+                </div> 
+                
+                : selectedLanguage.Language && !Object.keys(originInfo).length ? <div>Data for this language is not available</div>
+                    : null
+            }
         </div>
     )
 }

@@ -96,7 +96,7 @@ export default function QuestionsHelper() {
                             </ListItem>
                             <ListItem>
                                 <a target="_blank" className={classes.anchor} href="https://www.census.gov/programs-surveys/acs/microdata/access.html">
-                                ACS 1-Year Estimates-Public Use Microdata Sample 2019
+                                    ACS 1-Year Estimates-Public Use Microdata Sample 2019
                                 </a>
                             </ListItem>
                         </List>

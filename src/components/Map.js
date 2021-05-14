@@ -156,7 +156,7 @@ export default function Map(props) {
         const landGeoJSON = topojson.feature(bordersData, bordersData.objects.land);
         const projection = d3.geoAlbersUsa().fitSize([width, height], statesGeoJSON);
         const path = d3.geoPath().projection(projection);
-        
+
         const zoom = d3.zoom()
             .scaleExtent([1, 8])
             .on("zoom", event => zoomed(event));
@@ -182,6 +182,15 @@ export default function Map(props) {
                 .on("click", reset);
         }
 
+        // Remove any previous tooltip and add a new one
+        let tooltip = d3.select("#metro-tooltip");
+        if (tooltip.size() === 0) {
+            tooltip = d3.select(wrapperRef.current)
+                .append("div")
+                .attr("id", "metro-tooltip")
+                .style("opacity", 0);
+        }
+
         let g = svg.select("g");
         if (g.node() === null) { // Check if the states are already drawn
             g = svg.append("g");
@@ -192,7 +201,9 @@ export default function Map(props) {
                     .attr("d", path)
                     .attr("fill", d => fillCounty(d))
                     .attr("class", "feature")
-                    .on("click", (event, d) => zoomClickFeature(d));
+                    .on("click", (event, d) => zoomClickFeature(d))
+                    .on("mouseover", () => tooltip.style('opacity', 1))
+                    .on("mouseout", () => tooltip.style("opacity", 0))
             } else if (mapOption === "States") {
                 g.selectAll("path")
                     .data(statesGeoJSON.features)
@@ -200,7 +211,9 @@ export default function Map(props) {
                     .attr("d", path)
                     .attr("fill", defaultStateColor)
                     .attr("class", "feature")
-                    .on("click", (event, d) => handleLocationClick(d));
+                    .on("click", (event, d) => handleLocationClick(d))
+                    .on("mouseover", () => tooltip.style('opacity', 1))
+                    .on("mouseout", () => tooltip.style("opacity", 0))
             } else {
                 g.selectAll("path")
                     .data([landGeoJSON])
@@ -212,22 +225,32 @@ export default function Map(props) {
             }
         }
 
-        svg.call(zoom)
-
-        // Remove any previous tooltip and add a new one
-        d3.selectAll("#bar-tooltip").remove();
-        d3.select(wrapperRef.current)
-            .append("div")
-            .attr("id", "bar-tooltip")
-            .style("opacity", 0);
+        svg.call(zoom) 
 
         if (mapOption === "Counties") {
             g.selectAll("path")
+                .on("mousemove", (event,d) => {
+                    const county = countiesData[d.id.toString()];
+                    const html = selectedLanguage.length === 0 ? county.County : county.County + "</br>" + numberWithCommas(county[selectedLanguage]);
+                    tooltip
+                        .html(html)
+                        .style("left", (event.x + 20) + "px")
+                        .style("top", (event.y) + "px")
+                })
                 .transition()
                 .duration(countyTransitionSpeed)
-                .attr("fill", d => fillCounty(d));
+                .attr("fill", d => fillCounty(d))
         } else if (mapOption === "States") {
             g.selectAll("path")
+                .on("mousemove", (event,d) => {
+                    const stateName = stateIDs[d.id];
+                    const stateSelectedLangData = statesData.filter(e => e.Language === selectedLanguage && e.Location === stateName)[0];
+                    const html = selectedLanguage.length === 0 ? stateName : stateName + "</br>" + numberWithCommas(stateSelectedLangData.NumberOfSpeakers);
+                    tooltip
+                        .html(html)
+                        .style("left", (event.x + 20) + "px")
+                        .style("top", (event.y) + "px")
+                })
                 .transition()
                 .duration(countyTransitionSpeed)
                 .attr("fill", d => fillState(d));
@@ -259,22 +282,22 @@ export default function Map(props) {
                     .data(filteredLocations)
                     .enter()
                         .append("circle")
+                        .attr('class', 'circle')
                         .attr("r", 0)
                         .style("stroke-width", 0)
-                        .style("fill", defaultCircleColor)
                         .attr("d", d => {
                             let containerFeature = statesGeoJSON.features.filter(feature => d3.geoContains(feature, [locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]))[0];
                             d["containerFeature"] = containerFeature;
                             return d;
                         })
                         .on("click", (event,d) => handleClickLocation(event, d))
-                        .on("mouseover", (event,d) => {
-                            d3.select(event.target).style("fill", highlightedCircleColor);
-                        })
-                        .on("mouseout", (event, d) => {
-                            if (svgRef.current["activeLocation"] !== d.Location) {
-                                d3.select(event.target).style("fill", defaultCircleColor);
-                            }
+                        .on("mouseover", () => tooltip.style('opacity', 1))
+                        .on("mouseout", () => tooltip.style("opacity", 0))
+                        .on("mousemove", (event,d) => {
+                            tooltip
+                                .html(d.Location + "</br>" + numberWithCommas(d.NumberOfSpeakers))
+                                .style("left", (event.x + 20) + "px")
+                                .style("top", (event.y) + "px")
                         })
                         .attr("transform", function(d) {
                             return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
@@ -332,9 +355,9 @@ export default function Map(props) {
             
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function reset() {
-            // d3.selectAll('circle').style("fill", defaultCircleColor);
-            // svgRef.current["zoomedLocation"] = "";
-            // svgRef.current["activeLocation"] = "";
+            d3.selectAll('circle').style("fill", defaultCircleColor);
+            svgRef.current["zoomedLocation"] = "";
+            svgRef.current["activeLocation"] = "";
             svg.transition()
                 .duration(zoomTransitionSpeed)
                 .call( zoom.transform, d3.zoomIdentity ); 
