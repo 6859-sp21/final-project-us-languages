@@ -46,7 +46,9 @@ function App() {
   const [open, setOpen] = useState(false);
 
   const handleLocationClick = (data) => {
-    setSelectedLocation(data.Location);
+    const loc = data.Location || stateIDs[data.id];
+    console.log('selected loc', loc);
+    setSelectedLocation(loc);
     handleDrawerOpen()
   }
 
@@ -108,6 +110,7 @@ function App() {
   function handleMapOptionChange(newMapOption) {
     setMapOption(newMapOption);
     setSelectedLanguage({'Language': ""});
+    handleDrawerClose();
   }
 
   // get the max size of the user's window
@@ -135,7 +138,7 @@ function App() {
                 languagesMetroData={languagesMetroData}
                 allMetroLanguages={Object.keys(allMetroLanguages)}
                 languagesStateData={languagesStateData}
-                allStateLanguages={allStateLanguages}
+                allStateLanguages={Object.keys(allStateLanguages)}
                 sortedLocLanguages={sortedLocLanguages}
                 audioMetadata={audioMetadata}
                 selectedLanguage={selectedLanguage.Language}

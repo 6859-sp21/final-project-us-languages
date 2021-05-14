@@ -94,8 +94,15 @@ export default function LeftDrawer(props) {
   const histogramTransitionSpeed = 500;
 
   function stringifyNumber(index) {
-    const n = index + 1
-    if (n <= 3) return `${n}${abbrev[index]}`
+    const n = index + 1;
+    const idx = Math.min(index, 3);
+    if (n >= 11) {
+      const stringIdx = index.toString()
+      const onesDigit = stringIdx[stringIdx.length-1];
+      if (parseInt(onesDigit) <= 3) return `${n}${abbrev[parseInt(onesDigit)]}`
+      else return `${n}${abbrev[3]}`
+    }
+    if (n <= 3) return `${n}${abbrev[idx]}`
     else return `${n}${abbrev[3]}`
   }
 
@@ -111,37 +118,59 @@ export default function LeftDrawer(props) {
         return parseInt(b["NumberOfSpeakers"]) - parseInt(a["NumberOfSpeakers"]);
     });
 
-    if (filteredLocations.length) {
-      // showHistogram(filteredLocations[0]);
+    if (filteredLocations.length !== 0) {
+      const locData = filteredLocations[0];
+
+      const allLanguagesSet = new Set(allLanguages);
+      const selectedLocLangData = languageData.filter(entry => entry.Location === locData.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allLanguagesSet.has(entry.Language));
+      const sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
+      const selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === locData.Language);
+      const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
+      const graphedLanguages = dataToGraph.map(entry => entry.Language);
+
+      setSortedLocLangData(sortedLocLangData);
+      setSelectedLangIndex(selectedLangIndex);
+      return {dataToGraph, graphedLanguages, filteredLocations};
     }
-    const d = filteredLocations[0];
 
-    const allLanguagesSet = new Set(allLanguages);
-    const selectedLocLangData = languageData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allLanguagesSet.has(entry.Language));
-    const sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
-    const selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
-    const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
-    const graphedLanguages = dataToGraph.map(entry => entry.Language);
+  }
 
-    setSortedLocLangData(sortedLocLangData);
-    setSelectedLangIndex(selectedLangIndex);
-    return {dataToGraph, graphedLanguages};
+  function validateData(languageData, allLanguages, selectedLocation) {
+    return languageData.length !== 0 && selectedLocation !== '' && allLanguages.length !== 0;
   }
 
   useEffect(() => {
     // console.log('in use ', Object.keys(locationsData).length !== 0 && languagesMetroData.length !== 0 && selectedLocation !== '');
 
-    if (mapOption === 'Metro') {
+      if (mapOption === 'Metro') {
+        // ensure a location is selected and metro languages available 
+        if (validateData(languagesMetroData, allMetroLanguages, selectedLocation)){
+          const sortedData = sortLanguages(languagesMetroData, allMetroLanguages);
+          if (sortedData) {
+            const {dataToGraph, graphedLanguages, filteredLocations} = sortedData;
+            if (filteredLocations.length !== 0) {
+              showHistogram(dataToGraph, graphedLanguages, filteredLocations[0])
+            }
+          }
+        }
+      } else if (mapOption === 'States') {
+        if (validateData(languagesStateData, allStateLanguages, selectedLocation)) {
+          const sortedData = sortLanguages(languagesStateData, allStateLanguages);
+          if (sortedData) {
+            const {dataToGraph, graphedLanguages, filteredLocations} = sortedData;
+            if (filteredLocations.length !== 0) {
+              showHistogram(dataToGraph, graphedLanguages, filteredLocations[0])
+            }
+          }
+        }
 
-    } else if (mapOption === 'States') {
-
-    } else if (mapOption === 'Counties') {
-
-    }
-    if (languagesMetroData.length !== 0 && selectedLocation !== '' && mapOption === 'Metro') {
-
+      } else if (mapOption === 'Counties') {
+        if (validateData(languagesStateData, allMetroLanguages, selectedLocation)) {
+          
+        }
+      }
       
-      function showHistogram(d) {
+      function showHistogram(dataToGraph, graphedLanguages, d) {
         d3.select("#drawer-histogram").selectAll("svg").remove();
         d3.select(wrapperRef.current)
           .append("div")
@@ -155,17 +184,6 @@ export default function LeftDrawer(props) {
           .attr('width', width)
           .attr('height', height);
 
-        const allMetroLanguagesSet = new Set(allMetroLanguages);
-        
-        const selectedLocLangData = languagesMetroData.filter(entry => entry.Location === d.Location && !isNaN(parseInt(entry.NumberOfSpeakers)) && allMetroLanguagesSet.has(entry.Language));
-        const sortedLocLangData = selectedLocLangData.sort((a,b) => parseInt(b['NumberOfSpeakers']) - parseInt(a['NumberOfSpeakers']));
-        const selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === d.Language);
-        const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
-        const graphedLanguages = dataToGraph.map(entry => entry.Language);
-
-
-        console.log('sortedloclang data', sortedLocLangData);
-        
         const colorScale = language => language === d.Language ? "#2b5876" : "#ccc";
   
         const xScale = d3.scaleLinear()
@@ -238,11 +256,8 @@ export default function LeftDrawer(props) {
             .style("opacity", 1);
   
         document.getElementById("drawer-histogram").appendChild(svg.node());
-      }
-      // if (filteredLocations.length) {
-      //   showHistogram(filteredLocations[0]);
-      // }
     }
+
   }, [selectedLocation, selectedLanguage])
 
   useEffect(() => {
@@ -284,7 +299,7 @@ export default function LeftDrawer(props) {
         </div>
         <Divider />
         <div className={classes.container} id="description">
-            {sortedLocLangData.length !== 0 && mapOption === 'Metro' ?
+            {sortedLocLangData.length !== 0 && (mapOption === 'Metro' || mapOption === 'States') ?
             (<p>
               <b>{sortedLocLangData[selectedLangIndex].Language}</b> is the <b>{stringifyNumber(selectedLangIndex)}</b> most spoken language in {metroArea}. There 
               are {numberWithCommas(sortedLocLangData[selectedLangIndex].NumberOfSpeakers)} speakers in the area.            

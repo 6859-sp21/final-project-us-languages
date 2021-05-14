@@ -156,7 +156,7 @@ export default function Map(props) {
         const landGeoJSON = topojson.feature(bordersData, bordersData.objects.land);
         const projection = d3.geoAlbersUsa().fitSize([width, height], statesGeoJSON);
         const path = d3.geoPath().projection(projection);
-
+        
         const zoom = d3.zoom()
             .scaleExtent([1, 8])
             .on("zoom", event => zoomed(event));
@@ -200,7 +200,7 @@ export default function Map(props) {
                     .attr("d", path)
                     .attr("fill", defaultStateColor)
                     .attr("class", "feature")
-                    .on("click", (event, d) => zoomClickFeature(d));
+                    .on("click", (event, d) => handleLocationClick(d));
             } else {
                 g.selectAll("path")
                     .data([landGeoJSON])
