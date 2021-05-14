@@ -4,12 +4,12 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import axios from 'axios';
 
 import Map from './components/Map.js';
-import Navbar from './components/Navbar';
 import LanguageSelect from './components/LanguageSelect';
 import LeftDrawer from './components/LeftDrawer';
 import LandingOverlay from './components/LandingOverlay';
 import Globe from './components/Globe';
 import MapSelect from './components/MapSelect';
+import QuestionsHelper from './components/QuestionsHelper';
 
 const theme = createMuiTheme({
   palette: {
@@ -179,6 +179,7 @@ function App() {
                         originsData={originsData}
                         countryCodes={countryCodes}
                         data={countriesData}/>
+                      <QuestionsHelper></QuestionsHelper>
                     </div>
                   </div>
                 )

@@ -3,6 +3,7 @@ import * as d3 from "d3";
 import tip from "d3-tip";
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
+import { Box } from '@material-ui/core';
 
 const drawerWidth = 600;
 
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
       marginRight: drawerWidth,
     },
     container: {
-        maxWidth: '16vw',
+        maxWidth: '15vw',
         // height: '100vh',
     }
   }));
@@ -264,9 +265,11 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
             {
                 selectedLanguage.Language && Object.keys(originInfo).length ? 
                 <div>
-                    {selectedLanguage.Language} is spoken in {countryNames}.
-                    <p>Genus: {originInfo.genus}</p>
-                    <p>Family: {originInfo.family}</p>
+                    <p style={{ fontSize: 20, margin: 1 }}>{selectedLanguage.Language} is spoken in {countryNames}.</p>
+                    <Box display="flex" justifyContent="flex-start" flexWrap="wrap" alignItems="flex-start">
+                        <p style={{ width: '100%',  margin: 0}}>Genus: {originInfo.genus}</p>
+                        <p style={{ width: '100%',  margin: 0 }}>Family: {originInfo.family}</p>
+                    </Box>
                 </div> 
                 
                 : selectedLanguage.Language && !Object.keys(originInfo).length ? <div>Data for this language is not available</div>

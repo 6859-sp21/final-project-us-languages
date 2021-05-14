@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import * as d3 from "d3";
+import { Box } from '@material-ui/core';
 
 const drawerWidth = 350;
 
@@ -32,9 +33,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-start',
   },
   title: {
-    fontWeight: 400,
+    fontWeight: 600,
     marginLeft: 10,
-    fontSize: 19,
+    fontSize: 23,
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
@@ -49,6 +50,17 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1rem',
     textAlign: 'left', 
     // padding: '0 10px',
+  },
+  subHeading: {
+    marginBottom: 0,
+  },
+  anchor: {
+    textDecoration: 'none',
+    color: '#2b5876',
+    textAlign: 'right',
+  },
+  heading: {
+    marginTop: 10,
   }
 }));
 
@@ -210,8 +222,10 @@ export default function LeftDrawer(props) {
             .style('fill', d => colorScale(d.Language))
             .style('padding-bottom', 5)
             .style('stroke', '#fff');
+
+        const container = g.append('div').attr('class', 'container');
         
-        g.append('text')
+        container.append('text')
             .attr('x', 0)
             .attr('dx', 4)
             .attr('dy', '1.25em')
@@ -315,10 +329,14 @@ export default function LeftDrawer(props) {
           {audioClipAvailible ? 
             (
               <div>
-                <p>Audio clip translation: {audioClipDetails.Translation}</p> 
-                <p>Audio clip transliteration: {audioClipDetails.Script}</p> 
+                <p className={classes.subHeading}>Audio clip translation: </p> 
+                <h3 className={classes.heading}>{audioClipDetails.Translation}</h3>
+                <p className={classes.subHeading}>Audio clip transliteration:</p> 
+                <h3 className={classes.heading}>{audioClipDetails.Script}</h3>
                 <audio src={audioClipUrl} type="audio/mp3" controls="controls"></audio>
-                <a target="_blank" href={audioClipDetails.Source}>Learn more</a> 
+                <Box style={{textAlign: 'right', padding: 10}}>
+                  <a target="_blank" className={classes.anchor} href={audioClipDetails.Source}>Learn more</a> 
+                </Box>
               </div>
             )
           : <p>No audioclip availible</p>
