@@ -195,18 +195,28 @@ body {
   fill: #4e4376;
 }
 
-circle {
+.circle {
   cursor: pointer;
   stroke: #fff;
   stroke-opacity: .5;
   opacity: .75;
+  fill: #2b5876;
 }
 
-#bar-tooltip {
+.circle:hover {
+  fill: #4e4376;
+}
+
+.circle.active {
+  fill: #4e4376;
+}
+
+#metro-tooltip {
   position: absolute;
   pointer-events: none;
-  background: rgba(43,43,43, 0.8);
-  border-radius: 10px;
+  background: white;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .block {
