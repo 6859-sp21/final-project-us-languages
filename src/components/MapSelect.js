@@ -6,8 +6,10 @@ export default function MapSelect({setMapOptionParent}) {
   const [mapOption, setMapOption] = React.useState('Metro');
 
   const handleSelect = (event, newOption) => {
-    setMapOption(newOption);
-    setMapOptionParent(newOption);
+    if (newOption) {
+      setMapOption(newOption);
+      setMapOptionParent(newOption);
+    }
   };
 
   return (
