@@ -39,6 +39,7 @@ export default function Map(props) {
     const defaultStateColor = "#ccc";
     const defaultCircleColor = "#2b5876";
     const highlightedCircleColor = "#4e4376";
+    let active = d3.select(null);
 
     function genRadius(val) {
         val = parseInt(val);
@@ -120,8 +121,6 @@ export default function Map(props) {
     }
 
     const countyColor = d3.scaleThreshold()
-        // .domain([1, 100, 1000, 1500, 2000, 2500, 3000, 4000, 5000, 10000])
-        // .range(d3.schemeBlues[9]);
         .domain([1, 100, 1000, 10000, 10000, 100000, 1000000])
         .range(d3.schemeBlues[7]);
 
@@ -147,16 +146,20 @@ export default function Map(props) {
                 return stateColor(stateSelectedLangData['NumberOfSpeakers']);
             }
         }
-        return defaultCountyColor
+        return defaultStateColor;
     }
 
     useEffect( () => {
-        const svg = d3.select(svgRef.current).attr('zoomedBounds', "");
+        const svg = d3.select(svgRef.current);
         const statesGeoJSON = topojson.feature(bordersData, bordersData.objects.states);
         const countiesGeoJSON = topojson.feature(bordersData, bordersData.objects.counties);
         const landGeoJSON = topojson.feature(bordersData, bordersData.objects.land);
         const projection = d3.geoAlbersUsa().fitSize([width, height], statesGeoJSON);
         const path = d3.geoPath().projection(projection);
+
+        const zoom = d3.zoom()
+            .scaleExtent([1, 8])
+            .on("zoom", event => zoomed(event));
 
         if (svg.selectAll("rect").size() === 0) { // Check if the background is already drawn
             svg.append("rect")
@@ -166,14 +169,21 @@ export default function Map(props) {
                 .on("click", reset);
             // createLegend();
         }
-
+        
+        // If mapOption changed, clear previous map & redraw rect
         if (svgRef.current["mapOption"] !== mapOption) {
             svg.selectAll("g").remove();
+            svg.selectAll("rect").remove();
             svgRef.current["mapOption"] = mapOption;
+            svg.append("rect")
+                .attr("class", "background")
+                .attr("width", width)
+                .attr("height", height)
+                .on("click", reset);
         }
 
-        let g = d3.select(null);
-        if (svg.selectAll("g").size() === 0) { // Check if the states are already drawn
+        let g = svg.select("g");
+        if (g.node() === null) { // Check if the states are already drawn
             g = svg.append("g");
             if (mapOption === "Counties") {
                 g.selectAll("path")
@@ -182,7 +192,7 @@ export default function Map(props) {
                     .attr("d", path)
                     .attr("fill", d => fillCounty(d))
                     .attr("class", "feature")
-                    .on("click", zoomClick);
+                    .on("click", (event, d) => zoomClickFeature(d));
             } else if (mapOption === "States") {
                 g.selectAll("path")
                     .data(statesGeoJSON.features)
@@ -190,7 +200,7 @@ export default function Map(props) {
                     .attr("d", path)
                     .attr("fill", defaultStateColor)
                     .attr("class", "feature")
-                    .on("click", zoomClick);
+                    .on("click", (event, d) => zoomClickFeature(d));
             } else {
                 g.selectAll("path")
                     .data([landGeoJSON])
@@ -200,9 +210,16 @@ export default function Map(props) {
                     .attr("class", "land-feature")
                     .on("click", reset);
             }
-        } else {
-            g = svg.select("g");
         }
+
+        svg.call(zoom)
+
+        // Remove any previous tooltip and add a new one
+        d3.selectAll("#bar-tooltip").remove();
+        d3.select(wrapperRef.current)
+            .append("div")
+            .attr("id", "bar-tooltip")
+            .style("opacity", 0);
 
         if (mapOption === "Counties") {
             g.selectAll("path")
@@ -215,13 +232,6 @@ export default function Map(props) {
                 .duration(countyTransitionSpeed)
                 .attr("fill", d => fillState(d));
         } else {
-            // Remove any previous tooltip and add a new one
-            d3.selectAll("#bar-tooltip").remove();
-            d3.select(wrapperRef.current)
-                .append("div")
-                .attr("id", "bar-tooltip")
-                .style("opacity", 0);
-
             const filteredLocations = languagesMetroData.filter(entry => {
                 return entry.Language === selectedLanguage && locationsData[entry.Location];
             }).sort((a,b) => {
@@ -232,8 +242,9 @@ export default function Map(props) {
             let prevCircles = g.selectAll("circle");
             if (prevCircles.size() === 0) {
                 addNewCircles();
-            } else {
-                prevCircles.transition()
+            } else if (svgRef.current["selectedLanguage"] !== selectedLanguage) {
+                prevCircles
+                    .transition()
                     .duration(circleTransitionSpeed)
                     .attr("r", 0)
                     .style("stroke-width", 0)
@@ -242,6 +253,7 @@ export default function Map(props) {
             }
 
             function addNewCircles() {
+                svgRef.current["selectedLanguage"] = selectedLanguage;
                 const circles = g
                     .selectAll("circle")
                     .data(filteredLocations)
@@ -281,44 +293,60 @@ export default function Map(props) {
             d3.select(event.target).style("fill", highlightedCircleColor);
             handleLocationClick(data);
             if (data['containerFeature'] !== undefined) {
-                zoomClick(event, data)
+                zoomClickCircle(event, data)
             }
         }
 
         // Adapted from https://bl.ocks.org/mbostock/4699541
-        function zoomClick(event, d) {
-            let bounds = path.bounds(d.containerFeature);
-            // const boundingClientRect = event.target.getBoundingClientRect();
-            // const customBounds = [[boundingClientRect.left, boundingClientRect.top],[boundingClientRect.right, boundingClientRect.bottom]];
+        function zoomClickCircle(event, d) {
             if (svgRef.current["zoomedLocation"] === d.Location) return reset();
             svgRef.current["zoomedLocation"] = d.Location;
-            let dx = bounds[1][0] - bounds[0][0],
+            let bounds = path.bounds(d.containerFeature),
+                dx = bounds[1][0] - bounds[0][0],
                 dy = bounds[1][1] - bounds[0][1],
                 x = (bounds[0][0] + bounds[1][0]) / 2,
                 y = (bounds[0][1] + bounds[1][1]) / 2,
                 scale = .9 / Math.max(dx / width, dy / height),
                 translate = [width / 2 - scale * x, height / 2 - scale * y];
 
-            g.transition()
+            svg.transition()
                 .duration(zoomTransitionSpeed)
-                .style("stroke-width", 1.5 / scale + "px")
-                .attr("transform", "translate(" + translate + ")scale(" + scale + ")");            
+                .call( zoom.transform, d3.zoomIdentity.translate(translate[0],translate[1]).scale(scale) );       
         }
+
+        function zoomClickFeature(d) {
+            if (active.node() === d) return reset();
+            active = d3.select(d);
+            let bounds = path.bounds(d),
+                dx = bounds[1][0] - bounds[0][0],
+                dy = bounds[1][1] - bounds[0][1],
+                x = (bounds[0][0] + bounds[1][0]) / 2,
+                y = (bounds[0][1] + bounds[1][1]) / 2,
+                scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height))),
+                translate = [width / 2 - scale * x, height / 2 - scale * y];
+          
+            svg.transition()
+                .duration(zoomTransitionSpeed)
+                .call( zoom.transform, d3.zoomIdentity.translate(translate[0],translate[1]).scale(scale) );
+          }
             
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function reset() {
-            d3.selectAll('circle').style("fill", defaultCircleColor)
-            svgRef.current["zoomedLocation"] = "";
-            svgRef.current["activeLocation"] = "";
-            g.transition()
+            // d3.selectAll('circle').style("fill", defaultCircleColor);
+            // svgRef.current["zoomedLocation"] = "";
+            // svgRef.current["activeLocation"] = "";
+            svg.transition()
                 .duration(zoomTransitionSpeed)
-                .style("stroke-width", "1.5px")
-                .attr("transform", "");
+                .call( zoom.transform, d3.zoomIdentity ); 
         }
-    }, [bordersData, locationsData, languagesMetroData, width, height, selectedLanguage, mapOption]);
+
+        function zoomed(event) {
+            g.attr("transform", event.transform);
+        }
+    });
 
     return (
-        <div id="map" ref={wrapperRef} style={{width: width}} >
+        <div id="map" ref={wrapperRef} style={{width: width, zIndex: 0}}>
             <svg
                 width={width} 
                 height={height} 
