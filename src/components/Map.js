@@ -39,7 +39,6 @@ export default function Map(props) {
     const defaultStateColor = "#ccc";
     const defaultCircleColor = "#2b5876";
     const highlightedCircleColor = "#4e4376";
-    let active = d3.select(null);
 
     function genRadius(val) {
         val = parseInt(val);
@@ -201,7 +200,6 @@ export default function Map(props) {
                     .attr("d", path)
                     .attr("fill", d => fillCounty(d))
                     .attr("class", "feature")
-                    .on("click", (event, d) => zoomClickFeature(d))
                     .on("mouseover", () => tooltip.style('opacity', 1))
                     .on("mouseout", () => tooltip.style("opacity", 0))
             } else if (mapOption === "States") {
@@ -285,11 +283,6 @@ export default function Map(props) {
                         .attr('class', 'circle')
                         .attr("r", 0)
                         .style("stroke-width", 0)
-                        .attr("d", d => {
-                            let containerFeature = statesGeoJSON.features.filter(feature => d3.geoContains(feature, [locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]))[0];
-                            d["containerFeature"] = containerFeature;
-                            return d;
-                        })
                         .on("click", (event,d) => handleClickLocation(event, d))
                         .on("mouseover", () => tooltip.style('opacity', 1))
                         .on("mouseout", () => tooltip.style("opacity", 0))
@@ -311,53 +304,14 @@ export default function Map(props) {
         }
 
         const handleClickLocation = (event, data) => {
-            svgRef.current["activeLocation"] = data.Location;
             d3.selectAll('circle').style("fill", defaultCircleColor);
             d3.select(event.target).style("fill", highlightedCircleColor);
             handleLocationClick(data);
-            if (data['containerFeature'] !== undefined) {
-                zoomClickCircle(event, data)
-            }
         }
-
-        // Adapted from https://bl.ocks.org/mbostock/4699541
-        function zoomClickCircle(event, d) {
-            if (svgRef.current["zoomedLocation"] === d.Location) return reset();
-            svgRef.current["zoomedLocation"] = d.Location;
-            let bounds = path.bounds(d.containerFeature),
-                dx = bounds[1][0] - bounds[0][0],
-                dy = bounds[1][1] - bounds[0][1],
-                x = (bounds[0][0] + bounds[1][0]) / 2,
-                y = (bounds[0][1] + bounds[1][1]) / 2,
-                scale = .9 / Math.max(dx / width, dy / height),
-                translate = [width / 2 - scale * x, height / 2 - scale * y];
-
-            svg.transition()
-                .duration(zoomTransitionSpeed)
-                .call( zoom.transform, d3.zoomIdentity.translate(translate[0],translate[1]).scale(scale) );       
-        }
-
-        function zoomClickFeature(d) {
-            if (active.node() === d) return reset();
-            active = d3.select(d);
-            let bounds = path.bounds(d),
-                dx = bounds[1][0] - bounds[0][0],
-                dy = bounds[1][1] - bounds[0][1],
-                x = (bounds[0][0] + bounds[1][0]) / 2,
-                y = (bounds[0][1] + bounds[1][1]) / 2,
-                scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height))),
-                translate = [width / 2 - scale * x, height / 2 - scale * y];
-          
-            svg.transition()
-                .duration(zoomTransitionSpeed)
-                .call( zoom.transform, d3.zoomIdentity.translate(translate[0],translate[1]).scale(scale) );
-          }
             
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function reset() {
             d3.selectAll('circle').style("fill", defaultCircleColor);
-            svgRef.current["zoomedLocation"] = "";
-            svgRef.current["activeLocation"] = "";
             svg.transition()
                 .duration(zoomTransitionSpeed)
                 .call( zoom.transform, d3.zoomIdentity ); 
@@ -369,7 +323,7 @@ export default function Map(props) {
     });
 
     return (
-        <div id="map" ref={wrapperRef} style={{width: width, zIndex: 0}}>
+        <div id="map" ref={wrapperRef} style={{width: width}}>
             <svg
                 width={width} 
                 height={height} 
