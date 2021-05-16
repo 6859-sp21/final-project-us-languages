@@ -163,6 +163,8 @@ export default function LeftDrawer(props) {
               showHistogram(dataToGraph, graphedLanguages, filteredLocations[0])
             }
           }
+        } else {
+
         }
       } else if (mapOption === 'States') {
         if (validateData(languagesStateData, allStateLanguages, selectedLocation)) {
@@ -273,7 +275,7 @@ export default function LeftDrawer(props) {
         document.getElementById("drawer-histogram").appendChild(svg.node());
     }
 
-  }, [selectedLocation, selectedLanguage])
+  }, [selectedLocation, selectedLanguage, mapOption])
 
   useEffect(() => {
     const language = selectedLanguage ? selectedLanguage.toLowerCase() : "";
@@ -323,7 +325,7 @@ export default function LeftDrawer(props) {
         </div>
         <Divider />
         <div className={classes.container} id="description">
-            {sortedLocLangData.length !== 0 && (mapOption === 'Metro' || mapOption === 'States') ?
+            {selectedLanguage !== ''&& sortedLocLangData.length !== 0 && (mapOption === 'Metro' || mapOption === 'States') ?
             (<p> 
               <b>{sortedLocLangData[selectedLangIndex].Language}</b> is the <b>{stringifyNumber(selectedLangIndex)}</b> most spoken language in {selectedLocation.split(',')[0]}. There 
               are {numberWithCommas(sortedLocLangData[selectedLangIndex].NumberOfSpeakers)} speakers in the area.            

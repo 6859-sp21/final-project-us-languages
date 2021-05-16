@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         alignContent: 'center',
         display: 'flex',
         flexFlow: 'wrap',
-        paddingTop: 200,
+        paddingTop: '20vh',
     },
     heading: {
         width: '100%',
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         fontFamily: 'Montserrat',
         fontWeight: 700,
-        fontSize: 30,
+        fontSize: '4vh',
     },
     subHeading: {
         width: '100%',
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         fontFamily: 'Montserrat',
         fontWeight: 300,
-        fontSize: 90,
+        fontSize: '14vh',
         marginBottom: 40,
     },
     bodyContainer: {
@@ -49,12 +49,12 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         fontFamily: 'Roboto',
         fontWeight: 300,
-        fontSize: 16,
+        fontSize: '2vh',
         display: 'flex',
-        marginBottom: 70,
+        marginBottom: '5vh',
     },
     bodyText: {
-        maxWidth: 600,
+        maxWidth: '50vw',
     },
     hidden: {
         display: 'none',
