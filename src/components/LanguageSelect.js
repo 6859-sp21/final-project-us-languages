@@ -31,7 +31,7 @@ export default function LanguageSelect({mapOption, allMetroLanguages, allStateLa
   const languages = switchLanguages(mapOption);
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", width: '100%'}}>
+    <div style={{ display: "flex", justifyContent: "flex-start", width: '100%', flexWrap: 'wrap'}}>
       <Autocomplete
         key={mapOption}
         id="language-select"
@@ -60,6 +60,7 @@ export default function LanguageSelect({mapOption, allMetroLanguages, allStateLa
           />
         )}
       />
+      <p>Sorted by number of speakers (Descending)</p>
     </div>
   );
 }

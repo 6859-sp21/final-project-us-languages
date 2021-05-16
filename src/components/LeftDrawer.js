@@ -308,12 +308,12 @@ export default function LeftDrawer(props) {
           <div className={classes.titleContainer}>
             {
               mapOption === 'Metro' || mapOption === 'States' ? 
-              <Typography className={classes.title} title={selectedLocation.split(',')[0]}>{selectedLocation.split(',')[0]}</Typography>
+              <Typography variant='h2' className={classes.title} title={selectedLocation.split(',')[0]}>{selectedLocation.split(',')[0]}</Typography>
               : null
             }
             {
               mapOption === 'Counties' && countiesData[selectedLocation] ?
-              <Typography className={classes.title} title={countiesData[selectedLocation].County}>{countiesData[selectedLocation].County}</Typography>
+              <Typography variant='h2' className={classes.title} title={countiesData[selectedLocation].County}>{countiesData[selectedLocation].County}</Typography>
               : null
             }
           </div>
@@ -331,7 +331,7 @@ export default function LeftDrawer(props) {
             : null
             }
             {
-              countiesData[selectedLocation] && mapOption === 'Counties' ? 
+              countiesData[selectedLocation] && mapOption === 'Counties' && selectedLanguage !== ''? 
               (
                 <div>
                   <p>
@@ -354,13 +354,16 @@ export default function LeftDrawer(props) {
         </div>
         <br />
         <div className={classes.container} >
-          {(mapOption === 'Metro' || mapOption === 'States') ?
+          {selectedLanguage !== "" && (mapOption === 'Metro' || mapOption === 'States') ?
             (
               <div>
                 <div>Nearest neighbors of this language by number of speakers</div>
                 <div ref={wrapperRef}></div>
               </div>
             ) : null
+          }
+          {
+            selectedLanguage === "" ? <p>Select a language to get started</p> : null
           }
         </div>
         <div className={classes.container}>

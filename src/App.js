@@ -47,9 +47,7 @@ function App() {
 
   const handleLocationClick = (data) => {
     const loc = data.Location || stateIDs[data.id] || data.id.toString();
-    console.log('loc: ', data);
-    if (typeof(loc) !== 'Object') {
-      console.log('loc: ', loc);
+    if (loc) {
       setSelectedLocation(loc);
       handleDrawerOpen()
     }
@@ -97,13 +95,13 @@ function App() {
     }, [])
     
   function handleLanguageChange(newLanguage) {
-    if (newLanguage in allMetroLanguages) {
+    if (newLanguage in allMetroLanguages && mapOption === 'Metro') {
       console.log(newLanguage, allMetroLanguages[newLanguage]);
       setSelectedLanguage(allMetroLanguages[newLanguage]);
-    } else if (newLanguage in allStateLanguages) {
+    } else if (newLanguage in allStateLanguages  && mapOption === 'States') {
       console.log(newLanguage, allStateLanguages[newLanguage]);
       setSelectedLanguage(allStateLanguages[newLanguage]);
-    } else {
+    } else if (mapOption === 'Counties') {
       console.log(newLanguage, {'Language': newLanguage});
       setSelectedLanguage({'Language': newLanguage.replace(/\s/g, '')});
     }

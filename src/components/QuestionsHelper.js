@@ -72,7 +72,7 @@ export default function QuestionsHelper() {
                     <p className={classes.bodyText}>
                         This project is a visualization of the many languages spoken in the United States, divided by metro areas, states, and counties.
                         You can see how many speakers of that language there are and where they are located in the U.S. 
-                        as well as where the main population of those speakers are in the world.
+                        as well as where the main population of those speakers are in the world. Click and drag to pan across the map; scroll to zoom.
                         Select a language and location to start exploring the diversity of languages in the United States.  
                     </p>
                     <h3 style={{ marginBottom: 0 }} id="transition-modal-subtitle">Sources used</h3>

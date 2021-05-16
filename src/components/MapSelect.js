@@ -13,7 +13,7 @@ export default function MapSelect({setMapOptionParent}) {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", width: '100%', paddingRight: '10px', paddingTop:'10px'}}>
+    <div style={{ display: "flex", justifyContent: "flex-end", width: '100%', paddingRight: '10px', paddingTop:'10px', maxHeight: '55px'}}>
       <ToggleButtonGroup
         value={mapOption}
         exclusive

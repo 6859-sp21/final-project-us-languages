@@ -59,15 +59,16 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
             const originsCopy = Object.assign({}, originsData[iso]);
             originsCopy['country_codes'] = originsCopy['country_codes'].split(' ').map(code => countryCodes[code] || '');
             setOriginCountries(new Set(originsCopy['country_codes'].map(data => data.ISO2)));
+            console.log('setOriginCountries: ', originCountries);
             const countries = originsCopy['country_codes'].map(data => data.COUNTRY);
             let stringBuilder = '';
             if (countries.length === 1) {
                 stringBuilder = countries[0];
             } else if (countries.length === 2) {
                 stringBuilder = `${countries[0]} and ${countries[1]}`;
-            } else if (countries.length > 2 && countries.length < 5) {
-                stringBuilder = `${countries.slice(0, 3).join(', ')} and ${countries[countries.length-1]}`;
-            } else if (countries.length >= 5) {
+            } else if (countries.length > 2 && countries.length < 4) {
+                stringBuilder = `${countries.slice(0, 2).join(', ')} and ${countries[countries.length-1]}`;
+            } else if (countries.length >= 4) {
                 stringBuilder = `${countries.slice(0, 3).join(', ')} and ${countries.length - 3} other countries`;
             }
             setCountryNames(stringBuilder);
