@@ -190,10 +190,16 @@ export default function LeftDrawer(props) {
           .append("div")
           .attr("id", "drawer-histogram")
           .style("opacity", 0);
-        console.log('wrapper ref: ', d3.select(wrapperRef.current));
+        
+        const longestLanguageLength = Math.max(...dataToGraph.map(obj => obj.Language.length));  
+        console.log('data tograph: ', dataToGraph.map(obj => obj.Language.length));
+        let adjustedMargin = 0;
+        if (longestLanguageLength > 15) {
+          adjustedMargin += longestLanguageLength * 3.5;
+        }
   
-        const height = 200, width = 300;
-        const margin = ({top: 30, right: 70, bottom: 20, left: 80});
+        const height = 200, width = 300 + adjustedMargin;
+        const margin = ({top: 30, right: 70, bottom: 20, left: 80 + adjustedMargin});
 
         const svg = d3.create('svg')
           .attr('width', width)
@@ -270,6 +276,7 @@ export default function LeftDrawer(props) {
         d3.select("#drawer-histogram")
             .style("left", (15) + "px")
             .style("top", (255) + "px")
+            .style("overflow-x", 'scroll')
             .style("opacity", 1);
   
         document.getElementById("drawer-histogram").appendChild(svg.node());
