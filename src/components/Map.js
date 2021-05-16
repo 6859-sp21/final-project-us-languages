@@ -201,7 +201,7 @@ export default function Map(props) {
                     .attr("d", path)
                     .attr("fill", d => fillCounty(d))
                     .attr("class", "feature")
-                    .on("click", (event, d) => zoomClickFeature(d))
+                    .on("click", (event, d) => handleLocationClick(d))
                     .on("mouseover", () => tooltip.style('opacity', 1))
                     .on("mouseout", () => tooltip.style("opacity", 0))
             } else if (mapOption === "States") {

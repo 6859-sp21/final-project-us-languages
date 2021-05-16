@@ -79,8 +79,8 @@ export default function LeftDrawer(props) {
     audioMetadata, 
     selectedLanguage, 
     selectedLocation, 
-    sortedLocLanguages, 
     handleDrawerClose,
+    countiesData,
     languagesMetroData,
     allMetroLanguages,
     languagesStateData,
@@ -101,7 +101,6 @@ export default function LeftDrawer(props) {
   const theme = useTheme();
   // const {sortedLocLangData, selectedLangIndex} = sortedLocLanguages;
   // let sortedLocLangData = [];
-  const metroArea = selectedLocation.split(',')[0];
   const abbrev = ['st', 'nd', 'rd', 'th']
   const histogramTransitionSpeed = 500;
 
@@ -148,7 +147,7 @@ export default function LeftDrawer(props) {
   }
 
   function validateData(languageData, allLanguages, selectedLocation) {
-    return languageData.length !== 0 && selectedLocation !== '' && allLanguages.length !== 0;
+    return languageData.length !== 0 && allLanguages.length !== 0 && selectedLocation !== '';
   }
 
   useEffect(() => {
@@ -177,8 +176,9 @@ export default function LeftDrawer(props) {
         }
 
       } else if (mapOption === 'Counties') {
-        if (validateData(languagesStateData, allMetroLanguages, selectedLocation)) {
-          
+        const allCountyLanguages = ["Population 5 Years And Over","Speak A Language Other Than English", "Spanish", "IndoEuropean", "Asian Pacific Island", "Other"];
+        console.log(countiesData[selectedLocation], selectedLocation, selectedLanguage);
+        if (validateData(countiesData, allCountyLanguages, selectedLocation)) {
         }
       }
       
@@ -188,6 +188,7 @@ export default function LeftDrawer(props) {
           .append("div")
           .attr("id", "drawer-histogram")
           .style("opacity", 0);
+        console.log('wrapper ref: ', d3.select(wrapperRef.current));
   
         const height = 200, width = 300;
         const margin = ({top: 30, right: 70, bottom: 20, left: 80});
@@ -223,9 +224,9 @@ export default function LeftDrawer(props) {
             .style('padding-bottom', 5)
             .style('stroke', '#fff');
 
-        const container = g.append('div').attr('class', 'container');
+        // const container = g.append('div').attr('class', 'container');
         
-        container.append('text')
+        g.append('text')
             .attr('x', 0)
             .attr('dx', 4)
             .attr('dy', '1.25em')
@@ -305,7 +306,16 @@ export default function LeftDrawer(props) {
       >
         <div className={classes.drawerHeader}>
           <div className={classes.titleContainer}>
-            <Typography className={classes.title} title={selectedLocation.split(',')[0]}>{selectedLocation.split(',')[0]}</Typography>
+            {
+              mapOption === 'Metro' || mapOption === 'States' ? 
+              <Typography className={classes.title} title={selectedLocation.split(',')[0]}>{selectedLocation.split(',')[0]}</Typography>
+              : null
+            }
+            {
+              mapOption === 'Counties' && countiesData[selectedLocation] ?
+              <Typography className={classes.title} title={countiesData[selectedLocation].County}>{countiesData[selectedLocation].County}</Typography>
+              : null
+            }
           </div>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
@@ -314,16 +324,44 @@ export default function LeftDrawer(props) {
         <Divider />
         <div className={classes.container} id="description">
             {sortedLocLangData.length !== 0 && (mapOption === 'Metro' || mapOption === 'States') ?
-            (<p>
-              <b>{sortedLocLangData[selectedLangIndex].Language}</b> is the <b>{stringifyNumber(selectedLangIndex)}</b> most spoken language in {metroArea}. There 
+            (<p> 
+              <b>{sortedLocLangData[selectedLangIndex].Language}</b> is the <b>{stringifyNumber(selectedLangIndex)}</b> most spoken language in {selectedLocation.split(',')[0]}. There 
               are {numberWithCommas(sortedLocLangData[selectedLangIndex].NumberOfSpeakers)} speakers in the area.            
             </p>)
             : null
             }
+            {
+              countiesData[selectedLocation] && mapOption === 'Counties' ? 
+              (
+                <div>
+                  <p>
+                    There are {countiesData[selectedLocation][selectedLanguage]} speakers in the area.
+                  </p>
+                  <br/>
+                  {selectedLanguage === 'IndoEuropean' ? 
+                  <a className={classes.anchor} rel="noreferrer" target="_blank" href="https://www.worldhistory.org/Indo-European_Languages/">
+                    What are Indo-European languages?</a> 
+                  : null}
+                  {selectedLanguage === 'AsianPacificIsland' ? 
+                  <a className={classes.anchor} rel="noreferrer" target="_blank" href="https://www.languagescientific.com/asia-pacific-languages-translation-and-localization//">
+                    What are Asian/Pacific Islander Languages languages?</a> 
+                  : null}
+                  
+                </div>
+              )
+              : null
+            }
         </div>
+        <br />
         <div className={classes.container} >
-            <div>Nearest neighbors of this language by number of speakers</div>
-            <div ref={wrapperRef}></div>
+          {(mapOption === 'Metro' || mapOption === 'States') ?
+            (
+              <div>
+                <div>Nearest neighbors of this language by number of speakers</div>
+                <div ref={wrapperRef}></div>
+              </div>
+            ) : null
+          }
         </div>
         <div className={classes.container}>
           {audioClipAvailible ? 
@@ -335,7 +373,7 @@ export default function LeftDrawer(props) {
                 <h3 className={classes.heading}>{audioClipDetails.Script}</h3>
                 <audio src={audioClipUrl} type="audio/mp3" controls="controls"></audio>
                 <Box style={{textAlign: 'right', padding: 10}}>
-                  <a target="_blank" className={classes.anchor} href={audioClipDetails.Source}>Learn more</a> 
+                  <a rel="noreferrer" target="_blank" className={classes.anchor} href={audioClipDetails.Source}>Learn more</a> 
                 </Box>
               </div>
             )

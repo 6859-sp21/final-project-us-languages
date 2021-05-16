@@ -79,23 +79,23 @@ export default function QuestionsHelper() {
                     <Box display="flex" justifyContent="flex-start" flexWrap="wrap" alignItems="flex-start">
                         <List>
                             <ListItem>
-                                <a target="_blank" className={classes.anchor} href="https://www.kaggle.com/rtatman/world-atlas-of-language-structures">
+                                <a rel="noreferrer" target="_blank" className={classes.anchor} href="https://www.kaggle.com/rtatman/world-atlas-of-language-structures">
                                     Dryer, Matthew S. & Haspelmath, 
                                     Martin (eds.) 2013. The World Atlas of Language Structures Online. 
                                     Leipzig: Max Planck Institute for Evolutionary Anthropology. (Available online at http://wals.info)</a>
                             </ListItem>
                             <ListItem>
-                                <a target="_blank" className={classes.anchor} href="www.omniglot.com">
+                                <a rel="noreferrer" target="_blank" className={classes.anchor} href="www.omniglot.com">
                                     Ager, Simon. "Omniglot - writing systems and languages of the world".10th May 2021.
                                 </a>
                             </ListItem>
                             <ListItem>
-                                <a target="_blank" className={classes.anchor} href="https://www.census.gov/data/tables/2013/demo/2009-2013-lang-tables.html">
+                                <a rel="noreferrer" target="_blank" className={classes.anchor} href="https://www.census.gov/data/tables/2013/demo/2009-2013-lang-tables.html">
                                     Detailed Languages Spoken at Home and Ability to Speak English for the Population 5 Years and Over: 2009-2013
                                 </a>
                             </ListItem>
                             <ListItem>
-                                <a target="_blank" className={classes.anchor} href="https://www.census.gov/programs-surveys/acs/microdata/access.html">
+                                <a rel="noreferrer" target="_blank" className={classes.anchor} href="https://www.census.gov/programs-surveys/acs/microdata/access.html">
                                     ACS 1-Year Estimates-Public Use Microdata Sample 2019
                                 </a>
                             </ListItem>

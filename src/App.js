@@ -46,10 +46,13 @@ function App() {
   const [open, setOpen] = useState(false);
 
   const handleLocationClick = (data) => {
-    const loc = data.Location || stateIDs[data.id];
-    console.log('selected loc', loc);
-    setSelectedLocation(loc);
-    handleDrawerOpen()
+    const loc = data.Location || stateIDs[data.id] || data.id.toString();
+    console.log('loc: ', data);
+    if (typeof(loc) !== 'Object') {
+      console.log('loc: ', loc);
+      setSelectedLocation(loc);
+      handleDrawerOpen()
+    }
   }
 
   const handleDrawerOpen = () => {
@@ -102,7 +105,7 @@ function App() {
       setSelectedLanguage(allStateLanguages[newLanguage]);
     } else {
       console.log(newLanguage, {'Language': newLanguage});
-      setSelectedLanguage({'Language': newLanguage});
+      setSelectedLanguage({'Language': newLanguage.replace(/\s/g, '')});
     }
     handleDrawerClose();
   };
@@ -139,6 +142,7 @@ function App() {
                 allMetroLanguages={Object.keys(allMetroLanguages)}
                 languagesStateData={languagesStateData}
                 allStateLanguages={Object.keys(allStateLanguages)}
+                countiesData={countiesData}
                 sortedLocLanguages={sortedLocLanguages}
                 audioMetadata={audioMetadata}
                 selectedLanguage={selectedLanguage.Language}

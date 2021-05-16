@@ -1,16 +1,4 @@
 Language,NumberOfSpeakers,SpeakEnglishLessThanVeryWell,ISO
-Atsugewi,(D),(B),atw
-Cayuga,(D),(B),cay
-Chemehuevi,(D),(B),ute
-Karakalpak,(D),(B),kaa
-Kawaiisu,(D),(B),xaw
-Nauruan,(D),(D),nau
-Niuean,(D),(B),niu
-Serrano,(D),(B),ser
-Spokane,(D),(B),spo
-Twana,(D),(D),twa
-Upper Kuskokwim,(D),(B),kuu
-Wichita,(D),(B),wic
 Speak only English at home,231122908,(X),
 Spanish,37458470,16344440,spa
 Chinese,1867485,1054885,cmn
@@ -292,3 +280,15 @@ Minangkabau,15,(D),min
 Siuslaw,10,(D),sis
 Patwin,4,(B),wit
 Upper Chehalis,4,(D),
+Atsugewi,(D),(B),atw
+Cayuga,(D),(B),cay
+Chemehuevi,(D),(B),ute
+Karakalpak,(D),(B),kaa
+Kawaiisu,(D),(B),xaw
+Nauruan,(D),(D),nau
+Niuean,(D),(B),niu
+Serrano,(D),(B),ser
+Spokane,(D),(B),spo
+Twana,(D),(D),twa
+Upper Kuskokwim,(D),(B),kuu
+Wichita,(D),(B),wic

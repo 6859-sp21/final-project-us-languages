@@ -1,116 +1,116 @@
-Language,ISO
-Afrikaans,afr
-Akan (incl. Twi),
-Albanian,aln
-Aleut languages,
-Amharic,amh
-Apache languages,
-Arabic,arb
-Armenian,hye
-Assyrian Neo-Aramaic,aii
-Bengali,ben
-Bosnian,bos
-Bulgarian,bul
-Burmese,mya
-Cajun French,
-Cantonese,yue
-Cebuano,ceb
-Chaldean Neo-Aramaic,
-Chamorro,cha
-Cherokee,chr
-Chin languages,
-Chinese,cmn
-Chuukese,chk
-Croatian,hrv
-Czech,ces
-Dakota languages,
-Danish,dan
-Dari,prs
-Dutch,nld
-Edoid languages,
-English only household,
-Farsi,
-Filipino,
-Finnish,fin
-French,fra
-Fulah,
-Ga,
-Ganda,
-Gbe languages,
-German,deu
-Greek,ell
-Gujarati,guj
-Haitian,hat
-Hawaiian,haw
-Hebrew,heb
-Hindi,hin
-Hmong,mww
-Hungarian,hun
-Igbo,ibo
-Ilocano,ilo
-Indonesian,ind
-Irish,gle
-Italian,ita
-Iu Mien,ium
-Jamaican Creole English,jam
-Japanese,jpn
-Kabuverdianu,
-Kannada,kan
-Karen languages,ksw
-Keres,kee
-Khmer,khm
-Konkani,knn
-Korean,kor
-Kurdish,kmr
-Lao,lao
-Latvian,lav
-Lithuanian,lit
-Macedonian,mkd
-Malay,zsm
-Malayalam,mal
-Mandarin,cmn
-Manding languages,
-Marathi,mar
-Marshallese,mah
-Min Nan Chinese,
-Mongolian,khk
-Muskogean languages,
-Navajo,nav
-Nepali,nep
-Nilo-Saharan languages,
-Norwegian,nob
-Ojibwa,otw
-Oromo,gax
-Pashto,pst
-Pennsylvania German,
-Polish,pol
-Portuguese,por
-Punjabi,pan
-Romanian,ron
-Russian,rus
-Samoan,smo
-Serbian,hrv
-Serbocroatian,hrv
-Shona,sna
-Sinhala,sin
-Slovak,slk
-Somali,som
-Spanish,spa
-Swahili,swh
-Swedish,swe
-Swiss German,
-Tagalog,tgl
-Tamil,tam
-Telugu,tel
-Thai,tha
-Tibetan,bod
-Tigrinya,tir
-Tongan,ton
-Turkish,tur
-Ukrainian,ukr
-Urdu,urd
-Uto-Aztecan languages,
-Vietnamese,vie
-Wolof,wol
-Yiddish,ydd
-Yoruba,yor
+Language,ISO,NumberOfSpeakers
+English only household,,95895062
+Spanish,spa,15345707
+Chinese,cmn,895412
+French,fra,708884
+Tagalog,tgl,596550
+German,deu,568425
+Vietnamese,vie,557572
+Korean,kor,508388
+Arabic,arb,476854
+Russian,rus,459782
+Hindi,hin,385415
+Portuguese,por,383966
+Italian,ita,352985
+Mandarin,cmn,339596
+Haitian,hat,326451
+Polish,pol,264876
+Japanese,jpn,256816
+Cantonese,yue,219882
+Farsi,,203891
+Telugu,tel,184750
+Filipino,,176159
+Urdu,urd,174116
+Gujarati,guj,161311
+Greek,ell,144506
+Bengali,ben,125508
+Tamil,tam,117240
+Hebrew,heb,105764
+Armenian,hye,102106
+Punjabi,pan,99773
+Amharic,amh,94453
+Thai,tha,92203
+Romanian,ron,83818
+Khmer,khm,80778
+Malayalam,mal,77040
+Dutch,nld,73275
+Ukrainian,ukr,72319
+Yoruba,yor,72154
+Navajo,nav,71641
+Hmong,mww,70832
+Swahili,swh,68675
+Nepali,nep,64883
+Akan (incl. Twi),,63096
+Turkish,tur,61530
+Pennsylvania German,,59020
+Somali,som,58426
+Albanian,aln,56363
+Lao,lao,53256
+Yiddish,ydd,52646
+Hungarian,hun,47179
+Igbo,ibo,44199
+Marathi,mar,42985
+Bosnian,bos,41787
+Jamaican Creole English,jam,37082
+Min Nan Chinese,,36746
+Burmese,mya,34186
+Ilocano,ilo,34104
+Indonesian,ind,32420
+Serbian,hrv,32399
+Swedish,swe,32088
+Bulgarian,bul,30626
+Kannada,kan,29880
+Samoan,smo,26335
+Tigrinya,tir,25997
+Cebuano,ceb,25856
+Croatian,hrv,25138
+Czech,ces,25016
+Afrikaans,afr,20311
+Lithuanian,lit,19508
+Norwegian,nob,18531
+Danish,dan,17681
+Hawaiian,haw,17288
+Pashto,pst,15011
+Assyrian Neo-Aramaic,aii,14714
+Slovak,slk,14223
+Sinhala,sin,13785
+Irish,gle,13066
+Aleut languages,,12790
+Finnish,fin,12320
+Uto-Aztecan languages,,11676
+Karen languages,ksw,11336
+Cajun French,,11277
+Macedonian,mkd,10840
+Chaldean Neo-Aramaic,,10595
+Serbocroatian,hrv,10172
+Nilo-Saharan languages,,10145
+Dari,prs,9992
+Latvian,lav,9549
+Ojibwa,otw,9059
+Manding languages,,9012
+Swiss German,,8316
+Chamorro,cha,8265
+Tongan,ton,8179
+Wolof,wol,7928
+Kabuverdianu,,7730
+Chin languages,,7585
+Oromo,gax,7456
+Gbe languages,,7254
+Apache languages,,6949
+Dakota languages,,6931
+Muskogean languages,,6755
+Malay,zsm,6732
+Tibetan,bod,6670
+Cherokee,chr,6527
+Fulah,,6447
+Ganda,,6351
+Ga,,6253
+Edoid languages,,6206
+Mongolian,khk,5791
+Iu Mien,ium,5766
+Kurdish,kmr,5398
+Marshallese,mah,4612
+Konkani,knn,4459
+Shona,sna,4334
+Keres,kee,3400
+Chuukese,chk,3378
