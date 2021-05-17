@@ -60,7 +60,7 @@ export default function LanguageSelect({mapOption, allMetroLanguages, allStateLa
           />
         )}
       />
-      <p>Sorted by number of speakers (Descending)</p>
+      <p style={{marginTop: 0, marginBottom: 0, fontSize: 14}}> *ordered descending by number of speakers</p>
     </div>
   );
 }
