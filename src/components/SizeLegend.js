@@ -28,7 +28,7 @@ export default function SizeLegend() {
       .attr("width", width)
       .attr("height", height);
 
-  const legendLabels = ["<= 1,000", "<= 10,000", "<= 100,000", "<= 1,000,000", "<= 10,000,000"];
+  const legendLabels = ["1,000", "10,000", "100,000", "1,000,000", "10,000,000"];
   const legendValues = [1000, 10000, 100000, 1000000, 10000001];
   legendValues.reverse();
   legendLabels.reverse();
@@ -70,11 +70,11 @@ export default function SizeLegend() {
       .attr('x', xLabel)
       .attr('y', function(d){ return  yCircle - 2*genRadius(d) } )
       .text( function(d, i){ return legendLabels[i] } )
-      .style("font-size", 10)
+      .style("font-size", 11)
       .style("fill", "black")
       .attr('alignment-baseline', 'middle');
 
   return (
-    <div id="sizeLegend" />
+    <div style={{ marginLeft: '3vw' }} id="sizeLegend" />
   )
 }

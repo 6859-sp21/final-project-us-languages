@@ -138,7 +138,6 @@ export default function LeftDrawer(props) {
       const selectedLangIndex = sortedLocLangData.findIndex(e => e.Language === locData.Language);
       const dataToGraph = sortedLocLangData.slice(Math.max(selectedLangIndex-2, 0), Math.max(selectedLangIndex+3, 5));
       const graphedLanguages = dataToGraph.map(entry => entry.Language);
-
       setSortedLocLangData(sortedLocLangData);
       setSelectedLangIndex(selectedLangIndex);
       return {dataToGraph, graphedLanguages, filteredLocations};
@@ -192,9 +191,8 @@ export default function LeftDrawer(props) {
           .style("opacity", 0);
         
         const longestLanguageLength = Math.max(...dataToGraph.map(obj => obj.Language.length));  
-        console.log('data tograph: ', dataToGraph.map(obj => obj.Language.length));
         let adjustedMargin = 0;
-        if (longestLanguageLength > 15) {
+        if (longestLanguageLength > 8) {
           adjustedMargin += longestLanguageLength * 3.5;
         }
   
@@ -256,10 +254,23 @@ export default function LeftDrawer(props) {
             .attr('transform', `translate(${margin.left}, 0)`)
             .call(d3.axisLeft(yMargin).tickSize(0));
   
+        const adjustedIdx = [-2, -1, 0, 1, 2];
+
+        let englishCase = false;
+        function determineIdx(language, idx) {
+          if (selectedLangIndex < 2) {
+            englishCase = true;
+            return `${idx + 1}. ` + language
+          }
+          englishCase = false
+          return `${selectedLangIndex - adjustedIdx[adjustedIdx.length - 1 - idx] + 1}. ` + language
+        }
+
         axis.select(".domain").remove();
         axis.selectAll('text')
             .attr('dx', -2)
-            .style("font-size", 'small');
+            .style("font-size", 'small')
+            .text((d, idx) => determineIdx(d, idx));
   
         setTimeout(() => {
           g.selectAll('rect')
@@ -276,13 +287,13 @@ export default function LeftDrawer(props) {
         d3.select("#drawer-histogram")
             .style("left", (15) + "px")
             .style("top", (255) + "px")
-            .style("overflow-x", 'scroll')
+            .style("overflow-x", 'auto')
             .style("opacity", 1);
   
         document.getElementById("drawer-histogram").appendChild(svg.node());
     }
 
-  }, [selectedLocation, selectedLanguage, mapOption])
+  }, [selectedLocation, selectedLangIndex, selectedLanguage, mapOption])
 
   useEffect(() => {
     const language = selectedLanguage ? selectedLanguage.toLowerCase() : "";
@@ -366,7 +377,7 @@ export default function LeftDrawer(props) {
           {selectedLanguage !== "" && (mapOption === 'Metro' || mapOption === 'States') ?
             (
               <div>
-                <div>Nearest neighbors of this language by number of speakers</div>
+                <p>Nearest neighbors of this language by number of speakers</p>
                 <div ref={wrapperRef}></div>
               </div>
             ) : null
