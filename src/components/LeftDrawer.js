@@ -192,7 +192,6 @@ export default function LeftDrawer(props) {
           .style("opacity", 0);
         
         const longestLanguageLength = Math.max(...dataToGraph.map(obj => obj.Language.length));  
-        console.log('data tograph: ', dataToGraph.map(obj => obj.Language.length));
         let adjustedMargin = 0;
         if (longestLanguageLength > 15) {
           adjustedMargin += longestLanguageLength * 3.5;
