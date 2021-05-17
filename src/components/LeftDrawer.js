@@ -163,6 +163,8 @@ export default function LeftDrawer(props) {
               showHistogram(dataToGraph, graphedLanguages, filteredLocations[0])
             }
           }
+        } else {
+
         }
       } else if (mapOption === 'States') {
         if (validateData(languagesStateData, allStateLanguages, selectedLocation)) {
@@ -188,10 +190,16 @@ export default function LeftDrawer(props) {
           .append("div")
           .attr("id", "drawer-histogram")
           .style("opacity", 0);
-        console.log('wrapper ref: ', d3.select(wrapperRef.current));
+        
+        const longestLanguageLength = Math.max(...dataToGraph.map(obj => obj.Language.length));  
+        console.log('data tograph: ', dataToGraph.map(obj => obj.Language.length));
+        let adjustedMargin = 0;
+        if (longestLanguageLength > 15) {
+          adjustedMargin += longestLanguageLength * 3.5;
+        }
   
-        const height = 200, width = 300;
-        const margin = ({top: 30, right: 70, bottom: 20, left: 80});
+        const height = 200, width = 300 + adjustedMargin;
+        const margin = ({top: 30, right: 70, bottom: 20, left: 80 + adjustedMargin});
 
         const svg = d3.create('svg')
           .attr('width', width)
@@ -268,12 +276,13 @@ export default function LeftDrawer(props) {
         d3.select("#drawer-histogram")
             .style("left", (15) + "px")
             .style("top", (255) + "px")
+            .style("overflow-x", 'scroll')
             .style("opacity", 1);
   
         document.getElementById("drawer-histogram").appendChild(svg.node());
     }
 
-  }, [selectedLocation, selectedLanguage])
+  }, [selectedLocation, selectedLanguage, mapOption])
 
   useEffect(() => {
     const language = selectedLanguage ? selectedLanguage.toLowerCase() : "";
@@ -323,7 +332,7 @@ export default function LeftDrawer(props) {
         </div>
         <Divider />
         <div className={classes.container} id="description">
-            {sortedLocLangData.length !== 0 && (mapOption === 'Metro' || mapOption === 'States') ?
+            {selectedLanguage !== ''&& sortedLocLangData.length !== 0 && (mapOption === 'Metro' || mapOption === 'States') ?
             (<p> 
               <b>{sortedLocLangData[selectedLangIndex].Language}</b> is the <b>{stringifyNumber(selectedLangIndex)}</b> most spoken language in {selectedLocation.split(',')[0]}. There 
               are {numberWithCommas(sortedLocLangData[selectedLangIndex].NumberOfSpeakers)} speakers in the area.            
