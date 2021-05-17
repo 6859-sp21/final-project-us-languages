@@ -180,7 +180,8 @@ function App() {
                         selectedLanguage={selectedLanguage}
                         originsData={originsData}
                         countryCodes={countryCodes}
-                        data={countriesData}/>
+                        data={countriesData}
+                        mapOption={mapOption}/>
                       <QuestionsHelper></QuestionsHelper>
                     </div>
                   </div>

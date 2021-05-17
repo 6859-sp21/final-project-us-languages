@@ -44,9 +44,7 @@ export default function Map(props) {
         val = parseInt(val);
         if (isNaN(val)) {return 0};
 
-        if (val <= 100) {
-            return 2;
-        } else if (val <= 1000) {
+        if (val <= 1000) {
             return 4;
         } else if (val <= 10000) {
             return 8;
@@ -59,68 +57,13 @@ export default function Map(props) {
         }
     }
 
-    function createLegend() {
-        // Add legend
-        const legendSvg = d3.create('svg')
-            .attr('width', 300)
-            .attr('height', height)
-            .attr('class', 'legend');
-
-        const legendLabels = ["<= 100", "<= 1,000", "<= 10,000", "<= 100,000", "<= 1,000,000", "> 1,000,000"];
-        const legendValues = [100, 1000, 10000, 100000, 1000000, 10000001];
-        legendValues.reverse();
-        legendLabels.reverse();
-        const xCircle = 66;
-        const yCircle = 130;
-        const xLabel = 150;
-
-        legendSvg
-            .selectAll("legend")
-            .data(legendValues)
-            .enter()
-            .append("circle")
-                .attr("cx", 66)
-                .attr("cy", function(d, i){ return 4*genRadius(d)} )
-                .attr("r", function(d){ return genRadius(d) })
-                .style("fill", defaultCircleColor)
-                .style("stroke-width", 1.5)
-
-        // Add legend: segments
-        legendSvg
-            .selectAll("legend")
-            .data(legendValues)
-            .enter()
-            .append("line")
-                .attr('x1', function(d){ return xCircle + genRadius(d) } )
-                .attr('x2', xLabel)
-                .attr('y1', function(d){ return 4*genRadius(d)} )
-                .attr('y2', function(d){ return 4*genRadius(d) } )
-                .attr('stroke', 'black')
-                .style('stroke-dasharray', ('2,2'))
-
-        // Add legend: labels
-        legendSvg
-            .selectAll("legend")
-            .data(legendValues)
-            .enter()
-            .append("text")
-                .attr('x', xLabel)
-                .attr('y', function(d){ return 4*genRadius(d) } )
-                .text( function(d, i){ return legendLabels[i] } )
-                .style("font-size", 10)
-                .style("fill", "black")
-                .attr('alignment-baseline', 'middle')
-        
-        document.getElementById("map").appendChild(legendSvg.node());
-    }
-
     //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
     const countyColor = d3.scaleThreshold()
-        .domain([1, 100, 1000, 10000, 10000, 100000, 1000000])
+        .domain([10, 100, 1000, 10000, 100000, 1000000, 100000000])
         .range(d3.schemeBlues[7]);
 
     function fillCounty(d) {
@@ -134,7 +77,7 @@ export default function Map(props) {
     }
 
     const stateColor = d3.scaleThreshold()
-        .domain([1, 100, 1000, 10000, 10000, 100000, 1000000])
+        .domain([10, 100, 1000, 10000, 100000, 1000000, 100000000])
         .range(d3.schemeBlues[7]);
 
     function fillState(d) {

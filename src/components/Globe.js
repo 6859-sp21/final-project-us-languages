@@ -4,6 +4,8 @@ import tip from "d3-tip";
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
+import SizeLegend from './SizeLegend';
+import ColorLegend from './ColorLegend';
 
 const drawerWidth = 600;
 
@@ -41,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
  * @param {Integer} size parameter used for width and height
  * @returns 
  */
-export default function Globe({open, selectedLanguage, originsData, countryCodes, handleDrawerOpen, submissions, coordData, data, sizeVw, sizeVh}) {
+export default function Globe({open, selectedLanguage, originsData, countryCodes, handleDrawerOpen, submissions, coordData, data, sizeVw, sizeVh, mapOption}) {
     const svgRef = useRef();
     const wrapperRef = useRef();
     const [selectedCountry, setSelectedCountry] = useState(null)
@@ -291,6 +293,9 @@ export default function Globe({open, selectedLanguage, originsData, countryCodes
                 : selectedLanguage.Language && !Object.keys(originInfo).length ? <div>Data for this language is not available</div>
                     : null
             }
+            <Box display="flex" justifyContent="center">
+                {mapOption === "Metro" ? < SizeLegend /> : < ColorLegend width={sizeVw}/>}
+            </Box>
         </div>
     )
 }
