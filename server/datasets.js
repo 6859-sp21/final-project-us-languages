@@ -128,7 +128,7 @@ fs.createReadStream(languagesWithMetroFile)
     console.log('Languages CSV file successfully processed');
 });
 
-fs.createReadStream(languagesOnlyMetroFile)
+fs.createReadStream(languagesOnlyMetroFile) 
   .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
   .pipe(csv({separator: ','}))
   .on('data', (row) => {
