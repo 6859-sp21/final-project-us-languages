@@ -39,6 +39,7 @@ export default function Map(props) {
     const defaultStateColor = "#ccc";
     const defaultCircleColor = "#2b5876";
     const highlightedCircleColor = "#4e4376";
+    let active = d3.select(null);
 
     function genRadius(val) {
         val = parseInt(val);
@@ -250,14 +251,17 @@ export default function Map(props) {
         }
 
         const handleClickLocation = (event, data) => {
-            d3.selectAll('circle').style("fill", defaultCircleColor);
-            d3.select(event.target).style("fill", highlightedCircleColor);
+            if (svgRef.current["active"] !== undefined) svgRef.current["active"].classed("active", false);
+            svgRef.current["active"] = d3.select(event.target);
+            svgRef.current["active"].classed("active", true);
+            d3.select(event.target).classed("active", true);
             handleLocationClick(data);
         }
             
         // Adapted from https://bl.ocks.org/mbostock/4699541
         function reset() {
-            d3.selectAll('circle').style("fill", defaultCircleColor);
+            if (svgRef.current["active"] !== undefined) svgRef.current["active"].classed("active", false);
+            svgRef.current["active"] = d3.select(null);
             svg.transition()
                 .duration(zoomTransitionSpeed)
                 .call( zoom.transform, d3.zoomIdentity ); 
