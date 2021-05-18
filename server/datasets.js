@@ -149,7 +149,7 @@ fs.createReadStream(languagesOnlyStatesFile)
   })
   .on('end', () => {
     console.log('Languages Only CSV file successfully processed');
-});
+}); 
 
 fs.createReadStream(stateIdsFile)  
   .pipe(csv({separator: '\t'}))

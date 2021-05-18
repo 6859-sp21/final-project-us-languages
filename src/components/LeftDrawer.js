@@ -95,7 +95,6 @@ export default function LeftDrawer(props) {
   const [sortedLocLangData, setSortedLocLangData] = useState([]);
   const [selectedLangIndex, setSelectedLangIndex] = useState(0);
 
-  const histoRef = useRef()
   const wrapperRef = useRef()
   const classes = useStyles();
   const theme = useTheme();
@@ -193,7 +192,7 @@ export default function LeftDrawer(props) {
         const longestLanguageLength = Math.max(...dataToGraph.map(obj => obj.Language.length));  
         let adjustedMargin = 0;
         if (longestLanguageLength > 8) {
-          adjustedMargin += longestLanguageLength * 3.5;
+          adjustedMargin += longestLanguageLength * 4.5;
         }
   
         const height = 200, width = 300 + adjustedMargin;
@@ -229,8 +228,6 @@ export default function LeftDrawer(props) {
             .style('fill', d => colorScale(d.Language))
             .style('padding-bottom', 5)
             .style('stroke', '#fff');
-
-        // const container = g.append('div').attr('class', 'container');
         
         g.append('text')
             .attr('x', 0)
@@ -240,15 +237,6 @@ export default function LeftDrawer(props) {
             .style('font-size', 'small')
             .text(d => numberWithCommas(d.NumberOfSpeakers))
   
-        // svg.append('text')
-        //     .attr('text-anchor', 'middle')
-        //     .attr('fill', '#fff')
-        //     .style('font-size', 'medium')
-        //     .attr('x', width/2)
-        //     .attr('y', margin.top)
-        //     .attr('dy', '-0.5em')
-        //     .text(d.Location);
-        
         const axis = svg.append('g')
             .style('color', "black")
             .attr('transform', `translate(${margin.left}, 0)`)
@@ -256,13 +244,10 @@ export default function LeftDrawer(props) {
   
         const adjustedIdx = [-2, -1, 0, 1, 2];
 
-        let englishCase = false;
         function determineIdx(language, idx) {
           if (selectedLangIndex < 2) {
-            englishCase = true;
             return `${idx + 1}. ` + language
           }
-          englishCase = false
           return `${selectedLangIndex - adjustedIdx[adjustedIdx.length - 1 - idx] + 1}. ` + language
         }
 
@@ -309,10 +294,6 @@ export default function LeftDrawer(props) {
     }
     }, [audioMetadata, selectedLanguage])
 
-  //Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
-  function numberWithCommas(x) {
-      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
   return (
     <div className={classes.root}>
       <Drawer

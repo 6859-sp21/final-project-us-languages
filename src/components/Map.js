@@ -37,9 +37,6 @@ export default function Map(props) {
     const zoomTransitionSpeed = 750;
     const defaultCountyColor = "#ccc";
     const defaultStateColor = "#ccc";
-    const defaultCircleColor = "#2b5876";
-    const highlightedCircleColor = "#4e4376";
-    let active = d3.select(null);
 
     function genRadius(val) {
         val = parseInt(val);
@@ -190,11 +187,13 @@ export default function Map(props) {
                 .on("mousemove", (event,d) => {
                     const stateName = stateIDs[d.id];
                     const stateSelectedLangData = statesData.filter(e => e.Language === selectedLanguage && e.Location === stateName)[0];
-                    const html = selectedLanguage.length === 0 ? stateName : stateName + "</br>" + numberWithCommas(stateSelectedLangData.NumberOfSpeakers);
-                    tooltip
-                        .html(html)
-                        .style("left", (event.x + 20) + "px")
-                        .style("top", (event.y) + "px")
+                    if (stateSelectedLangData.NumberOfSpeakers) {
+                        const html = selectedLanguage.length === 0 ? stateName : stateName + "</br>" + numberWithCommas(stateSelectedLangData.NumberOfSpeakers);
+                        tooltip
+                            .html(html)
+                            .style("left", (event.x + 20) + "px")
+                            .style("top", (event.y) + "px")
+                    }
                 })
                 .transition()
                 .duration(countyTransitionSpeed)
@@ -221,32 +220,34 @@ export default function Map(props) {
             }
 
             function addNewCircles() {
-                svgRef.current["selectedLanguage"] = selectedLanguage;
-                const circles = g
-                    .selectAll("circle")
-                    .data(filteredLocations)
-                    .enter()
-                        .append("circle")
-                        .attr('class', 'circle')
-                        .attr("r", 0)
-                        .style("stroke-width", 0)
-                        .on("click", (event,d) => handleClickLocation(event, d))
-                        .on("mouseover", () => tooltip.style('opacity', 1))
-                        .on("mouseout", () => tooltip.style("opacity", 0))
-                        .on("mousemove", (event,d) => {
-                            tooltip
-                                .html(d.Location + "</br>" + numberWithCommas(d.NumberOfSpeakers))
-                                .style("left", (event.x + 20) + "px")
-                                .style("top", (event.y) + "px")
-                        })
-                        .attr("transform", function(d) {
-                            return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
-                        });
-                        
-                circles.transition()
-                    .duration(circleTransitionSpeed)
-                    .attr("r", d => genRadius(d["NumberOfSpeakers"]))
-                    .style("stroke-width", 1.5);
+                if (svgRef) {
+                    svgRef.current["selectedLanguage"] = selectedLanguage;
+                    const circles = g
+                        .selectAll("circle")
+                        .data(filteredLocations)
+                        .enter()
+                            .append("circle")
+                            .attr('class', 'circle')
+                            .attr("r", 0)
+                            .style("stroke-width", 0)
+                            .on("click", (event,d) => handleClickLocation(event, d))
+                            .on("mouseover", () => tooltip.style('opacity', 1))
+                            .on("mouseout", () => tooltip.style("opacity", 0))
+                            .on("mousemove", (event,d) => {
+                                tooltip
+                                    .html(d.Location + "</br>" + numberWithCommas(d.NumberOfSpeakers))
+                                    .style("left", (event.x + 20) + "px")
+                                    .style("top", (event.y) + "px")
+                            })
+                            .attr("transform", function(d) {
+                                return "translate(" + projection([locationsData[d.Location].coordinates.longitude, locationsData[d.Location].coordinates.latitude]) + ")"; 
+                            });
+                            
+                    circles.transition()
+                        .duration(circleTransitionSpeed)
+                        .attr("r", d => genRadius(d["NumberOfSpeakers"]))
+                        .style("stroke-width", 1.5);
+                }
             }
         }
 

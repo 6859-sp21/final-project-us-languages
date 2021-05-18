@@ -16,7 +16,6 @@ const router = express.Router();
 // Enable reading of environment variables
 require('dotenv').config();
 
-const tempAudioFile = path.resolve(__dirname, 'tmp/');
 const audiomapFile = path.resolve(__dirname, '../datasets/audio_mapping3.txt');
 const audiomapData = {}
 
@@ -27,15 +26,15 @@ async function main() {
     .pipe(stripBom()) // remove BOM from csv file (BOM causes parsing issue)
     .pipe(csv({separator: ','}))
     .on('data', (row) => {
-      console.log('row', row); 
       const lang = row.Language.toLowerCase();
       audiomapData[lang] = row;
       if (row.DriveID.length === 0) {
         refreshDriveFiles = true;
+        console.log('Missing file for: ', lang);
       }
     })
     .on('end', async () => {
-      console.log('Audio mapping CSV file successfully processed', audiomapData);
+      console.log('Audio mapping CSV file successfully processed');
       const auth = await getAuthToken();
       if (refreshDriveFiles) {
         console.log('Refreshing audio mapping csv');
@@ -105,7 +104,7 @@ async function getFiles({auth}) {
         // write to local csv
         stringify(Object.values(audiomapData), {
           header: true
-        }, function (err, output) {
+        }, function (err, output) { 
           fs.writeFile(audiomapFile, output, (err) => {
             if (err) console.log(err.message, err.stack);
           });

@@ -5,7 +5,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import HelpIcon from '@material-ui/icons/Help';
 import IconButton from '@material-ui/core/IconButton';
-import { Box, List, ListItem, ListItemText, Paper } from '@material-ui/core';
+import { Box, List, ListItem, Paper } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -70,9 +70,10 @@ export default function QuestionsHelper() {
                 <Paper className={classes.paper}>
                     <h2 id="transition-modal-title">What is this project?</h2>
                     <p className={classes.bodyText}>
-                        This project is a visualization of the many languages spoken in the United States, divided by metro areas, states, and counties.
-                        You can see how many speakers of that language there are and where they are located in the U.S. 
-                        as well as where the main population of those speakers are in the world. Click and drag to pan across the map; scroll to zoom.
+                        This project is a visualization of the many languages spoken in the United States, divided by metro areas, states, and counties, using 
+                        data provided by the US Census Bureau and compiled by the American Community Survey.
+                        It captures the number of speakers by region as well as where the main population of those speakers are in the world. 
+                        To explore the visual, click and drag to pan across the map and scroll to zoom.
                         Select a language and location to start exploring the diversity of languages in the United States.  
                     </p>
                     <h3 style={{ marginBottom: 0 }} id="transition-modal-subtitle">Sources used</h3>
@@ -96,7 +97,22 @@ export default function QuestionsHelper() {
                             </ListItem>
                             <ListItem>
                                 <a rel="noreferrer" target="_blank" className={classes.anchor} href="https://www.census.gov/programs-surveys/acs/microdata/access.html">
-                                    ACS 1-Year Estimates-Public Use Microdata Sample 2019
+                                    ACS 1-Year and 5-Year Estimates-Public Use Microdata Sample 2019
+                                </a>
+                            </ListItem>
+                            <ListItem>
+                                <a rel="noreferrer" target="_blank" className={classes.anchor} href="https://countrycode.org/">
+                                    Country Codes
+                                </a>
+                            </ListItem>
+                            <ListItem>
+                                <a rel="noreferrer" target="_blank" className={classes.anchor} href="https://github.com/topojson/us-atlas">
+                                    US Topojson
+                                </a>
+                            </ListItem>
+                            <ListItem>
+                                <a rel="noreferrer" target="_blank" className={classes.anchor} href="https://github.com/nvkelso/natural-earth-vector">
+                                    Natural Earth Vector
                                 </a>
                             </ListItem>
                         </List>

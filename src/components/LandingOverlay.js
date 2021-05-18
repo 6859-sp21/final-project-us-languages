@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { animations } from 'react-animation'
 import Button from '@material-ui/core/Button';
 import clsx from 'clsx';
@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '5vh',
     },
     bodyText: {
+        color: 'white',
         maxWidth: '50vw',
     },
     hidden: {
@@ -70,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
 export default function LandingOverlay({hidden, setHidden}) {
     const [clicked, setClicked] = useState(false)
     const classes = useStyles();
-    const theme = useTheme();
 
     const handleClick = (e) => {
         setClicked(true);
@@ -90,11 +90,13 @@ export default function LandingOverlay({hidden, setHidden}) {
                     US Languages
                 </div>
                 <div className={classes.bodyContainer}>
-                    <div className={classes.bodyText}>
-                    This project is a visualization of the many languages spoken in the United States, drawn from the 2009-2013 American Community Survey 
-                    which was a 5-year estimate of US census data. 
-                    Select a language to see how many speakers of that language there are and where they are located.
-                    </div>
+                    <p className={classes.bodyText}>
+                        This project is a visualization of the many languages spoken in the United States, divided by metro areas, states, and counties, using 
+                        data provided by the US Census Bureau and compiled by the American Community Survey.
+                        It captures the number of speakers by region as well as where the main population of those speakers are in the world. 
+                        To explore the visual, click and drag to pan across the map and scroll to zoom.
+                        Select a language and location to start exploring the diversity of languages in the United States.  
+                    </p>
                 </div>
                 <Button onClick={handleClick} variant="outlined" size="large" className={classes.button}>
                     View Map

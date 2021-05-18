@@ -136,7 +136,6 @@ function App() {
                 selectedLocation={selectedLocation} 
                 languagesMetroData={languagesMetroData} 
                 handleDrawerClose={handleDrawerClose}
-                languagesMetroData={languagesMetroData}
                 allMetroLanguages={Object.keys(allMetroLanguages)}
                 languagesStateData={languagesStateData}
                 allStateLanguages={Object.keys(allStateLanguages)}
@@ -173,7 +172,7 @@ function App() {
                         languagesStateData={languagesStateData}
                         setSortedLocLanguages={setSortedLocLanguages}
                         selectedLanguage={selectedLanguage.Language || selectedLanguage}
-                        selectedLanguage={selectedLanguage.Language}/>
+                        />
                       <Globe 
                         sizeVw={13* maxVw / 100}
                         sizeVh={13* maxVw / 100}
