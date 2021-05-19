@@ -27,6 +27,13 @@ https://us-languages.herokuapp.com/
     - audioclips.js
     - processing.js
     - server.js
+  - Alejandro
+    - ColorLegend.js
+    - HistogramTooltip.js
+    - LanguageSelect.js
+    - Map.js
+    - MapSelect.js
+    - SizeLegend.js
 
 ## Local Development
 
