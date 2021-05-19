@@ -171,7 +171,7 @@ function App() {
                         languagesMetroData={languagesMetroData} 
                         languagesStateData={languagesStateData}
                         setSortedLocLanguages={setSortedLocLanguages}
-                        selectedLanguage={selectedLanguage.Language || selectedLanguage}
+                        selectedLanguage={selectedLanguage.Language}
                         />
                       <Globe 
                         sizeVw={13* maxVw / 100}
