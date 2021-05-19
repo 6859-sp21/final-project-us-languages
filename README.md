@@ -19,6 +19,8 @@ https://drive.google.com/file/d/1abl_tt3fvnwIzKPhmbzlAO-WQjbEZQ-1/view?usp=shari
 https://us-languages.herokuapp.com/
 
 ## Work Distrubtion
+We met about 2-3 times a week for about an hour and a half. During these meetings, we discussed our progress, how to split up the components, and how to fix any bugs we have come across. Outside of these meetings, we kept in touch often over Facebook Messenger: sent progress images, answered clarification images, and made suggestions for improvement. We worked together during A4, so the transition to the final project was pretty smooth.
+
  - Calvin
     - Globe.js
     - LandingOverlay.js
