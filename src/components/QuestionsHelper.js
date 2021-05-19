@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
   anchor: {
       textDecoration: 'none',
       color: '#2b5876',
+  }, 
+  externalLink: {
+      marginRight: '1vw',
   }
 }));
 
@@ -116,6 +119,17 @@ export default function QuestionsHelper() {
                                 </a>
                             </ListItem>
                         </List>
+                    </Box>
+                    <Box display="flex" justifyContent="flex-end" flexWrap="wrap" alignItems="flex-end"> 
+                        <a rel="noreferrer" target="_blank" className={classes.anchor} href="https://github.com/6859-sp21/final-project-us-languages">
+                            <h3 className={classes.externalLink}>Github</h3>
+                        </a>
+                        <a rel="noreferrer" target="_blank" className={classes.anchor} href="https://drive.google.com/file/d/10To1Zw_wfPGsITnV7ZFJYmUT9Ot9Sd7g/view?usp=sharing">
+                            <h3 className={classes.externalLink}>Paper</h3>
+                        </a>
+                        <a rel="noreferrer" target="_blank" className={classes.anchor} href="https://drive.google.com/file/d/1abl_tt3fvnwIzKPhmbzlAO-WQjbEZQ-1/view?usp=sharing">
+                            <h3 className={classes.externalLink}>Video</h3>
+                        </a>
                     </Box>
                 </Paper>
             </Fade>

@@ -1,5 +1,4 @@
 # US Languages
----
 ![Website Summary](https://drive.google.com/uc?export=view&id=1U33jKXOxX2JzY2XyOfuMMJcFcYgaXFVE)
 
 ## Team Members
@@ -11,6 +10,7 @@
 This project is a visualization of various languages and where they are spoken in the United States. The goal of our visualization is to provide a tool for users to gain a better understanding of the diversity in the US through the unique medium of language, which doesn’t get discussed as often compared to race or nationality. We use data from the US census bureau compiled by the American Community survey to showcase the number of speakers by metropolitan areas, counties, and states. In order to assess the effectiveness of our visualization in highlighting diversity, we ask three participants about the most populous ancestries in the US before and after using our visualization to determine whether our visual had any effect in the correctness of their answers. What we found was that our visual did help users in correctly identifying ancestries as well as gaining a better understanding about diversity in the US.
 
 ## Paper
+https://drive.google.com/file/d/10To1Zw_wfPGsITnV7ZFJYmUT9Ot9Sd7g/view?usp=sharing
 
 ## Video
 https://drive.google.com/file/d/1abl_tt3fvnwIzKPhmbzlAO-WQjbEZQ-1/view?usp=sharing
