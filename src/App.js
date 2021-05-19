@@ -96,13 +96,10 @@ function App() {
     
   function handleLanguageChange(newLanguage) {
     if (newLanguage in allMetroLanguages && mapOption === 'Metro') {
-      console.log(newLanguage, allMetroLanguages[newLanguage]);
       setSelectedLanguage(allMetroLanguages[newLanguage]);
     } else if (newLanguage in allStateLanguages  && mapOption === 'States') {
-      console.log(newLanguage, allStateLanguages[newLanguage]);
       setSelectedLanguage(allStateLanguages[newLanguage]);
     } else if (mapOption === 'Counties') {
-      console.log(newLanguage, {'Language': newLanguage});
       setSelectedLanguage({'Language': newLanguage.replace(/\s/g, '')});
     }
     handleDrawerClose();
@@ -171,7 +168,7 @@ function App() {
                         languagesMetroData={languagesMetroData} 
                         languagesStateData={languagesStateData}
                         setSortedLocLanguages={setSortedLocLanguages}
-                        selectedLanguage={selectedLanguage.Language || selectedLanguage}
+                        selectedLanguage={selectedLanguage.Language}
                         />
                       <Globe 
                         sizeVw={13* maxVw / 100}

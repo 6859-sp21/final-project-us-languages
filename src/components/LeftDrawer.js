@@ -149,8 +149,6 @@ export default function LeftDrawer(props) {
   }
 
   useEffect(() => {
-    // console.log('in use ', Object.keys(locationsData).length !== 0 && languagesMetroData.length !== 0 && selectedLocation !== '');
-
       if (mapOption === 'Metro') {
         // ensure a location is selected and metro languages available 
         if (validateData(languagesMetroData, allMetroLanguages, selectedLocation)){
@@ -177,7 +175,6 @@ export default function LeftDrawer(props) {
 
       } else if (mapOption === 'Counties') {
         const allCountyLanguages = ["Population 5 Years And Over","Speak A Language Other Than English", "Spanish", "IndoEuropean", "Asian Pacific Island", "Other"];
-        console.log(countiesData[selectedLocation], selectedLocation, selectedLanguage);
         if (validateData(countiesData, allCountyLanguages, selectedLocation)) {
         }
       }

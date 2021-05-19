@@ -170,13 +170,15 @@ export default function Map(props) {
         if (mapOption === "Counties") {
             g.selectAll("path")
                 .on("mousemove", (event,d) => {
-                    const county = countiesData[d.id.toString()];
-                    if (county) {
-                        const html = selectedLanguage.length === 0 ? county.County : county.County + "</br>" + numberWithCommas(county[selectedLanguage]);
-                        tooltip
-                            .html(html)
-                            .style("left", (event.x + 20) + "px")
-                            .style("top", (event.y) + "px")
+                    if (d.id) {
+                        const county = countiesData[d.id.toString()];
+                        if (county) {
+                            const html = selectedLanguage.length === 0 ? county.County : county.County + "</br>" + numberWithCommas(county[selectedLanguage]);
+                            tooltip
+                                .html(html)
+                                .style("left", (event.x + 20) + "px")
+                                .style("top", (event.y) + "px")
+                        }
                     }
                 })
                 .transition()
@@ -187,13 +189,12 @@ export default function Map(props) {
                 .on("mousemove", (event,d) => {
                     const stateName = stateIDs[d.id];
                     const stateSelectedLangData = statesData.filter(e => e.Language === selectedLanguage && e.Location === stateName)[0];
-                    if (stateSelectedLangData.NumberOfSpeakers) {
-                        const html = selectedLanguage.length === 0 ? stateName : stateName + "</br>" + numberWithCommas(stateSelectedLangData.NumberOfSpeakers);
-                        tooltip
-                            .html(html)
-                            .style("left", (event.x + 20) + "px")
-                            .style("top", (event.y) + "px")
-                    }
+                    const html = selectedLanguage.length === 0 ? stateName : stateName + "</br>" + numberWithCommas(stateSelectedLangData.NumberOfSpeakers);
+                    tooltip
+                        .html(html)
+                        .style("left", (event.x + 20) + "px")
+                        .style("top", (event.y) + "px")
+                    
                 })
                 .transition()
                 .duration(countyTransitionSpeed)
