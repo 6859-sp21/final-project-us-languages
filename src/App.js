@@ -127,7 +127,6 @@ function App() {
               <LandingOverlay hidden={hidden} setHidden={setHidden}></LandingOverlay>
             </div>
             <div className="background-overlay">
-              {/* <Navbar /> */}
               <LeftDrawer 
                 open={open} 
                 selectedLocation={selectedLocation} 

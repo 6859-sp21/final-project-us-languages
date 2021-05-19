@@ -1,14 +1,44 @@
-# final-project-starter-code
+# US Languages
+---
+![Website Summary](https://drive.google.com/uc?export=view&id=1U33jKXOxX2JzY2XyOfuMMJcFcYgaXFVE)
 
-## Getting Started with Create React App
+## Team Members
+- Alejandro Camacho
+- Calvin Phung
+
+## Abstract
+
+This project is a visualization of various languages and where they are spoken in the United States. The goal of our visualization is to provide a tool for users to gain a better understanding of the diversity in the US through the unique medium of language, which doesn’t get discussed as often compared to race or nationality. We use data from the US census bureau compiled by the American Community survey to showcase the number of speakers by metropolitan areas, counties, and states. In order to assess the effectiveness of our visualization in highlighting diversity, we ask three participants about the most populous ancestries in the US before and after using our visualization to determine whether our visual had any effect in the correctness of their answers. What we found was that our visual did help users in correctly identifying ancestries as well as gaining a better understanding about diversity in the US.
+
+## Paper
+
+## Video
+https://drive.google.com/file/d/1abl_tt3fvnwIzKPhmbzlAO-WQjbEZQ-1/view?usp=sharing
+
+## Website
+https://us-languages.herokuapp.com/
+
+## Work Distrubtion
+ - Calvin
+    - Globe.js
+    - LandingOverlay.js
+    - LeftDrawer.js
+    - QuestionsHelper.js
+    - audioclips.js
+    - processing.js
+    - server.js
+
+## Local Development
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm install`
+Installs all dependencies.
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -40,33 +70,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
