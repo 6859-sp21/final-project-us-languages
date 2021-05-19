@@ -107,7 +107,6 @@ export default function Map(props) {
                 .attr("width", width)
                 .attr("height", height)
                 .on("click", reset);
-            // createLegend();
         }
         
         // If mapOption changed, clear previous map & redraw rect
